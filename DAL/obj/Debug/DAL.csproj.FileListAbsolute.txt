@@ -1,0 +1,15 @@
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.exe.config
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\MainWindow.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\App.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL_MarkupCompile.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL_MarkupCompile.lref
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\MainWindow.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.g.resources
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.Properties.Resources.resources
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.pdb

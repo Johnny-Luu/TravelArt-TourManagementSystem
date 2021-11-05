@@ -1,0 +1,15 @@
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.Properties.Resources.resources
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.GenerateResource.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.exe.config
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\MainWindow.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\App.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL_MarkupCompile.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL_MarkupCompile.lref
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\MainWindow.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.g.resources
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.pdb
