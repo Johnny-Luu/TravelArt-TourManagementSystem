@@ -1,0 +1,6 @@
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\bin\Debug\DTO.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\bin\Debug\DTO.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\obj\Debug\DTO.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DTO\obj\Debug\DTO.pdb
