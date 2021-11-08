@@ -60,6 +60,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Pages\PageAdding.xaml.cs">
+      <DependentUpon>PageAdding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageConfirm.xaml.cs">
+      <DependentUpon>PageConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageStatistic.xaml.cs">
+      <DependentUpon>PageStatistic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageTour.xaml.cs">
+      <DependentUpon>PageTour.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -77,20 +89,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Asset\fonts\" />
-    <Folder Include="Asset\images\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="Assets\images\" />
+    <Folder Include="Components" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\PageAdding.xaml" />
+    <Page Include="Pages\PageConfirm.xaml" />
+    <Page Include="Pages\PageStatistic.xaml" />
+    <Page Include="Pages\PageTour.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Asset\icons\icon-close.png">
+    <Resource Include="Assets\icons\icon-close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Asset\icons\icon-minimize.png">
+    <Resource Include="Assets\icons\icon-minimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

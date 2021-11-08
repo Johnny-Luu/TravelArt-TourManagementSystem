@@ -13,3 +13,11 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.Gen
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.exe
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.baml
