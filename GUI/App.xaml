@@ -4,6 +4,38 @@
              xmlns:local="clr-namespace:GUI"
              StartupUri="MainWindow/MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Navbar items when clicked-->
+        <Style x:Key="NavItemClickedStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="Poppins" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderThickness" Value="0 0 0 3" />
+            <Setter Property="Margin" Value="0 0 20 0" />
+            <Setter Property="Foreground" Value="#9129EC" />
+            <Setter Property="BorderBrush" Value="#9129EC" />
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+        
+        <!--Navbar items by default-->
+        <Style x:Key="NavItemUnClickedStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="Poppins" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="BorderThickness" Value="0 0 0 3" />
+            <Setter Property="Margin" Value="0 0 20 0" />
+            <Setter Property="Foreground" Value="#000000" />
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+        
+        <!--Style for navbar items-->
+        <Style x:Key="NavItemStyle" TargetType="Label" BasedOn="{StaticResource NavItemUnClickedStyle}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#9129EC" />
+                    <Setter Property="BorderBrush" Value="#9129EC" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
     </Application.Resources>
 </Application>

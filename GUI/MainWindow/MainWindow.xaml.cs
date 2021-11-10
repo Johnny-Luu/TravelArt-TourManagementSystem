@@ -56,10 +56,10 @@ namespace GUI
 
         private void ResetNavItemsToDefault()
         {
-            LbStatistic.Style = Resources["NavItemUnClickedStyle"] as Style;
-            LbConfirm.Style = Resources["NavItemUnClickedStyle"] as Style;
-            LbTour.Style = Resources["NavItemUnClickedStyle"] as Style;
-            LbAdding.Style = Resources["NavItemUnClickedStyle"] as Style;
+            LbStatistic.Style = Resources["NavItemStyle"] as Style;
+            LbConfirm.Style = Resources["NavItemStyle"] as Style;
+            LbTour.Style = Resources["NavItemStyle"] as Style;
+            LbAdding.Style = Resources["NavItemStyle"] as Style;
         }
     }
 }

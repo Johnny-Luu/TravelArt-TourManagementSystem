@@ -21,3 +21,27 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.exe.config
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.exe
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.pdb
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\MainWindow\MainWindow.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\App.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\MainWindow\MainWindow.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.g.resources
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.exe
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.pdb
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\App.baml
