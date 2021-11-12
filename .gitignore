@@ -1,3 +1,7 @@
+*.exe
+*.pdb
+*.resources
+//Loi ko chay dc thi xoa 3 th tren
 *.suo
 *.user
 *.sln.docstates
