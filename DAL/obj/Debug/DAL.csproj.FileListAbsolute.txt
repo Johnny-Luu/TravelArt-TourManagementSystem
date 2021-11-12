@@ -4,3 +4,9 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csprojAsse
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.exe
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.exe
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.exe
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache

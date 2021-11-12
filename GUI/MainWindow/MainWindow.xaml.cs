@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using GUI.Pages;
+using static System.Windows.WindowState;
 
 namespace GUI
 {
@@ -12,7 +13,7 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
-            LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
+            if (LbStatistic != null) LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
             FrContainer.Content = new PageStatistic();
         }
 

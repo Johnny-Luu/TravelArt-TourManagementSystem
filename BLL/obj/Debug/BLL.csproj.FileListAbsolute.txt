@@ -10,3 +10,9 @@ C:\Users\User\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.exe
 C:\Users\User\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.pdb
 C:\Users\User\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
 C:\Users\User\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.exe
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.exe
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
