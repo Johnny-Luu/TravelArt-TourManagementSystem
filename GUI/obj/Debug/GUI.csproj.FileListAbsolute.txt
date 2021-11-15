@@ -70,3 +70,14 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.g.re
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\App.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Components\TourControl.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Components\TourControl.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\System.Windows.Interactivity.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\System.Windows.Interactivity.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Models.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Models.pdb
