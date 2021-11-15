@@ -33,7 +33,7 @@
             <Border CornerRadius="10">
                 <Border.Background>
                     <ImageBrush
-                        ImageSource="../Assets/images/img-paris.jpg"
+                        ImageSource="../../Assets/images/img-paris.jpg"
                         Stretch="UniformToFill" />
                 </Border.Background>
             </Border>

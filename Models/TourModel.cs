@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GUI.Models
+namespace Models
 {
     public class TourModel
     {

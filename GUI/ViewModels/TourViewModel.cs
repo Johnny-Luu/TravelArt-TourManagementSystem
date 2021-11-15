@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
 using GUI.Components;
-using GUI.Models;
 using GUI.Pages;
+using Models;
 
 namespace GUI.ViewModels
 {
