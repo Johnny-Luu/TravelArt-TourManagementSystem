@@ -82,3 +82,14 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\Pa
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageConfirm.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\BLL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\FireSharp.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\BLL.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Input;
+using BLL;
 using GUI.Components;
 using GUI.Pages;
 using Models;
@@ -19,28 +21,22 @@ namespace GUI.ViewModels
             LoadTourCommand = new RelayCommand<PageTour>(para => true, para => LoadTour(para));
         }
 
-        public void LoadTour(PageTour para)
+        public async void LoadTour(PageTour para)
         {
             PgTour = para;
 
-            //Fake data (temporary)
-            var tourModel = new TourModel("Vietnam", "this is a description");
-
-            TourControl item1 = new TourControl();
-            item1.LbName.Content = tourModel.Name;
-            item1.LbDescription.Content = tourModel.Description;
-            
-            TourControl item2 = new TourControl();
-            item2.LbName.Content = tourModel.Name;
-            item2.LbDescription.Content = tourModel.Description;
-            
-            TourControl item3 = new TourControl();
-            item3.LbName.Content = tourModel.Name;
-            item3.LbDescription.Content = tourModel.Description;
-            
-            PgTour.WpTour.Children.Add(item1);
-            PgTour.WpTour.Children.Add(item2);
-            PgTour.WpTour.Children.Add(item3);
+            var tourBlL = new TourBLL();
+            var tourList = await tourBlL.GetAllTour();
+            foreach (var tour in tourList)
+            {
+                TourControl item = new TourControl();
+                item.LbName.Content = tour.Name;
+                item.TbDescription.Text = tour.Description;
+                item.LbComment.Content = tour.CurrentComment + "comments";
+                item.LbCurTour.Content = tour.CurrentTour + "current tours";
+                item.LbRating.Content = tour.Rating;
+                PgTour.WpTour.Children.Add(item);
+            }
 
             // use for binding data
             // TourList.Add(tourModel);

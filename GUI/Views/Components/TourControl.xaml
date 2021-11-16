@@ -64,7 +64,7 @@
                 <Label
                     Grid.Row="1"
                     Name="LbName"
-                    Content="{Binding Name}"
+                    Content="Name"
                     FontFamily="Poppins"
                     FontWeight="Bold"
                     FontSize="22"
@@ -75,20 +75,22 @@
                 <!--Tour description-->
                 <Label
                     Grid.Row="2"
-                    Name="LbDescription"
                     FontFamily="Poppins"
                     FontSize="12"
                     Foreground="Black"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left">
-                    <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow" TextTrimming="CharacterEllipsis">
-                        
-                    </TextBlock>
+                    <TextBlock
+                        Name="TbDescription" 
+                        Text="Dalat is a city in the central Vietnam. It's a beautiful place where you can take a rest with a peaceful atmosphere, you can enjoy it" 
+                        TextWrapping="WrapWithOverflow" 
+                        TextTrimming="CharacterEllipsis" />
                 </Label>
                 
                 <!--Comment quantity-->
                 <Label
                     Grid.Row="3"
+                    Name="LbComment"
                     Content="12 comments"
                     FontFamily="Poppins"
                     FontSize="12"
@@ -99,6 +101,7 @@
                 <!--Current tour quantity-->
                 <Label
                     Grid.Row="4"
+                    Name="LbCurTour"
                     Content="2 current tours"
                     FontFamily="Poppins"
                     FontSize="12"
@@ -109,6 +112,7 @@
                 <!--Tour rating-->
                 <Label
                     Grid.Row="5"
+                    Name="LbRating"
                     Content="4.0 *"
                     FontFamily="Poppins"
                     FontSize="16"

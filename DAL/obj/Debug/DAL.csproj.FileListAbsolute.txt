@@ -10,3 +10,19 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.exe
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.pdb
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\FireSharp.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Models.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Extensions.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Primitives.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Models.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Extensions.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Primitives.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CopyComplete

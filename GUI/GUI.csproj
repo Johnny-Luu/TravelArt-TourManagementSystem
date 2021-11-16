@@ -132,6 +132,10 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{afa57f88-e3ea-4c07-96c4-ca8ced6727ee}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0b0b5bfb-35e9-4a7f-89ff-1614f500db23}</Project>
       <Name>Models</Name>

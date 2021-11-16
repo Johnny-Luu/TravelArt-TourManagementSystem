@@ -16,3 +16,15 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.exe
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\bin\Debug\BLL.pdb
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\DAL.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Models.exe
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\FireSharp.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\DAL.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Models.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Newtonsoft.Json.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\BLL\obj\Debug\BLL.csproj.CopyComplete
