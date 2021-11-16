@@ -137,14 +137,14 @@
                     <Image
                         Name="BtnMinimize"
                         Style="{StaticResource NavBtnStyle}"
-                        Source="../Assets/icons/icon-minimize.png"
+                        Source="../../Assets/icons/icon-minimize.png"
                         MouseDown="BtnMinimize_OnMouseDown">
                     </Image>
                     
                     <Image
                         Name="BtnClose"
                         Style="{StaticResource NavBtnStyle}"
-                        Source="../Assets/icons/icon-close.png"
+                        Source="../../Assets/icons/icon-close.png"
                         Margin="0 0 5 0"
                         MouseDown="BtnClose_OnMouseDown">
                     </Image>
