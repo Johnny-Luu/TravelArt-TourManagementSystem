@@ -15,7 +15,7 @@
 
 
 
-        <Grid Grid.Column="0" Grid.ColumnSpan="1" Background="Plum" Width="895">
+        <Grid x:Name="GridDestination" Grid.Column="0" Grid.ColumnSpan="1"  Width="895" Margin="0,0,0.2,0">
             <!--
             <Grid.Background >
                 <ImageBrush  Stretch="UniformToFill" />
@@ -73,31 +73,11 @@
                 </TextBlock.RenderTransform>
             </TextBlock>
             <!-- scroll buttons-->
-            <Image x:Name="ImgSlider3"  MouseDown="ImgSlider3_MouseDown"  Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,300,0,0" Width="6" Height="25">
-
-                <Image.Source>
-                    <ImageSource>/GUI;component/Assets/icons/icon-close.png</ImageSource>
-                </Image.Source>
-
-            </Image>
-            <Image x:Name="ImgSlider4"  MouseDown="ImgSlider4_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,400,0,0" RenderTransformOrigin="0.487,-1.145" Width="6" Height="6">
-
-                <Image.Source>
-                    <ImageSource>/GUI;component/Assets/icons/icon-close.png</ImageSource>
-                </Image.Source>
-            </Image>
-            <Image x:Name="ImgSlider1"  MouseDown="ImgSlider1_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0" RenderTransformOrigin="0.487,-1.145" Width="6" Height="6">
-
-                <Image.Source>
-                    <ImageSource>/GUI;component/Assets/icons/icon-close.png</ImageSource>
-                </Image.Source>
-            </Image>
-            <Image x:Name="ImgSlider2"  MouseDown="ImgSlider2_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,200,0,0" Width="6" Height="6.4">
-
-                <Image.Source>
-                    <ImageSource>/GUI;component/Assets/icons/icon-close.png</ImageSource>
-                </Image.Source>
-            </Image>
+            <Ellipse Fill="#FF8800FF" x:Name="ImgSlider3"  MouseDown="ImgSlider3_MouseDown"  Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Margin="0,300,0,0" Width="6" Height="6"/>
+            <Ellipse Fill="#FF8800FF" x:Name="ImgSlider4"  MouseDown="ImgSlider4_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Margin="0,400,0,0"  Width="6" Height="6" />
+            <Ellipse Fill="#FF8800FF" x:Name="ImgSlider1"  MouseDown="ImgSlider1_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Margin="0,100,0,0"  Width="6" Height="6"/>
+            <Ellipse Fill="#FF8800FF" x:Name="ImgSlider2"  MouseDown="ImgSlider2_MouseDown" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Margin="0,200,0,0" Width="6" Height="6"/>
+            <Rectangle Fill="#FF8800FF" Height="300"  RadiusY="0.7" Grid.Row="1" RadiusX="1" Stroke="#FF8800FF" VerticalAlignment="Center" Width="2" Margin="0,0,0,0"/>
 
         </Grid >
 
@@ -114,13 +94,13 @@
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center" Width="385">
-                    
+
 
                     <Label
                         Name="LbInfo"
                         Style="{StaticResource NavItemStyle}"
                         Content="Information"
-                       Width="105" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                       Width="110" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                     </Label>
                     <Label
                         x:Name="LbRating"

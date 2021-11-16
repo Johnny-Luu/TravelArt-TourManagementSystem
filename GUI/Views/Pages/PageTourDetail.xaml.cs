@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Shapes;
 
 namespace GUI.Views.Pages
 {
@@ -9,6 +10,7 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
             ResizeAllSlider();
+    
         }
 
         private void BtnBack_MouseDown(object sender, MouseButtonEventArgs e)
@@ -23,18 +25,19 @@ namespace GUI.Views.Pages
             ResizeSlider(ImgSlider3);
             ResizeSlider(ImgSlider4);
         }
-        private void ResizeSlider(Image img)
+        private void ResizeSlider(Ellipse img)
+        {
+            img.Width = 6;
+            img.Height = 6;
+        }
+        private void ToggleSlider(Ellipse img)
         {
             img.Width = 14;
             img.Height = 14;
         }
-        private void ToggleSlider(Image img)
-        {
-            img.Width = 20;
-            img.Height = 20;
-        }
         #region Slider button
 
+      
         private void ImgSlider4_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             ResizeAllSlider();
