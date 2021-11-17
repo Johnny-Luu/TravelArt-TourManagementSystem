@@ -15,19 +15,9 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.exe.config
 C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.exe
 C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.pdb
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\MainWindow\MainWindow.g.cs
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.g.cs
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.g.cs
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.g.cs
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\App.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_MarkupCompile.cache
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_MarkupCompile.lref
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\MainWindow\MainWindow.baml
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageAdding.baml
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageConfirm.baml
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageStatistic.baml
-C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Pages\PageTour.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.g.resources
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.Properties.Resources.resources
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -82,6 +72,27 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\Pa
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageConfirm.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Models.exe
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Models.pdb
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourControl.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\MainWindow.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAdding.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageConfirm.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\ResourceXAML\MainResource.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourControl.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\MainWindow.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAdding.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageConfirm.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\BLL.exe
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.exe
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\FireSharp.dll
@@ -93,3 +104,14 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.pdb
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.xml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\BLL.exe
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.exe
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\FireSharp.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\BLL.pdb
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.pdb
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml

@@ -26,3 +26,25 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\Newtonsoft.Jso
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Extensions.xml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Primitives.xml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.exe
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\DAL.pdb
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\FireSharp.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Models.exe
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Models.pdb
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\User\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\User\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\User\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.exe
+C:\Users\User\TravelArt-TourManagementSystem\DAL\obj\Debug\DAL.pdb

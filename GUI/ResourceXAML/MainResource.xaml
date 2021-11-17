@@ -37,5 +37,17 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <!--Style for Adding items-->
+    <Style x:Key="AddItemStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="Poppins" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <!--Style of Confirm Button-->
+    <Style x:Key="ConfirmButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="Poppins" />
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
     
 </ResourceDictionary>
