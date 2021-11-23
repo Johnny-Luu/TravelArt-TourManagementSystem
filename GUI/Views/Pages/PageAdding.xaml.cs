@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using GUI.Pages;
 
 namespace GUI.Pages
 {
@@ -7,6 +8,8 @@ namespace GUI.Pages
         public PageAdding()
         {
             InitializeComponent();
+            var destinationOfPageAdding = new PageAddingHotel();
+            FrAddingContainer.Content = destinationOfPageAdding;
         }
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="Views\Pages\PageAdding.xaml.cs">
       <DependentUpon>PageAdding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\PageAddingDestination.xaml.cs">
+      <DependentUpon>PageAddingDestination.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageAddingHotel.xaml.cs">
+      <DependentUpon>PageAddingHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\PageConfirm.xaml.cs">
       <DependentUpon>PageConfirm.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <Compile Include="Views\Pages\PageTour.xaml.cs">
       <DependentUpon>PageTour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageAddingTour.xaml.cs">
+      <DependentUpon>PageAddingTour.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -114,9 +123,12 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\PageAdding.xaml" />
+    <Page Include="Views\Pages\PageAddingDestination.xaml" />
+    <Page Include="Views\Pages\PageAddingHotel.xaml" />
     <Page Include="Views\Pages\PageConfirm.xaml" />
     <Page Include="Views\Pages\PageStatistic.xaml" />
     <Page Include="Views\Pages\PageTour.xaml" />
+    <Page Include="Views\Pages\PageAddingTour.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">
@@ -140,6 +152,37 @@
       <Project>{0b0b5bfb-35e9-4a7f-89ff-1614f500db23}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\images\img-passport.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-air-plane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Assets\images\clipart2575067 (1).png" />
+    <Resource Include="Assets\images\img-camera-vintage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Assets\images\pngaaa.com-18001.png" />
+    <Resource Include="Assets\images\img-hotel-building.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-bag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-taxi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-vali.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-vector-route-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-world-travel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -34,7 +34,7 @@
                 Name="LbDestination"
                 Content="Destination"
                 BorderBrush="White"
-                Margin="30 0 0 0"
+                Margin="25 0 0 0"
                 Style="{StaticResource NavItemStyle}"
                 MouseDown="LbDestination_OnMouseDown">
             </Label>
@@ -51,7 +51,7 @@
                 <Label
                     Content="All"
                     FontWeight="Normal"
-                    Style="{StaticResource NavItemStyle}"
+                    Style="{StaticResource NavTourItemStyle}"
                     FontSize="14"
                     BorderBrush="White">
                 </Label>
@@ -59,7 +59,7 @@
                 <Label
                     Content="Trending"
                     FontWeight="Normal"
-                    Style="{StaticResource NavItemStyle}"
+                    Style="{StaticResource NavTourItemStyle}"
                     FontSize="14"
                     BorderBrush="White">
                 </Label>
@@ -67,7 +67,7 @@
                 <Label
                     Content="On Promotion"
                     FontWeight="Normal"
-                    Style="{StaticResource NavItemStyle}"
+                    Style="{StaticResource NavTourItemStyle}"
                     FontSize="14"
                     BorderBrush="White">
                 </Label>
@@ -75,7 +75,7 @@
                 <Label
                     Content="Abroad"
                     FontWeight="Normal"
-                    Style="{StaticResource NavItemStyle}"
+                    Style="{StaticResource NavTourItemStyle}"
                     FontSize="14"
                     BorderBrush="White">
                 </Label>
@@ -83,7 +83,7 @@
                 <Label
                     Content="Domestic"
                     FontWeight="Normal"
-                    Style="{StaticResource NavItemStyle}"
+                    Style="{StaticResource NavTourItemStyle}"
                     FontSize="14"
                     BorderBrush="White">
                 </Label> 

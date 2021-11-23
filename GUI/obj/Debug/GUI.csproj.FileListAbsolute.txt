@@ -115,3 +115,10 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\DAL.pdb
 C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingDestination.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingDestination.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_Content.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingHotel.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingHotel.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.baml
