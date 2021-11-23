@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace GUI.Pages
+namespace GUI.Views.Pages
 {
     public partial class PageStatistic : Page
     {

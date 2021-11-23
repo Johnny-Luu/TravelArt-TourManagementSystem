@@ -122,3 +122,10 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddin
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingHotel.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingDestination.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingHotel.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI_Content.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingDestination.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingHotel.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTour.baml

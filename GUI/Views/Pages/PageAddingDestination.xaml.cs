@@ -2,9 +2,9 @@
 
 namespace GUI.Views.Pages
 {
-    public partial class PageConfirm : Page
+    public partial class PageAddingDestination : Page
     {
-        public PageConfirm()
+        public PageAddingDestination()
         {
             InitializeComponent();
         }

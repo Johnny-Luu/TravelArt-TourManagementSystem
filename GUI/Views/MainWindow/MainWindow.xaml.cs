@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using GUI.Pages;
+using GUI.Views.Pages;
 using static System.Windows.WindowState;
 
 namespace GUI

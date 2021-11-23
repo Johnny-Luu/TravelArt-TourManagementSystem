@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace GUI.Pages
+namespace GUI.Views.Pages
 {
     public partial class PageTour : Page
     {

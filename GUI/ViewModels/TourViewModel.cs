@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using BLL;
 using GUI.Components;
-using GUI.Pages;
+using GUI.Views.Pages;
 using Models;
 
 namespace GUI.ViewModels

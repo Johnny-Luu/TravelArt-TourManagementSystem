@@ -1,7 +1,8 @@
 ﻿using System.Windows.Controls;
-using GUI.Pages;
+using GUI.Views.Pages;
+using GUI.Views.Pages;
 
-namespace GUI.Pages
+namespace GUI.Views.Pages
 {
     public partial class PageAdding : Page
     {
