@@ -92,14 +92,27 @@
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="#FFFFFF" />
-        <Setter Property="Background" Value="#9129EC" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
     
     <!--Style of textBox-->
     <Style x:Key="TextBoxStyle" TargetType="TextBox">
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Mulish"/>
+    </Style>
+    
+    <!--Style of ComboBoxItem-->
+    <Style x:Key="ComboBoxItemStyle" TargetType="ComboBoxItem">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Mulish"/>
+    </Style>
+    
+    <!--Style of ComboBox-->
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
         <Setter Property="FontFamily" Value="Mulish"/>
     </Style>
     

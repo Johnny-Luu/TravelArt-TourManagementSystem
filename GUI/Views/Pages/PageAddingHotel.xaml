@@ -8,7 +8,7 @@
       Title="PageAddingHotel" 
       Height="720" 
       Width="1280">
-    <Grid>
+     <Grid>
         <Grid.ColumnDefinitions>
                <ColumnDefinition Width="1*"/>
                <ColumnDefinition Width="1*"/>
@@ -84,7 +84,7 @@
                                     Height="150" 
                                     BorderThickness="0"
                                     TextWrapping="Wrap"
-                                    FontSize="14"
+                                    FontSize="20"
                                     FontFamily="Mulish"/>
                         </Border>
                   </StackPanel>

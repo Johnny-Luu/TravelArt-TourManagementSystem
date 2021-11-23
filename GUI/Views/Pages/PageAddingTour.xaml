@@ -124,7 +124,9 @@
                                                 Width="500"
                                                 Height="80"
                                                 BorderThickness="0"
-                                                Style="{StaticResource TextBoxStyle}"/>
+                                                TextWrapping="Wrap"
+                                                FontSize="20"
+                                                FontFamily="Mulish"/>
                                     </Border>
                               </WrapPanel>
                         </Border>
@@ -160,10 +162,17 @@
                               HorizontalAlignment="Center">
                               <ComboBox
                                     Height="50"
-                                    Width="330">
-                                    <ComboBoxItem>ComboBox Item #1</ComboBoxItem>
-                                    <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
-                                    <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+                                    Width="330"
+                                    Style="{StaticResource ComboBoxStyle}">
+                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
+                                          ComboBox Item #1
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
+                                          ComboBox Item #2
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
+                                          ComboBox Item #3
+                                    </ComboBoxItem>
                               </ComboBox>
                         </Border>
                   </WrapPanel>
