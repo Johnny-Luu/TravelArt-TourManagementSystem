@@ -89,13 +89,11 @@
     </Style>
     
     <!--Style of Confirm Button-->
-    <Style x:Key="ConfirmButtonStyle" TargetType="Button">
-        <Setter Property="FontFamily" Value="Mulish" />
-        <Setter Property="FontSize" Value="18" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="#FFFFFF" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
+    <Style x:Key="ConfirmButtonStyle" TargetType="Border">
+        <Setter Property="Width" Value="120" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Background" Value="#9129EC" />
+        <Setter Property="CornerRadius" Value="20" />
         <Setter Property="Cursor" Value="Hand" />
         
         <Style.Triggers>
@@ -103,6 +101,16 @@
                 <Setter Property="Opacity" Value="0.8" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+    
+    <!--Style of Confirm Button Label-->
+    <Style x:Key="ConfirmButtonLabelStyle" TargetType="Label">
+        <Setter Property="Content" Value="Confim" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
     </Style>
     
     <!--Style of textBox-->

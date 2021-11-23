@@ -186,26 +186,19 @@
             
             <!--Confirm Button-->
             <Border Grid.Column="1"
-                    Height="40"
-                    Width="120"
-                    Background="#9129EC"
-                    CornerRadius="20"
+                    Style="{StaticResource ConfirmButtonStyle}"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0 0 60 230">
                   
-                  <Button 
-                        BorderBrush="{x:Null}"
-                        Content="Confirm"
-                        Style="{StaticResource ConfirmButtonStyle}">
-                        <i:Interaction.Triggers>
-                              <i:EventTrigger EventName="Click">
-                                    <i:InvokeCommandAction
-                                          Command="{Binding PushTourCommand}"
-                                          CommandParameter="{Binding ElementName=PgAddingTour}"/>
-                              </i:EventTrigger>
-                        </i:Interaction.Triggers>      
-                  </Button>
+                  <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                              <i:InvokeCommandAction
+                                    Command="{Binding PushTourCommand}"
+                                    CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                        </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                  <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
             
             <!--Image World Travel Circle-->

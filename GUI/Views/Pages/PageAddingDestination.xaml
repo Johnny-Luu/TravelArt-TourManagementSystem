@@ -141,28 +141,11 @@
             
             <!--Confirm Button-->
             <Border Grid.Column="1"
-                    Height="47"
-                    Width="110"
-                    Background="#9129EC"
-                    Opacity="0.8"
-                    CornerRadius="30"
-                    BorderThickness="3"
-                    BorderBrush="Transparent"
+                    Style="{StaticResource ConfirmButtonStyle}"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0 0 110 165">
-                  <Border
-                        CornerRadius="30"
-                        BorderThickness="10"
-                        BorderBrush="Transparent"
-                        Background="#9129EC">
-                        <Button 
-                              BorderBrush="#9129EC"
-                              Background="#9129EC"
-                              Content="Confirm"
-                              OpacityMask="#9129EC"
-                              Style="{StaticResource ConfirmButtonStyle}"/>
-                  </Border>
+                  <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
           
             <!--Image Suitcases-->
