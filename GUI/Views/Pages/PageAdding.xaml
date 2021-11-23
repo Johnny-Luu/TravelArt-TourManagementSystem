@@ -23,23 +23,29 @@
                     
                        <!--Tour Adding item-->
                        <Label
+                             Name="LbTour"
                              BorderBrush="White"
                              Style="{StaticResource NavItemStyle}"
-                             Content="Tour">
+                             Content="Tour"
+                             MouseDown="LbTour_OnMouseDown">
                        </Label>
                     
                        <!--Destination Adding item-->
                        <Label
+                             Name="LbDestination"
                              BorderBrush="White"
                              Style="{StaticResource NavItemStyle}"
-                             Content="Destination">
+                             Content="Destination"
+                             MouseDown="LbDestination_OnMouseDown">
                        </Label>
                     
                        <!--Hotel Adding item-->
                        <Label
+                             Name="LbHotel"
                              BorderBrush="White"
                              Style="{StaticResource NavItemStyle}"
-                             Content="Hotel">
+                             Content="Hotel"
+                             MouseDown="LbHotel_OnMouseDown">
                        </Label>
                  </WrapPanel>
            </Grid>
