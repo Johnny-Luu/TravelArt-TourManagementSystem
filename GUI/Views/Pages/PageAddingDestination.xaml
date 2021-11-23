@@ -7,7 +7,9 @@
       mc:Ignorable="d"
       Title="PageAddingDestination" 
       Height="720" 
-      Width="1280">
+      Width="1280"
+      x:Name="PgAddingDestination"
+      DataContext="{StaticResource AddingDestinationVm}">
     <Grid>
         <Grid.ColumnDefinitions>
                <ColumnDefinition Width="5.3*"/>

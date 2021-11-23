@@ -5,6 +5,7 @@
     <!--View models-->
     <viewModels:TourViewModel x:Key="TourVm"></viewModels:TourViewModel>
     <viewModels:AddingTourViewModel x:Key="AddingTourVm"></viewModels:AddingTourViewModel>
+    <viewModels:AddingDestinationViewModel x:Key="AddingDestinationVm"></viewModels:AddingDestinationViewModel>
     
     <!--Navbar items when clicked-->
     <Style x:Key="NavItemClickedStyle" TargetType="Label">
