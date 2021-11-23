@@ -30,7 +30,7 @@
             </Grid.ColumnDefinitions>
             
             <!--Tour image-->
-            <Border CornerRadius="10">
+            <Border CornerRadius="10" Name="BorderImg">
                 <Border.Background>
                     <ImageBrush
                         ImageSource="../../Assets/images/img-paris.jpg"

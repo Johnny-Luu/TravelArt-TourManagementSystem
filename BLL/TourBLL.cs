@@ -20,5 +20,11 @@ namespace BLL
             _tourDAL = new TourDAL();
             _tourDAL.PushTour(tour);
         }
+
+        public Task<string> InitID()
+        {
+            _tourDAL = new TourDAL();
+            return _tourDAL.InitID();
+        }
     }
 }

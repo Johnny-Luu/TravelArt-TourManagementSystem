@@ -35,5 +35,12 @@ namespace DAL
             _client = new FirebaseClient(config);
             await _client.SetAsync("Tour/" + tour.Id, tour);
         }
+
+        public async Task<string> InitID()
+        {
+            var tourList = await GetAllTour();
+            var id = tourList.Count;
+            return id.ToString();
+        }
     }
 }
