@@ -34,7 +34,13 @@ namespace DAL
         public async Task<string> InitID()
         {
             var destinationList = await GetAllDestination();
-            var id = destinationList.Count;
+            var id = 0;
+
+            if (destinationList != null)
+            {
+                id = destinationList.Count;
+            }
+            
             return id.ToString();
         }
     }

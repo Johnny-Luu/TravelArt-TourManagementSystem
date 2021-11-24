@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
       Title="PageAddingDestination" 
       Height="720" 
@@ -16,6 +17,14 @@
                <ColumnDefinition Width="4.7*"/>
          </Grid.ColumnDefinitions>
            
+          <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                      <i:InvokeCommandAction
+                            Command="{Binding LoadHotelCommand}"
+                            CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                </i:EventTrigger>
+          </i:Interaction.Triggers>
+          
             <!--Destination planning frame-->
             <Border Grid.Column="0"
                     Background="#80ECDABF" 
@@ -34,7 +43,7 @@
                               
                         <!--Destination planning label-->
                         <Label
-                              Content="Destination planning"
+                              Content="Hotel planning"
                               HorizontalAlignment="Left"
                               Style="{StaticResource AddItemStyle}"/>
                               
@@ -44,22 +53,11 @@
                               BorderThickness="4" 
                               BorderBrush="white">
                               <ComboBox
+                                    Name="CbHotelList"
                                     BorderThickness="0"
-                                    Height="60"
+                                    Height="40"
                                     Width="350"
                                     Style="{StaticResource ComboBoxStyle}">
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #1
-                                    </ComboBoxItem>
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #2
-                                    </ComboBoxItem>
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #3
-                                    </ComboBoxItem>
                               </ComboBox>
                         </Border>
                   </StackPanel>
@@ -96,6 +94,7 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
+                                    Name="TbName"
                                     Width="220"
                                     Height="40" 
                                     BorderThickness="0"
@@ -116,6 +115,7 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
+                                    Name="TbDescription"
                                     Width="260"
                                     Height="180" 
                                     BorderThickness="0"
@@ -143,7 +143,17 @@
                         CornerRadius="10" 
                         BorderThickness="4" 
                         BorderBrush="white">
+                        
+                        <i:Interaction.Triggers>
+                              <i:EventTrigger EventName="MouseDown">
+                                    <i:InvokeCommandAction
+                                          Command="{Binding ChooseImageCommand}"
+                                          CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                              </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        
                         <Image
+                              Name="ImgPicture"
                               Style="{StaticResource IconAddStyle}"
                               Stretch="None"
                               HorizontalAlignment="Center"
@@ -158,6 +168,15 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0 0 110 165">
+                  
+                  <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                              <i:InvokeCommandAction
+                                    Command="{Binding PushDestinationCommand}"
+                                    CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                        </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                  
                   <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
           
