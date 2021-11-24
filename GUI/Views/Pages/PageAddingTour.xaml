@@ -137,12 +137,24 @@
                                           BorderBrush="white"
                                           Background="White"
                                           Margin="20 0 ">
+                                          
+                                          <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="MouseDown">
+                                                      <i:InvokeCommandAction
+                                                            Command="{Binding ChooseImageCommand}"
+                                                            CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                                                </i:EventTrigger>
+                                          </i:Interaction.Triggers>
+                                          
                                           <Image
+                                                Name="ImgPicture"
                                                 Style="{StaticResource IconAddStyle}"
                                                 Stretch="None"
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
-                                                Source="../../Assets/images/img-add-icon.png"/>
+                                                Source="../../Assets/images/img-add-icon.png">
+                                                
+                                          </Image>
                                     </Border>
                               </WrapPanel>
                         </Border>

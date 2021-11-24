@@ -14,6 +14,13 @@
       DataContext="{StaticResource TourVm}">
     
     <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction
+                    Command="{Binding LoadTourCommand}"
+                    CommandParameter="{Binding ElementName=PgTour}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="9*"/>
@@ -93,13 +100,6 @@
             <ScrollViewer
                 Grid.Column="1"
                 VerticalScrollBarVisibility="Hidden">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="Loaded">
-                        <i:InvokeCommandAction
-                            Command="{Binding LoadTourCommand}"
-                            CommandParameter="{Binding ElementName=PgTour}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
                 
                 <WrapPanel Name="WpTour" />
             
