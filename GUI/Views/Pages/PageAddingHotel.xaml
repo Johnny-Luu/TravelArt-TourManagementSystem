@@ -31,19 +31,6 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                         
-                        <!--Picture Button-->
-                        <Button 
-                              BorderBrush="Transparent"
-                              Background="Transparent"
-                              HorizontalAlignment="Left"
-                              Style="{StaticResource PictureButtonStyle}"
-                              Margin="0 25">
-                              <StackPanel Orientation="Horizontal">     
-                                    <Image Source=" "/>  
-                                    <TextBlock Margin="5,0">Picture</TextBlock>  
-                              </StackPanel>  
-                        </Button>
-                        
                         <!--Hotel Name label-->
                         <Label
                               Content="Hotel Name"
@@ -58,21 +45,21 @@
                               HorizontalAlignment="Left"
                               VerticalAlignment="Top">
                               <TextBox
-                                    Width="350"
-                                    Height="50" 
+                                    Width="400"
+                                    Height="40" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
                         
-                        <!--Short Description label-->
+                        <!--Price (per night) label-->
                         <Label
-                              Content="Short description"
+                              Content="Price (per night)"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom"
                               Margin="0 25 0 0"/>
                         
-                        <!--Short Description textBox-->
+                        <!--Price textBox-->
                         <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
@@ -80,8 +67,8 @@
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom">
                               <TextBox
-                                    Width="350"
-                                    Height="150" 
+                                    Width="400"
+                                    Height="40" 
                                     BorderThickness="0"
                                     TextWrapping="Wrap"
                                     FontSize="20"
@@ -162,12 +149,12 @@
           
           <!--Image Taxi-->
           <Image 
-                Height="320"
-                Width="290"
+                Height="400"
+                Width="350"
                 Source="../../Assets/images/img-taxi.png"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                Margin="50 -45"/>
+                Margin="50 -70"/>
           
           <!--Image Bag-->
           <Image Grid.Column="1" 

@@ -65,13 +65,13 @@
                   </StackPanel>
             </Border>
 
-            <!--Picture button- Destination name - Short description-->
+            <!--Destination name - Description - Picture-->
             <Border Grid.Column="1"
                     Background="#986F8875" 
                     CornerRadius="30" 
                     BorderThickness="1" 
                     BorderBrush="#986F8875"
-                    Width="450"
+                    Width="500"
                     Height="480"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
@@ -79,22 +79,9 @@
                   
                   <StackPanel 
                         Orientation="Vertical"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
-                        
-                        <!--Picture Button-->
-                        <Button 
-                              BorderBrush="Transparent"
-                              Background="Transparent"
-                              HorizontalAlignment="Left"
-                              Style="{StaticResource PictureButtonStyle}"
-                              Margin="0 20">
-                              
-                              <StackPanel Orientation="Horizontal">     
-                                    <Image Source=" "/>  
-                                    <TextBlock Margin="5,0">Picture</TextBlock>  
-                              </StackPanel>  
-                        </Button>
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="20 0">
                         
                         <!--Destination Name label-->
                         <Label
@@ -109,28 +96,28 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
-                                    Width="350"
-                                    Height="50" 
+                                    Width="220"
+                                    Height="40" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
                         
-                        <!--Short Description label-->
+                        <!--Description label-->
                         <Label
-                              Content="Short description"
+                              Content="Description"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               Margin="0 20 0 0"/>
                         
-                        <!--Short Description textBox-->
+                        <!--Description textBox-->
                         <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
-                                    Width="350"
-                                    Height="170" 
+                                    Width="260"
+                                    Height="180" 
                                     BorderThickness="0"
                                     TextWrapping="Wrap"
                                     FontSize="20"
@@ -138,6 +125,36 @@
                         </Border>
                   </StackPanel>
             </Border>
+            
+            <StackPanel Grid.Column="1" 
+                        Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="240 0 0 105">
+                  <!--Picture label-->
+                  <Label 
+                        Content="Picture"
+                        Style="{StaticResource AddItemStyle}"/>
+                  <!--Picture TextBlock-->
+                  <Border
+                        CornerRadius="10" 
+                        BorderThickness="4" 
+                        BorderBrush="white">
+                        <TextBlock Width="160"
+                                   Height="180"
+                                   Background="White">
+                              <!--Img AddPicture-->
+                              <Image
+                                    Height="30"
+                                    Width="30"
+                                    Stretch="Uniform"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Margin="65 75 0 0 "
+                                    Source="../../Assets/images/img-add-icon.png"/>
+                        </TextBlock>
+                  </Border>
+            </StackPanel>
             
             <!--Confirm Button-->
             <Border Grid.Column="1"
@@ -160,12 +177,12 @@
             <!--Image Air Plane-->
             <Image Grid.Column="1" 
                         Height="150"
-                        Width="220"
+                        Width="300"
                         Source="../../Assets/images/img-air-plane.png"
                         Stretch="Uniform"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
-                        Margin="0 0 90 0"/>
+                        Margin="0 -25 30  0"/>
             
             <!--Image Camera-->
             <Image Grid.Column="1" 
