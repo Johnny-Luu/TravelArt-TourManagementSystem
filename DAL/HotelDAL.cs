@@ -1,50 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows;
+using DTO;
 using FireSharp;
-using FireSharp.Config;
-using FireSharp.Extensions;
-using Models;
-using Newtonsoft.Json;
 
 namespace DAL
 {
-    public class TourDAL
+    public class HotelDAL
     {
         private DbUtils _db;
         private FirebaseClient _client;
 
-        public async Task<List<TourModel>> GetAllTour()
+        public async Task<List<HotelModel>> GetAllHotel()
         {
             _db = new DbUtils();
             var config = _db.CreateConnection();
             _client = new FirebaseClient(config);
             
-            var result = await _client.GetAsync("Tour");
-            var data = result.ResultAs<List<TourModel>>();
+            var result = await _client.GetAsync("Hotel");
+            var data = result.ResultAs<List<HotelModel>>();
 
             return data;
         }
         
-        public async void PushTour(TourModel tour)
+        public async void PushHotel(HotelModel hotel)
         {
             _db = new DbUtils();
             var config = _db.CreateConnection();
             _client = new FirebaseClient(config);
-            await _client.SetAsync("Tour/" + tour.Id, tour);
+            await _client.SetAsync("Hotel/" + hotel.Id, hotel);
         }
-
+        
         public async Task<string> InitID()
         {
-            var tourList = await GetAllTour();
+            var hotelList = await GetAllHotel();
             var id = 0;
             
-            if (tourList != null)
+            if (hotelList != null)
             {
-                id = tourList.Count;
+                id = hotelList.Count;
             }
+            
             return id.ToString();
         }
     }

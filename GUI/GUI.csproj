@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModels\AddingDestinationViewModel.cs" />
+    <Compile Include="ViewModels\AddingHotelViewModel.cs" />
     <Compile Include="ViewModels\AddingTourViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />

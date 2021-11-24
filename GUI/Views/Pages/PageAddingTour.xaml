@@ -152,9 +152,7 @@
                                                 Stretch="None"
                                                 VerticalAlignment="Center"
                                                 HorizontalAlignment="Center"
-                                                Source="../../Assets/images/img-add-icon.png">
-                                                
-                                          </Image>
+                                                Source="../../Assets/images/img-add-icon.png" />
                                     </Border>
                               </WrapPanel>
                         </Border>
