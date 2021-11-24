@@ -137,22 +137,18 @@
                         Style="{StaticResource AddItemStyle}"/>
                   <!--Picture TextBlock-->
                   <Border
+                        Height="190"
+                        Width="190"
+                        Background="White"
                         CornerRadius="10" 
                         BorderThickness="4" 
                         BorderBrush="white">
-                        <TextBlock Width="160"
-                                   Height="180"
-                                   Background="White">
-                              <!--Img AddPicture-->
-                              <Image
-                                    Height="30"
-                                    Width="30"
-                                    Stretch="Uniform"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Margin="65 75 0 0 "
-                                    Source="../../Assets/images/img-add-icon.png"/>
-                        </TextBlock>
+                        <Image
+                              Style="{StaticResource IconAddStyle}"
+                              Stretch="None"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Source="../../Assets/images/img-add-icon.png"/>
                   </Border>
             </StackPanel>
             
