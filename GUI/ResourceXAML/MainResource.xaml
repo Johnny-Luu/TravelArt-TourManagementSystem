@@ -6,6 +6,7 @@
     <viewModels:TourViewModel x:Key="TourVm"></viewModels:TourViewModel>
     <viewModels:AddingTourViewModel x:Key="AddingTourVm"></viewModels:AddingTourViewModel>
     <viewModels:AddingDestinationViewModel x:Key="AddingDestinationVm"></viewModels:AddingDestinationViewModel>
+    <viewModels:AddingHotelViewModel x:Key="AddingHotelVm"></viewModels:AddingHotelViewModel>
     
     <!--Navbar items when clicked-->
     <Style x:Key="NavItemClickedStyle" TargetType="Label">
@@ -133,4 +134,13 @@
         <Setter Property="FontFamily" Value="Mulish"/>
     </Style>
     
+    <!--Style of IconAdd Image-->
+    <Style x:Key="IconAddStyle" TargetType="Image">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.6" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

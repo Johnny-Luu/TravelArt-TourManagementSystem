@@ -31,8 +31,8 @@
                   
                   <Grid>
                         <Grid.RowDefinitions>
-                              <RowDefinition Height="6.5*"/>
-                              <RowDefinition Height="3.5*"/>
+                              <RowDefinition Height="5.5*"/>
+                              <RowDefinition Height="4.5*"/>
                         </Grid.RowDefinitions>
                         
                         <Grid>
@@ -74,6 +74,7 @@
                                           <!--Price label-->
                                           <Label
                                                 Content="Price"
+                                                Margin=" 0 20 0 0 "
                                                 Style="{StaticResource AddItemStyle}"/>
                                           
                                           <!--Price textBox-->
@@ -88,28 +89,14 @@
                                                       BorderThickness="0"
                                                       Style="{StaticResource TextBoxStyle}"/>
                                           </Border>
-                                          
-                                          <!--Picture Button-->
-                                          <Button 
-                                                BorderBrush="Transparent"
-                                                Background="Transparent"
-                                                HorizontalAlignment="Left"
-                                                VerticalAlignment="Bottom"
-                                                Margin="0 22 "
-                                                Style="{StaticResource PictureButtonStyle}">
-                              
-                                                <StackPanel Orientation="Horizontal">     
-                                                      <Image Source=" "/>  
-                                                      <TextBlock Margin="5,0">Picture</TextBlock>  
-                                                </StackPanel>  
-                                          </Button>
                                     </WrapPanel>
                               </Border>
                         </Grid>
                   
-                        <!--Short Destination of TourAdding-->
+                        <!--Short Description of TourAdding-->
                         <Border Grid.Row="1">
                               <WrapPanel
+                                    Orientation="Vertical"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top"
                                     Margin="40 0 0 0">
@@ -127,12 +114,45 @@
                                           Background="White">
                                           <TextBox
                                                 Name="TbShortDescription"
-                                                Width="500"
-                                                Height="80"
+                                                Width="330"
+                                                Height="150"
                                                 BorderThickness="0"
                                                 TextWrapping="Wrap"
                                                 FontSize="20"
                                                 FontFamily="Mulish"/>
+                                    </Border>
+                                    
+                                    <!--Picture label-->
+                                    <Label 
+                                          Content="Picture"
+                                          Margin="20 0 0 0"
+                                          Style="{StaticResource AddItemStyle}"/>
+                                    
+                                    <!--Picture textBlock-->
+                                    <Border
+                                          Height="160"
+                                          Width="200"
+                                          CornerRadius="10" 
+                                          BorderThickness="4" 
+                                          BorderBrush="white"
+                                          Background="White"
+                                          Margin="20 0 ">
+                                          
+                                          <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="MouseDown">
+                                                      <i:InvokeCommandAction
+                                                            Command="{Binding ChooseImageCommand}"
+                                                            CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                                                </i:EventTrigger>
+                                          </i:Interaction.Triggers>
+                                          
+                                          <Image
+                                                Name="ImgPicture"
+                                                Style="{StaticResource IconAddStyle}"
+                                                Stretch="None"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Source="../../Assets/images/img-add-icon.png" />
                                     </Border>
                               </WrapPanel>
                         </Border>

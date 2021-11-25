@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
       Title="PageAddingDestination" 
       Height="720" 
@@ -16,6 +17,14 @@
                <ColumnDefinition Width="4.7*"/>
          </Grid.ColumnDefinitions>
            
+          <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                      <i:InvokeCommandAction
+                            Command="{Binding LoadHotelCommand}"
+                            CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                </i:EventTrigger>
+          </i:Interaction.Triggers>
+          
             <!--Destination planning frame-->
             <Border Grid.Column="0"
                     Background="#80ECDABF" 
@@ -34,7 +43,7 @@
                               
                         <!--Destination planning label-->
                         <Label
-                              Content="Destination planning"
+                              Content="Hotel planning"
                               HorizontalAlignment="Left"
                               Style="{StaticResource AddItemStyle}"/>
                               
@@ -44,34 +53,23 @@
                               BorderThickness="4" 
                               BorderBrush="white">
                               <ComboBox
+                                    Name="CbHotelList"
                                     BorderThickness="0"
-                                    Height="60"
+                                    Height="40"
                                     Width="350"
                                     Style="{StaticResource ComboBoxStyle}">
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #1
-                                    </ComboBoxItem>
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #2
-                                    </ComboBoxItem>
-                                    <ComboBoxItem
-                                          Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #3
-                                    </ComboBoxItem>
                               </ComboBox>
                         </Border>
                   </StackPanel>
             </Border>
 
-            <!--Picture button- Destination name - Short description-->
+            <!--Destination name - Description - Picture-->
             <Border Grid.Column="1"
                     Background="#986F8875" 
                     CornerRadius="30" 
                     BorderThickness="1" 
                     BorderBrush="#986F8875"
-                    Width="450"
+                    Width="500"
                     Height="480"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
@@ -79,22 +77,9 @@
                   
                   <StackPanel 
                         Orientation="Vertical"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
-                        
-                        <!--Picture Button-->
-                        <Button 
-                              BorderBrush="Transparent"
-                              Background="Transparent"
-                              HorizontalAlignment="Left"
-                              Style="{StaticResource PictureButtonStyle}"
-                              Margin="0 20">
-                              
-                              <StackPanel Orientation="Horizontal">     
-                                    <Image Source=" "/>  
-                                    <TextBlock Margin="5,0">Picture</TextBlock>  
-                              </StackPanel>  
-                        </Button>
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Margin="20 0">
                         
                         <!--Destination Name label-->
                         <Label
@@ -109,28 +94,30 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
-                                    Width="350"
-                                    Height="50" 
+                                    Name="TbName"
+                                    Width="220"
+                                    Height="40" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
                         
-                        <!--Short Description label-->
+                        <!--Description label-->
                         <Label
-                              Content="Short description"
+                              Content="Description"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               Margin="0 20 0 0"/>
                         
-                        <!--Short Description textBox-->
+                        <!--Description textBox-->
                         <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
-                                    Width="350"
-                                    Height="170" 
+                                    Name="TbDescription"
+                                    Width="260"
+                                    Height="180" 
                                     BorderThickness="0"
                                     TextWrapping="Wrap"
                                     FontSize="20"
@@ -139,12 +126,57 @@
                   </StackPanel>
             </Border>
             
+            <StackPanel Grid.Column="1" 
+                        Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="240 0 0 105">
+                  <!--Picture label-->
+                  <Label 
+                        Content="Picture"
+                        Style="{StaticResource AddItemStyle}"/>
+                  <!--Picture TextBlock-->
+                  <Border
+                        Height="190"
+                        Width="190"
+                        Background="White"
+                        CornerRadius="10" 
+                        BorderThickness="4" 
+                        BorderBrush="white">
+                        
+                        <i:Interaction.Triggers>
+                              <i:EventTrigger EventName="MouseDown">
+                                    <i:InvokeCommandAction
+                                          Command="{Binding ChooseImageCommand}"
+                                          CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                              </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        
+                        <Image
+                              Name="ImgPicture"
+                              Style="{StaticResource IconAddStyle}"
+                              Stretch="None"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Source="../../Assets/images/img-add-icon.png"/>
+                  </Border>
+            </StackPanel>
+            
             <!--Confirm Button-->
             <Border Grid.Column="1"
                     Style="{StaticResource ConfirmButtonStyle}"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0 0 110 165">
+                  
+                  <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                              <i:InvokeCommandAction
+                                    Command="{Binding PushDestinationCommand}"
+                                    CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                        </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                  
                   <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
           
@@ -160,12 +192,12 @@
             <!--Image Air Plane-->
             <Image Grid.Column="1" 
                         Height="150"
-                        Width="220"
+                        Width="300"
                         Source="../../Assets/images/img-air-plane.png"
                         Stretch="Uniform"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Right"
-                        Margin="0 0 90 0"/>
+                        Margin="0 -25 30  0"/>
             
             <!--Image Camera-->
             <Image Grid.Column="1" 

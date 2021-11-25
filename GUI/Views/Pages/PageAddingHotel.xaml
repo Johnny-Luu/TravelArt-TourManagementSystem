@@ -4,10 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
       Title="PageAddingHotel" 
       Height="720" 
-      Width="1280">
+      Width="1280"
+      x:Name="PgAddingHotel"
+      DataContext="{StaticResource AddingHotelVm}">
      <Grid>
         <Grid.ColumnDefinitions>
                <ColumnDefinition Width="1*"/>
@@ -31,19 +34,6 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                         
-                        <!--Picture Button-->
-                        <Button 
-                              BorderBrush="Transparent"
-                              Background="Transparent"
-                              HorizontalAlignment="Left"
-                              Style="{StaticResource PictureButtonStyle}"
-                              Margin="0 25">
-                              <StackPanel Orientation="Horizontal">     
-                                    <Image Source=" "/>  
-                                    <TextBlock Margin="5,0">Picture</TextBlock>  
-                              </StackPanel>  
-                        </Button>
-                        
                         <!--Hotel Name label-->
                         <Label
                               Content="Hotel Name"
@@ -58,21 +48,22 @@
                               HorizontalAlignment="Left"
                               VerticalAlignment="Top">
                               <TextBox
-                                    Width="350"
-                                    Height="50" 
+                                    Name="TbName"
+                                    Width="400"
+                                    Height="40" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
                         
-                        <!--Short Description label-->
+                        <!--Price (per night) label-->
                         <Label
-                              Content="Short description"
+                              Content="Price (per night)"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom"
                               Margin="0 25 0 0"/>
                         
-                        <!--Short Description textBox-->
+                        <!--Price textBox-->
                         <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
@@ -80,12 +71,11 @@
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom">
                               <TextBox
-                                    Width="350"
-                                    Height="150" 
+                                    Name="TbPrice"
+                                    Width="400"
+                                    Height="40" 
                                     BorderThickness="0"
-                                    TextWrapping="Wrap"
-                                    FontSize="20"
-                                    FontFamily="Mulish"/>
+                                    Style="{StaticResource TextBoxStyle}"/>
                         </Border>
                   </StackPanel>
             </Border>
@@ -122,6 +112,7 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
+                                    Name="TbAddress"
                                     Width="300"
                                     Height="50" 
                                     BorderThickness="0"
@@ -142,6 +133,7 @@
                               BorderBrush="white"
                               HorizontalAlignment="Left">
                               <TextBox
+                                    Name="TbPhone"
                                     Width="300"
                                     Height="50" 
                                     BorderThickness="0"
@@ -157,17 +149,26 @@
                   HorizontalAlignment="Right"
                   VerticalAlignment="Bottom"
                   Margin="0 0 40 155">
+                
+                <i:Interaction.Triggers>
+                      <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
+                                  Command="{Binding PushHotelCommand}"
+                                  CommandParameter="{Binding ElementName=PgAddingHotel}"/>
+                      </i:EventTrigger>
+                </i:Interaction.Triggers>
+                
                 <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
           
           <!--Image Taxi-->
           <Image 
-                Height="320"
-                Width="290"
+                Height="400"
+                Width="350"
                 Source="../../Assets/images/img-taxi.png"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                Margin="50 -45"/>
+                Margin="50 -70"/>
           
           <!--Image Bag-->
           <Image Grid.Column="1" 
