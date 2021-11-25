@@ -34,8 +34,8 @@ namespace GUI
             LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
            //FrContainer.Content = new PageStatistic();
             // FrContainer.Content = new PageTourDetail();
-            FrContainer.Width = 350;
-            FrContainer.Height = 150;
+            //FrContainer.Width = 350;
+            //FrContainer.Height = 150;
             FrContainer.Content = new TourRating();
         }
 
