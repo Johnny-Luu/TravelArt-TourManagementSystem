@@ -165,3 +165,13 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Co
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml

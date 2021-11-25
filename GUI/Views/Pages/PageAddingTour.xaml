@@ -16,6 +16,14 @@
                <ColumnDefinition Width="6*"/>
                <ColumnDefinition Width="4*"/>
          </Grid.ColumnDefinitions>
+         
+         <i:Interaction.Triggers>
+               <i:EventTrigger EventName="Loaded">
+                     <i:InvokeCommandAction
+                           Command="{Binding LoadDestinationCommand}"
+                           CommandParameter="{Binding ElementName=PgAddingTour}"/>
+               </i:EventTrigger>
+         </i:Interaction.Triggers>
            
             <!--About TourAdding-->
             <Border Grid.Column="0"
@@ -169,39 +177,68 @@
                     Height="500"
                     Margin="0 15 50 0"
                     VerticalAlignment="Top">
-                  <WrapPanel Orientation="Vertical"
+                  <Grid>
+                        <WrapPanel Orientation="Vertical"
                              VerticalAlignment="Top"
                              HorizontalAlignment="Center"
                              Margin="25">
                               
-                        <!--Destination planning label-->
-                        <Label
-                              Content="Destination planning"
-                              Style="{StaticResource AddItemStyle}"/>
+                              <!--Destination planning label-->
+                              <Label
+                                    Content="Destination planning"
+                                    Style="{StaticResource AddItemStyle}"/>
                               
-                        <!--Destination planning ComboBox-->
-                        <Border 
+                              <!--Destination planning ComboBox-->
+                              <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               VerticalAlignment="Center"
                               HorizontalAlignment="Center">
                               <ComboBox
+                                    Name="CbDestinationPlanning"
                                     Height="50"
                                     Width="330"
                                     Style="{StaticResource ComboBoxStyle}">
-                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #1
-                                    </ComboBoxItem>
-                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #2
-                                    </ComboBoxItem>
-                                    <ComboBoxItem Style="{StaticResource ComboBoxItemStyle}">
-                                          ComboBox Item #3
-                                    </ComboBoxItem>
+                                    <i:Interaction.Triggers>
+                                          <i:EventTrigger EventName="SelectionChanged">
+                                                <i:InvokeCommandAction
+                                                      Command="{Binding DestinationChooseCommand}"
+                                                      CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                                          </i:EventTrigger>
+                                    </i:Interaction.Triggers>
                               </ComboBox>
                         </Border>
-                  </WrapPanel>
+                        
+                              <!--Destination planning list-->
+                              <ScrollViewer 
+                                    Width="400" 
+                                    Height="350" 
+                                    VerticalScrollBarVisibility="Hidden">
+                                    <WrapPanel 
+                                          Name="WpDestinationChoose"
+                                          Margin="0 20 0 0"/>
+                              </ScrollViewer>
+                        </WrapPanel>
+                        
+                        <!--Clear button-->
+                        <Image
+                              Width="20"
+                              Height="20"
+                              Style="{StaticResource IconClearStyle}"
+                              VerticalAlignment="Top"
+                              HorizontalAlignment="Right"
+                              Margin="0 30 60 0"
+                              Source="../../Assets/icons/icon-clear.png">
+                              <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="MouseDown">
+                                          <i:InvokeCommandAction
+                                                Command="{Binding ClearCommand}"
+                                                CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                                    </i:EventTrigger>
+                              </i:Interaction.Triggers>
+                        </Image>
+                  </Grid>
             </Border>
             
             <!--Confirm Button-->

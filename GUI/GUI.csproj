@@ -72,6 +72,9 @@
     <Compile Include="Views\Components\Comment.xaml.cs">
       <DependentUpon>Comment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\DestinationChooseItem.xaml.cs">
+      <DependentUpon>DestinationChooseItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\PlanButton.xaml.cs">
       <DependentUpon>PlanButton.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,7 @@
   <ItemGroup>
     <Page Include="ResourceXAML\MainResource.xaml" />
     <Page Include="Views\Components\Comment.xaml" />
+    <Page Include="Views\Components\DestinationChooseItem.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
     <Page Include="Views\Components\TourRating.xaml" />
@@ -178,6 +182,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\images\img-air-plane.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\icon-clear.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="Assets\images\clipart2575067 (1).png" />

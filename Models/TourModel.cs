@@ -13,7 +13,8 @@ namespace Models
         private int _currentTour = 0;
         private double _rating = 0;
         private int _status = 1;        // 0 - not available, 1 - available
-        
+        private string _destinationIds = "";
+
         public string Id
         {
             get => _id;
@@ -68,9 +69,16 @@ namespace Models
             set => _status = value;
         }
 
+        public string DestinationIds
+        {
+            get => _destinationIds;
+            set => _destinationIds = value;
+        }
+
+
         public TourModel() { }
 
-        public TourModel(string id, string img ,string name, string description, string price, int currentComment, int currentTour, double rating, int status)
+        public TourModel(string id, string img ,string name, string description, string price, int currentComment, int currentTour, double rating, int status, string destinationIds)
         {
             _id = id;
             _img = img;
@@ -81,6 +89,7 @@ namespace Models
             _currentTour = currentTour;
             _rating = rating;
             _status = status;
+            _destinationIds = destinationIds;
         }
     }
 }
