@@ -68,8 +68,17 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\TourViewModel.cs" />
+    <Compile Include="Views\Components\Comment.xaml.cs">
+      <DependentUpon>Comment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\PlanButton.xaml.cs">
+      <DependentUpon>PlanButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\TourControl.xaml.cs">
       <DependentUpon>TourControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\TourRating.xaml.cs">
+      <DependentUpon>TourRating.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,6 +103,9 @@
     </Compile>
     <Compile Include="Views\Pages\PageAddingTour.xaml.cs">
       <DependentUpon>PageAddingTour.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageTourDetail.xaml.cs">
+      <DependentUpon>PageTourDetail.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +133,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="ResourceXAML\MainResource.xaml" />
+    <Page Include="Views\Components\Comment.xaml" />
+    <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
+    <Page Include="Views\Components\TourRating.xaml" />
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +147,7 @@
     <Page Include="Views\Pages\PageStatistic.xaml" />
     <Page Include="Views\Pages\PageTour.xaml" />
     <Page Include="Views\Pages\PageAddingTour.xaml" />
+    <Page Include="Views\Pages\PageTourDetail.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">
