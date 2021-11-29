@@ -9,16 +9,21 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
             InitChartFrame(5,2,6,1,20);
-            InitCommentFrame();
+            InitCommentPanel();
         }
 
         public void InitChartFrame(int r1, int r2, int r3, int r4, int r5)
         {
             FrChart.Content = new TourRating(r1,r2,r3,r4,r5);
         }
-        public void InitCommentFrame()
+
+        public void InitCommentPanel()
         {
-            FrCmt.Content = new ListComment();
+            Comment item = new Comment();
+           // FrCmt.Content = new ListComment();
+           WpListCmt.Children.Add(item);
+           Comment item2 = new Comment();
+           WpListCmt.Children.Add(item2);
         }
     }
 }
