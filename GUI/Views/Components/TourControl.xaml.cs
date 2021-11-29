@@ -1,4 +1,6 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Input;
+using GUI.Views.Pages;
 
 namespace GUI.Components
 {
@@ -8,5 +10,7 @@ namespace GUI.Components
         {
             InitializeComponent();
         }
+
+      
     }
 }
