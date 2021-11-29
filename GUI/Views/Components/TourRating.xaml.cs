@@ -7,11 +7,10 @@ namespace GUI.Views.Components
 {
     public partial class TourRating : UserControl
     {
-        public TourRating(int r1, int r2, int r3, int r4, int r5)
+        public TourRating()
         {
-           
+
             InitializeComponent();
-            RatingChartInit(r1,r2,r3,r4,r5);
         }
 
  

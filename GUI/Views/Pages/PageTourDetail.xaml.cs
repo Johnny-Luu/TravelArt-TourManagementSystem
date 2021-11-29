@@ -8,7 +8,7 @@ namespace GUI.Views.Pages
         public PageTourDetail()
         {
             InitializeComponent();
-            FrContainer.Content = new PageTourDetail_Rating();
+           
 
         }
 
@@ -17,6 +17,21 @@ namespace GUI.Views.Pages
             throw new System.NotImplementedException();
         }
 
+
+        private void LbInfo_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            FrContainer.Content = new PageTourDetail_Info();
+        }
+
+        private void LbRating_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+            FrContainer.Content = new PageTourDetail_Rating();
+        }
         
+        private void LbPlan_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            FrContainer.Content = new PageTourDetail_Plan();
+        }
     }
 }

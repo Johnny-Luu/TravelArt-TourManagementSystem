@@ -117,8 +117,8 @@
     <Compile Include="Views\Pages\PageTourDetail_Rating.xaml.cs">
       <DependentUpon>PageTourDetail_Rating.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\PapeTourDetail_Info.xaml.cs">
-      <DependentUpon>PapeTourDetail_Info.xaml</DependentUpon>
+    <Compile Include="Views\Pages\PageTourDetail_Info.xaml.cs">
+      <DependentUpon>PageTourDetail_Info.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +164,7 @@
     <Page Include="Views\Pages\PageTourDetail.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Plan.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
-    <Page Include="Views\Pages\PapeTourDetail_Info.xaml" />
+    <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">

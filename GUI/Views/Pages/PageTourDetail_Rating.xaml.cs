@@ -8,22 +8,34 @@ namespace GUI.Views.Pages
         public PageTourDetail_Rating()
         {
             InitializeComponent();
-            InitChartFrame(5,2,6,1,20);
+            InitChartFrame();
             InitCommentPanel();
         }
 
-        public void InitChartFrame(int r1, int r2, int r3, int r4, int r5)
+        public void InitChartFrame()
         {
-            FrChart.Content = new TourRating(r1,r2,r3,r4,r5);
+            TourRating chart = new TourRating();
+            FrChart.Content = chart;
+            
+            chart.RatingChartInit(2,1,2,1,2);
         }
 
         public void InitCommentPanel()
-        {
-            Comment item = new Comment();
-           // FrCmt.Content = new ListComment();
-           WpListCmt.Children.Add(item);
-           Comment item2 = new Comment();
-           WpListCmt.Children.Add(item2);
+        { 
+            var item = new Comment(); 
+            WpListCmt.Children.Add(item);
+            
+            var item2 = new Comment();
+            WpListCmt.Children.Add(item2);
+            
+            var item3 = new Comment();
+            WpListCmt.Children.Add(item3);
+            
+            var item4 = new Comment();
+            WpListCmt.Children.Add(item4);
+            
+            var item5 = new Comment();
+            WpListCmt.Children.Add(item5);
         }
     }
 }

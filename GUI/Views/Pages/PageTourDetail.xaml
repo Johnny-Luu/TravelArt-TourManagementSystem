@@ -58,7 +58,6 @@
                 Width="839" Height="99"
                 Margin="26,14.4,69.4,-111"
                 TextWrapping="Wrap"
-                Text="Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo "
                 FontFamily="Poppins" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" RenderTransformOrigin="0.498,0.476" FontSize="18" Grid.ColumnSpan="2"
@@ -70,9 +69,10 @@
                         <RotateTransform/>
                         <TranslateTransform X="-0.752"/>
                     </TransformGroup>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-          
+                </TextBlock.RenderTransform><Run Text="Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo "/><InlineUIContainer>
+                    <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+                </InlineUIContainer></TextBlock>
+
 
         </Grid >
 
@@ -92,19 +92,22 @@
 
 
                     <Label
+                        MouseDown="LbInfo_MouseDown"
                         Name="LbInfo"
                         Style="{StaticResource NavItemStyle}"
                         Content="Information"
                        Width="110" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                     </Label>
                     <Label
+                        MouseDown="LbRating_MouseDown"
                         x:Name="LbRating"
                         Style="{StaticResource NavItemStyle}"
                         Content="Rating"
                         FontSize="18" Margin="20,0" Width="90" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
 
-                    <Label
+                    <Label 
+                        MouseDown="LbPlan_MouseDown"
                         Name="LbPlan"
                         Style="{StaticResource NavItemStyle}"
                         Content="Plan"

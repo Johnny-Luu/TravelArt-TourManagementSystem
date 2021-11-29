@@ -2,9 +2,9 @@
 
 namespace GUI.Views.Pages
 {
-    public partial class PapeTourDetail_Info : Page
+    public partial class PageTourDetail_Info : Page
     {
-        public PapeTourDetail_Info()
+        public PageTourDetail_Info()
         {
             InitializeComponent();
         }
