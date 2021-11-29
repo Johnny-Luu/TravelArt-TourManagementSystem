@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using GUI.Views.Components;
+using GUI.Views.MainWindow;
 using GUI.Views.Pages;
 using static System.Windows.WindowState;
 
@@ -34,9 +35,9 @@ namespace GUI
             LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
            //FrContainer.Content = new PageStatistic();
             // FrContainer.Content = new PageTourDetail();
-            //FrContainer.Width = 350;
-           // FrContainer.Height = 150;
-            FrContainer.Content = new PageTourDetail();
+        
+            TourDetailWindow w2 = new TourDetailWindow();
+            w2.Show();
         }
 
         private void LbConfirm_OnMouseDown(object sender, MouseButtonEventArgs e)

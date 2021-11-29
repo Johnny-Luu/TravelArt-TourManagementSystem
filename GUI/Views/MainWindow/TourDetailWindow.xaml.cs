@@ -1,20 +1,20 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
 using System.Windows.Input;
+using GUI.Views.Pages;
 
-namespace GUI.Views.Pages
+namespace GUI.Views.MainWindow
+
 {
-    public partial class PageTourDetail : Page
+    public partial class TourDetailWindow : Window
     {
-        public PageTourDetail()
+        public TourDetailWindow()
         {
             InitializeComponent();
-           
-
+            FrContainer.Content = new PageTourDetail_Info();
         }
-
         private void BtnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.Close();
         }
 
 

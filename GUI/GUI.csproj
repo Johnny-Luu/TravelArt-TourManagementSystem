@@ -88,6 +88,9 @@
     <Compile Include="Views\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainWindow\TourDetailWindow.xaml.cs">
+      <DependentUpon>TourDetailWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\PageAdding.xaml.cs">
       <DependentUpon>PageAdding.xaml</DependentUpon>
     </Compile>
@@ -108,9 +111,6 @@
     </Compile>
     <Compile Include="Views\Pages\PageAddingTour.xaml.cs">
       <DependentUpon>PageAddingTour.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Pages\PageTourDetail.xaml.cs">
-      <DependentUpon>PageTourDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\PageTourDetail_Plan.xaml.cs">
       <DependentUpon>PageTourDetail_Plan.xaml</DependentUpon>
@@ -155,6 +155,7 @@
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MainWindow\TourDetailWindow.xaml" />
     <Page Include="Views\Pages\PageAdding.xaml" />
     <Page Include="Views\Pages\PageAddingDestination.xaml" />
     <Page Include="Views\Pages\PageAddingHotel.xaml" />
@@ -162,7 +163,6 @@
     <Page Include="Views\Pages\PageStatistic.xaml" />
     <Page Include="Views\Pages\PageTour.xaml" />
     <Page Include="Views\Pages\PageAddingTour.xaml" />
-    <Page Include="Views\Pages\PageTourDetail.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Plan.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
