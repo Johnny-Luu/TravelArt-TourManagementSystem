@@ -7,12 +7,15 @@ namespace GUI.Views.Components
 {
     public partial class TourRating : UserControl
     {
-        public TourRating()
+        public TourRating(int r1, int r2, int r3, int r4, int r5)
         {
+           
             InitializeComponent();
-            RatingChartInit(5, 4, 3, 5, 2);
+            RatingChartInit(r1,r2,r3,r4,r5);
         }
-    
+
+ 
+
         private float MaxRate(int r1, int r2, int r3, int r4, int r5)
         {
             var max = r1;
@@ -47,9 +50,9 @@ namespace GUI.Views.Components
             ////////////////////////////////////////////
            //Kiếm được hình ngôi sao thì đổi mấy cái path này
            ///////////////////////////////////////////////
-            const string fullStar = "pack://application:,,,/Assets/icons/icon-close.png";
-            const string noStar = "pack://application:,,,/Assets/images/img-bag.png";
-            const string halfStar = "pack://application:,,,/Assets/icons/icon-minimize.png";
+            const string fullStar = "pack://application:,,,/Assets/icons/goldstar_full.png";
+            const string noStar = "pack://application:,,,/Assets/icons/goldstar_empty.png";
+            const string halfStar = "pack://application:,,,/Assets/icons/goldstar_half.png";
             
             var converter = new ImageSourceConverter();
             ImgStar1.Source = (ImageSource)converter.ConvertFromString(noStar);

@@ -175,3 +175,9 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Componen
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ListComment.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ListComment.baml

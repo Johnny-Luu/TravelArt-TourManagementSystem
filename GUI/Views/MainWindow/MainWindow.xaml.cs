@@ -35,8 +35,8 @@ namespace GUI
            //FrContainer.Content = new PageStatistic();
             // FrContainer.Content = new PageTourDetail();
             //FrContainer.Width = 350;
-            //FrContainer.Height = 150;
-            FrContainer.Content = new TourRating();
+           // FrContainer.Height = 150;
+            FrContainer.Content = new PageTourDetail();
         }
 
         private void LbConfirm_OnMouseDown(object sender, MouseButtonEventArgs e)

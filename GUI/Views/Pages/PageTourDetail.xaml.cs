@@ -8,8 +8,8 @@ namespace GUI.Views.Pages
         public PageTourDetail()
         {
             InitializeComponent();
+            FrContainer.Content = new PageTourDetail_Rating();
 
-    
         }
 
         private void BtnBack_MouseDown(object sender, MouseButtonEventArgs e)

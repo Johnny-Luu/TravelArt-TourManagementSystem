@@ -1,0 +1,22 @@
+﻿<Page x:Class="GUI.Views.Pages.PageTourDetail_Rating"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.Pages"
+      mc:Ignorable="d"
+      Title="PageTourDetail_Rating" Height="670" Width="385">
+	<Grid>
+
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="169.6"/>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="475.2"/>
+
+		</Grid.RowDefinitions>
+		<Frame x:Name="FrChart" Content="Frame" HorizontalAlignment="Left" Height="150" Margin="5,20,0,0" VerticalAlignment="Top" Width="350" Grid.RowSpan="2"/>
+		<Label Content="Comment" HorizontalAlignment="Left" Margin="10,0.4,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="155" Grid.Row="1" FontFamily="Ubuntu" FontWeight="Bold"/>
+		<Frame x:Name="FrCmt" Content="Frame" HorizontalAlignment="Left" Height="420" Margin="0,3.4,-0.2,0" Grid.Row="2" VerticalAlignment="Top" Width="385"/>
+	</Grid>
+</Page>

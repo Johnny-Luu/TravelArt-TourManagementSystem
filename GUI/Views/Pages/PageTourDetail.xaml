@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
       mc:Ignorable="d"
-     Title="PageTourDetail" Height="720" Width="1280">
+      Title="PageTourDetail" Height="720" Width="1280">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="895"/>
@@ -16,10 +16,10 @@
 
 
         <Grid x:Name="GridDestination" Grid.Column="0" Grid.ColumnSpan="1"  Width="895" Margin="0,0,0.2,0">
-            <!--
+            
             <Grid.Background >
-                <ImageBrush  Stretch="UniformToFill" />
-            </Grid.Background> -->
+                <ImageBrush  Stretch="UniformToFill"  ImageSource="/Assets/images/img-paris.jpg"/>
+            </Grid.Background> 
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
@@ -42,7 +42,7 @@
             <!-- Back button-->
             <Image x:Name="BtnBack" MouseDown="BtnBack_MouseDown" Grid.Column="0" Width="35" Height="35">
                 <Grid.Row>0</Grid.Row>
-                <Image.Source>/Assets/icons/icon-close.png</Image.Source>
+                <Image.Source>/Assets/icons/arrow-left.png</Image.Source>
             </Image>
             <!-- Text -->
             <Label x:Name="TxtTitle" Content="sadasd" Grid.Row="2" Grid.Column="1" Margin="154.6,1.8,229.4,6.6" FontFamily="Poppins" FontSize="24" Foreground="White" Height="42" HorizontalContentAlignment="Center" Width="499.8" FontWeight="Bold">
@@ -76,7 +76,7 @@
 
         </Grid >
 
-        <Grid Grid.Column="1" Grid.ColumnSpan="1" Background="AliceBlue" Width="385">
+        <Grid Grid.Column="1" Grid.ColumnSpan="1"  Width="385">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="auto"/>
@@ -117,8 +117,8 @@
 
             <Frame
                 Grid.Row="0" Grid.RowSpan="2"
-                 Background="#FFEAEA25"
-                Name="FrContainer" Margin="0,50,0,-668.8" 
+                 
+                Name="FrContainer" Margin="0,50,0,-668.8" Width="385" Height="670" 
               
                 />
 

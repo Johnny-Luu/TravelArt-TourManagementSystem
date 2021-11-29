@@ -75,6 +75,9 @@
     <Compile Include="Views\Components\DestinationChooseItem.xaml.cs">
       <DependentUpon>DestinationChooseItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\ListComment.xaml.cs">
+      <DependentUpon>ListComment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\PlanButton.xaml.cs">
       <DependentUpon>PlanButton.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,9 @@
     <Compile Include="Views\Pages\PageTourDetail.xaml.cs">
       <DependentUpon>PageTourDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\PageTourDetail_Rating.xaml.cs">
+      <DependentUpon>PageTourDetail_Rating.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -139,6 +145,7 @@
     <Page Include="ResourceXAML\MainResource.xaml" />
     <Page Include="Views\Components\Comment.xaml" />
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
+    <Page Include="Views\Components\ListComment.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
     <Page Include="Views\Components\TourRating.xaml" />
@@ -153,6 +160,7 @@
     <Page Include="Views\Pages\PageTour.xaml" />
     <Page Include="Views\Pages\PageAddingTour.xaml" />
     <Page Include="Views\Pages\PageTourDetail.xaml" />
+    <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">
@@ -185,6 +193,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icons\icon-clear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\arrow-left.png" />
+    <Resource Include="Assets\icons\goldstar_empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\goldstar_full.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\goldstar_half.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="Assets\images\clipart2575067 (1).png" />

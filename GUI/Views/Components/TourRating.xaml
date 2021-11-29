@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:GUI.Views.Components"
              mc:Ignorable="d"
              d:DesignHeight="150" d:DesignWidth="350">
-	<Grid>
+	<Grid Width="350" Height="150">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="31*"/>
 			<ColumnDefinition Width="7*"/>
