@@ -18,7 +18,7 @@
 		<Frame x:Name="FrChart" Content="Điểm đánh giá với cái biểu đồ" HorizontalAlignment="Left" Height="150" Margin="5,20,0,0" VerticalAlignment="Top" Width="350" Grid.RowSpan="2"/>
 		<Label Content="Comment" HorizontalAlignment="Left" Margin="10,0.4,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="155" Grid.Row="1" FontFamily="Ubuntu" FontWeight="Bold"/>
 		<ScrollViewer x:Name="FrCmt" HorizontalAlignment="Left" Height="460
-		" Margin="10,3.4,-0.2,0" Grid.Row="2" VerticalAlignment="Top" Width="385">
+		" Margin="10,3.4,-0.2,0" Grid.Row="2" VerticalAlignment="Top" Width="385" VerticalScrollBarVisibility="Hidden">
 			<WrapPanel Name="WpListCmt">
 				
 			</WrapPanel>

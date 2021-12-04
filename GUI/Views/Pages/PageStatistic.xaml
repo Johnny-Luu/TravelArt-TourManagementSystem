@@ -8,11 +8,12 @@
       Title="PageStatistic" Height="648" Width="1280">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="590"/>
         </Grid.RowDefinitions> 
   
-        <WrapPanel Grid.Row="0">
+        <WrapPanel Grid.Row="0" Height="58
+                  ">
             <Label 
                 Name="LbTour"
                 Content="Tour"

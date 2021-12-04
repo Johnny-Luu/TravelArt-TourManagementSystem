@@ -73,6 +73,9 @@
     <Compile Include="Views\Components\Comment.xaml.cs">
       <DependentUpon>Comment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\ConfirmControl.xaml.cs">
+      <DependentUpon>ConfirmControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\DestinationChooseItem.xaml.cs">
       <DependentUpon>DestinationChooseItem.xaml</DependentUpon>
     </Compile>
@@ -148,12 +151,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\fonts\" />
-    <Folder Include="Assets\images\" />
-    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="ResourceXAML\MainResource.xaml" />
     <Page Include="Views\Components\Comment.xaml" />
+    <Page Include="Views\Components\ConfirmControl.xaml" />
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />

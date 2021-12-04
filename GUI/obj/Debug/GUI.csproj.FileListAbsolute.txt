@@ -187,3 +187,5 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pa
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Tour.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.baml
