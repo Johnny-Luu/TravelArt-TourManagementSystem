@@ -17,7 +17,7 @@ namespace GUI.Views.Pages
             TourRating chart = new TourRating();
             FrChart.Content = chart;
             
-            chart.RatingChartInit(2,1,2,1,2);
+            chart.RatingChartInit(10,5,1,10,15);
         }
 
         public void InitCommentPanel()

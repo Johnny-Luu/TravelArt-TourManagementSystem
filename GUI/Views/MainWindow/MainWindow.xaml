@@ -11,7 +11,7 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent">
+        Background="#FFF4F4F4">
     
     <Window.Resources>
         
@@ -63,7 +63,7 @@
     </Window.Resources>
     
     <Border 
-        Background="White" 
+        Background="#FFF4F4F4" 
         CornerRadius="20" 
         BorderThickness="0.3" 
         BorderBrush="white">

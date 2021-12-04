@@ -5,13 +5,35 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
       mc:Ignorable="d"
-      Title="PageStatistic" Height="450" Width="800">
+      Title="PageStatistic" Height="648" Width="1280">
     <Grid>
-        <Label 
-            Content="Statistic Page" 
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="50">
-        </Label>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions> 
+  
+        <WrapPanel Grid.Row="0">
+            <Label 
+                Name="LbTour"
+                Content="Tour"
+                BorderBrush="#F4F4F4"
+                Style="{StaticResource NavItemStyle}"
+                Margin="25 15 0 0"
+                MouseDown="MouseDown_Tour"
+                >
+         
+            </Label>
+        
+            <Label
+                Name="LbStaff"
+                Content="Staff"
+                BorderBrush="#F4F4F4"
+                Margin="25 15 0 0"
+                MouseDown="MouseDown_Staff"
+                Style="{StaticResource NavItemStyle}">
+             
+            </Label>
+        </WrapPanel>
+        <Frame Name="FrameContainer" Grid.Row="1"></Frame>
     </Grid>
 </Page>

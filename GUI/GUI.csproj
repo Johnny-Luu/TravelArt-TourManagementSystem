@@ -106,6 +106,12 @@
     <Compile Include="Views\Pages\PageStatistic.xaml.cs">
       <DependentUpon>PageStatistic.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\PageStatistic_Staff.xaml.cs">
+      <DependentUpon>PageStatistic_Staff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageStatistic_Tour.xaml.cs">
+      <DependentUpon>PageStatistic_Tour.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\PageTour.xaml.cs">
       <DependentUpon>PageTour.xaml</DependentUpon>
     </Compile>
@@ -157,12 +163,24 @@
     </Page>
     <Page Include="Views\MainWindow\TourDetailWindow.xaml" />
     <Page Include="Views\Pages\PageAdding.xaml" />
-    <Page Include="Views\Pages\PageAddingDestination.xaml" />
-    <Page Include="Views\Pages\PageAddingHotel.xaml" />
+    <Page Include="Views\Pages\PageAddingDestination.xaml">
+      <DependentUpon>PageAdding.xaml</DependentUpon>
+    </Page>
+    <Page Include="Views\Pages\PageAddingHotel.xaml">
+      <DependentUpon>PageAdding.xaml</DependentUpon>
+    </Page>
     <Page Include="Views\Pages\PageConfirm.xaml" />
     <Page Include="Views\Pages\PageStatistic.xaml" />
+    <Page Include="Views\Pages\PageStatistic_Staff.xaml">
+      <DependentUpon>PageStatistic.xaml</DependentUpon>
+    </Page>
+    <Page Include="Views\Pages\PageStatistic_Tour.xaml">
+      <DependentUpon>PageStatistic.xaml</DependentUpon>
+    </Page>
     <Page Include="Views\Pages\PageTour.xaml" />
-    <Page Include="Views\Pages\PageAddingTour.xaml" />
+    <Page Include="Views\Pages\PageAddingTour.xaml">
+      <DependentUpon>PageAdding.xaml</DependentUpon>
+    </Page>
     <Page Include="Views\Pages\PageTourDetail_Plan.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
@@ -211,6 +229,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icons\icon_edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\cameraicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\moneyicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\renvenueicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\tourgroupicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\tourguideicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\travelicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="Assets\images\clipart2575067 (1).png" />

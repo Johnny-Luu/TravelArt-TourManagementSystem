@@ -102,7 +102,7 @@
                         Name="LbInfo"
                         Style="{StaticResource NavItemStyle}"
                         Content="Information"
-                       Width="110" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                       Width="113" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
 					</Label>
 					<Label
                         MouseDown="LbRating_MouseDown"

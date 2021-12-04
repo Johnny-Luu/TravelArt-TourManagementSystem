@@ -1,0 +1,145 @@
+﻿<Page x:Class="GUI.Views.Pages.PageStatistic_Staff"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.Pages"
+         mc:Ignorable="d"
+      Background="#FFF4F4F4"
+      Title="PageStatistic_Staff" Height="583" Width="1280">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="40*"/>
+			<ColumnDefinition Width="80*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
+		<Border 
+			Grid.Column="1" 
+			Grid.Row="0"
+			Grid.RowSpan="3"
+			Height="535"
+			Margin="15,20.6,0,0"
+			VerticalAlignment="Top" Width="800"
+			HorizontalAlignment="Left"
+			Background="White" 
+			CornerRadius="20" 
+			BorderThickness="0.3" 
+			BorderBrush="white">
+			
+        
+			
+		<WrapPanel Margin="0,0,2.6,0.2"></WrapPanel>
+			</Border>
+	<!-- 3 Panel ben phai-->
+		<Border 
+			Grid.Column="0" 
+			Grid.Row="1"
+			Height="150"
+			Margin="50.4,20.6,0,0"
+			VerticalAlignment="Top" Width="330"
+			HorizontalAlignment="Left"
+			Background="White" 
+			CornerRadius="20" 
+			BorderThickness="0.3" 
+			BorderBrush="white">
+			
+        
+			<Border.Effect>
+				<DropShadowEffect
+					Color="Gray"
+					BlurRadius="5"
+					Opacity=".5"
+					ShadowDepth="2" />
+			</Border.Effect>
+		<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
+			
+			<Rectangle  Height="90" Stroke="White" Width="90" Margin="30,30,0,30" RadiusX="20" RadiusY="20">
+				<Rectangle.Fill>
+
+					<ImageBrush ImageSource="/Assets/icons/tourguideicon.png"/>
+
+				</Rectangle.Fill>
+			</Rectangle>
+			<WrapPanel Height="150" Width="210">
+				<Label Content="Tour Guide" Width="170" HorizontalAlignment="Left" Margin="40,30,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+				<Label Name="LbTourGuide" Content="180000000" Height="48" Width="165" Margin="40,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#3CA1FF"/>
+			</WrapPanel>
+			
+		</WrapPanel>
+			</Border>
+		<Border 
+			Grid.Column="0" 
+			Grid.Row="0"
+			Height="150"
+			Margin="50.4,20.6,0,0"
+			VerticalAlignment="Top" Width="330"
+			HorizontalAlignment="Left"
+			Background="White" 
+			CornerRadius="20" 
+			BorderThickness="0.3" 
+			BorderBrush="white">
+			
+        
+			<Border.Effect>
+				<DropShadowEffect
+					Color="Gray"
+					BlurRadius="5"
+					Opacity=".5"
+					ShadowDepth="2" />
+			</Border.Effect>
+			<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
+			<Rectangle  Height="90" Stroke="White" Width="90" Margin="30,30,0,30" RadiusX="20" RadiusY="20">
+				<Rectangle.Fill>
+
+					<ImageBrush ImageSource="/Assets/icons/travelicon.png"/>
+
+				</Rectangle.Fill>
+			</Rectangle>
+			<WrapPanel Height="150" Width="210">
+				<Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="38,30,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+				<Label Name="LbTotal" Content="12.255.260" Height="48" Width="165" Margin="40,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#00FFD1"/>
+			</WrapPanel>
+			</WrapPanel>
+			</Border>
+		<Border 
+			Grid.Column="0" 
+			Grid.Row="2"
+			Height="150"
+			Margin="50.4,20.6,0,0"
+			VerticalAlignment="Top" Width="330"
+			HorizontalAlignment="Left"
+			Background="White" 
+			CornerRadius="20" 
+			BorderThickness="0.3" 
+			BorderBrush="white">
+			
+        
+			<Border.Effect>
+				<DropShadowEffect
+					Color="Gray"
+					BlurRadius="5"
+					Opacity=".5"
+					ShadowDepth="2" />
+			</Border.Effect>
+		<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
+		<Rectangle  Height="90" Stroke="White" Width="90" Margin="30,30,0,30" RadiusX="20" RadiusY="20"> 
+			<Rectangle.Fill>
+
+				<ImageBrush ImageSource="/Assets/icons/tourgroupicon.png"/>
+
+			</Rectangle.Fill>
+		</Rectangle>
+			<WrapPanel Height="150" Width="210">
+				<Label Content="Tour Deputy" Width="170" HorizontalAlignment="Left" Margin="40,30,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+				<Label Name="LbTourDeputy" Content="120" Height="48" Width="165" Margin="40,10,0,0" FontFamily="Poppins" FontSize="25" Foreground="#FFABA6" FontWeight="Bold"/>
+			</WrapPanel>
+		</WrapPanel>
+			</Border>
+	</Grid>
+
+</Page>
+

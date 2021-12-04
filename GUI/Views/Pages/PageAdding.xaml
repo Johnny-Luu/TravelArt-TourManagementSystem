@@ -24,7 +24,7 @@
                        <!--Tour Adding item-->
                        <Label
                              Name="LbTour"
-                             BorderBrush="White"
+                             BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Tour"
                              MouseDown="LbTour_OnMouseDown">
@@ -33,7 +33,7 @@
                        <!--Destination Adding item-->
                        <Label
                              Name="LbDestination"
-                             BorderBrush="White"
+                             BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Destination"
                              MouseDown="LbDestination_OnMouseDown">
@@ -42,7 +42,7 @@
                        <!--Hotel Adding item-->
                        <Label
                              Name="LbHotel"
-                             BorderBrush="White"
+                             BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Hotel"
                              MouseDown="LbHotel_OnMouseDown">
