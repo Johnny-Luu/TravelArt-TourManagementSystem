@@ -33,11 +33,10 @@ namespace GUI
         {
             ResetNavItemsToDefault();
             LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
-           //FrContainer.Content = new PageStatistic();
-            // FrContainer.Content = new PageTourDetail();
+           FrContainer.Content = new PageStatistic();
+            
         
-            TourDetailWindow w2 = new TourDetailWindow();
-            w2.Show();
+            
         }
 
         private void LbConfirm_OnMouseDown(object sender, MouseButtonEventArgs e)

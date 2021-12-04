@@ -85,7 +85,7 @@
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="BorderThickness" Value="0 0 0 3" />
         <Setter Property="Margin" Value="0 0 20 0" />
-        <Setter Property="Foreground" Value="#F4F4F4" />
+        <Setter Property="Foreground" Value="#000000" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
     

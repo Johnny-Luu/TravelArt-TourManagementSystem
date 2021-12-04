@@ -10,7 +10,8 @@
              Background="Transparent"
              Margin="0 0 25 20">
     <Border 
-        Background="White" 
+        MouseDown="MouseDown_TourDetail"
+        Background="white" 
         CornerRadius="10" 
         BorderThickness="0.3" 
         BorderBrush="white">

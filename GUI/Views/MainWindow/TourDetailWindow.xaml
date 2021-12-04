@@ -11,8 +11,9 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="White">
-	<Grid>
+        Background="Transparent">
+	<Grid Background="White">
+		
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="895"/>
 			<ColumnDefinition Width="385"/>
