@@ -178,10 +178,30 @@
                     Margin="0 15 50 0"
                     VerticalAlignment="Top">
                   <Grid>
-                        <WrapPanel Orientation="Vertical"
-                             VerticalAlignment="Top"
-                             HorizontalAlignment="Center"
-                             Margin="25">
+                        <StackPanel 
+                              Orientation="Vertical"
+                              VerticalAlignment="Top"
+                              Margin="20 10 0 0">
+                              
+                              <!--Province label-->
+                              <Label
+                                    Content="Province"
+                                    Style="{StaticResource AddItemStyle}"/>
+                              
+                              <!--Province ComboBox-->
+                              <Border 
+                                    CornerRadius="10" 
+                                    BorderThickness="4" 
+                                    BorderBrush="white"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                                    <ComboBox
+                                          Height="50"
+                                          Width="330"
+                                          Style="{StaticResource ComboBoxStyle}">
+                                    </ComboBox>
+                              </Border>
+                              
                               
                               <!--Destination planning label-->
                               <Label
@@ -219,16 +239,16 @@
                                           Name="WpDestinationChoose"
                                           Margin="0 20 0 0"/>
                               </ScrollViewer>
-                        </WrapPanel>
+                        </StackPanel>
                         
                         <!--Clear button-->
                         <Image
                               Width="20"
                               Height="20"
                               Style="{StaticResource IconClearStyle}"
-                              VerticalAlignment="Top"
+                              VerticalAlignment="Center"
                               HorizontalAlignment="Right"
-                              Margin="0 30 60 0"
+                              Margin="0 0 40 250"
                               Source="../../Assets/icons/icon-clear.png">
                               <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="MouseDown">

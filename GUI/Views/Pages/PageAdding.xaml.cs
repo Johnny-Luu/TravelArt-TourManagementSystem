@@ -11,7 +11,7 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
             LbTour.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrAddingContainer.Content = new PageAddingTour();
+            FrAddingContainer.Content = new PageAddingTourGroup();
         }
 
         private void LbTour_OnMouseDown(object sender, MouseButtonEventArgs e)

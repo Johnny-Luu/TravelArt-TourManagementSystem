@@ -173,6 +173,18 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Componen
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.g.cs
@@ -189,3 +201,19 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pa
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourDetailWindow.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Tour.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourDetailWindow.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Tour.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.baml

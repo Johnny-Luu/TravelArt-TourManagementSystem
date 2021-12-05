@@ -27,8 +27,7 @@
                              BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Tour"
-                             MouseDown="LbTour_OnMouseDown">
-                       </Label>
+                             MouseDown="LbTour_OnMouseDown"/>
                     
                        <!--Destination Adding item-->
                        <Label
@@ -36,8 +35,7 @@
                              BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Destination"
-                             MouseDown="LbDestination_OnMouseDown">
-                       </Label>
+                             MouseDown="LbDestination_OnMouseDown"/>
                     
                        <!--Hotel Adding item-->
                        <Label
@@ -45,8 +43,13 @@
                              BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
                              Content="Hotel"
-                             MouseDown="LbHotel_OnMouseDown">
-                       </Label>
+                             MouseDown="LbHotel_OnMouseDown"/>
+                       
+                       <!--TourGroup Adding item-->
+                       <Label
+                             BorderBrush="White"
+                             Style="{StaticResource NavItemStyle}"
+                             Content="Tour Group"/>
                  </WrapPanel>
            </Grid>
            

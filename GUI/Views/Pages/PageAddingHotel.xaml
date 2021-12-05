@@ -16,18 +16,18 @@
                <ColumnDefinition Width="1*"/>
                <ColumnDefinition Width="1*"/>
          </Grid.ColumnDefinitions>
-
-          <!--Picture button - Hotel Name - Short description-->
-          <Border Grid.Column="0"
-                  Background="#8064614B" 
-                  CornerRadius="30" 
-                  BorderThickness="1" 
-                  BorderBrush="#8064614B"
-                  Width="530"
-                  Height="500"
-                  HorizontalAlignment="Right"
-                  VerticalAlignment="Top"
-                  Margin="0 0 30 0">
+           
+           <!--Picture button - Hotel Name - Short description-->
+           <Border Grid.Column="0"
+                   Background="#8064614B" 
+                   CornerRadius="30" 
+                   BorderThickness="1" 
+                   BorderBrush="#8064614B"
+                   Width="530"
+                   Height="500"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="0 0 30 0">
                   
                   <StackPanel 
                         Orientation="Vertical"
@@ -79,18 +79,18 @@
                         </Border>
                   </StackPanel>
             </Border>
-          
-          <!--Address & Phone number-->
-          <Border Grid.Column="1"
-                  Background="#60569589" 
-                  CornerRadius="30" 
-                  BorderThickness="1" 
-                  BorderBrush="#60569589"
-                  Width="600"
-                  Height="400"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Top"
-                  Margin="0 100">
+           
+           <!--Address & Phone number-->
+           <Border Grid.Column="1"
+                   Background="#60569589" 
+                   CornerRadius="30" 
+                   BorderThickness="1" 
+                   BorderBrush="#60569589"
+                   Width="600"
+                   Height="400"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0 100">
                   
                   <StackPanel 
                         Orientation="Vertical"
@@ -142,13 +142,12 @@
                   </StackPanel>
             </Border>
             
-          
-          <!--Confirm Button-->
-          <Border Grid.Column="1"
-                  Style="{StaticResource ConfirmButtonStyle}"
-                  HorizontalAlignment="Right"
-                  VerticalAlignment="Bottom"
-                  Margin="0 0 40 155">
+           <!--Confirm Button-->
+           <Border Grid.Column="1"
+                   Style="{StaticResource ConfirmButtonStyle}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="0 0 40 155">
                 
                 <i:Interaction.Triggers>
                       <i:EventTrigger EventName="MouseDown">
@@ -160,32 +159,32 @@
                 
                 <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
             </Border>
-          
-          <!--Image Taxi-->
-          <Image 
-                Height="400"
-                Width="350"
-                Source="../../Assets/images/img-taxi.png"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="50 -70"/>
-          
-          <!--Image Bag-->
-          <Image Grid.Column="1" 
-                Height="200"
-                Width="200"
-                Source="../../Assets/images/img-bag.png"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                Margin="-70 180"/>
-          
-          <!--Image Hotel Building-->
-          <Image Grid.Column="1" 
-                 Height="420"
-                 Width="350"
-                 Source="../../Assets/images/img-hotel-building.png"
-                 HorizontalAlignment="Right"
-                 VerticalAlignment="Bottom"
-                 Margin="0 200"/>
+           
+           <!--Image Taxi-->
+           <Image 
+                                  Height="400"
+                                  Width="350"
+                                  Source="../../Assets/images/img-taxi.png"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Top"
+                                  Margin="50 -70"/>
+           
+           <!--Image Bag-->
+           <Image Grid.Column="1" 
+                  Height="200"
+                  Width="200"
+                  Source="../../Assets/images/img-bag.png"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Bottom"
+                  Margin="-70 180"/>
+           
+           <!--Image Hotel Building-->
+           <Image Grid.Column="1" 
+                  Height="420"
+                  Width="350"
+                  Source="../../Assets/images/img-hotel-building.png"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Bottom"
+                  Margin="0 200"/>
     </Grid> 
 </Page>

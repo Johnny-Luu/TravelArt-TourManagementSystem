@@ -106,7 +106,7 @@
     
     <!--Style of Confirm Button Label-->
     <Style x:Key="ConfirmButtonLabelStyle" TargetType="Label">
-        <Setter Property="Content" Value="Confim" />
+        <Setter Property="Content" Value="Confirm" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="White" />
@@ -152,5 +152,41 @@
                 <Setter Property="Opacity" Value="0.6" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+    
+    <!--Style of Delete Button-->
+    <Style x:Key="DeleteButtonStyle" TargetType="Border">
+        <Setter Property="Width" Value="70" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="BorderBrush" Value="#F12B2C" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#FFFFFF" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Cursor" Value="Hand" />
+        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.6" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--Style of Delete Button Label-->
+    <Style x:Key="DeleteButtonLabelStyle" TargetType="Label">
+        <Setter Property="Content" Value="Delete" />
+        <Setter Property="FontFamily" Value="Mulish"/>
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#F12B2C" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+    
+    <!--Style of Group info item label-->
+    <Style x:Key="InfoLabelStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="Poppins"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#333333"/>
     </Style>
 </ResourceDictionary>

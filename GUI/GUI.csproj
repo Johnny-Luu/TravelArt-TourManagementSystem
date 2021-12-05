@@ -85,6 +85,9 @@
     <Compile Include="Views\Components\TourControl.xaml.cs">
       <DependentUpon>TourControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\TourismItem.xaml.cs">
+      <DependentUpon>TourismItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\TourRating.xaml.cs">
       <DependentUpon>TourRating.xaml</DependentUpon>
     </Compile>
@@ -102,6 +105,9 @@
     </Compile>
     <Compile Include="Views\Pages\PageAddingHotel.xaml.cs">
       <DependentUpon>PageAddingHotel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageAddingTourGroup.xaml.cs">
+      <DependentUpon>PageAddingTourGroup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\PageConfirm.xaml.cs">
       <DependentUpon>PageConfirm.xaml</DependentUpon>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="Views\Pages\PageTourDetail_Info.xaml.cs">
       <DependentUpon>PageTourDetail_Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageTourGroupDetail.xaml.cs">
+      <DependentUpon>PageTourGroupDetail.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -159,18 +168,16 @@
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
+    <Page Include="Views\Components\TourismItem.xaml" />
     <Page Include="Views\Components\TourRating.xaml" />
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainWindow\TourDetailWindow.xaml" />
     <Page Include="Views\Pages\PageAdding.xaml" />
-    <Page Include="Views\Pages\PageAddingDestination.xaml">
-      <DependentUpon>PageAdding.xaml</DependentUpon>
-    </Page>
-    <Page Include="Views\Pages\PageAddingHotel.xaml">
-      <DependentUpon>PageAdding.xaml</DependentUpon>
-    </Page>
+    <Page Include="Views\Pages\PageAddingDestination.xaml" />
+    <Page Include="Views\Pages\PageAddingHotel.xaml" />
+    <Page Include="Views\Pages\PageAddingTourGroup.xaml" />
     <Page Include="Views\Pages\PageConfirm.xaml" />
     <Page Include="Views\Pages\PageStatistic.xaml" />
     <Page Include="Views\Pages\PageStatistic_Staff.xaml">
@@ -180,12 +187,11 @@
       <DependentUpon>PageStatistic.xaml</DependentUpon>
     </Page>
     <Page Include="Views\Pages\PageTour.xaml" />
-    <Page Include="Views\Pages\PageAddingTour.xaml">
-      <DependentUpon>PageAdding.xaml</DependentUpon>
-    </Page>
+    <Page Include="Views\Pages\PageAddingTour.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Plan.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
+    <Page Include="Views\Pages\PageTourGroupDetail.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">
