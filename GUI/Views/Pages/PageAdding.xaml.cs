@@ -11,7 +11,7 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
             LbTour.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrAddingContainer.Content = new PageAddingTourGroup();
+            FrAddingContainer.Content = new PageAddingTour();
         }
 
         private void LbTour_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -40,6 +40,14 @@ namespace GUI.Views.Pages
             LbTour.Style = Application.Current.Resources["NavItemStyle"] as Style;
             LbDestination.Style = Application.Current.Resources["NavItemStyle"] as Style;
             LbHotel.Style = Application.Current.Resources["NavItemStyle"] as Style;
+            LbTourGroup.Style = Application.Current.Resources["NavItemStyle"] as Style;
+        }
+
+        private void LbTourGroup_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ResetNavItemsToDefault();
+            LbTourGroup.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
+            FrAddingContainer.Content = new PageAddingTourGroup();
         }
     }
 }

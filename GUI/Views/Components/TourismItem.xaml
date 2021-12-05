@@ -13,8 +13,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         
         <!--Image of Tourism-->
@@ -47,7 +47,8 @@
         <Border Grid.Column="2"
                 Style="{StaticResource DeleteButtonStyle}"
                 HorizontalAlignment="Right"
-                VerticalAlignment="Center">
+                VerticalAlignment="Center"
+                Margin="0 0 20 0">
             <Label Style="{StaticResource DeleteButtonLabelStyle}"/>
         </Border>
     </Grid>

@@ -17,10 +17,10 @@
         <!--About TourGroup-->
         <Border 
             Grid.Column="0"
-            Background="#70634223" 
+            Background="#60634223" 
             CornerRadius="30" 
             BorderThickness="1" 
-            BorderBrush="#70634223"
+            BorderBrush="#60634223"
             Width="450"
             Height="500"
             VerticalAlignment="Top"
@@ -69,10 +69,10 @@
         </Border>
         <Border
             Grid.Column="1"
-            Background="#7070743F" 
+            Background="#6070743F" 
             CornerRadius="30" 
             BorderThickness="1" 
-            BorderBrush="#7070743F"
+            BorderBrush="#6070743F"
             Width="650"
             Height="500"
             Margin="0 15 50 0"
@@ -149,7 +149,7 @@
             Source="../../Assets/images/img-coffee-cup.png"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Margin="20 0 0 280 "/>
+            Margin="20 0 0 200 "/>
         
         <!--Image Glasses-->
         <Image
@@ -159,7 +159,7 @@
             Source="../../Assets/images/img-glasses.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Margin="0 0 40 0 "/>
+            Margin="0 -20 40 0 "/>
         
         <!--Image Umbrella-->
         <Image 
@@ -169,7 +169,7 @@
             Source="../../Assets/images/img-umbrella.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Margin="0 0 0 0 ">
+            Margin="0 -60 -20 0 ">
             
             <Image.RenderTransform>
                 <RotateTransform Angle="23" />
@@ -185,7 +185,7 @@
             Source="../../Assets/images/img-street-food-car.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            Margin="0 0 0 250 "/> 
+            Margin="0 0 0 180 "/> 
         
         <!--Confirm Button-->
         <Border
@@ -193,7 +193,7 @@
             Style="{StaticResource ConfirmButtonStyle}"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            Margin="0 0 60 230">
+            Margin="0 0 60 150">
             
             <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
         </Border>

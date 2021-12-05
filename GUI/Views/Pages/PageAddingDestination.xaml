@@ -26,21 +26,23 @@
           </i:Interaction.Triggers>
           
             <!--Destination planning frame-->
-            <Border Grid.Column="0"
-                    Background="#80ECDABF" 
-                    CornerRadius="30" 
-                    BorderThickness="1" 
-                    BorderBrush="#80ECDABF"
-                    Width="650"
-                    Height="300"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    Margin="30 0 0 30">
-                  <StackPanel Orientation="Vertical"
-                              HorizontalAlignment="Left"
-                              Margin="20 30 0 0"
-                              >
-                              
+            <Border 
+                  Grid.Column="0"
+                  Background="#80ECDABF" 
+                  CornerRadius="30" 
+                  BorderThickness="1" 
+                  BorderBrush="#80ECDABF"
+                  Width="650"
+                  Height="300"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Center"
+                  Margin="30 0 0 30">
+                  
+                  <StackPanel 
+                        Orientation="Vertical"
+                        HorizontalAlignment="Left"
+                        Margin="20 30 0 0">
+                        
                         <!--Destination planning label-->
                         <Label
                               Content="Hotel planning"
@@ -60,20 +62,40 @@
                                     Style="{StaticResource ComboBoxStyle}">
                               </ComboBox>
                         </Border>
+                        
+                        <!--Province label-->
+                        <Label
+                              Content="Province"
+                              HorizontalAlignment="Left"
+                              Style="{StaticResource AddItemStyle}"/>
+                        
+                        <!--Choose Province comboBox-->
+                        <Border 
+                              CornerRadius="10" 
+                              BorderThickness="4" 
+                              BorderBrush="white">
+                              <ComboBox
+                                    BorderThickness="0"
+                                    Height="40"
+                                    Width="350"
+                                    Style="{StaticResource ComboBoxStyle}">
+                              </ComboBox>
+                        </Border>
                   </StackPanel>
             </Border>
 
             <!--Destination name - Description - Picture-->
-            <Border Grid.Column="1"
-                    Background="#986F8875" 
-                    CornerRadius="30" 
-                    BorderThickness="1" 
-                    BorderBrush="#986F8875"
-                    Width="500"
-                    Height="480"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Margin="30 15 0 0">
+            <Border
+                  Grid.Column="1"
+                  Background="#986F8875" 
+                  CornerRadius="30"
+                  BorderThickness="1" 
+                  BorderBrush="#986F8875"
+                  Width="500"
+                  Height="480"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Margin="30 15 0 0">
                   
                   <StackPanel 
                         Orientation="Vertical"
@@ -126,11 +148,13 @@
                   </StackPanel>
             </Border>
             
-            <StackPanel Grid.Column="1" 
-                        Orientation="Vertical"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Margin="240 0 0 105">
+            <StackPanel 
+                  Grid.Column="1" 
+                  Orientation="Vertical"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Margin="240 0 0 105">
+                  
                   <!--Picture label-->
                   <Label 
                         Content="Picture"
@@ -163,11 +187,12 @@
             </StackPanel>
             
             <!--Confirm Button-->
-            <Border Grid.Column="1"
-                    Style="{StaticResource ConfirmButtonStyle}"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="0 0 110 165">
+            <Border 
+                  Grid.Column="1"
+                  Style="{StaticResource ConfirmButtonStyle}"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Bottom"
+                  Margin="0 0 110 165">
                   
                   <i:Interaction.Triggers>
                         <i:EventTrigger EventName="MouseDown">
@@ -182,31 +207,33 @@
           
             <!--Image Suitcases-->
             <Image 
-                        Height="450"
-                        Width="350"
-                        Source="../../Assets/images/img-vali.png"
-                        Stretch="Uniform"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top"/>
+                  Height="450"
+                  Width="350"
+                  Source="../../Assets/images/img-vali.png"
+                  Stretch="Uniform"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Top"/>
             
             <!--Image Air Plane-->
-            <Image Grid.Column="1" 
-                        Height="150"
-                        Width="300"
-                        Source="../../Assets/images/img-air-plane.png"
-                        Stretch="Uniform"
-                        VerticalAlignment="Top"
-                        HorizontalAlignment="Right"
-                        Margin="0 -25 30  0"/>
+            <Image
+                  Grid.Column="1" 
+                  Height="150"
+                  Width="300"
+                  Source="../../Assets/images/img-air-plane.png"
+                  Stretch="Uniform"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Right"
+                  Margin="0 -25 30  0"/>
             
             <!--Image Camera-->
-            <Image Grid.Column="1" 
-                   Height="100"
-                   Width="150"
-                   Source="../../Assets/images/img-camera-vintage.png"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Left"
-                   Margin="0 0 0 200"/>
+            <Image 
+                  Grid.Column="1" 
+                  Height="100"
+                  Width="150"
+                  Source="../../Assets/images/img-camera-vintage.png"
+                  VerticalAlignment="Bottom"
+                  HorizontalAlignment="Left"
+                  Margin="0 0 0 200"/>
             
     </Grid>
 </Page>

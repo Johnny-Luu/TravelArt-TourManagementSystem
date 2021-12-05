@@ -184,7 +184,9 @@
             <WrapPanel Orientation="Vertical">
                 
                 <components:TourismItem></components:TourismItem>
-                
+                <components:TourismItem></components:TourismItem>
+                <components:TourismItem></components:TourismItem>
+                <components:TourismItem></components:TourismItem>
                 
             </WrapPanel>
         </Border>

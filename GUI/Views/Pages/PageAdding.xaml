@@ -47,9 +47,11 @@
                        
                        <!--TourGroup Adding item-->
                        <Label
-                             BorderBrush="White"
+                             Name="LbTourGroup"
+                             BorderBrush="#F4F4F4"
                              Style="{StaticResource NavItemStyle}"
-                             Content="Tour Group"/>
+                             Content="Tour Group"
+                             MouseDown="LbTourGroup_OnMouseDown"/>
                  </WrapPanel>
            </Grid>
            
