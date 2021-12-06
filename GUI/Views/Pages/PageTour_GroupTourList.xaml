@@ -1,0 +1,77 @@
+﻿<Page x:Class="GUI.Views.Pages.PageTour_GroupTourList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:uc="clr-namespace:GUI.Views.Components"
+      mc:Ignorable="d"
+      Title="PageTour_GroupTourList" 
+      Height="720" 
+      Width="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            
+            <WrapPanel Orientation="Horizontal"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left">
+                
+                <!--Tour guild label-->
+                <Label 
+                    Content="Tour Guild"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin=" 70 0 0 0"/>
+                
+                <!--Status label-->
+                <Label 
+                    Content="Status"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="240 0 0 0"/>
+                
+                <!--Time start label-->
+                <Label 
+                    Content="Time start"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="105 0 0 0"/>
+                
+                <!--Time end label-->
+                <Label 
+                    Content="Time end"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="190 0 0 0"/>
+                
+                <!--Passenger label-->
+                <Label 
+                    Content="Passenger"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="145 0 0 0"/>
+            </WrapPanel>
+        </Grid>
+        
+        <Border 
+            Grid.Row="1"
+            Width="1280"
+            Height="480"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center">
+            
+            <WrapPanel Orientation="Vertical">
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+                <uc:TourGuildItem></uc:TourGuildItem>
+            </WrapPanel>
+        </Border>
+    </Grid>
+</Page>

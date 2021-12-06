@@ -217,3 +217,7 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStati
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.baml

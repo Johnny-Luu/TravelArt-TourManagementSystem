@@ -79,6 +79,9 @@
     <Compile Include="Views\Components\DestinationChooseItem.xaml.cs">
       <DependentUpon>DestinationChooseItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\TourGuildItem.xaml.cs">
+      <DependentUpon>TourGuildItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\PlanButton.xaml.cs">
       <DependentUpon>PlanButton.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,9 @@
     <Compile Include="Views\Pages\PageTourGroupDetail.xaml.cs">
       <DependentUpon>PageTourGroupDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\PageTour_GroupTourList.xaml.cs">
+      <DependentUpon>PageTour_GroupTourList.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -166,6 +172,7 @@
     <Page Include="Views\Components\Comment.xaml" />
     <Page Include="Views\Components\ConfirmControl.xaml" />
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
+    <Page Include="Views\Components\TourGuildItem.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
     <Page Include="Views\Components\TourismItem.xaml" />
@@ -192,6 +199,7 @@
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
     <Page Include="Views\Pages\PageTourGroupDetail.xaml" />
+    <Page Include="Views\Pages\PageTour_GroupTourList.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\icons\icon-close.png">
