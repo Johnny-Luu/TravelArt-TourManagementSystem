@@ -6,6 +6,7 @@
         private string _img = "";
         private string _name = "";
         private string _description = "";
+        private string _province = "";
         private string _idHotel = "";
 
         public string Id
@@ -32,6 +33,12 @@
             set => _description = value;
         }
         
+        public string Province
+        {
+            get => _province;
+            set => _province = value;
+        }
+
         public string IdHotel
         {
             get => _idHotel;
@@ -40,12 +47,13 @@
 
         public DestinationModel() {}
 
-        public DestinationModel(string id, string img, string name, string description, string idHotel)
+        public DestinationModel(string id, string img, string name, string description, string province, string idHotel)
         {
             _id = id;
             _img = img;
             _name = name;
             _description = description;
+            _province = province;
             _idHotel = idHotel;
         }
     }

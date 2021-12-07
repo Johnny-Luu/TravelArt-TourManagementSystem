@@ -6,8 +6,9 @@
         private string _name = "";
         private string _price = "";
         private string _address = "";
+        private string _province = "";
         private string _phoneNumber = "";
-
+        
         public string Id
         {
             get => _id;
@@ -31,6 +32,12 @@
             get => _address;
             set => _address = value;
         }
+        
+        public string Province
+        {
+            get => _province;
+            set => _province = value;
+        }
 
         public string PhoneNumber
         {
@@ -42,12 +49,13 @@
         {
         }
 
-        public HotelModel(string id, string name, string price, string address, string phoneNumber)
+        public HotelModel(string id, string name, string price, string address, string province, string phoneNumber)
         {
             _id = id;
             _name = name;
             _price = price;
             _address = address;
+            _province = province;
             _phoneNumber = phoneNumber;
         }
     }

@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using BLL;
 using DTO;
+using GUI.GlobalData;
 using GUI.Views.Pages;
 
 namespace GUI.ViewModels
@@ -10,10 +11,22 @@ namespace GUI.ViewModels
     {
         public PageAddingHotel PgAddingHotel { get; set; }
         public ICommand PushHotelCommand { get; set; }
+        public ICommand LoadProvinceCommand { get; set; }
         
         public AddingHotelViewModel()
         {
             PushHotelCommand = new RelayCommand<PageAddingHotel>(para => true, para => PushHotel(para));
+            LoadProvinceCommand = new RelayCommand<PageAddingHotel>(para => true, para => LoadProvince(para));
+        }
+
+        public void LoadProvince(PageAddingHotel para)
+        {
+            PgAddingHotel = para;
+            
+            foreach (var province in ProvinceData.ProvinceList)
+            {
+                PgAddingHotel.CbProvince.Items.Add(province);
+            }
         }
 
         public async void PushHotel(PageAddingHotel para)
@@ -23,9 +36,10 @@ namespace GUI.ViewModels
             var name = PgAddingHotel.TbName.Text;
             var price = PgAddingHotel.TbPrice.Text;
             var address = PgAddingHotel.TbAddress.Text;
+            var province = PgAddingHotel.CbProvince.Text;
             var phone = PgAddingHotel.TbPhone.Text;
             
-            if(name == "" || price == "" || address == "" || phone == "")
+            if(name == "" || price == "" || address == "" || phone == "" || province == "")
             {
                 MessageBox.Show("Please fill all fields");
                 return;
@@ -40,6 +54,7 @@ namespace GUI.ViewModels
                 Name = name,
                 Price = price,
                 Address = address,
+                Province = province,
                 PhoneNumber = phone
             };
             

@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using BLL;
 using DTO;
+using GUI.GlobalData;
 using GUI.Views.Components;
 using GUI.Views.Pages;
 using Microsoft.Win32;
@@ -25,6 +26,7 @@ namespace GUI.ViewModels
         public PageAddingTour PgAddingTour { get; set; }
         public ICommand ChooseImageCommand { get; set; }
         public ICommand PushTourCommand { get; set; }
+        public ICommand LoadProvinceCommand { get; set; }
         public ICommand LoadDestinationCommand { get; set; }
         public ICommand DestinationChooseCommand { get; set; }
         public ICommand ClearCommand { get; set; }
@@ -36,11 +38,12 @@ namespace GUI.ViewModels
             
             ChooseImageCommand = new RelayCommand<PageAddingTour>(para => true, para => ChooseImage(para));
             PushTourCommand = new RelayCommand<PageAddingTour>(para => true, para => PushTour(para));
+            LoadProvinceCommand = new RelayCommand<PageAddingTour>(para => true, para => LoadProvince(para));
             LoadDestinationCommand = new RelayCommand<PageAddingTour>(para => true, para => LoadDestinationList(para));
             DestinationChooseCommand = new RelayCommand<PageAddingTour>(para => true, para => DestinationChosen(para));
             ClearCommand = new RelayCommand<PageAddingTour>(para => true, para => ClearDestinationChosenList(para));
         }
-        
+       
         public void ChooseImage(PageAddingTour para)
         {
             PgAddingTour = para;
@@ -144,13 +147,26 @@ namespace GUI.ViewModels
             _destinationChosenList.Clear();
             PgAddingTour.WpDestinationChoose.Children.Clear();
         }
+        
+        public void LoadProvince(PageAddingTour para)
+        {
+            PgAddingTour = para;
+            
+            foreach (var province in ProvinceData.ProvinceList)
+            {
+                PgAddingTour.CbProvince.Items.Add(province);
+            }
+        }
 
         private async void LoadDestinationList(PageAddingTour para)
         {
             PgAddingTour = para;
+            
+            PgAddingTour.CbDestinationPlanning.Items.Clear();
+            var provinceChosen = PgAddingTour.CbProvince.SelectedValue.ToString();
 
             var destinationBLL = new DestinationBLL();
-            _destinationList = await destinationBLL.GetAllDestination();
+            _destinationList = await destinationBLL.GetDestinationByProvince(provinceChosen);
             
             // Load destination list to combobox
             foreach (var destination in _destinationList)

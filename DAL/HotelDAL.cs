@@ -30,6 +30,20 @@ namespace DAL
             await _client.SetAsync("Hotel/" + hotel.Id, hotel);
         }
         
+        public async Task<List<HotelModel>> GetHotelByProvince(string province)
+        {
+            var hotelList = await GetAllHotel();
+            var hotelByProvince = new List<HotelModel>();
+            foreach (var item in hotelList)
+            {
+                if (item.Province == province)
+                {
+                    hotelByProvince.Add(item);
+                }
+            }
+            return hotelByProvince;
+        }
+        
         public async Task<string> InitID()
         {
             var hotelList = await GetAllHotel();

@@ -20,7 +20,7 @@
          <i:Interaction.Triggers>
                <i:EventTrigger EventName="Loaded">
                      <i:InvokeCommandAction
-                           Command="{Binding LoadDestinationCommand}"
+                           Command="{Binding LoadProvinceCommand}"
                            CommandParameter="{Binding ElementName=PgAddingTour}"/>
                </i:EventTrigger>
          </i:Interaction.Triggers>
@@ -196,15 +196,24 @@
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center">
                                     <ComboBox
-                                          Height="50"
+                                          Name="CbProvince"
+                                          Height="40"
                                           Width="330"
                                           Style="{StaticResource ComboBoxStyle}">
+                                          <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="SelectionChanged">
+                                                      <i:InvokeCommandAction
+                                                            Command="{Binding LoadDestinationCommand}"
+                                                            CommandParameter="{Binding ElementName=PgAddingTour}"/>
+                                                </i:EventTrigger>
+                                          </i:Interaction.Triggers>
                                     </ComboBox>
                               </Border>
                               
                               
                               <!--Destination planning label-->
                               <Label
+                                    Margin="0 20 0 0"
                                     Content="Destination planning"
                                     Style="{StaticResource AddItemStyle}"/>
                               
@@ -217,7 +226,7 @@
                               HorizontalAlignment="Center">
                               <ComboBox
                                     Name="CbDestinationPlanning"
-                                    Height="50"
+                                    Height="40"
                                     Width="330"
                                     Style="{StaticResource ComboBoxStyle}">
                                     <i:Interaction.Triggers>
@@ -237,7 +246,7 @@
                                     VerticalScrollBarVisibility="Hidden">
                                     <WrapPanel 
                                           Name="WpDestinationChoose"
-                                          Margin="0 20 0 0"/>
+                                          Margin="0 20 0 30"/>
                               </ScrollViewer>
                         </StackPanel>
                         

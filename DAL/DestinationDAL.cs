@@ -31,6 +31,20 @@ namespace DAL
             await _client.SetAsync("Destination/" + destination.Id, destination);
         }
         
+        public async Task<List<DestinationModel>> GetDestinationByProvince(string province)
+        {
+            var destinationList = await GetAllDestination();
+            var destinationByProvince = new List<DestinationModel>();
+            foreach (var item in destinationList)
+            {
+                if (item.Province == province)
+                {
+                    destinationByProvince.Add(item);
+                }
+            }
+            return destinationByProvince;
+        }
+        
         public async Task<string> InitID()
         {
             var destinationList = await GetAllDestination();

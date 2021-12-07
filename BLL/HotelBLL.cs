@@ -21,6 +21,12 @@ namespace BLL
             _hotelDAL.PushHotel(hotel);
         }
 
+        public Task<List<HotelModel>> GetHotelByProvince(string province)
+        {
+            _hotelDAL = new HotelDAL();
+            return _hotelDAL.GetHotelByProvince(province);
+        }
+
         public Task<string> InitID()
         {
             _hotelDAL = new HotelDAL();

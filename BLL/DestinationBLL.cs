@@ -21,6 +21,12 @@ namespace BLL
             _destinationDAL = new DestinationDAL();
             _destinationDAL.PushDestination(destination);
         }
+        
+        public Task<List<DestinationModel>> GetDestinationByProvince(string province)
+        {
+            _destinationDAL = new DestinationDAL();
+            return _destinationDAL.GetDestinationByProvince(province);
+        }
 
         public Task<string> InitID()
         {

@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using BLL;
 using DTO;
+using GUI.GlobalData;
 using GUI.Views.Pages;
 using Microsoft.Win32;
 
@@ -16,12 +17,14 @@ namespace GUI.ViewModels
         
         public PageAddingDestination PgAddingDestination { get; set; }
         public ICommand PushDestinationCommand { get; set; }
+        public ICommand LoadProvinceCommand { get; set; }
         public ICommand LoadHotelCommand { get; set; }
         public ICommand ChooseImageCommand { get; set; }
         
         public AddingDestinationViewModel()
         {
             PushDestinationCommand = new RelayCommand<PageAddingDestination>(para => true, para => PushDestination(para));
+            LoadProvinceCommand = new RelayCommand<PageAddingDestination>(para => true, para => LoadProvince(para));
             LoadHotelCommand = new RelayCommand<PageAddingDestination>(para => true, para => LoadHotel(para));
             ChooseImageCommand = new RelayCommand<PageAddingDestination>(para => true, para => ChooseImage(para));
         }
@@ -32,6 +35,7 @@ namespace GUI.ViewModels
             
             var name = PgAddingDestination.TbName.Text;
             var description = PgAddingDestination.TbDescription.Text;
+            var province = PgAddingDestination.CbProvinceList.Text;
             var idHotel = "";
             
             if (PgAddingDestination.CbHotelList.SelectedValue != null)
@@ -40,7 +44,7 @@ namespace GUI.ViewModels
                 idHotel = hotelChoose.Split('-')[0];
             }
             
-            if(name == "" || description == "" || idHotel == "")
+            if(name == "" || description == "" || province == "" || idHotel == "")
             {
                 MessageBox.Show("Please fill all fields");
                 return;
@@ -61,6 +65,7 @@ namespace GUI.ViewModels
                 Name = name,
                 Description = description,
                 IdHotel = idHotel,
+                Province = province,
                 Img = _base64img
             };
             
@@ -68,12 +73,25 @@ namespace GUI.ViewModels
             MessageBox.Show("Successfully added");
         }
 
-        public async void LoadHotel(PageAddingDestination para)
+        public void LoadProvince(PageAddingDestination para)
         {
             PgAddingDestination = para;
             
+            foreach (var province in ProvinceData.ProvinceList)
+            {
+                PgAddingDestination.CbProvinceList.Items.Add(province);
+            }
+        }
+        
+        public async void LoadHotel(PageAddingDestination para)
+        {
+            PgAddingDestination = para;
+            PgAddingDestination.CbHotelList.Items.Clear();
+            var provinceChosen = PgAddingDestination.CbProvinceList.SelectedValue.ToString();
+            
             var hotelBLL = new HotelBLL();
-            var hotelList = await hotelBLL.GetAllHotel();
+            var hotelList = await hotelBLL.GetHotelByProvince(provinceChosen);
+            
             foreach (var hotel in hotelList)
             {
                 PgAddingDestination.CbHotelList.Items.Add(hotel.Id + "-" + hotel.Name);

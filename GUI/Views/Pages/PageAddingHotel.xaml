@@ -12,10 +12,17 @@
       x:Name="PgAddingHotel"
       DataContext="{StaticResource AddingHotelVm}">
      <Grid>
-        <Grid.ColumnDefinitions>
+           <i:Interaction.Triggers>
+                 <i:EventTrigger EventName="Loaded">
+                       <i:InvokeCommandAction
+                             Command="{Binding LoadProvinceCommand}"
+                             CommandParameter="{Binding ElementName=PgAddingHotel}"/>
+                 </i:EventTrigger>
+           </i:Interaction.Triggers>
+           <Grid.ColumnDefinitions>
                <ColumnDefinition Width="1*"/>
                <ColumnDefinition Width="1*"/>
-         </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
            
            <!--Picture button - Hotel Name - Short description-->
            <Border Grid.Column="0"
@@ -115,9 +122,11 @@
                               HorizontalAlignment="Center"
                               Margin="0 0 40 0">
                               <ComboBox
+                                    Name="CbProvince"
+                                    IsEditable="True"
                                     BorderThickness="0"
                                     Height="50"
-                                    Width="250"
+                                    Width="300"
                                     Style="{StaticResource ComboBoxStyle}">
                               </ComboBox>
                         </Border>

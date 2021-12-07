@@ -15,12 +15,12 @@
         <Grid.ColumnDefinitions>
                <ColumnDefinition Width="5.3*"/>
                <ColumnDefinition Width="4.7*"/>
-         </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
            
           <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Loaded">
                       <i:InvokeCommandAction
-                            Command="{Binding LoadHotelCommand}"
+                            Command="{Binding LoadProvinceCommand}"
                             CommandParameter="{Binding ElementName=PgAddingDestination}"/>
                 </i:EventTrigger>
           </i:Interaction.Triggers>
@@ -43,12 +43,40 @@
                         HorizontalAlignment="Left"
                         Margin="20 30 0 0">
                         
-                        <!--Destination planning label-->
+                        <!--Province label-->
+                        <Label
+                              Content="Province"
+                              HorizontalAlignment="Left"
+                              Style="{StaticResource AddItemStyle}"/>
+
+                        <!--Choose province comboBox-->
+                        <Border 
+                              CornerRadius="10" 
+                              BorderThickness="4" 
+                              BorderBrush="white">
+                              <ComboBox
+                                    Name="CbProvinceList"
+                                    BorderThickness="0"
+                                    Height="40"
+                                    Width="350"
+                                    Style="{StaticResource ComboBoxStyle}">
+                                    <i:Interaction.Triggers>
+                                          <i:EventTrigger EventName="SelectionChanged">
+                                                <i:InvokeCommandAction
+                                                      Command="{Binding LoadHotelCommand}"
+                                                      CommandParameter="{Binding ElementName=PgAddingDestination}"/>
+                                          </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                              </ComboBox>
+                        </Border>
+                        
+                        <!--Hotel planning label-->
                         <Label
                               Content="Hotel planning"
                               HorizontalAlignment="Left"
+                              Margin="0 20 0 0"
                               Style="{StaticResource AddItemStyle}"/>
-                              
+                       
                         <!--Choose hotel comboBox-->
                         <Border 
                               CornerRadius="10" 
@@ -56,25 +84,6 @@
                               BorderBrush="white">
                               <ComboBox
                                     Name="CbHotelList"
-                                    BorderThickness="0"
-                                    Height="40"
-                                    Width="350"
-                                    Style="{StaticResource ComboBoxStyle}">
-                              </ComboBox>
-                        </Border>
-                        
-                        <!--Province label-->
-                        <Label
-                              Content="Province"
-                              HorizontalAlignment="Left"
-                              Style="{StaticResource AddItemStyle}"/>
-                        
-                        <!--Choose Province comboBox-->
-                        <Border 
-                              CornerRadius="10" 
-                              BorderThickness="4" 
-                              BorderBrush="white">
-                              <ComboBox
                                     BorderThickness="0"
                                     Height="40"
                                     Width="350"
