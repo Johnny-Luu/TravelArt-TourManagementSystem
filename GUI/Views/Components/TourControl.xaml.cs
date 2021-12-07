@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using GUI.Views.MainWindow;
 using GUI.Views.Pages;
@@ -17,7 +18,6 @@ namespace GUI.Components
         {
             TourDetailWindow w2 = new TourDetailWindow();
             w2.ShowDialog();
-            
         }
     }
 }

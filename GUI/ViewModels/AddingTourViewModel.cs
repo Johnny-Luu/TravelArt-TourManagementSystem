@@ -104,8 +104,6 @@ namespace GUI.ViewModels
                 Price = price,
                 Description = shortDescription,
                 Img = _base64Img,
-                CurrentComment = 0,
-                CurrentTour = 0,
                 Rating = 0,
                 Status = 1,
                 DestinationIds = destinationIds

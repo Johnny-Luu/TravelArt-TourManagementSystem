@@ -40,8 +40,8 @@ namespace GUI.ViewModels
                 TourControl item = new TourControl();
                 item.LbName.Content = tour.Name;
                 item.TbDescription.Text = tour.Description;
-                item.LbComment.Content = tour.CurrentComment + "comments";
-                item.LbCurTour.Content = tour.CurrentTour + "current tours";
+                item.LbPrice.Content = tour.Price + " vnd";
+                item.LbVisit.Content = "Visit: " + (tour.DestinationIds.Length /2 + 1) + " locations";
                 item.LbRating.Content = tour.Rating;
 
                 // convert img from base64 to bitmap
@@ -59,10 +59,6 @@ namespace GUI.ViewModels
 
                 PgTour.WpTour.Children.Add(item);
             }
-
-            // use for binding data
-            // TourList.Add(tourModel);
-            // TourList.Add(tourModel2);
         }
     }
 }

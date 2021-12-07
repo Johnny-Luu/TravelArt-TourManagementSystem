@@ -48,71 +48,59 @@
         </WrapPanel>
         
         <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="8*"/>
-            </Grid.ColumnDefinitions>
+            <!-- <Grid.ColumnDefinitions> -->
+            <!--     <ColumnDefinition Width="1*"/> -->
+            <!--     <ColumnDefinition Width="8*"/> -->
+            <!-- </Grid.ColumnDefinitions> -->
             
             <!--filter items-->
-            <WrapPanel Grid.Column="0" Orientation="Vertical">
-                <Label
-                    Content="All"
-                    FontWeight="Normal"
-                    Style="{StaticResource NavTourItemStyle}"
-                    FontSize="14"
-                    BorderBrush="White">
-                </Label>
-        
-                <Label
-                    Content="Trending"
-                    FontWeight="Normal"
-                    Style="{StaticResource NavTourItemStyle}"
-                    FontSize="14"
-                    BorderBrush="White">
-                </Label>
-       
-                <Label
-                    Content="On Promotion"
-                    FontWeight="Normal"
-                    Style="{StaticResource NavTourItemStyle}"
-                    FontSize="14"
-                    BorderBrush="White">
-                </Label>
-        
-                <Label
-                    Content="Abroad"
-                    FontWeight="Normal"
-                    Style="{StaticResource NavTourItemStyle}"
-                    FontSize="14"
-                    BorderBrush="White">
-                </Label>
-        
-                <Label
-                    Content="Domestic"
-                    FontWeight="Normal"
-                    Style="{StaticResource NavTourItemStyle}"
-                    FontSize="14"
-                    BorderBrush="White">
-                </Label> 
-            </WrapPanel>
+            <!-- <WrapPanel Grid.Column="0" Orientation="Vertical"> -->
+            <!--     <Label -->
+            <!--         Content="All" -->
+            <!--         FontWeight="Normal" -->
+            <!--         Style="{StaticResource NavTourItemStyle}" -->
+            <!--         FontSize="14" -->
+            <!--         BorderBrush="White"> -->
+            <!--     </Label> -->
+            <!-- -->
+            <!--     <Label -->
+            <!--         Content="Trending" -->
+            <!--         FontWeight="Normal" -->
+            <!--         Style="{StaticResource NavTourItemStyle}" -->
+            <!--         FontSize="14" -->
+            <!--         BorderBrush="White"> -->
+            <!--     </Label> -->
+            <!-- -->
+            <!--     <Label -->
+            <!--         Content="On Promotion" -->
+            <!--         FontWeight="Normal" -->
+            <!--         Style="{StaticResource NavTourItemStyle}" -->
+            <!--         FontSize="14" -->
+            <!--         BorderBrush="White"> -->
+            <!--     </Label> -->
+            <!-- -->
+            <!--     <Label -->
+            <!--         Content="Abroad" -->
+            <!--         FontWeight="Normal" -->
+            <!--         Style="{StaticResource NavTourItemStyle}" -->
+            <!--         FontSize="14" -->
+            <!--         BorderBrush="White"> -->
+            <!--     </Label> -->
+            <!-- -->
+            <!--     <Label -->
+            <!--         Content="Domestic" -->
+            <!--         FontWeight="Normal" -->
+            <!--         Style="{StaticResource NavTourItemStyle}" -->
+            <!--         FontSize="14" -->
+            <!--         BorderBrush="White"> -->
+            <!--     </Label>  -->
+            <!-- </WrapPanel> -->
             
             <!--list all tour-->
             <ScrollViewer
-                Grid.Column="1"
+                Margin="30 0 0 70"
                 VerticalScrollBarVisibility="Hidden">
-                
                 <WrapPanel Name="WpTour" />
-            
-                <!--Use for binding data-->
-                <!-- <ListView ItemsSource="{Binding TourList}"> -->
-                <!--     <ListView.ItemTemplate> -->
-                <!--         <DataTemplate> -->
-                <!--             <WrapPanel> -->
-                <!--                 <uc:TourControl DataContext="{Binding}"/> -->
-                <!--             </WrapPanel> -->
-                <!--         </DataTemplate> -->
-                <!--     </ListView.ItemTemplate> -->
-                <!-- </ListView> -->
             </ScrollViewer>
         </Grid>
     </Grid>

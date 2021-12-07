@@ -166,11 +166,9 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Co
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.g.cs
-C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\PlanButton.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourRating.baml
-C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationChooseItem.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Comment.g.cs
@@ -217,7 +215,31 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStati
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourDetailWindow.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Tour.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourDetailWindow.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Staff.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageStatistic_Tour.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.baml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.baml
