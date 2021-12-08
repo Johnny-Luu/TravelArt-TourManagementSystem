@@ -5,37 +5,24 @@ namespace GUI.Views.Pages
 {
     public partial class PageTourDetail_Rating : Page
     {
-        public PageTourDetail_Rating()
+        public string TourID;
+        public PageTourDetail_Rating(string tourId)
         {
+            TourID = tourId;
             InitializeComponent();
-            InitChartFrame();
-            InitCommentPanel();
         }
 
-        public void InitChartFrame()
+        public void InitChartFrame(int r1,int r2,int r3,int r4,int r5)
         {
-            TourRating chart = new TourRating();
+            var chart = new TourRating();
+            chart.RatingChartInit(r1,r2,r3,r4,r5);
             FrChart.Content = chart;
-            
-            chart.RatingChartInit(10,5,1,10,15);
         }
 
-        public void InitCommentPanel()
-        { 
-            var item = new Comment(); 
-            WpListCmt.Children.Add(item);
-            
-            var item2 = new Comment();
-            WpListCmt.Children.Add(item2);
-            
-            var item3 = new Comment();
-            WpListCmt.Children.Add(item3);
-            
-            var item4 = new Comment();
-            WpListCmt.Children.Add(item4);
-            
-            var item5 = new Comment();
-            WpListCmt.Children.Add(item5);
+        public void InitCommentPanel(CommentComponent cmt)
+        {
+            WpListCmt.Children.Add(cmt);
+           
         }
     }
 }

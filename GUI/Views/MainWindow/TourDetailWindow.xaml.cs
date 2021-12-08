@@ -7,12 +7,13 @@ namespace GUI.Views.MainWindow
 {
     public partial class TourDetailWindow : Window
     {
+        public string tourID = "0";
         public TourDetailWindow()
         {
             InitializeComponent();
             ResetNavItemsToDefault();
             LbInfo.Style =Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Info();
+            FrContainer.Content = new PageTourDetail_Info(tourID);
         }
         private void BtnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -22,7 +23,7 @@ namespace GUI.Views.MainWindow
 
         private void LbInfo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            FrContainer.Content = new PageTourDetail_Info();
+            FrContainer.Content = new PageTourDetail_Info(tourID);
             ResetNavItemsToDefault();
             LbInfo.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
         }
@@ -31,14 +32,14 @@ namespace GUI.Views.MainWindow
         {
             ResetNavItemsToDefault();
             LbRating.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Rating();
+            FrContainer.Content = new PageTourDetail_Rating(tourID);
         }
         
         private void LbPlan_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ResetNavItemsToDefault();
             LbPlan.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Plan();
+            FrContainer.Content = new PageTourDetail_Plan(tourID);
         }
         private void ResetNavItemsToDefault()
         {

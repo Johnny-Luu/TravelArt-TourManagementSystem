@@ -40,6 +40,8 @@ namespace GUI.Views.Components
             LbNumberRating.Content = "Total: " + totalRating.ToString();
             double score =((r1 + r2 * 2 + r3 * 3 + r4 * 4 + r5 * 5) * 1.0) / totalRating;
             LbScore.Content = score.ToString("0.0");
+            //Exception no rating
+            if(r1+r2+r3+r4+r5==0) LbScore.Content = "0.0";
             //set star
             StarInit(score);
         }

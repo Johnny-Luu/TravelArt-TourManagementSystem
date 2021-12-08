@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using Microsoft.Win32.SafeHandles;
 
 namespace GUI.Views.Pages
 {
@@ -8,5 +9,7 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
         }
+
+        
     }
 }
