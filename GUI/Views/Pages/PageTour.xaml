@@ -19,8 +19,12 @@
                 <i:InvokeCommandAction
                     Command="{Binding LoadTourCommand}"
                     CommandParameter="{Binding ElementName=PgTour}"/>
+                <i:InvokeCommandAction
+                    Command="{Binding LoadDestinationCommand}"
+                    CommandParameter="{Binding ElementName=PgTour}"/>
             </i:EventTrigger>
         </i:Interaction.Triggers>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="9*"/>
@@ -35,6 +39,13 @@
                 Style="{StaticResource NavItemStyle}"
                 Margin="25 0 0 0"
                 MouseDown="LbTour_OnMouseDown">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDown">
+                        <i:InvokeCommandAction
+                            Command="{Binding SetTourCommand}"
+                            CommandParameter="{Binding ElementName=PgTour}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
             </Label>
         
             <Label
@@ -44,6 +55,14 @@
                 Margin="25 0 0 0"
                 Style="{StaticResource NavItemStyle}"
                 MouseDown="LbDestination_OnMouseDown">
+
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDown">
+                        <i:InvokeCommandAction
+                            Command="{Binding SetDestinationCommand}"
+                            CommandParameter="{Binding ElementName=PgTour}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
             </Label>
         </WrapPanel>
         

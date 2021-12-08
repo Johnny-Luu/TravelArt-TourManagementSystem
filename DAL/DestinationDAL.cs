@@ -22,7 +22,17 @@ namespace DAL
 
             return data;
         }
-        
+        public async Task<DestinationModel> GetDestinationbyID(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+
+            var result = await _client.GetAsync("Destination/" + id);
+            var data = result.ResultAs<DestinationModel>();
+            return data;
+
+        }
         public async void PushDestination(DestinationModel destination)
         {
             _db = new DbUtils();

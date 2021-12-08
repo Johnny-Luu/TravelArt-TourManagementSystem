@@ -18,12 +18,14 @@ namespace GUI.Views.Pages
         private void LbTour_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             ResetNavItemsToDefault();
+            WpTour.Children.Clear();
             LbTour.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
         }
 
         private void LbDestination_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             ResetNavItemsToDefault();
+            WpTour.Children.Clear();
             LbDestination.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
         }
         private void ResetNavItemsToDefault()

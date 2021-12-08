@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using GUI.Views.Pages;
+using Models;
 
 namespace GUI.Views.MainWindow
 
@@ -8,13 +9,14 @@ namespace GUI.Views.MainWindow
     public partial class TourDetailWindow : Window
     {
         private string TourID;
+        
         public TourDetailWindow(string _tourID)
         {
             InitializeComponent();
             ResetNavItemsToDefault();
             TourID = _tourID;
             LbInfo.Style =Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Info(TourID);
+            //FrContainer.Content = new PageTourDetail_Info();
         }
         public string GetTourID()
         {
@@ -28,7 +30,7 @@ namespace GUI.Views.MainWindow
 
         private void LbInfo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            FrContainer.Content = new PageTourDetail_Info(TourID);
+            FrContainer.Content = new PageTourDetail_Info();
             ResetNavItemsToDefault();
             LbInfo.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
         }
@@ -37,7 +39,7 @@ namespace GUI.Views.MainWindow
         {
             ResetNavItemsToDefault();
             LbRating.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Rating(TourID);
+            FrContainer.Content = new PageTourDetail_Rating();
         }
         
         private void LbPlan_MouseDown(object sender, MouseButtonEventArgs e)

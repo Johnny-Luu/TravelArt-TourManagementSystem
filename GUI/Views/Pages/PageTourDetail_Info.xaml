@@ -6,10 +6,11 @@
       xmlns:local="clr-namespace:GUI.Views.Pages"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
-      DataContext="{StaticResource TourDetailInfoVm}"
+      DataContext="{StaticResource TourDetailVm}"
       x:Name="PgTourDetailInfo"
       Title="PageTourDetail_Info"  Height="670" Width="385">
     <Grid>
+        
         <i:Interaction.Triggers>
             <i:EventTrigger EventName="Loaded">
                 <i:InvokeCommandAction
@@ -17,7 +18,7 @@
                     CommandParameter="{Binding ElementName=PgTourDetailInfo}"/>
             </i:EventTrigger>
 
-        </i:Interaction.Triggers>
+        </i:Interaction.Triggers> 
         <Grid.RowDefinitions>
             <RowDefinition Height="155.2"/>
             <RowDefinition Height="284.8"/>

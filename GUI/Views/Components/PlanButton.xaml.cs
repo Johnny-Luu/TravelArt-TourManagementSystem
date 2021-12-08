@@ -4,9 +4,13 @@ namespace GUI.Views.Components
 {
     public partial class PlanButton : UserControl
     {
-        public PlanButton()
+        public int index;
+        public PlanButton(int i)
         {
+            index = i;
             InitializeComponent();
+            
         }
+    
     }
 }

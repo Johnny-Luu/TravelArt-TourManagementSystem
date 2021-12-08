@@ -15,7 +15,11 @@ namespace BLL
             _destinationDAL = new DestinationDAL();
             return _destinationDAL.GetAllDestination();
         }
-        
+        public Task<DestinationModel> GetDestinationbyID(string id)
+        {
+            _destinationDAL = new DestinationDAL();
+            return _destinationDAL.GetDestinationbyID(id);
+        }
         public void PushDestination(DestinationModel destination)
         {
             _destinationDAL = new DestinationDAL();

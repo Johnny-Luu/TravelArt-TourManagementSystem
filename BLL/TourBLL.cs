@@ -19,7 +19,7 @@ namespace BLL
             _tourDAL = new TourDAL();
             return _tourDAL.GetTourbyID(id);
         }
-        
+
         public void PushTour(TourModel tour)
         {
             _tourDAL = new TourDAL();

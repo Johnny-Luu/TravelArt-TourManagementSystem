@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Models;
 
 namespace GUI.Views.Pages
 {
     public partial class PageTourDetail_Info : Page
-    { 
-        private string TourID;
-        public PageTourDetail_Info(string _tourId)
+    {
+        public PageTourDetail_Info( )
         {
-            TourID = _tourId;
             InitializeComponent();
         }
 
-        public string GetTourID()
-        {
-            return TourID;
-        }
+   
     public void Set_LbPrice(long s)
     {
         //s.ToString(@"#\.###\.###\.##0")
