@@ -71,7 +71,12 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\StaffChartViewModel.cs" />
-    <Compile Include="ViewModels\TourDetailRatingViewModel.cs" />
+    <Compile Include="ViewModels\TourDetailInfoViewModel.cs">
+      <DependentUpon>TourDetailViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\TourDetailRatingViewModel.cs">
+      <DependentUpon>TourDetailViewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\TourDetailViewModel.cs" />
     <Compile Include="ViewModels\TourViewModel.cs" />
     <Compile Include="Views\Components\CommentComponent.xaml.cs">

@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace GUI.Views.Pages
@@ -16,13 +17,19 @@ namespace GUI.Views.Pages
         {
             return TourID;
         }
-    public void Set_LbPrice(string s)
+    public void Set_LbPrice(long s)
     {
-        LbPrice.Content = "Price: " + s + " VND";
+        //s.ToString(@"#\.###\.###\.##0")
+        string moneyString = String.Format("{0:0,0}", s);
+        LbPrice.Content = "Price: " + moneyString + " VND";
     }
-    public void Set_LbDuration(string s)
+    public void Set_LbDuration(int d, int n)
     {
-        LbDuration.Content = "Duration: " + s + " Days";
+        string res = "Duration: " + d.ToString() +" Day";
+        if (d > 1) res += "s";
+        res += " " + n + " Night";
+        if(n>1) res += "s";
+        LbDuration.Content = res;
     }
     public void Set_LbAvailable(string s)
     {

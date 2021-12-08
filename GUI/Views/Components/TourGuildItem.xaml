@@ -10,62 +10,63 @@
              Height="60"
              Width="1280"
              BorderBrush="#80C4C4C4"
-             BorderThickness="1">
+             BorderThickness="0">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="256*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--Avatar image-->
         <Ellipse
-            Grid.Column="0"
+            Grid.Column="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Right"
             Height="50"
             Width="50"
-            Margin="0 0 10 0">
+            Margin="0,4,10,4.4">
             <Ellipse.Fill>
                 <ImageBrush 
                     ImageSource="../../Assets/images/img-paris.jpg"
                     Stretch="UniformToFill"/>
             </Ellipse.Fill>
         </Ellipse>
-        
+
         <!--Name label-->
         <Label 
-            Grid.Column="1" 
+            Grid.Column="2" 
             Content="Name"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontWeight="SemiBold"
-            FontSize="14"/>
-        
+            FontSize="14" Margin="0,16,0,15.4"/>
+
         <!--Status-->
         <Label
-            Grid.Column="2"
+            Grid.Column="3"
             Content="• on trip"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Poppins"
             FontWeight="Light"
             FontSize="12"
-            Foreground="#33FF00"/>
-        
+            Foreground="#33FF00" Margin="0,17,0,17.4"/>
+
         <!--Time Start-->
         <Label
-            Grid.Column="3"
+            Grid.Column="4"
             Content="6AM GM+7 - 20/11"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold"/>
+            FontWeight="SemiBold" Margin="0,16,0,15.4"/>
         <!--Time End-->
         <Label
             Grid.Column="4"
@@ -74,8 +75,8 @@
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold"/>
-        
+            FontWeight="SemiBold" Grid.ColumnSpan="2" Margin="255,16,0,15.4"/>
+
         <!--Passenger-->
         <Label
             Grid.Column="5"
@@ -84,7 +85,8 @@
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold"/>
-        
+            FontWeight="SemiBold" Grid.ColumnSpan="2" Margin="254.8,16,0,15.4"/>
+        <Rectangle Grid.ColumnSpan="6" Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" RadiusY="0.4" RadiusX="1" Stroke="#00000000" VerticalAlignment="Top" Width="1212" Grid.Column="1"/>
+
     </Grid>
 </UserControl>
