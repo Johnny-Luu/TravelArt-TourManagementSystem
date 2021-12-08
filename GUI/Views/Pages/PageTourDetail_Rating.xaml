@@ -7,7 +7,7 @@
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
      
-      DataContext="{StaticResource TourDetailRatingVm}"
+      DataContext="{StaticResource TourDetailVm}"
       x:Name="PgTourDetailRating"
       Title="PageTourDetail_Rating" Height="670" Width="385">
 	<Grid>
