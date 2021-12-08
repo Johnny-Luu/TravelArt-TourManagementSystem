@@ -13,13 +13,18 @@
              BorderThickness="0">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="28*"/>
-            <ColumnDefinition Width="100*"/>
-            <ColumnDefinition Width="256*"/>
-            <ColumnDefinition Width="128*"/>
-            <ColumnDefinition Width="255*"/>
-            <ColumnDefinition Width="255*"/>
-            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="51*"/>
+
         </Grid.ColumnDefinitions>
 
         <!--Avatar image-->
@@ -29,7 +34,7 @@
             HorizontalAlignment="Right"
             Height="50"
             Width="50"
-            Margin="0,4,10,4.4">
+            Margin="0,5,10,5">
             <Ellipse.Fill>
                 <ImageBrush 
                     ImageSource="../../Assets/images/img-paris.jpg"
@@ -38,17 +43,26 @@
         </Ellipse>
 
         <!--Name label-->
-        <Label 
+        <Label x:Name="LbTourGroupName" 
             Grid.Column="2" 
-            Content="Name"
+            Content="Tour Group"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontWeight="SemiBold"
-            FontSize="14" Margin="0,16,0,15.4"/>
+            FontSize="14" Margin="18,5,0,28" Height="27" Width="180" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
 
         <!--Status-->
-        <Label
+        <Label x:Name="LbStatus"
             Grid.Column="3"
             Content="• on trip"
             VerticalAlignment="Center"
@@ -56,37 +70,135 @@
             FontFamily="Poppins"
             FontWeight="Light"
             FontSize="12"
-            Foreground="#33FF00" Margin="0,17,0,17.4"/>
+            Foreground="#33FF00" Margin="19,20,0,16" Height="24" Width="69"/>
 
         <!--Time Start-->
-        <Label
-            Grid.Column="4"
-            Content="6AM GM+7 - 20/11"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-            FontFamily="Mulish"
-            FontSize="14"
-            FontWeight="SemiBold" Margin="0,16,0,15.4"/>
         <!--Time End-->
-        <Label
-            Grid.Column="4"
-            Content="9AM GM+7 - 20/11"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-            FontFamily="Mulish"
-            FontSize="14"
-            FontWeight="SemiBold" Grid.ColumnSpan="2" Margin="255,16,0,15.4"/>
 
         <!--Passenger-->
-        <Label
-            Grid.Column="5"
+        <Label x:Name="LbPassenger"
+            Grid.Column="10"
             Content="25/26"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold" Grid.ColumnSpan="2" Margin="254.8,16,0,15.4"/>
-        <Rectangle Grid.ColumnSpan="6" Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" RadiusY="0.4" RadiusX="1" Stroke="#00000000" VerticalAlignment="Top" Width="1212" Grid.Column="1"/>
+            FontWeight="SemiBold" Margin="18,18,0,15" Height="27" Width="75"/>
+        <Rectangle Grid.ColumnSpan="10" Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" RadiusY="0.4" RadiusX="1" Stroke="#00000000" VerticalAlignment="Top" Width="1260" Grid.Column="1"/>
+        <Label x:Name="LbTourGroupID" 
+            Grid.Column="2" 
+            Content="ID: 1231"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Ubuntu"
+            FontWeight="SemiBold" Margin="20,30,0,3" Height="27" Width="130" RenderTransformOrigin="0.5,0.5" FontSize="10" Foreground="#FF888888">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="LbTourName" 
+            Grid.Column="5" 
+            Content="Tour"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Mulish"
+            FontWeight="SemiBold"
+            FontSize="14" Margin="18,3,0,30" Height="27" Width="175" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="LbTourID" 
+            Grid.Column="5" 
+            Content="ID: 1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Ubuntu"
+            FontWeight="SemiBold" Margin="20,30,0,10" Height="27" Width="130" RenderTransformOrigin="0.5,0.5" FontSize="10" Foreground="#FF888888">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="LbGuideName" 
+            Grid.Column="6" 
+            Content="Tour guide name"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Mulish"
+            FontWeight="SemiBold"
+            FontSize="14" Margin="18,5,0,28" Height="27" Width="175" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="LBGuideID" 
+            Grid.Column="6" 
+            Content="ID: T12"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Ubuntu"
+            FontWeight="SemiBold" Margin="20,30,0,8" Height="27" Width="130" RenderTransformOrigin="0.5,0.5" FontSize="10" Foreground="#FF888888">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.231"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.263"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="LbTimesStart"
+            Grid.Column="8"
+            Content="9AM GM+7 - 20/11"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Mulish"
+            FontSize="14"
+            FontWeight="SemiBold" Margin="18,5,0,28" Height="27" Width="165"/>
+        <Label x:Name="LbMoney"
+            Grid.Column="9"
+            Content="1950.000.000"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Mulish"
+            FontSize="14"
+            FontWeight="SemiBold" Margin="18,3,0,30" Height="27" Width="175"/>
+        <Label x:Name="LbCurrency"
+            Grid.Column="9"
+            Content="VND"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Ubuntu"
+            FontSize="10"
+            FontWeight="SemiBold" Margin="20,30,0,10" Height="27" Width="129" Foreground="#FF888888"/>
+        <Label x:Name="LbTimeEnd"
+            Grid.Column="8"
+            Content="9AM GM+7 - 20/11"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            FontFamily="Mulish"
+            FontSize="14"
+            FontWeight="SemiBold" Margin="18,28,0,5" Height="27" Width="165"/>
 
     </Grid>
 </UserControl>

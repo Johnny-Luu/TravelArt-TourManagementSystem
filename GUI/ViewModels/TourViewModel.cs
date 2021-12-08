@@ -43,8 +43,12 @@ namespace GUI.ViewModels
                 item.TbDescription.Text = tour.Description;
                 item.LbPrice.Content = tour.Price + " vnd";
                 item.LbVisit.Content = "Visit: " + (tour.DestinationIds.Length /2 + 1) + " locations";
+               ////////////////////
+                //Cai nay phai tinh lai
+                // chu ko luu trong db
+                ///////////////
                 item.LbRating.Content = tour.Rating;
-
+                item.StarInit(tour.Rating);
                 // convert img from base64 to bitmap
                 // and add to item's image
                 var bytes = Convert.FromBase64String(tour.Img);

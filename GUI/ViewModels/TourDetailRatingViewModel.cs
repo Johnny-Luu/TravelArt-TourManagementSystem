@@ -30,8 +30,10 @@ namespace GUI.ViewModels
                 
                 cmt.LbName.Content = "Ten";
                 cmt.LbDate.Content = "18/08/2001";
-                cmt.score = 5;
+                cmt.score = 4;
+               
                 cmt.TbComment.Text ="Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang";
+                cmt.InitStar();
                 //
                 PgTourDetailRating.InitCommentPanel(cmt);
                 if (cmt.score is <= 5 and >= 1) rate[cmt.score]++;

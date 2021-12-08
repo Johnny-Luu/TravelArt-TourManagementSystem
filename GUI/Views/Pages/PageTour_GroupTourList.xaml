@@ -9,69 +9,116 @@
       Title="PageTour_GroupTourList" 
       Height="720" 
       Width="1280">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="9*"/>
-        </Grid.RowDefinitions>
-        
-        <Grid Grid.Row="0">
-            
-            <WrapPanel Orientation="Horizontal"
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="23*"/>
+			<RowDefinition Height="10*"/>
+			<RowDefinition Height="111*"/>
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="0" Grid.RowSpan="2">
+			<WrapPanel Grid.Row="0" Margin="10,2,-10,28.2">
+				<Label 
+                Name="LbOntrip"
+                Content="On Trip"
+                BorderBrush="#F4F4F4"
+                Style="{StaticResource NavItemStyle}"
+                Margin="25 15 0 0"
+               
+                >
+
+				</Label>
+
+				<Label
+                Name="LbPlanning"
+                Content="Planing"
+                BorderBrush="#F4F4F4"
+                Margin="25 15 0 0"
+               
+                Style="{StaticResource NavItemStyle}">
+
+				</Label>
+				<Label
+                    x:Name="LbOver"
+                    Content="Over"
+                    BorderBrush="#F4F4F4"
+                    Margin="25 15 0 0"
+              
+                    Style="{StaticResource NavItemStyle}"/>
+			</WrapPanel>
+			<WrapPanel Orientation="Horizontal"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Left">
-                
-                <!--Tour guild label-->
-                <Label 
-                    Content="Tour Guild"
+                       HorizontalAlignment="Left" Margin="5,105,0,32.8" Width="1270">
+
+				<!--Tour guild label-->
+				<!--Tour guild label-->
+				<Label 
+                    Content="Tour Group"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin=" 70 0 0 0"/>
-                
-                <!--Status label-->
-                <Label 
+                    Margin="90,0,0,0"/>
+				<Label 
                     Content="Status"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="240 0 0 0"/>
-                
-                <!--Time start label-->
-                <Label 
-                    Content="Time start"
+                    Margin="130,0,0,0"/>
+				<Label 
+                    Content="Tour "
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="105 0 0 0"/>
-                
-                <!--Time end label-->
-                <Label 
-                    Content="Time end"
+                    Margin="50,0,0,0"/>
+
+				<!--Time start label-->
+				<Label 
+                    Content="Tour Guide"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="190 0 0 0"/>
-                
-                <!--Passenger label-->
-                <Label 
+                    Margin="160,0,0,0"/>
+
+				<!--Time end label-->
+				<Label 
+                    Content="Time"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="125,0,0,0"/>
+
+				<!--Passenger label-->
+				<Label 
+                    Content="Revenue"
+                    Style="{StaticResource GroupGuildListStyle}"
+                    Margin="160,0,0,0"/>
+				<Label
                     Content="Passenger"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="145 0 0 0"/>
-            </WrapPanel>
-        </Grid>
-        
-        <Border 
+                    Margin="130,0,0,0"/>
+
+			</WrapPanel>
+			<Rectangle Fill="#FFFFE6D3" HorizontalAlignment="Left" Height="55" Margin="430,35,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="240" RadiusX="20" RadiusY="20"/>
+			<Border BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="425,-10,0,0" VerticalAlignment="Top" Width="230">
+				<WrapPanel>
+					<Label Content="  Total" Width="140" Height="44" FontSize="18" FontFamily="Poppins" Margin="125,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Foreground="#FF333333" HorizontalContentAlignment="Center"/>
+					<Label Content="150" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FFFF7A00" HorizontalContentAlignment="Center"/>
+
+				</WrapPanel>
+
+			</Border>
+			<Image Grid.Row="0" Source="/GUI;component/Assets/images/img-taxi.png" HorizontalAlignment="Left" Height="90" Margin="450,5,0,0" VerticalAlignment="Top" Width="90"/>
+		</Grid>
+
+		<ScrollViewer 
             Grid.Row="1"
             Width="1280"
-            Height="480"
+            Height="505"
             VerticalAlignment="Top"
-            HorizontalAlignment="Center">
-            
-            <WrapPanel Orientation="Vertical">
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-                <uc:TourGuildItem></uc:TourGuildItem>
-            </WrapPanel>
-        </Border>
-    </Grid>
+            HorizontalAlignment="Center" Margin="-20,14.8,20,0" VerticalScrollBarVisibility="Hidden" Grid.RowSpan="2">
+
+			<WrapPanel Orientation="Vertical" Margin="30,5,-29.6,-4.8">
+				<uc:TourGuildItem />
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+				<uc:TourGuildItem/>
+			</WrapPanel>
+		</ScrollViewer>
+	</Grid>
 </Page>

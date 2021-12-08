@@ -15,7 +15,7 @@
         CornerRadius="10" 
         BorderThickness="0.3" 
         BorderBrush="white">
-        
+
         <Border.Effect>
             <DropShadowEffect
                 Color="Gray"
@@ -23,13 +23,13 @@
                 Opacity=".5"
                 ShadowDepth="2" />
         </Border.Effect>
-        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.2*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            
+
             <!--Tour image-->
             <Border CornerRadius="10" Name="BorderImg">
                 <Border.Background>
@@ -38,8 +38,8 @@
                         Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
-            
-            
+
+
             <!--Tour info-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -50,7 +50,7 @@
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1.5*" />
                 </Grid.RowDefinitions>
-                
+
                 <!--Tour status-->
                 <Label
                     Content="available"
@@ -60,7 +60,7 @@
                     Foreground="#33FF00"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"/>
-                
+
                 <!--Tour name-->
                 <Label
                     Grid.Row="1"
@@ -72,7 +72,7 @@
                     Foreground="Black"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"/>
-                
+
                 <!--Tour description-->
                 <Label
                     Grid.Row="2"
@@ -87,7 +87,7 @@
                         TextWrapping="WrapWithOverflow" 
                         TextTrimming="CharacterEllipsis" />
                 </Label>
-                
+
                 <!--Tour price-->
                 <WrapPanel Grid.Row="3">
                     <Image Source="../../Assets/icons/icon-price.png" />
@@ -100,7 +100,7 @@
                         HorizontalAlignment="Left" 
                         Content="12.000.000 vnd"/>
                 </WrapPanel>
-                
+
                 <!--Tour price-->
                 <WrapPanel Grid.Row="4">
                     <Image Source="../../Assets/icons/icon-globe.png" />
@@ -113,17 +113,22 @@
                         HorizontalAlignment="Left" 
                         Content="Visit: 4 locations"/>
                 </WrapPanel>
-                
+
                 <!--Tour rating-->
                 <Label
-                    Grid.Row="5"
+                    Grid.Row="4"
                     Name="LbRating"
                     Content="4.0 *"
                     FontFamily="Poppins"
                     FontSize="16"
                     Foreground="#EFD700"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left"/>
+                    HorizontalAlignment="Left" Width="33" Margin="2,0,0,7" Height="25" Grid.RowSpan="2" RenderTransformOrigin="0.539,0.784"/>
+                <Image  x:Name="ImgStar1" Grid.Row="5" Width="12" Height="12.2" Margin="28,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar2" Grid.Row="5" Width="12" Height="12.2" Margin="43,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar3" Grid.Row="5" Width="12" Height="12.2" Margin="58,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar4" Grid.Row="5" Width="12" Height="12.2" Margin="73,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar5" Grid.Row="5" Width="12" Height="12.2" Margin="88,6.2,0,13" HorizontalAlignment="Left"/>
             </Grid>
         </Grid>
     </Border>
