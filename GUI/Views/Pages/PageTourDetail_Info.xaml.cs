@@ -5,18 +5,17 @@ namespace GUI.Views.Pages
 {
     public partial class PageTourDetail_Info : Page
     { 
-        public string TourID;
-        public PageTourDetail_Info(string tourId)
+        private string TourID;
+        public PageTourDetail_Info(string _tourId)
         {
-            TourID = tourId;
+            TourID = _tourId;
             InitializeComponent();
-            InitializeComponent();
-            Set_LbAvailable("5");
-            Set_LbDuration("3");
-            Set_LbPrice("69.420.000");
-            Set_LbVisit("7");
         }
-       
+
+        public string GetTourID()
+        {
+            return TourID;
+        }
     public void Set_LbPrice(string s)
     {
         LbPrice.Content = "Price: " + s + " VND";

@@ -19,17 +19,20 @@ namespace GUI.ViewModels
             int[] rate = new int[6];
             PgTourDetailRating = para;
             //id cua tour de tim trong db
-            string tourId = PgTourDetailRating.TourID;
+            string tourId = PgTourDetailRating.GetTourID();
             
             //Init Comment
-            //foreach (var comment in)
+            //foreach (var comment in tour)
             {
+                
                 CommentComponent cmt = new CommentComponent();
                 //cmt.ImgAvatar=
+                
                 cmt.LbName.Content = "Ten";
                 cmt.LbDate.Content = "18/08/2001";
                 cmt.score = 5;
                 cmt.TbComment.Text ="Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang";
+                //
                 PgTourDetailRating.InitCommentPanel(cmt);
                 if (cmt.score is <= 5 and >= 1) rate[cmt.score]++;
             }

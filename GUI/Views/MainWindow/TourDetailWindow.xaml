@@ -36,7 +36,7 @@
 		<Grid x:Name="GridDestination" Grid.Column="0" Grid.ColumnSpan="1"  Width="895" Margin="0,0,0.2,0">
 
 			<Grid.Background >
-				<ImageBrush  Stretch="UniformToFill"  ImageSource="/Assets/images/img-paris.jpg"/>
+				<ImageBrush  Stretch="UniformToFill"  />
 			</Grid.Background>
 
 			<Grid.ColumnDefinitions>
@@ -72,24 +72,7 @@
 				</Label.OpacityMask>
 			</Label>
 
-			<TextBlock x:Name="TxtDecription" Grid.Row="3" 
-                Width="839" Height="99"
-                Margin="26,14.4,69.4,-111"
-                TextWrapping="Wrap"
-                FontFamily="Poppins" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" RenderTransformOrigin="0.498,0.476" FontSize="18" Grid.ColumnSpan="2"
-                Grid.Column="0" FontWeight="Bold">
-				<TextBlock.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform/>
-						<SkewTransform AngleX="-0.628"/>
-						<RotateTransform/>
-						<TranslateTransform X="-0.752"/>
-					</TransformGroup>
-				</TextBlock.RenderTransform><Run Text="Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo Cháu lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo lên ba cháu đi mẫu giáo "/><InlineUIContainer>
-                    <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-                </InlineUIContainer></TextBlock>
+		
 
 
 		</Grid >

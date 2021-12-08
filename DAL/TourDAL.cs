@@ -24,10 +24,19 @@ namespace DAL
             
             var result = await _client.GetAsync("Tour");
             var data = result.ResultAs<List<TourModel>>();
-
             return data;
         }
-        
+        public async Task<TourModel> GetTourbyID(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+
+            var result = await _client.GetAsync("Tour/" + id);
+            var data = result.ResultAs<TourModel>();
+            return data;
+
+        }
         public async void PushTour(TourModel tour)
         {
             _db = new DbUtils();

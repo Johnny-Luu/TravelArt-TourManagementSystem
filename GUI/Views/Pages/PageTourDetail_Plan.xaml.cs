@@ -4,11 +4,15 @@ namespace GUI.Views.Pages
 {
     public partial class PageTourDetail_Plan : Page
     {
-        public string TourID;
-        public PageTourDetail_Plan(string tourId)
+        private string TourID;
+        public PageTourDetail_Plan(string _tourId)
         {
-            TourID = tourId;
+            TourID = _tourId;
             InitializeComponent();
+        }
+        public string GetTourID()
+        {
+            return TourID;
         }
     }
 }

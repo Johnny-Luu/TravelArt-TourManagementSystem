@@ -7,13 +7,18 @@ namespace GUI.Views.MainWindow
 {
     public partial class TourDetailWindow : Window
     {
-        public string tourID = "0";
-        public TourDetailWindow()
+        private string TourID;
+        public TourDetailWindow(string _tourID)
         {
             InitializeComponent();
             ResetNavItemsToDefault();
+            TourID = _tourID;
             LbInfo.Style =Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Info(tourID);
+            FrContainer.Content = new PageTourDetail_Info(TourID);
+        }
+        public string GetTourID()
+        {
+            return TourID;
         }
         private void BtnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -23,7 +28,7 @@ namespace GUI.Views.MainWindow
 
         private void LbInfo_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            FrContainer.Content = new PageTourDetail_Info(tourID);
+            FrContainer.Content = new PageTourDetail_Info(TourID);
             ResetNavItemsToDefault();
             LbInfo.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
         }
@@ -32,14 +37,14 @@ namespace GUI.Views.MainWindow
         {
             ResetNavItemsToDefault();
             LbRating.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Rating(tourID);
+            FrContainer.Content = new PageTourDetail_Rating(TourID);
         }
         
         private void LbPlan_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ResetNavItemsToDefault();
             LbPlan.Style = Application.Current.Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTourDetail_Plan(tourID);
+            FrContainer.Content = new PageTourDetail_Plan(TourID);
         }
         private void ResetNavItemsToDefault()
         {

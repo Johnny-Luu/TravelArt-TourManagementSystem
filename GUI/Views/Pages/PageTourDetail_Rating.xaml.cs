@@ -5,13 +5,16 @@ namespace GUI.Views.Pages
 {
     public partial class PageTourDetail_Rating : Page
     {
-        public string TourID;
-        public PageTourDetail_Rating(string tourId)
+        private string TourID;
+        public PageTourDetail_Rating(string _tourId)
         {
-            TourID = tourId;
+            TourID = _tourId;
             InitializeComponent();
         }
-
+        public string GetTourID()
+        {
+            return TourID;
+        }
         public void InitChartFrame(int r1,int r2,int r3,int r4,int r5)
         {
             var chart = new TourRating();

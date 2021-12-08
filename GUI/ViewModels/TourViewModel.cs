@@ -38,6 +38,7 @@ namespace GUI.ViewModels
             foreach (var tour in tourList)
             {
                 TourControl item = new TourControl();
+                item.tourID = tour.Id;
                 item.LbName.Content = tour.Name;
                 item.TbDescription.Text = tour.Description;
                 item.LbPrice.Content = tour.Price + " vnd";
