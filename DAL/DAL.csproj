@@ -72,10 +72,12 @@
     <ItemGroup>
         <Compile Include="DbUtils.cs" />
         <Compile Include="DestinationDAL.cs" />
+        <Compile Include="EmployeeDAL.cs" />
         <Compile Include="HotelDAL.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="TourDAL.cs" />
+        <Compile Include="TourGroupDAL.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
