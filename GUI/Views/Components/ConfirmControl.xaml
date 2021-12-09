@@ -15,7 +15,7 @@
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="180"/>
             <ColumnDefinition Width="85"/>
-            <ColumnDefinition Width="85"/>
+            <ColumnDefinition Width="90"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2"/>
@@ -38,12 +38,12 @@
         <Label x:Name="LbTourGroupDate" Content="25/10/2021 to 30/10/2021&#xD;&#xA;" Grid.Column="4" HorizontalAlignment="Left" Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2" Width="240" Foreground="#FFC5C7CD" FontWeight="Bold"/>
         <Label x:Name="LbPrice" Content="120.000.000" Grid.Column="5" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Grid.ColumnSpan="2" Width="190" VerticalContentAlignment="Bottom"/>
         <Label x:Name="LbPriceCurrency" Content="vnd" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="166" Foreground="#FFC5C7CD" FontWeight="Bold" Height="32"/>
-        <Border  Grid.Column="6" HorizontalAlignment="Right" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="70" Height="22" Grid.RowSpan="2" BorderBrush="Transparent" Background="#FF29CC97" CornerRadius="10">
+        <Border  Grid.Column="6" HorizontalAlignment="Right" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="Transparent" Background="#FF29CC97" CornerRadius="10">
 
             <Button MouseDown="MouseDown_Accept" Content="Accept" BorderBrush="Transparent" Background="Transparent" Margin="0,0,0.4,0" Foreground="White"/>
 
         </Border>
-        <Border  Grid.Column="7" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="70" Height="22" Grid.RowSpan="2" BorderBrush="#FFF12B2C" Background="White" CornerRadius="10" BorderThickness="1">
+        <Border  Grid.Column="7" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="#FFF12B2C" Background="White" CornerRadius="10" BorderThickness="1">
             <Button MouseDown="MouseDown_Decline" Content="Decline" BorderBrush="Transparent" Background="Transparent" Margin="0" Foreground="#FFF12B2C"/>
 
 
