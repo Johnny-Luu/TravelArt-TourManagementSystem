@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:GUI.Views.Components"
              mc:Ignorable="d"
              d:DesignHeight="115" d:DesignWidth="360">
+    <!-- cmt-->
     <Border 
         
         Background="white" 
