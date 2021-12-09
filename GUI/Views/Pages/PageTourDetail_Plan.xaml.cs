@@ -8,38 +8,25 @@ namespace GUI.Views.Pages
     {
         private string TourID;
         public int TourLenght=5;
-        private int currentDay;
         public PageTourDetail_Plan(string _tourId)
         {
             TourID = _tourId;
-            currentDay = 1;
             InitializeComponent();
-            UpdateLbDay();
-           
-            
         }
         public string GetTourID()
         {
             return TourID;
         }
 
-
-        private void nextDay(object sender, MouseButtonEventArgs e)
+        public void InitDes(DestinationControl desCtrl, int day)
         {
-            currentDay++;
-            if (currentDay > TourLenght) currentDay = 1;
-            UpdateLbDay();
-        }
-        private void prevDay(object sender, MouseButtonEventArgs e)
-        {
-            currentDay--;
-            if (currentDay < 1) currentDay = TourLenght;
-            UpdateLbDay();
+            Label lb = new Label();
+      
+            lb.Content = "Day " + day.ToString();
+            WpContaner.Children.Add(lb);
+            WpContaner.Children.Add(desCtrl);
         }
 
-        private void UpdateLbDay()
-        {
-            LbTourDay.Text = "Day " + currentDay.ToString();
-        }
+
     }
 }
