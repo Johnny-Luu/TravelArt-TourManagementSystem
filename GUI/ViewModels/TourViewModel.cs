@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -104,7 +105,7 @@ namespace GUI.ViewModels
                 DestinationControl item = new DestinationControl();
                 item.LbName.Content = destination.Name;
                 item.TbDescription.Text = destination.Description;
-
+                item.Margin = new Thickness(20);
               
                 // convert img from base64 to bitmap
                 // and add to item's image

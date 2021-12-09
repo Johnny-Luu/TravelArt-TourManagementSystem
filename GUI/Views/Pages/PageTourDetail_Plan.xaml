@@ -20,16 +20,14 @@
         </i:Interaction.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="130"/>
-            <RowDefinition Height="70.4"/>
-            <RowDefinition Height="559.2"/>
+            <RowDefinition Height="540"/>
         </Grid.RowDefinitions>
-        <uc:DestinationControl Grid.Row="2" x:Name="DesControl" Margin="7,100.2,14.8,345" />
+      
         <TextBox  x:Name="LbTourName" Text="Loading" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="32" FontWeight="Bold" Height="120" Width="310" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent" IsEnabled="False"/>
-        <Label Content="Number of Destination : 15" HorizontalAlignment="Left" Margin="20,14.6,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="16" Height="35" Width="300" Foreground="DimGray"/>
-        <Image x:Name="ImgNext" MouseDown="nextDay" Source="/Assets/icons/goldstar_empty.png" HorizontalAlignment="Left" Height="30" Margin="335,19.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="40"/>
-        <Image x:Name="ImgBack" MouseDown="prevDay" Source="/Assets/icons/goldstar_empty.png" HorizontalAlignment="Left" Height="30" Margin="10,20,0,0" Grid.Row="2" VerticalAlignment="Top" Width="40"/>
-        <TextBox  x:Name="LbTourDay" Text="Day 1" HorizontalAlignment="Center" Margin="135,9.2,134.8,0" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="32" FontWeight="Bold" Height="65" Width="115" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent" IsEnabled="False" Grid.Row="2" TextAlignment="Center"/>
-
-
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+            <WrapPanel x:Name="WpContaner" Margin="20,0,0,0"></WrapPanel>
+        </ScrollViewer>
+        
+       
     </Grid>
 </Page>

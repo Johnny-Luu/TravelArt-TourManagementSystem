@@ -102,26 +102,38 @@ namespace GUI.ViewModels
         }
         public async void LoadPlan(PageTourDetail_Plan para)
         {
-            
+
             
             PgTourDetailPlan = para;
             //des
             PgTourDetailPlan.LbTourName.Text = tour.Name;
-            
 
+            int daycount = 0;
             var destinationBlL = new DestinationBLL();
-            var des = await destinationBlL.GetDestinationbyID("2");
-            PgTourDetailPlan.DesControl.TbDescription.Text = des.Description;
-            PgTourDetailPlan.DesControl.LbName.Content = des.Name;
-            var bytes = Convert.FromBase64String(des.Img);
-            var ms = new MemoryStream();
-            ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
-            var image = new Bitmap(ms, false);
-            ms.Dispose();
-            var a = image.GetHbitmap();
-            var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-            PgTourDetailPlan.DesControl.BorderImg.Background = new ImageBrush(b);
-       
+
+            string ListDesID = tour.DestinationIds;
+            String[] arrayListDesId = ListDesID.Split(',');
+            for(int i=0;i<arrayListDesId.Length;i++)
+            {
+                
+                string desID = arrayListDesId[i];
+                DestinationControl desCtrl = new DestinationControl();
+                var des = await destinationBlL.GetDestinationbyID(desID);
+                daycount++;
+                desCtrl.TbDescription.Text = des.Description;
+                desCtrl.LbName.Content = des.Name;
+                var bytes = Convert.FromBase64String(des.Img);
+                var ms = new MemoryStream();
+                ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
+                var image = new Bitmap(ms, false);
+                ms.Dispose();
+                var a = image.GetHbitmap();
+                var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty,
+                    BitmapSizeOptions.FromEmptyOptions());
+                desCtrl.BorderImg.Background = new ImageBrush(b);
+                PgTourDetailPlan.InitDes(desCtrl, daycount);
+            }
+
         }
 
     
