@@ -4,18 +4,30 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
       Title="PageAddingTourGroup" 
       Height="720"
-      Width="1280">
+      Width="1280"
+      x:Name="PgAddingTourGroup"
+      DataContext="{StaticResource AddingTourGroupVm}">
     <Grid>
-         <Grid.ColumnDefinitions>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction
+                    Command="{Binding LoadDataCommand}"
+                    CommandParameter="{Binding ElementName=PgAddingTourGroup}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4.5*"/>
             <ColumnDefinition Width="5.5*"/>
         </Grid.ColumnDefinitions>
         
         <!--About TourGroup-->
-        <Border 
+        <Border
             Grid.Column="0"
             Background="#60634223" 
             CornerRadius="30" 
@@ -34,7 +46,7 @@
                 Margin="30">
                 
                 <!--Tourist Group label-->
-                <Label Content="Tourist Group"
+                <Label Content="Tour Group Name"
                        Style="{StaticResource AddItemStyle}"/>
                 
                 <!--Tourist Group textBox-->
@@ -42,29 +54,55 @@
                         BorderThickness="4" 
                         BorderBrush="white">
                     <TextBox 
+                        Name="TbTourGroupName"
                         Width="350"
                         Height="50" 
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}"/>
                  </Border>
                 
-                <!--Slot label-->
+                <!--Tour Leader label-->
                 <Label 
-                    Content="Slot"
-                    Style="{StaticResource AddItemStyle}"
-                    Margin="0 60 0 0"/>
-                      
-                <!--Slot textBox-->
+                    Content="Tour Leader"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource AddItemStyle}"/>
+                    
+                <!--Tour Leader ComboBox-->
                 <Border
                     CornerRadius="10" 
                     BorderThickness="4" 
-                    BorderBrush="white">
-                    <TextBox
+                    BorderBrush="white"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                    <ComboBox
+                        Name="CbTourLeader"
+                        Height="50"
                         Width="350"
-                        Height="50" 
-                        BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}"/>
+                        Style="{StaticResource ComboBoxStyle}" >
+                    </ComboBox>
                 </Border>
+                
+                <!--Tour Deputy label-->
+                <Label 
+                    Content="Tour Deputy"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource AddItemStyle}"/>
+                    
+                <!--Tour Deputy ComboBox-->
+                <Border
+                    CornerRadius="10" 
+                    BorderThickness="4" 
+                    BorderBrush="white"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                    <ComboBox
+                        Name="CbTourDeputy"
+                        Height="50"
+                        Width="350"
+                        Style="{StaticResource ComboBoxStyle}">
+                    </ComboBox>
+                </Border>
+                
             </WrapPanel>
         </Border>
         <Border
@@ -86,7 +124,7 @@
                     
                     <!--Tour Name label-->
                     <Label 
-                        Content="Tour Name"
+                        Content="Tour"
                         Style="{StaticResource AddItemStyle}"/>
                     
                     <!--Tour Name ComboBox-->
@@ -96,46 +134,71 @@
                         BorderBrush="white"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center">
-                        <ComboBox 
+                        <ComboBox
+                            Name="CbTour"
                             Height="50"
-                            Width="330"
+                            Width="350"
                             Style="{StaticResource ComboBoxStyle}"/>
+                    </Border>
+                    
+                    
+                    <!--Slot label-->
+                    <Label 
+                        Content="Slot"
+                        Style="{StaticResource AddItemStyle}"
+                        Margin="0 20 0 0"/>
+                      
+                    <!--Slot textBox-->
+                    <Border
+                        CornerRadius="10" 
+                        BorderThickness="4" 
+                        BorderBrush="white">
+                        <TextBox
+                            Name="TbSlot"
+                            Width="350"
+                            Height="50" 
+                            BorderThickness="0"
+                            Style="{StaticResource TextBoxStyle}"/>
                     </Border>
                     
                     <!--Start Date label-->
                     <Label
                         Content="Start Date"
                         Style="{StaticResource AddItemStyle}"
-                        Margin="0 70 0 0"/>
+                        Margin="0 20 0 0"/>
                     
                     <!--Start Date textBox-->
                     <Border
-                        CornerRadius="10" 
-                        BorderThickness="4" 
+                        CornerRadius="10"
+                        BorderThickness="4"
+                        Background="White"
                         BorderBrush="white">
-                        <TextBox
+                        <DatePicker
+                            Name="DpStartDate"
                             Width="350"
-                            Height="50" 
-                            BorderThickness="0"
-                            Style="{StaticResource TextBoxStyle}"/>
+                            Height="50"
+                            FontSize="20"
+                            FontFamily="Mulish"/>
                     </Border>
                   
                     <!--End Date label-->
                     <Label 
                         Content="End Date"
                         Style="{StaticResource AddItemStyle}"
-                        Margin="0 70 0 0"/>
+                        Margin="0 20 0 0"/>
                     
                     <!--End Date textBox-->
                     <Border
                         CornerRadius="10" 
                         BorderThickness="4" 
-                        BorderBrush="white">
-                        <TextBox 
+                        BorderBrush="white"
+                        Background="White">
+                        <DatePicker
+                            Name="DpEndDate"
                             Width="350"
-                            Height="50" 
-                            BorderThickness="0"
-                            Style="{StaticResource TextBoxStyle}"/>
+                            Height="50"
+                            FontSize="20"
+                            FontFamily="Mulish"/>
                     </Border>
                 </WrapPanel>
             </Grid>
@@ -194,6 +257,13 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
             Margin="0 0 60 150">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction
+                        Command="{Binding PushTourGroupCommand}"
+                        CommandParameter="{Binding ElementName=PgAddingTourGroup}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
             
             <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
         </Border>

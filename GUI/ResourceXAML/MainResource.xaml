@@ -9,7 +9,7 @@
     <viewModels:AddingHotelViewModel x:Key="AddingHotelVm"></viewModels:AddingHotelViewModel>
     <viewModels:StaffChartViewModel x:Key="StaffChartVm"></viewModels:StaffChartViewModel>
     <viewModels:TourDetailViewModel x:Key="TourDetailVm"></viewModels:TourDetailViewModel>
-   
+    <viewModels:AddingTourGroupViewModel x:Key="AddingTourGroupVm"></viewModels:AddingTourGroupViewModel>
     
     <!--Navbar items when clicked-->
     <Style x:Key="NavItemClickedStyle" TargetType="Label">

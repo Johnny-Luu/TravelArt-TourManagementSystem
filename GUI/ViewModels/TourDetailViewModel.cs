@@ -94,7 +94,7 @@ namespace GUI.ViewModels
                 cmt.InitStar();
                 //
                 PgTourDetailRating.InitCommentPanel(cmt);
-                if (cmt.score is <= 5 and >= 1) rate[cmt.score]++;
+                if (cmt.score <= 5 && cmt.score >= 1) rate[cmt.score]++;
             }
 
             //InitChart
