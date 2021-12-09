@@ -83,7 +83,7 @@
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold" Margin="18,18,0,15" Height="27" Width="75"/>
+            FontWeight="SemiBold" Margin="5,18,0,15" Height="27" Width="75"/>
         <Rectangle Grid.ColumnSpan="10" Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" RadiusY="0.4" RadiusX="1" Stroke="#00000000" VerticalAlignment="Top" Width="1260" Grid.Column="1"/>
         <Label x:Name="LbTourGroupID" 
             Grid.Column="2" 
@@ -167,38 +167,40 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LbTimesStart"
+        <Label x:Name="LbDeputyName"
             Grid.Column="8"
-            Content="9AM GM+7 - 20/11"
+            Content="Tour Deputy Name"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
             FontWeight="SemiBold" Margin="18,5,0,28" Height="27" Width="165"/>
-        <Label x:Name="LbMoney"
+        <Label x:Name="LbTimesStart"
             Grid.Column="9"
-            Content="1950.000.000"
+            Content="dd/mm/yyyy"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
             FontWeight="SemiBold" Margin="18,3,0,30" Height="27" Width="175"/>
-        <Label x:Name="LbCurrency"
-            Grid.Column="9"
-            Content="VND"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left"
-            FontFamily="Ubuntu"
-            FontSize="10"
-            FontWeight="SemiBold" Margin="20,30,0,10" Height="27" Width="129" Foreground="#FF888888"/>
         <Label x:Name="LbTimeEnd"
-            Grid.Column="8"
-            Content="9AM GM+7 - 20/11"
+            Grid.Column="9"
+            Content="dd/mm/yyyy"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             FontFamily="Mulish"
             FontSize="14"
-            FontWeight="SemiBold" Margin="18,28,0,5" Height="27" Width="165"/>
+            FontWeight="SemiBold" Margin="20,30,0,10" Height="27" Width="129" />
+        <Label x:Name="id"
+            Grid.Column="8"
+            Content="9AM GM+7 - 20/11"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+          
+            FontFamily="Ubuntu"
+            FontSize="10"
+            FontWeight="SemiBold"
+            Margin="18,28,0,5" Height="27" Width="165" Foreground="#FF888888"/>
 
     </Grid>
 </UserControl>

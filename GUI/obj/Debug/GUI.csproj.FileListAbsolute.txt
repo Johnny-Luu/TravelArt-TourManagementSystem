@@ -268,3 +268,14 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Co
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationControl.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationControl.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\DestinationControl.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.dll
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.xml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml

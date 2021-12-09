@@ -67,21 +67,22 @@
 
 				<!--Time start label-->
 				<Label 
-                    Content="Tour Guide"
+                    Content="Tour Guide Leader"
                     Style="{StaticResource GroupGuildListStyle}"
                     Margin="160,0,0,0"/>
 
 				<!--Time end label-->
 				<Label 
+					Content="Tour Guide Deputy"
+					Style="{StaticResource GroupGuildListStyle}"
+					Margin="80,0,0,0"/>
+				<Label 
                     Content="Time"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="125,0,0,0"/>
+                    Margin="70,0,0,0"/>
 
 				<!--Passenger label-->
-				<Label 
-                    Content="Revenue"
-                    Style="{StaticResource GroupGuildListStyle}"
-                    Margin="160,0,0,0"/>
+				
 				<Label
                     Content="Passenger"
                     Style="{StaticResource GroupGuildListStyle}"
