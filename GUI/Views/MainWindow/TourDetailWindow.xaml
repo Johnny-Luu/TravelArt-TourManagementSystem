@@ -16,118 +16,107 @@
         DataContext="{StaticResource TourDetailVm}"
         x:Name="WdTourDetail"
         >
-	<Grid Background="White">
-		<i:Interaction.Triggers>
-			<i:EventTrigger EventName="Loaded">
-				<i:InvokeCommandAction
-					Command="{Binding LoadTourDetailCommand}"
-					CommandParameter="{Binding ElementName=WdTourDetail}"/>
-			</i:EventTrigger>
-			
-		</i:Interaction.Triggers>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="895"/>
-			<ColumnDefinition Width="385"/>
-		</Grid.ColumnDefinitions>
-
-
-
-
-		<Grid x:Name="GridDestination" Grid.Column="0" Grid.ColumnSpan="1"  Width="895" Margin="0,0,0.2,0">
-
-			<Grid.Background >
-				<ImageBrush  Stretch="UniformToFill"  />
-			</Grid.Background>
-
+	<Border 
+		Background="White" 
+		CornerRadius="20">
+		
+		<Grid>
+			<i:Interaction.Triggers>
+				<i:EventTrigger EventName="Loaded">
+					<i:InvokeCommandAction
+						Command="{Binding LoadTourDetailCommand}"
+						CommandParameter="{Binding ElementName=WdTourDetail}"/>
+				</i:EventTrigger>
+			</i:Interaction.Triggers>
+				
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="50"/>
-				<ColumnDefinition Width="auto"/>
+				<ColumnDefinition Width="895"/>
+				<ColumnDefinition Width="385"/>
 			</Grid.ColumnDefinitions>
 
-			<Grid.RowDefinitions>
-				<RowDefinition Height="50"/>
-				<RowDefinition Height="500"/>
-				<RowDefinition Height="50"/>
-				<RowDefinition Height="auto"/>
-			</Grid.RowDefinitions>
+			<Grid x:Name="GridDestination" Width="895" Margin="0,0,0.2,0">
 
-			<Grid Grid.Column="0" Grid.Row="0" />
-			<Grid Grid.Column="0" Grid.Row="1" >
+				<!--Tour image-->
+				<Border CornerRadius="20" Name="BorderImg">
+					<Border.Background>
+						<ImageBrush
+							Stretch="UniformToFill" />
+					</Border.Background>
+				</Border>
+
+				<Grid Grid.Column="0" Grid.Row="0" />
+				<Grid Grid.Column="0" Grid.Row="1" >
+
+				</Grid>
+
+				<!-- Back button-->
+				<Image
+					x:Name="BtnBack"
+					MouseDown="BtnBack_MouseDown"
+					Grid.Column="0" 
+					Width="35" 
+					Height="35"
+					VerticalAlignment="Top"
+					HorizontalAlignment="Left"
+					Margin="10 10 0 0">
+					<Grid.Row>0</Grid.Row>
+					<Image.Source>/Assets/icons/arrow-left.png</Image.Source>
+				</Image>
+					
+			</Grid >
+
+			<Grid Grid.Column="1" Grid.ColumnSpan="1"  Width="385">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+
+				<!--Label-->
+				<Grid Grid.Row="0">
+
+					<WrapPanel
+	                    Grid.Column="0"
+	                    VerticalAlignment="Center"
+	                    HorizontalAlignment="Center" Width="385">
+
+
+						<Label
+	                        MouseDown="LbInfo_MouseDown"
+	                        Name="LbInfo"
+	                        Style="{StaticResource NavItemStyle}"
+	                        Content="Information"
+	                       Width="113" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+						</Label>
+						<Label
+	                        MouseDown="LbRating_MouseDown"
+	                        x:Name="LbRating"
+	                        Style="{StaticResource NavItemStyle}"
+	                        Content="Rating"
+	                        FontSize="18" Margin="20,0" Width="90" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+
+						<Label 
+	                        MouseDown="LbPlan_MouseDown"
+	                        Name="LbPlan"
+	                        Style="{StaticResource NavItemStyle}"
+	                        Content="Plan"
+	                         FontSize="18" Width="55" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+						</Label>
+
+					</WrapPanel>
+				</Grid>
+				<!--Frame-->
+
+				<Frame
+	                Grid.Row="0" Grid.RowSpan="2"
+	                 
+	                Name="FrContainer" NavigationUIVisibility="Hidden" Margin="0,50,0,-667.8" Width="385" 
+	              
+	                />
 
 
 			</Grid>
-
-			<!-- Back button-->
-			<Image x:Name="BtnBack" MouseDown="BtnBack_MouseDown" Grid.Column="0" Width="35" Height="35">
-				<Grid.Row>0</Grid.Row>
-				<Image.Source>/Assets/icons/arrow-left.png</Image.Source>
-			</Image>
-			<!-- Text -->
-			<Label x:Name="TxtTitle" Content="sadasd" Grid.Row="2" Grid.Column="1" Margin="154.6,1.8,229.4,6.6" FontFamily="Poppins" FontSize="24" Foreground="White" Height="42" HorizontalContentAlignment="Center" Width="499.8" FontWeight="Bold">
-				<Label.OpacityMask>
-					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-						<GradientStop Color="Black" Offset="0"/>
-						<GradientStop Color="#FF4C0000" Offset="1"/>
-					</LinearGradientBrush>
-				</Label.OpacityMask>
-			</Label>
-
-		
-
-
-		</Grid >
-
-		<Grid Grid.Column="1" Grid.ColumnSpan="1"  Width="385">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="50"/>
-				<RowDefinition Height="auto"/>
-			</Grid.RowDefinitions>
-
-			<!--Label-->
-			<Grid Grid.Row="0">
-
-				<WrapPanel
-                    Grid.Column="0"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center" Width="385">
-
-
-					<Label
-                        MouseDown="LbInfo_MouseDown"
-                        Name="LbInfo"
-                        Style="{StaticResource NavItemStyle}"
-                        Content="Information"
-                       Width="113" FontSize="18" Margin="30,0,20,0"   HorizontalAlignment="Center" VerticalAlignment="Center"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-					</Label>
-					<Label
-                        MouseDown="LbRating_MouseDown"
-                        x:Name="LbRating"
-                        Style="{StaticResource NavItemStyle}"
-                        Content="Rating"
-                        FontSize="18" Margin="20,0" Width="90" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-
-
-					<Label 
-                        MouseDown="LbPlan_MouseDown"
-                        Name="LbPlan"
-                        Style="{StaticResource NavItemStyle}"
-                        Content="Plan"
-                         FontSize="18" Width="55" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-					</Label>
-
-				</WrapPanel>
-			</Grid>
-			<!--Frame-->
-
-			<Frame
-                Grid.Row="0" Grid.RowSpan="2"
-                 
-                Name="FrContainer" NavigationUIVisibility="Hidden" Margin="0,50,0,-667.8" Width="385" 
-              
-                />
-
-
 		</Grid>
-	</Grid>
+	</Border>
 
 </Window>

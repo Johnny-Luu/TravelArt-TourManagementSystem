@@ -107,7 +107,6 @@ namespace GUI.ViewModels
                 Price = price,
                 Description = shortDescription,
                 Img = _base64Img,
-                Rating = 0,
                 Status = 1,
                 DestinationIds = destinationIds
             };

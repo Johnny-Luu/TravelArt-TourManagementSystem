@@ -54,7 +54,7 @@ namespace GUI.ViewModels
 
            var a = image.GetHbitmap();
            var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-           WdTourDetail.GridDestination.Background = new ImageBrush(b);
+           WdTourDetail.BorderImg.Background = new ImageBrush(b);
           //show khi load xong
           WdTourDetail.LbInfo.Visibility = Visibility.Visible;
           WdTourDetail.LbRating.Visibility = Visibility.Visible;
@@ -80,19 +80,18 @@ namespace GUI.ViewModels
           
             
             //Init Comment
-            //foreach (var comment in tour)
+            foreach (var rating in tour.RatingList)
             {
-                
                 CommentComponent cmt = new CommentComponent();
-                //cmt.ImgAvatar=
                 
-                cmt.LbName.Content = "Ten";
-                cmt.LbDate.Content = "18/08/2001";
-                cmt.score = 4;
-               
-                cmt.TbComment.Text ="Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang Luu Ngoc Sang Luu Ngoc Sang Ton Nu Ngoc Sang";
+                // haven't init user yet, so display id instead
+                // will be replaced by user name later
+                cmt.LbName.Content = rating.CustomerId;
+                cmt.LbDate.Content = rating.Time;
+                cmt.score = rating.Rating;
+                cmt.TbComment.Text = rating.Comment;
                 cmt.InitStar();
-                //
+                
                 PgTourDetailRating.InitCommentPanel(cmt);
                 if (cmt.score <= 5 && cmt.score >= 1) rate[cmt.score]++;
             }

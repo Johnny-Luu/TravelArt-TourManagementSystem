@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using DTO;
 
 namespace Models
 {
@@ -9,7 +11,7 @@ namespace Models
         private string _name = "";
         private string _description = "";
         private string _price = "";
-        private double _rating = 0;
+        private List<RatingModel> _ratingList = new List<RatingModel>();
         private int _status = 1;        // 0 - not available, 1 - available
         private string _destinationIds = "";
 
@@ -43,11 +45,12 @@ namespace Models
             set => _price = value;
         }
         
-        public double Rating
+        public List<RatingModel> RatingList
         {
-            get => _rating;
-            set => _rating = value;
+            get => _ratingList;
+            set => _ratingList = value;
         }
+
 
         public int Status
         {
@@ -64,14 +67,13 @@ namespace Models
 
         public TourModel() { }
 
-        public TourModel(string id, string img ,string name, string description, string price, double rating, int status, string destinationIds)
+        public TourModel(string id, string img, string name, string description, string price, int status, string destinationIds)
         {
             _id = id;
             _img = img;
             _name = name;
             _description = description;
             _price = price;
-            _rating = rating;
             _status = status;
             _destinationIds = destinationIds;
         }
