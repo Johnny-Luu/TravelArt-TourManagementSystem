@@ -43,8 +43,7 @@ namespace GUI.ViewModels
         public async void LoadTour(PageTour para)
         {
             PgTour = para;
-            PgTour.LbTour.Visibility = Visibility.Hidden;
-            PgTour.LbDestination.Visibility = Visibility.Hidden;
+       
             PgTour.WpTour.Children.Clear();
             var tourBlL = new TourBLL();
             tourList = await tourBlL.GetAllTour();
@@ -60,13 +59,13 @@ namespace GUI.ViewModels
             var destinationBlL = new DestinationBLL();
              destinationlist = await destinationBlL.GetAllDestination();
              
-             PgTour.LbTour.Visibility = Visibility.Visible;
-             PgTour.LbDestination.Visibility = Visibility.Visible;
+            SetDestination(para);
             
         }
 
         public async void SetTour(PageTour para)
         {
+            PgTour.WpTour.Children.Clear();
             foreach (var tour in tourList)
             {
                 TourControl item = new TourControl();
@@ -99,6 +98,7 @@ namespace GUI.ViewModels
         }
         public async void SetDestination(PageTour para)
         {
+            PgTour.WpTour.Children.Clear();
             foreach (var destination in destinationlist)
             {
                 DestinationControl item = new DestinationControl();
