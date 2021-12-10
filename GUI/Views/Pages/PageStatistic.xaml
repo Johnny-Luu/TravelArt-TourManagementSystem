@@ -15,18 +15,14 @@
             <RowDefinition Height="590"/>
         </Grid.RowDefinitions> 
   
-        <WrapPanel Grid.Row="0" Height="58
-                  ">
+        <WrapPanel Grid.Row="0" Height="58">
             <Label 
                 Name="LbTour"
                 Content="Tour"
                 BorderBrush="#F4F4F4"
                 Style="{StaticResource NavItemStyle}"
                 Margin="25 15 0 0"
-                MouseDown="MouseDown_Tour"
-                >
-         
-            </Label>
+                MouseDown="MouseDown_Tour" />
         
             <Label
                 Name="LbStaff"
@@ -34,9 +30,7 @@
                 BorderBrush="#F4F4F4"
                 Margin="25 15 0 0"
                 MouseDown="MouseDown_Staff"
-                Style="{StaticResource NavItemStyle}">
-             
-            </Label>
+                Style="{StaticResource NavItemStyle}" />
         </WrapPanel>
         <Frame Name="FrameContainer" Grid.Row="1"></Frame>
     </Grid>

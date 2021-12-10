@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       mc:Ignorable="d"
       Background="Transparent"
       Title="PageStatistic_Staff" Height="590" Width="1280">
@@ -30,16 +31,15 @@
 			BorderThickness="0.3" 
 			BorderBrush="white">
 			
-        
-			
-		<WrapPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Margin="0,0,2.6,0.2"></WrapPanel>
-			</Border>
+			<lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Bottom" >
+			</lvc:CartesianChart>
+		</Border>
 	<!-- 3 Panel ben phai-->
 		<Border 
 			Grid.Column="1" 
 			Grid.Row="1"
 			Height="150"
-			Margin="50.4,20.6,0,0"
+			Margin="50.4,14,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
@@ -109,7 +109,7 @@
 			Grid.Column="1" 
 			Grid.Row="2"
 			Height="150"
-			Margin="50.4,20.6,0,0"
+			Margin="50.4,12,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 

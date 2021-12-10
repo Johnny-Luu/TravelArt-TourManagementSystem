@@ -16,8 +16,7 @@ namespace GUI
         {
             InitializeComponent();
             if (LbStatistic != null) LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new PageTour_GroupTourList();
-           
+            FrContainer.Content = new PageStatistic();
         }
 
         private void BtnMinimize_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -34,10 +33,7 @@ namespace GUI
         {
             ResetNavItemsToDefault();
             LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
-           FrContainer.Content = new PageStatistic();
-            
-        
-            
+            FrContainer.Content = new PageStatistic();
         }
 
         private void LbConfirm_OnMouseDown(object sender, MouseButtonEventArgs e)
