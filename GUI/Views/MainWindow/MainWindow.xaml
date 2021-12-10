@@ -77,9 +77,9 @@
             <!--Navbar-->
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 
                 <!--Logo-->
@@ -121,6 +121,14 @@
                         Style="{StaticResource NavItemStyle}"
                         Content="Tour"
                         MouseDown="LbTour_OnMouseDown">
+                    </Label>
+                    
+                    <!--TourGroup item-->
+                    <Label
+                        Name="LbTourGroup"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="Tour Group"
+                        MouseDown="LbTourGroup_OnMouseDown">
                     </Label>
                     
                     <!--Adding item-->

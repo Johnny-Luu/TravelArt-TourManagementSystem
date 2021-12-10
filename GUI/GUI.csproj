@@ -89,6 +89,7 @@
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\StaffChartViewModel.cs" />
     <Compile Include="ViewModels\TourDetailViewModel.cs" />
+    <Compile Include="ViewModels\TourGroupViewModel.cs" />
     <Compile Include="ViewModels\TourViewModel.cs" />
     <Compile Include="Views\Components\CommentComponent.xaml.cs">
       <DependentUpon>CommentComponent.xaml</DependentUpon>
@@ -302,6 +303,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icons\icon-time.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\icons\icon-arrow-left-black.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Content Include="Assets\images\clipart2575067 (1).png" />

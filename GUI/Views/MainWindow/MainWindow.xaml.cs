@@ -49,6 +49,13 @@ namespace GUI
             LbTour.Style = Resources["NavItemClickedStyle"] as Style;
             FrContainer.Content = new PageTour();
         }
+        
+        private void LbTourGroup_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ResetNavItemsToDefault();
+            LbTourGroup.Style = Resources["NavItemClickedStyle"] as Style;
+            FrContainer.Content = new PageTour_GroupTourList();
+        }
 
         private void LbAdding_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -62,6 +69,7 @@ namespace GUI
             LbStatistic.Style = Resources["NavItemStyle"] as Style;
             LbConfirm.Style = Resources["NavItemStyle"] as Style;
             LbTour.Style = Resources["NavItemStyle"] as Style;
+            LbTourGroup.Style = Resources["NavItemStyle"] as Style;
             LbAdding.Style = Resources["NavItemStyle"] as Style;
         }
     }

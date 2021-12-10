@@ -10,7 +10,8 @@
              Height="60"
              Width="1280"
              BorderBrush="#80C4C4C4"
-             BorderThickness="0">
+             BorderThickness="0"
+             MouseDown="UIElement_OnMouseDown">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -43,7 +44,7 @@
         </Ellipse>
 
         <!--Name label-->
-        <Label x:Name="LbTourGroupName" 
+        <Label Name="LbTourGroupName" 
             Grid.Column="2" 
             Content="Tour Group"
             VerticalAlignment="Center"
@@ -62,7 +63,7 @@
         </Label>
 
         <!--Status-->
-        <Label x:Name="LbStatus"
+        <Label Name="LbStatus"
             Grid.Column="3"
             Content="• on trip"
             VerticalAlignment="Center"
@@ -76,7 +77,7 @@
         <!--Time End-->
 
         <!--Passenger-->
-        <Label x:Name="LbPassenger"
+        <Label Name="LbPassenger"
             Grid.Column="10"
             Content="25/26"
             VerticalAlignment="Center"
@@ -85,7 +86,7 @@
             FontSize="14"
             FontWeight="SemiBold" Margin="5,18,0,15" Height="27" Width="75"/>
         <Rectangle Grid.ColumnSpan="10" Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" RadiusY="0.4" RadiusX="1" Stroke="#00000000" VerticalAlignment="Top" Width="1260" Grid.Column="1"/>
-        <Label x:Name="LbTourGroupID" 
+        <Label Name="LbTourGroupID" 
             Grid.Column="2" 
             Content="ID: 1231"
             VerticalAlignment="Center"
@@ -101,7 +102,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LbTourName" 
+        <Label Name="LbTourName" 
             Grid.Column="5" 
             Content="Tour"
             VerticalAlignment="Center"
@@ -118,7 +119,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LbTourID" 
+        <Label Name="LbTourID" 
             Grid.Column="5" 
             Content="ID: 1"
             VerticalAlignment="Center"
@@ -134,7 +135,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LbGuideName" 
+        <Label Name="LbGuideName" 
             Grid.Column="6" 
             Content="Tour guide name"
             VerticalAlignment="Center"
@@ -151,7 +152,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LBGuideID" 
+        <Label Name="LbGuideID" 
             Grid.Column="6" 
             Content="ID: T12"
             VerticalAlignment="Center"
@@ -167,7 +168,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="LbDeputyName"
+        <Label Name="LbDeputyName"
             Grid.Column="8"
             Content="Tour Deputy Name"
             VerticalAlignment="Center"
@@ -175,7 +176,7 @@
             FontFamily="Mulish"
             FontSize="14"
             FontWeight="SemiBold" Margin="18,5,0,28" Height="27" Width="165"/>
-        <Label x:Name="LbTimesStart"
+        <Label Name="LbTimesStart"
             Grid.Column="9"
             Content="dd/mm/yyyy"
             VerticalAlignment="Center"
@@ -183,7 +184,7 @@
             FontFamily="Mulish"
             FontSize="14"
             FontWeight="SemiBold" Margin="18,3,0,30" Height="27" Width="175"/>
-        <Label x:Name="LbTimeEnd"
+        <Label Name="LbTimeEnd"
             Grid.Column="9"
             Content="dd/mm/yyyy"
             VerticalAlignment="Center"
@@ -191,7 +192,7 @@
             FontFamily="Mulish"
             FontSize="14"
             FontWeight="SemiBold" Margin="20,30,0,10" Height="27" Width="129" />
-        <Label x:Name="id"
+        <Label Name="LbDeputyID"
             Grid.Column="8"
             Content="9AM GM+7 - 20/11"
             VerticalAlignment="Center"

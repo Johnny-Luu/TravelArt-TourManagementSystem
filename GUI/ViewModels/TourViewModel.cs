@@ -100,6 +100,7 @@ namespace GUI.ViewModels
                 PgTour.WpTour.Children.Add(item);
             }
         }
+        
         public async void SetDestination(PageTour para)
         {
             PgTour.WpTour.Children.Clear();

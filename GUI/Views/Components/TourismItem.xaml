@@ -34,7 +34,8 @@
                 <Label Content="Tom Ruise" 
                        FontFamily="Mulish"
                        FontSize="14"
-                       FontWeight="SemiBold"/>
+                       FontWeight="SemiBold"
+                       Name="LbName"/>
                 <Label Content="Updated 1 day ago"
                        FontFamily="Mulish"
                        FontSize="12"

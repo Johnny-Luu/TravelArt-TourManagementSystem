@@ -15,6 +15,7 @@ namespace DTO
         private int _slot;
         private DateTime? _startDate;    
         private DateTime? _endDate;
+        private string _customerList;
 
         public string Id
         {
@@ -80,6 +81,12 @@ namespace DTO
         {
             get => _endDate;
             set => _endDate = value; 
+        }
+        
+        public string CustomerList
+        {
+            get => _customerList;
+            set => _customerList = value;
         }
 
         public TourGroupModel()

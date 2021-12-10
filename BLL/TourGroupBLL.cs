@@ -14,6 +14,12 @@ namespace BLL
             _tourGroupDAL = new TourGroupDAL();
             return _tourGroupDAL.GetAllTourGroup();
         }
+
+        public Task<TourGroupModel> GetTourGroupByID(string id)
+        {
+            _tourGroupDAL = new TourGroupDAL();
+            return _tourGroupDAL.GetTourGroupByID(id);
+        }
         
         public void PushTourGroup(TourGroupModel tourGroup)
         {

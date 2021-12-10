@@ -22,6 +22,17 @@ namespace DAL
             return data;
         }
         
+        public async Task<TourGroupModel> GetTourGroupByID(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+
+            var result = await _client.GetAsync("TourGroup/" + id);
+            var data = result.ResultAs<TourGroupModel>();
+            return data;
+        }
+        
         public async void PushTourGroup(TourGroupModel tourGroup)
         {
             _db = new DbUtils();

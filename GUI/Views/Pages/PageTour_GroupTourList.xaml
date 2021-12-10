@@ -5,11 +5,23 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:GUI.Views.Pages"
       xmlns:uc="clr-namespace:GUI.Views.Components"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
       mc:Ignorable="d"
       Title="PageTour_GroupTourList" 
       Height="720" 
-      Width="1280">
+      Width="1280"
+      x:Name="PgTourGroup"
+      DataContext="{StaticResource TourGroupVm}">
+	
 	<Grid>
+		<i:Interaction.Triggers>
+			<i:EventTrigger EventName="Loaded">
+				<i:InvokeCommandAction
+					Command="{Binding LoadTourGroupCommand}"
+					CommandParameter="{Binding ElementName=PgTourGroup}"/>
+			</i:EventTrigger>
+		</i:Interaction.Triggers>
+		
 		<Grid.RowDefinitions>
 			<RowDefinition Height="23*"/>
 			<RowDefinition Height="10*"/>
@@ -23,11 +35,7 @@
                 Content="On Trip"
                 BorderBrush="#F4F4F4"
                 Style="{StaticResource NavItemStyle}"
-                Margin="25 15 0 0"
-               
-                >
-
-				</Label>
+                Margin="25 15 0 0" />
 
 				<Label
                 Name="LbPlanning"
@@ -89,16 +97,6 @@
                     Margin="130,0,0,0"/>
 
 			</WrapPanel>
-			<Rectangle Fill="#FFFFE6D3" HorizontalAlignment="Left" Height="55" Margin="430,35,0,0" Stroke="#00000000" VerticalAlignment="Top" Width="240" RadiusX="20" RadiusY="20"/>
-			<Border BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="425,-10,0,0" VerticalAlignment="Top" Width="230">
-				<WrapPanel>
-					<Label Content="  Total" Width="140" Height="44" FontSize="18" FontFamily="Poppins" Margin="125,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Foreground="#FF333333" HorizontalContentAlignment="Center"/>
-					<Label Content="150" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FFFF7A00" HorizontalContentAlignment="Center"/>
-
-				</WrapPanel>
-
-			</Border>
-			<Image Grid.Row="0" Source="/GUI;component/Assets/images/img-taxi.png" HorizontalAlignment="Left" Height="90" Margin="450,5,0,0" VerticalAlignment="Top" Width="90"/>
 		</Grid>
 
 		<ScrollViewer 
@@ -108,17 +106,8 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="-20,14.8,20,0" VerticalScrollBarVisibility="Hidden" Grid.RowSpan="2">
 
-			<WrapPanel Orientation="Vertical" Margin="30,5,-29.6,-4.8">
-				<uc:TourGuildItem />
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
-				<uc:TourGuildItem/>
+			<WrapPanel Name="WpTourGroupList" Orientation="Vertical" Margin="30,5,-29.6,-4.8">
+				
 			</WrapPanel>
 		</ScrollViewer>
 	</Grid>

@@ -38,6 +38,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CustomerBLL.cs" />
         <Compile Include="DestinationBLL.cs" />
         <Compile Include="EmployeeBLL.cs" />
         <Compile Include="HotelBLL.cs" />

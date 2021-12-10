@@ -70,6 +70,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CustomerDAL.cs" />
         <Compile Include="DbUtils.cs" />
         <Compile Include="DestinationDAL.cs" />
         <Compile Include="EmployeeDAL.cs" />
