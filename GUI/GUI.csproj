@@ -121,6 +121,9 @@
     <Compile Include="Views\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainWindow\TourGroupDetailWindow.xaml.cs">
+      <DependentUpon>TourGroupDetailWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow\TourDetailWindow.xaml.cs">
       <DependentUpon>TourDetailWindow.xaml</DependentUpon>
     </Compile>
@@ -163,9 +166,6 @@
     <Compile Include="Views\Pages\PageTourDetail_Info.xaml.cs">
       <DependentUpon>PageTourDetail_Info.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\PageTourGroupDetail.xaml.cs">
-      <DependentUpon>PageTourGroupDetail.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Pages\PageTour_GroupTourList.xaml.cs">
       <DependentUpon>PageTour_GroupTourList.xaml</DependentUpon>
     </Compile>
@@ -205,6 +205,7 @@
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MainWindow\TourGroupDetailWindow.xaml" />
     <Page Include="Views\MainWindow\TourDetailWindow.xaml" />
     <Page Include="Views\Pages\PageAdding.xaml" />
     <Page Include="Views\Pages\PageAddingDestination.xaml" />
@@ -223,7 +224,6 @@
     <Page Include="Views\Pages\PageTourDetail_Plan.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Rating.xaml" />
     <Page Include="Views\Pages\PageTourDetail_Info.xaml" />
-    <Page Include="Views\Pages\PageTourGroupDetail.xaml" />
     <Page Include="Views\Pages\PageTour_GroupTourList.xaml" />
   </ItemGroup>
   <ItemGroup>

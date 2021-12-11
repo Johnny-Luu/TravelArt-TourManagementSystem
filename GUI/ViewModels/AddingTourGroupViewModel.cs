@@ -123,7 +123,8 @@ namespace GUI.ViewModels
                 TourName = tourName,
                 Slot = slotNumber,
                 StartDate = startDate,
-                EndDate = endDate
+                EndDate = endDate,
+                CustomerList = ""
             };
             
             tourGroupBLL.PushTourGroup(tourGroup);

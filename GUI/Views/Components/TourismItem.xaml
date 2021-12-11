@@ -36,11 +36,19 @@
                        FontSize="14"
                        FontWeight="SemiBold"
                        Name="LbName"/>
-                <Label Content="Updated 1 day ago"
+                <Label Content="CustomerID: 0"
                        FontFamily="Mulish"
                        FontSize="12"
                        FontWeight="Regular"
-                       Foreground="#A6A6A6"/>
+                       Foreground="#A6A6A6"
+                       Name="LbId"/>
+                <Label Content="0"
+                       FontFamily="Mulish"
+                       FontSize="12"
+                       FontWeight="Regular"
+                       Foreground="#A6A6A6"
+                       Name="LbTourGroupId"
+                       Visibility="Collapsed"/>
             </StackPanel>
         </Grid>
         
@@ -49,7 +57,9 @@
                 Style="{StaticResource DeleteButtonStyle}"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                Margin="0 0 20 0">
+                Margin="0 0 20 0"
+                Name="BtnDelete"
+                MouseDown="BtnDelete_OnMouseDown">
             <Label Style="{StaticResource DeleteButtonLabelStyle}"/>
         </Border>
     </Grid>

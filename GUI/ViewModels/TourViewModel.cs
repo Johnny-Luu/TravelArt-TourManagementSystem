@@ -76,13 +76,17 @@ namespace GUI.ViewModels
                 item.LbPrice.Content = tour.Price + " vnd";
                 item.LbVisit.Content = "Visit: " + (tour.DestinationIds.Length /2 + 1) + " locations";
                 
-                ////////////////////
-                //Cai nay phai tinh lai
-                // chu ko luu trong db
-                ///////////////
+                // calculate rating point
+                double ratingPoint = 0;
+                foreach (var rating in tour.RatingList)
+                {
+                    ratingPoint += rating.Rating;
+                }
+                ratingPoint = ratingPoint*1.0 / tour.RatingList.Count;
                 
-                // item.LbRating.Content = tour.Rating;
-                // item.StarInit(tour.Rating);
+                // FIXME: set rating point for label
+                item.LbRating.Content = String.Format("{0:0.#}", ratingPoint);
+                item.StarInit(ratingPoint);
                 
                 // convert img from base64 to bitmap
                 // and add to item's image

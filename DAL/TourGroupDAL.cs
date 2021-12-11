@@ -32,6 +32,30 @@ namespace DAL
             var data = result.ResultAs<TourGroupModel>();
             return data;
         }
+
+        public async Task<bool> RemoveTourismFromList(string tourGroupId, string customerId)
+        {
+            var tourGroup = await GetTourGroupByID(tourGroupId);
+            var customerList = tourGroup.CustomerList;
+            var customerArray = customerList.Split(',');
+            var newCustomerList = "";
+            for (int i = 0; i < customerArray.Length; i++)
+            {
+                if (customerArray[i] != customerId)
+                {
+                    newCustomerList += customerArray[i] + ",";
+                }
+            }
+            newCustomerList = newCustomerList.TrimEnd(',');
+            
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            
+            var result = await _client.UpdateAsync("TourGroup/" + tourGroupId, new { CustomerList = newCustomerList });
+            var response = result.ResultAs<TourGroupModel>();
+            return response != null;
+        }
         
         public async void PushTourGroup(TourGroupModel tourGroup)
         {

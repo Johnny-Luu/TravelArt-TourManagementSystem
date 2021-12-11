@@ -220,7 +220,6 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\Pa
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.g.cs
-C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ConfirmControl.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourDetailWindow.baml
@@ -230,7 +229,6 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\Pa
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Plan.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Rating.baml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourDetail_Info.baml
-C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.g.cs
@@ -279,3 +277,5 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\LiveChar
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignColors.pdb
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.g.cs
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.baml
