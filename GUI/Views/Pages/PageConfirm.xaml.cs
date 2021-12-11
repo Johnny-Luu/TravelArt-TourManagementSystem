@@ -1,31 +1,84 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
+using System.Windows.Input;
+using BLL;
 using GUI.Views.Components;
 
 namespace GUI.Views.Pages
 {
     public partial class PageConfirm : Page
     {
+        private DateTime _today = DateTime.Now.Date;
+        private int _countToday = 0;
+        private int _countTotal = 0;
+        
         public PageConfirm()
         {
-            var item1 = new ConfirmControl();
-            var item2 = new ConfirmControl();
-            var item3 = new ConfirmControl();
-            var item4 = new ConfirmControl();
-            var item9 = new ConfirmControl();
-            var item5 = new ConfirmControl();
-            var item6 = new ConfirmControl();
-            var item7 = new ConfirmControl();
-            var item8 = new ConfirmControl();
             InitializeComponent();
-            WpListConfirm.Children.Add(item1);
-            WpListConfirm.Children.Add(item2);
-            WpListConfirm.Children.Add(item3);
-            WpListConfirm.Children.Add(item4);
-            WpListConfirm.Children.Add(item5);
-            WpListConfirm.Children.Add(item6);
-            WpListConfirm.Children.Add(item7);
-            WpListConfirm.Children.Add(item8);
-            WpListConfirm.Children.Add(item9);
+            LoadAllRequest();
+        }
+
+        private async void LoadAllRequest()
+        {
+            var requestBLL = new RequestBLL();
+            var listRequest = await requestBLL.GetAllRequest();
+
+            foreach (var request in listRequest)
+            {
+                // request info
+                var item = new ConfirmControl();
+                item.LbCustomerId.Content = "ID: " + request.CustomerId;
+                item.LbRequestTime.Content = request.Time;
+                if (request.Date == _today)
+                {
+                    item.LbRequestDate.Content = "Today";
+                    _countToday++;
+                }
+                else
+                {
+                    item.LbRequestDate.Content = request.Date.ToString("dd/MM/yyyy");
+                }
+                
+                // tour group info
+                var tourGroupBLL = new TourGroupBLL();
+                var tourGroup = await tourGroupBLL.GetTourGroupByID(request.TourGroupId);
+                item.LbTourGroupName.Content = tourGroup.Name;
+                item.LbTourGroupDate.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");
+                
+                // tour info
+                var tourBLL = new TourBLL();
+                var tour = await tourBLL.GetTourbyID(tourGroup.TourId);
+                item.LbTourName.Content = tour.Name;
+                item.LbTourId.Content = "ID: " + tour.Id;
+                item.LbPrice.Content = tour.Price;
+                
+                WpListConfirm.Children.Add(item);
+            }
+            
+            _countTotal = listRequest.Count;
+            LbTotalQuantity.Content = _countTotal;
+            LbTodayQuantity.Content = _countToday;
+        }
+
+        private void WpListConfirm_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.Source is ConfirmControl)
+            {
+                var item = e.Source as ConfirmControl;
+                
+                if(item == null) return;
+                
+                if (item.LbRequestDate.Content.ToString() == "Today")
+                {
+                    _countToday--;
+                    LbTodayQuantity.Content = _countToday;
+                }
+                
+                _countTotal--;
+                LbTotalQuantity.Content = _countTotal;
+                
+                WpListConfirm.Children.Remove(item);
+            }
         }
     }
 }

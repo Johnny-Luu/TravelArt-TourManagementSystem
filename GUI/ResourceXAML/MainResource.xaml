@@ -108,6 +108,16 @@
         </Style.Triggers>
     </Style>
     
+    <!--Style of hover button-->
+    <Style x:Key="ButtonHoverStyle" TargetType="Border">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.6" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
     <!--Style of Confirm Button Label-->
     <Style x:Key="ConfirmButtonLabelStyle" TargetType="Label">
         <Setter Property="Content" Value="Confirm" />

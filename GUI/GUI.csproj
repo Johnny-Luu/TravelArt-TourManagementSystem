@@ -333,6 +333,12 @@
     <Resource Include="Assets\images\img-glasses.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\images\img-computer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-mailed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Assets\images\pngaaa.com-18001.png" />
     <Resource Include="Assets\images\img-hotel-building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

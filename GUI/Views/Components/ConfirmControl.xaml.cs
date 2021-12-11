@@ -9,15 +9,5 @@ namespace GUI.Views.Components
         {
             InitializeComponent();
         }
-
-        private void MouseDown_Accept(object sender, MouseButtonEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void MouseDown_Decline(object sender, MouseButtonEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

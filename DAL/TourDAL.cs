@@ -26,6 +26,7 @@ namespace DAL
             var data = result.ResultAs<List<TourModel>>();
             return data;
         }
+        
         public async Task<TourModel> GetTourbyID(string id)
         {
             _db = new DbUtils();
@@ -37,6 +38,7 @@ namespace DAL
             return data;
 
         }
+        
         public async void PushTour(TourModel tour)
         {
             _db = new DbUtils();
