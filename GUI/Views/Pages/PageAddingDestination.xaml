@@ -152,7 +152,7 @@
                                     BorderThickness="0"
                                     TextWrapping="Wrap"
                                     FontSize="20"
-                                    FontFamily="Mulish"/>
+                                    FontFamily="Mulish" Background="White" />
                         </Border>
                   </StackPanel>
             </Border>

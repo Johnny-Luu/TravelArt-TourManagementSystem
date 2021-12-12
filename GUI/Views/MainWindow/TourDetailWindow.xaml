@@ -40,7 +40,7 @@
 				<Border CornerRadius="20" Name="BorderImg">
 					<Border.Background>
 						<ImageBrush
-							Stretch="UniformToFill" />
+							Stretch="UniformToFill" ImageSource="/GUI;component/Assets/images/loading.jpg" />
 					</Border.Background>
 				</Border>
 

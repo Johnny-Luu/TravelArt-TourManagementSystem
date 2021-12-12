@@ -61,7 +61,7 @@ namespace GUI.ViewModels
           WdTourDetail.LbPlan.Visibility = Visibility.Visible;
           WdTourDetail.FrContainer.Content = new PageTourDetail_Info();
         }
-        public async void LoadInfo(PageTourDetail_Info para)
+        public  void LoadInfo(PageTourDetail_Info para)
         {
             PgTourDetailInfo = para;
             
@@ -73,7 +73,7 @@ namespace GUI.ViewModels
             //Chua co Tour Group
             //PgTourDetailInfo.Set_LbAvailable();
         }
-        public async void LoadRating(PageTourDetail_Rating para)
+        public  void LoadRating(PageTourDetail_Rating para)
         {
             int[] rate = new int[6];
             PgTourDetailRating = para;
@@ -82,7 +82,7 @@ namespace GUI.ViewModels
             //Init Comment
             foreach (var rating in tour.RatingList)
             {
-                CommentComponent cmt = new CommentComponent();
+                CommentComponent cmt = new();
                 
                 // haven't init user yet, so display id instead
                 // will be replaced by user name later
@@ -106,7 +106,7 @@ namespace GUI.ViewModels
             PgTourDetailPlan = para;
             //des
             PgTourDetailPlan.LbTourName.Text = tour.Name;
-
+            PgTourDetailPlan.WpContaner.Children.Clear();
             int daycount = 0;
             var destinationBlL = new DestinationBLL();
 

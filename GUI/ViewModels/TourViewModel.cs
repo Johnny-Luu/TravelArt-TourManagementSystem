@@ -64,7 +64,7 @@ namespace GUI.ViewModels
             
         }
 
-        public async void SetTour(PageTour para)
+        public  void SetTour(PageTour para)
         {
             PgTour.WpTour.Children.Clear();
             foreach (var tour in tourList)
@@ -84,8 +84,8 @@ namespace GUI.ViewModels
                 }
                 ratingPoint = ratingPoint*1.0 / tour.RatingList.Count;
                 
-                // FIXME: set rating point for label
-                item.LbRating.Content = String.Format("{0:0.#}", ratingPoint);
+                
+                item.LbRating.Content = ratingPoint.ToString("0.0");
                 item.StarInit(ratingPoint);
                 
                 // convert img from base64 to bitmap
@@ -105,7 +105,7 @@ namespace GUI.ViewModels
             }
         }
         
-        public async void SetDestination(PageTour para)
+        public  void SetDestination(PageTour para)
         {
             PgTour.WpTour.Children.Clear();
             foreach (var destination in destinationlist)

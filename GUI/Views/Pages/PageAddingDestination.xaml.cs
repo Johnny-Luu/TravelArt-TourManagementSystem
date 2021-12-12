@@ -8,5 +8,7 @@ namespace GUI.Views.Pages
         {
             InitializeComponent();
         }
+
+       
     }
 }

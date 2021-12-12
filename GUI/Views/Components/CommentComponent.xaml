@@ -30,12 +30,13 @@
         </Ellipse>
         <Label x:Name="LbName" Grid.Row="0" Content="Anonymous" Grid.Column="1" HorizontalAlignment="Center" Margin="10,5,15.4,0.4" VerticalAlignment="Center" Grid.ColumnSpan="3" Width="265" Height="25" FontFamily="Arial" FontWeight="Bold" FontSize="14" VerticalContentAlignment="Center"/>
         <Label x:Name="LbDate"  Grid.Column="2" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Height="20" Grid.Row="1" Width="70" FontSize="10" FontFamily="Ubuntu" HorizontalContentAlignment="Center" FontStyle="Italic"/>
-        <TextBlock x:Name="TbComment" HorizontalAlignment="Left" Margin="5,5.2,0,-0.4" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="4" Width="340" Height="68" FontFamily="Ubuntu"/>
+        <TextBlock x:Name="TbComment" HorizontalAlignment="Left" Margin="6.4,5.2,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="3" Width="255" Height="48" FontFamily="Ubuntu" Grid.Column="1"/>
         <Image  x:Name="ImgStar1"  Grid.Column="1" Grid.Row="1" Width="12" Height="12.2" Margin="4.4,6.8,0,6.8" HorizontalAlignment="Left"/>
         <Image  x:Name="ImgStar2"  Grid.Column="1" Grid.Row="1" Width="12" Height="12.2" Margin="19.4,6.8,0,6.8" HorizontalAlignment="Left"/>
         <Image  x:Name="ImgStar3"  Grid.Column="1" Grid.Row="1" Width="12" Height="12.2" Margin="34.4,6.8,0,6.8" HorizontalAlignment="Left"/>
         <Image  x:Name="ImgStar4"  Grid.Column="1" Grid.Row="1" Width="12" Height="12.2" Margin="49.4,6.8,0,6.8" HorizontalAlignment="Left"/>
         <Image  x:Name="ImgStar5"  Grid.Column="1" Grid.Row="1" Width="12" Height="12.2" Margin="64.4,6.8,0,6.8" HorizontalAlignment="Left"/>
+        <Rectangle Grid.ColumnSpan="4" Grid.Column="0" HorizontalAlignment="Left" Height="1" Margin="30,63.2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="295" Fill="#FFC5C5C5"/>
 
 
 

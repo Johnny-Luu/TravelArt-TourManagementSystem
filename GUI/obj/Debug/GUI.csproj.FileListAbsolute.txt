@@ -240,12 +240,10 @@ C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\Pa
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.g.cs
-C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourGuildItem.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\TourismItem.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageAddingTourGroup.baml
-C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTourGroupDetail.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Pages\PageTour_GroupTourList.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\CommentComponent.g.cs
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\CommentComponent.baml
@@ -279,3 +277,5 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\Material
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.g.cs
 C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.baml

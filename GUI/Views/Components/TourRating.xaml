@@ -6,52 +6,52 @@
              xmlns:local="clr-namespace:GUI.Views.Components"
              mc:Ignorable="d"
              d:DesignHeight="150" d:DesignWidth="350">
-	<Grid Width="350" Height="150">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="31*"/>
-			<ColumnDefinition Width="7*"/>
-			<ColumnDefinition Width="32*"/>
+    <Grid Width="350" Height="150">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="32*"/>
 
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-		</Grid.RowDefinitions>
-		<Label x:Name="LbScore" Content="3.1" HorizontalAlignment="Center" Margin="50,5,25.2,21.2" Grid.RowSpan="3" Height="65" Width="95" FontSize="60" VerticalAlignment="Center" FontFamily="Poppins"/>
-		<Label x:Name="LbNumberRating" Content="Total: 2000" HorizontalAlignment="Center" Margin="15,5.8,5.2,11.2" Grid.Row="3" VerticalAlignment="Center" Width="140" Grid.RowSpan="2"
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LbScore" Content="3.1" HorizontalAlignment="Center" Margin="40,10,12.2,16.2" Grid.RowSpan="3" Height="65" Width="103" FontSize="60" VerticalAlignment="Center" FontFamily="Poppins"/>
+        <Label x:Name="LbNumberRating" Content="Total: 2000" HorizontalAlignment="Center" Margin="15,5.8,5.2,11.2" Grid.Row="3" VerticalAlignment="Center" Width="140" Grid.RowSpan="2"
 		       Grid.Column="0" Height="43" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
 
-		<Label Content="5&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
-		<Label Content="4&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
-		<Label Content="3&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="2" FontFamily="Poppins" FontSize="16"/>
-		<Label Content="2&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
-		<Label Content="1&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
-		<Rectangle x:Name="RecRating5" Grid.Column="2" Fill="#FF00CC2D" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="80" Grid.Row="0" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
-		<Rectangle x:Name="RecRating4" Grid.Column="2" Fill="#FF34FF48" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="80" Grid.Row="1" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
-		<Rectangle x:Name="RecRating3" Grid.Column="2" Fill="#FFFFEB33" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="120" Grid.Row="2" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
-		<Rectangle x:Name="RecRating2" Grid.Column="2" Fill="#FFFF9533" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="140" Grid.Row="3" StrokeDashArray="0" RadiusY="7" RadiusX="10"/>
-		<Rectangle x:Name="RecRating1" Grid.Column="2" Fill="#FFFF4242" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="35" Grid.Row="4" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
+        <Label Content="5&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
+        <Label Content="4&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
+        <Label Content="3&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="2" FontFamily="Poppins" FontSize="16"/>
+        <Label Content="2&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
+        <Label Content="1&#xA;" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="35" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" FontFamily="Poppins" FontSize="16"/>
+        <Rectangle x:Name="RecRating5" Grid.Column="2" Fill="#FF00CC2D" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="80" Grid.Row="0" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
+        <Rectangle x:Name="RecRating4" Grid.Column="2" Fill="#FF34FF48" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="80" Grid.Row="1" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
+        <Rectangle x:Name="RecRating3" Grid.Column="2" Fill="#FFFFEB33" HorizontalAlignment="Left" Height="20" Margin="10,0" Stroke="Black" VerticalAlignment="Center" Width="120" Grid.Row="2" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
+        <Rectangle x:Name="RecRating2" Grid.Column="2" Fill="#FFFF9533" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="140" Grid.Row="3" StrokeDashArray="0" RadiusY="7" RadiusX="10"/>
+        <Rectangle x:Name="RecRating1" Grid.Column="2" Fill="#FFFF4242" HorizontalAlignment="Left" Height="20" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="35" Grid.Row="4" RadiusX="10" RadiusY="7" StrokeDashArray="0"/>
 
-		<!-- star-->
-		<Image  x:Name="ImgStar1"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="45,15,0,0.4" HorizontalAlignment="Left">
-		
-		</Image>
-		<Image  x:Name="ImgStar2"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="60,15,0,0.4" HorizontalAlignment="Left">
-	
-		</Image>
-		<Image  x:Name="ImgStar3"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="75,15,0,0.4" HorizontalAlignment="Left">
-		
-		</Image>
-		<Image  x:Name="ImgStar4"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="90,15,0,0.4" HorizontalAlignment="Left">
-			
-		</Image>
-		<Image  x:Name="ImgStar5"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="105,15,0,0.4" HorizontalAlignment="Left">
-		
-		</Image>
+        <!-- star-->
+        <Image  x:Name="ImgStar1"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="45,15,0,0.4" HorizontalAlignment="Left">
+
+        </Image>
+        <Image  x:Name="ImgStar2"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="60,15,0,0.4" HorizontalAlignment="Left">
+
+        </Image>
+        <Image  x:Name="ImgStar3"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="75,15,0,0.4" HorizontalAlignment="Left">
+
+        </Image>
+        <Image  x:Name="ImgStar4"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="90,15,0,0.4" HorizontalAlignment="Left">
+
+        </Image>
+        <Image  x:Name="ImgStar5"  Grid.Column="0" Grid.Row="2" Width="15" Height="15" Margin="105,15,0,0.4" HorizontalAlignment="Left">
+
+        </Image>
 
 
-	</Grid>
+    </Grid>
 </UserControl>
