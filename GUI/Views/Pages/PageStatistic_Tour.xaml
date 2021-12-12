@@ -14,16 +14,84 @@
 			<ColumnDefinition Width="43*"/>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
+			<RowDefinition Height="0.5*"/>
 			<RowDefinition Height="1*"/>
 			<RowDefinition Height="1*"/>
 			<RowDefinition Height="1*"/>
 		</Grid.RowDefinitions>
+		
+		<!-- Revenue or Profit btn -->
+		<Border
+			Grid.Row="0"
+			Grid.Column="0"
+			CornerRadius="10" 
+			Background="#EAF7FF"
+			Padding="6"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Right">
+			<Grid Width="160" Height="30">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				
+				<!-- Revenue btn -->
+				<Border
+					Name="BtnRevenue"
+					CornerRadius="8" 
+					Background="White"
+					Style="{StaticResource ButtonHoverStyle}"
+					MouseDown="BtnRevenue_OnMouseDown">
+					<Label
+						Name="TxtRevenue"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"
+						Foreground="#3CA1FF"
+						Content="Revenue"/>
+				</Border>
+				
+				<!-- Profit btn -->
+				<Border
+					Name="BtnProfit"
+					Grid.Column="1"
+					CornerRadius="8"
+					Style="{StaticResource ButtonHoverStyle}" 
+					MouseDown="BtnProfit_OnMouseDown">
+					<Label
+						Name="TxtProfit"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Center"
+						Foreground="#949494"
+						Content="Profit"/>
+				</Border>
+				
+			</Grid>
+		</Border>
+		
+		<!--Tour ComboBox-->
+		<Border
+			Grid.Row="0"
+			Grid.Column="1"
+			CornerRadius="10" 
+			BorderThickness="4" 
+			BorderBrush="white"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Center">
+			<ComboBox
+				Name="CbTour"
+				Height="40"
+				Width="330"
+				Style="{StaticResource ComboBoxStyle}">
+			</ComboBox>
+		</Border>
+		
+		<!-- chart -->
 		<Border 
 			Grid.Column="0" 
-			Grid.Row="0"
+			Grid.Row="1"
 			Grid.RowSpan="3"
-			Height="535"
-			Margin="50.4,20.6,0,0"
+			Height="500"
+			Margin="50.4,0,0,0"
 			VerticalAlignment="Top" Width="800"
 			HorizontalAlignment="Left"
 			Background="White" 
@@ -34,12 +102,13 @@
 			<lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Bottom" >
 			</lvc:CartesianChart>
 		</Border>
-	<!-- 3 Panel ben phai-->
+		
+		<!-- 3 Panel ben phai-->
 		<Border 
 			Grid.Column="1" 
-			Grid.Row="1"
+			Grid.Row="2"
 			Height="150"
-			Margin="50.4,14,0,0"
+			Margin="50.4,8,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
@@ -73,9 +142,9 @@
 			</Border>
 		<Border 
 			Grid.Column="1" 
-			Grid.Row="0"
+			Grid.Row="1"
 			Height="150"
-			Margin="50.4,20.6,0,0"
+			Margin="50.4,4,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
@@ -107,7 +176,7 @@
 			</Border>
 		<Border 
 			Grid.Column="1" 
-			Grid.Row="2"
+			Grid.Row="3"
 			Height="150"
 			Margin="50.4,12,0,0"
 			VerticalAlignment="Top" Width="330"
