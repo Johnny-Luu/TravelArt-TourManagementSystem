@@ -15,10 +15,16 @@ namespace BLL
             return _tourGroupDAL.GetAllTourGroup();
         }
 
-        public Task<TourGroupModel> GetTourGroupByID(string id)
+        public Task<TourGroupModel> GetTourGroupById(string id)
         {
             _tourGroupDAL = new TourGroupDAL();
-            return _tourGroupDAL.GetTourGroupByID(id);
+            return _tourGroupDAL.GetTourGroupById(id);
+        }
+
+        public Task<List<TourGroupModel>> GetTourGroupByTourId(string id)
+        {
+            _tourGroupDAL = new TourGroupDAL();
+            return _tourGroupDAL.GetTourGroupByTourId(id);
         }
 
         public Task<bool> RemoveTourismFromList(string tourGroupId, string customerId)

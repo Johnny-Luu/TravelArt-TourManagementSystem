@@ -80,6 +80,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GlobalData\ColorData.cs" />
+    <Compile Include="GlobalData\DayData.cs" />
+    <Compile Include="GlobalData\MonthData.cs" />
     <Compile Include="GlobalData\ProvinceData.cs" />
     <Compile Include="ViewModels\AddingDestinationViewModel.cs" />
     <Compile Include="ViewModels\AddingHotelViewModel.cs" />

@@ -42,7 +42,7 @@ namespace GUI.Views.Pages
                 
                 // tour group info
                 var tourGroupBLL = new TourGroupBLL();
-                var tourGroup = await tourGroupBLL.GetTourGroupByID(request.TourGroupId);
+                var tourGroup = await tourGroupBLL.GetTourGroupById(request.TourGroupId);
                 item.LbTourGroupId.Content = tourGroup.Id;
                 item.LbTourGroupName.Content = tourGroup.Name;
                 item.LbTourGroupDate.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");

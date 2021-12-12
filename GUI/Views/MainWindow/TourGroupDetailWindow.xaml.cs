@@ -24,7 +24,7 @@ namespace GUI.Views.MainWindow
             var today = DateTime.Now.Date;
             var isTourOverOrOnTrip = false;
             var tourGroupBLL = new TourGroupBLL();
-            var tourGroup = await tourGroupBLL.GetTourGroupByID(_tourGroupId);
+            var tourGroup = await tourGroupBLL.GetTourGroupById(_tourGroupId);
             
             // Load data to UI
             LbId.Content = "ID: " + tourGroup.Id;

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DTO;
 using FireSharp;
@@ -22,7 +24,7 @@ namespace DAL
             return data;
         }
         
-        public async Task<TourGroupModel> GetTourGroupByID(string id)
+        public async Task<TourGroupModel> GetTourGroupById(string id)
         {
             _db = new DbUtils();
             var config = _db.CreateConnection();
@@ -32,10 +34,17 @@ namespace DAL
             var data = result.ResultAs<TourGroupModel>();
             return data;
         }
+        
+        public async Task<List<TourGroupModel>> GetTourGroupByTourId(string id)
+        {
+            var today = DateTime.Now.Date;
+            var allTourGroup = await GetAllTourGroup();
+            return allTourGroup.Where(tourGroup => tourGroup.TourId == id && tourGroup.StartDate <= today).ToList();
+        }
 
         public async Task<bool> RemoveTourismFromList(string tourGroupId, string customerId)
         {
-            var tourGroup = await GetTourGroupByID(tourGroupId);
+            var tourGroup = await GetTourGroupById(tourGroupId);
             var customerList = tourGroup.CustomerList;
             var customerArray = customerList.Split(',');
             var newCustomerList = "";
@@ -59,7 +68,7 @@ namespace DAL
         
         public async Task<bool> AddTourismToList(string tourGroupId, string customerId)
         {
-            var tourGroup = await GetTourGroupByID(tourGroupId);
+            var tourGroup = await GetTourGroupById(tourGroupId);
             var newCustomerList = "";
             if (!string.IsNullOrEmpty(tourGroup.CustomerList))
             {
