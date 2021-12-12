@@ -27,6 +27,7 @@ namespace GUI.Views.Pages
             {
                 // request info
                 var item = new ConfirmControl();
+                item.LbRequestId.Content = request.Id;
                 item.LbCustomerId.Content = "ID: " + request.CustomerId;
                 item.LbRequestTime.Content = request.Time;
                 if (request.Date == _today)
@@ -42,6 +43,7 @@ namespace GUI.Views.Pages
                 // tour group info
                 var tourGroupBLL = new TourGroupBLL();
                 var tourGroup = await tourGroupBLL.GetTourGroupByID(request.TourGroupId);
+                item.LbTourGroupId.Content = tourGroup.Id;
                 item.LbTourGroupName.Content = tourGroup.Name;
                 item.LbTourGroupDate.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");
                 

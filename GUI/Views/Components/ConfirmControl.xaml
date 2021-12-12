@@ -28,6 +28,7 @@
                 <ImageBrush ImageSource="/Assets/images/img-paris.jpg" Stretch="UniformToFill" />
             </Ellipse.Fill>
         </Ellipse>
+        <Label x:Name="LbRequestId" Visibility="Collapsed" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="185"/>
         <Label x:Name="LbCustomerName" Content="Name" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="185"/>
         <Label x:Name="LbCustomerId" Content="Id: 1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Width="185" Foreground="#FFC5C7CD" FontWeight="Bold"/>
         <Label x:Name="LbRequestDate" Content="Today" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="140"/>
@@ -35,10 +36,11 @@
         <Label x:Name="LbTourName" Content="Tour Da Lat - Vung Tau" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="240"/>
         <Label x:Name="LbTourId" Content="DL-VT" Grid.Column="3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Foreground="#FFC5C7CD" FontWeight="Bold"/>
         <Label x:Name="LbTourGroupName" Content="DL-VT-23010" Grid.Column="4" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="235"/>
+        <Label x:Name="LbTourGroupId" Visibility="Collapsed" Grid.Column="4" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Width="235"/>
         <Label x:Name="LbTourGroupDate" Content="25/10/2021 to 30/10/2021&#xD;&#xA;" Grid.Column="4" HorizontalAlignment="Left" Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2" Width="240" Foreground="#FFC5C7CD" FontWeight="Bold"/>
         <Label x:Name="LbPrice" Content="120.000.000" Grid.Column="5" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733" FontSize="14" Grid.ColumnSpan="2" Width="190" VerticalContentAlignment="Bottom"/>
         <Label x:Name="LbPriceCurrency" Content="vnd" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="166" Foreground="#FFC5C7CD" FontWeight="Bold" Height="32"/>
-        <Border Style="{StaticResource ButtonHoverStyle}" Grid.Column="6" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="Transparent" Background="#FF29CC97" CornerRadius="14">
+        <Border MouseDown="Accept_OnMouseDown" Style="{StaticResource ButtonHoverStyle}" Grid.Column="6" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="Transparent" Background="#FF29CC97" CornerRadius="14">
             <Label
                 Content="ACCEPT"
                 VerticalAlignment="Center"
@@ -46,7 +48,7 @@
                 Foreground="White"
                 FontSize="14"/>
         </Border>
-        <Border Style="{StaticResource ButtonHoverStyle}" Grid.Column="7" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="#FFF12B2C" Background="White" CornerRadius="14" BorderThickness="1">
+        <Border MouseDown="Decline_OnMouseDown" Style="{StaticResource ButtonHoverStyle}" Grid.Column="7" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2" BorderBrush="#FFF12B2C" Background="White" CornerRadius="14" BorderThickness="1">
             <Label
                 Content="DECLINE"
                 VerticalAlignment="Center"

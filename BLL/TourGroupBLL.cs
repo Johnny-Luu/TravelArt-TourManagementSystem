@@ -27,6 +27,12 @@ namespace BLL
             return _tourGroupDAL.RemoveTourismFromList(tourGroupId, customerId);
         }
         
+        public Task<bool> AddTourismToList(string tourGroupId, string customerId)
+        {
+            _tourGroupDAL = new TourGroupDAL();
+            return _tourGroupDAL.AddTourismToList(tourGroupId, customerId);
+        }
+        
         public void PushTourGroup(TourGroupModel tourGroup)
         {
             _tourGroupDAL = new TourGroupDAL();

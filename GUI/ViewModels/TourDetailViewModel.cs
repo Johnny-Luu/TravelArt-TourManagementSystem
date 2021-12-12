@@ -82,7 +82,7 @@ namespace GUI.ViewModels
             //Init Comment
             foreach (var rating in tour.RatingList)
             {
-                CommentComponent cmt = new();
+                CommentComponent cmt = new CommentComponent();
                 
                 // haven't init user yet, so display id instead
                 // will be replaced by user name later

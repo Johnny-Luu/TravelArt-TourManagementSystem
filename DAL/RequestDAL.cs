@@ -17,7 +17,10 @@ namespace DAL
             _client = new FirebaseClient(config);
             
             var result = await _client.GetAsync("Request");
-            var data = result.ResultAs<List<RequestModel>>();
+            var list = result.ResultAs<List<RequestModel>>();
+            
+            // find all request with id != -1
+            var data = list.FindAll(x => x.Id != "-1");
             return data;
         }
         
@@ -27,7 +30,8 @@ namespace DAL
             var config = _db.CreateConnection();
             _client = new FirebaseClient(config);
             
-            var result = await _client.DeleteAsync("Request/" + id);
+            // set id = -1 to delete
+            var result = await _client.UpdateAsync("Request/" + id, new { Id = "-1" });
             return result.StatusCode == System.Net.HttpStatusCode.OK;
         }
         
