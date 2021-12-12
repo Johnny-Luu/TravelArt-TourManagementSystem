@@ -79,24 +79,57 @@
                                                       Style="{StaticResource TextBoxStyle}"/>
                                           </Border>
                                           
-                                          <!--Price label-->
-                                          <Label
-                                                Content="Price"
-                                                Margin=" 0 20 0 0 "
-                                                Style="{StaticResource AddItemStyle}"/>
+                                          <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                      <ColumnDefinition />
+                                                      <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <WrapPanel>
+                                                      <!--Price label-->
+                                                      <Label
+                                                            Content="Price"
+                                                            Margin=" 0 20 0 0 "
+                                                            Style="{StaticResource AddItemStyle}"/>
                                           
-                                          <!--Price textBox-->
-                                          <Border 
-                                                CornerRadius="10" 
-                                                BorderThickness="4" 
-                                                BorderBrush="white">
-                                                <TextBox
-                                                      Name="TbPrice"
-                                                      Width="350"
-                                                      Height="50" 
-                                                      BorderThickness="0"
-                                                      Style="{StaticResource TextBoxStyle}"/>
-                                          </Border>
+                                                      <!--Price textBox-->
+                                                      <Border 
+                                                            CornerRadius="10" 
+                                                            HorizontalAlignment="Left"
+                                                            BorderThickness="4" 
+                                                            BorderBrush="white">
+                                                            <TextBox
+                                                                  Name="TbPrice"
+                                                                  Width="160"
+                                                                  Height="50" 
+                                                                  BorderThickness="0"
+                                                                  Style="{StaticResource TextBoxStyle}"/>
+                                                      </Border>
+                                                </WrapPanel>
+                                                
+                                                <WrapPanel Grid.Column="1">
+                                                      <!--Profit label-->
+                                                      <Label
+                                                            Content="Profit"
+                                                            Margin=" 20 20 0 0 "
+                                                            Style="{StaticResource AddItemStyle}"/>
+                                          
+                                                      <!--Profit textBox-->
+                                                      <Border 
+                                                            CornerRadius="10" 
+                                                            HorizontalAlignment="Left"
+                                                            Margin="10 0 0 0"
+                                                            BorderThickness="4" 
+                                                            BorderBrush="white">
+                                                            <TextBox
+                                                                  Name="TbProfit"
+                                                                  Width="160"
+                                                                  Height="50" 
+                                                                  BorderThickness="0"
+                                                                  Style="{StaticResource TextBoxStyle}"/>
+                                                      </Border>
+                                                </WrapPanel>
+                                          </Grid>
                                     </WrapPanel>
                               </Border>
                         </Grid>

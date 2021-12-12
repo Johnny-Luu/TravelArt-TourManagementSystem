@@ -75,12 +75,20 @@ namespace GUI.ViewModels
             var id = await tourBLL.InitID();
             var name = PgAddingTour.TbName.Text;
             var price = PgAddingTour.TbPrice.Text;
+            var profit = PgAddingTour.TbProfit.Text;
             var shortDescription = PgAddingTour.TbShortDescription.Text;
             
             // check tour info has filled or not
-            if(name == "" || price == "" || shortDescription == "")
+            if(name == "" || price == "" || profit == "" || shortDescription == "")
             {
                 MessageBox.Show("Please fill all fields");
+                return;
+            }
+            
+            // check price and profit is number or not
+            if(!int.TryParse(price, out int priceInt) || !int.TryParse(profit, out int profitInt))
+            {
+                MessageBox.Show("Price and Profit must be number");
                 return;
             }
             
@@ -105,6 +113,7 @@ namespace GUI.ViewModels
                 Id = id,
                 Name = name,
                 Price = price,
+                Profit = profit,
                 Description = shortDescription,
                 Img = _base64Img,
                 Status = 1,

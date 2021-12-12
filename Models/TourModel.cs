@@ -11,6 +11,7 @@ namespace Models
         private string _name = "";
         private string _description = "";
         private string _price = "";
+        private string _profit = "";
         private List<RatingModel> _ratingList = new List<RatingModel>();
         private int _status = 1;        // 0 - not available, 1 - available
         private string _destinationIds = "";
@@ -45,6 +46,12 @@ namespace Models
             set => _price = value;
         }
         
+        public string Profit
+        {
+            get => _profit;
+            set => _profit = value;
+        }
+        
         public List<RatingModel> RatingList
         {
             get => _ratingList;
@@ -67,13 +74,14 @@ namespace Models
 
         public TourModel() { }
 
-        public TourModel(string id, string img, string name, string description, string price, int status, string destinationIds)
+        public TourModel(string id, string img, string name, string description, string price, string profit, int status, string destinationIds)
         {
             _id = id;
             _img = img;
             _name = name;
             _description = description;
             _price = price;
+            _profit = profit;
             _status = status;
             _destinationIds = destinationIds;
         }
