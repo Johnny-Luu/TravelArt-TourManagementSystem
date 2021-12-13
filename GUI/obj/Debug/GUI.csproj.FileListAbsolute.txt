@@ -281,3 +281,5 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Ma
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\TourGroupDetailWindow.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\FunctionLibrary.dll
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\FunctionLibrary.pdb
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\FunctionLibrary.dll
+C:\My Projects\Rider\TravelArt-TourManagementSystem\GUI\bin\Debug\FunctionLibrary.pdb
