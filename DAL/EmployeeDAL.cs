@@ -21,5 +21,17 @@ namespace DAL
 
             return data;
         }
+        
+        public async Task<EmployeeModel> GetEmployeeById(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            
+            var result = await _client.GetAsync("Employee/" + id);
+            var data = result.ResultAs<EmployeeModel>();
+
+            return data;
+        }
     }
 }

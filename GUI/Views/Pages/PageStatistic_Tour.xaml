@@ -144,7 +144,6 @@
 			BorderThickness="0.3" 
 			BorderBrush="white">
 			
-			<!-- Labels="{Binding Labels}" -->
 			<lvc:CartesianChart Name="Chart" LegendLocation="Bottom" >
 				<lvc:CartesianChart.AxisX>
 					<lvc:Axis Name="Axis" >

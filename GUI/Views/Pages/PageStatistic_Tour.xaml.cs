@@ -62,6 +62,9 @@ namespace GUI.Views.Pages
         private async void LoadDataAllTour()
         {
             Chart.Series.Clear();
+            totalProfit = 0;
+            totalRevenue = 0;
+            
             tourList = await tourBLL.GetAllTour();
             foreach (var tour in tourList)
             {
