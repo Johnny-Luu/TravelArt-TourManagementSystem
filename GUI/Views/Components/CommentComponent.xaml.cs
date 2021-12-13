@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Media;
 using System.Xml.Schema;
+using FunctionLibrary;
 
 namespace GUI.Views.Components
 {
@@ -14,19 +15,12 @@ namespace GUI.Views.Components
         }
         public void InitStar()
         {
-            const string fullStar = "pack://application:,,,/Assets/icons/goldstar_full.png";
-            const string noStar = "pack://application:,,,/Assets/icons/goldstar_empty.png";
-            var converter = new ImageSourceConverter();
-            ImgStar1.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            ImgStar2.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            ImgStar3.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            ImgStar4.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            ImgStar5.Source = (ImageSource)converter.ConvertFromString(fullStar);
-
-            if (score < 5) ImgStar5.Source = (ImageSource)converter.ConvertFromString(noStar);
-            if (score < 4) ImgStar4.Source = (ImageSource)converter.ConvertFromString(noStar);
-            if (score < 3) ImgStar3.Source = (ImageSource)converter.ConvertFromString(noStar);
-            if (score < 2) ImgStar2.Source = (ImageSource)converter.ConvertFromString(noStar);
+            StarSetUp.SetUpStar(StarSetUp.ScoreToStar(score),out var s1,out var s2,out var s3,out var s4,out var s5);
+            ImgStar1.Source = StarSetUp.SetUpPath(s1);
+            ImgStar2.Source = StarSetUp.SetUpPath(s2);
+            ImgStar3.Source = StarSetUp.SetUpPath(s3);
+            ImgStar4.Source = StarSetUp.SetUpPath(s4);
+            ImgStar5.Source = StarSetUp.SetUpPath(s5);
             
 
         }

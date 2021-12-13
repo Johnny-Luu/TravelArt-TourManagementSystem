@@ -2,14 +2,14 @@
 using System.Security.Policy;
 using System.Windows.Controls;
 using System.Windows.Media;
-
+using FunctionLibrary;
 namespace GUI.Views.Components
 {
     public partial class TourRating : UserControl
     {
         public TourRating()
         {
-
+            
             InitializeComponent();
         }
 
@@ -30,11 +30,13 @@ namespace GUI.Views.Components
             const int maxLenght = 140;
             var maxRate=MaxRate(r1,r2,r3,r4,r5);
             //Set chart lenght
-            RecRating1.Width = maxLenght * (r1*1.0/ maxRate);
-            RecRating2.Width = maxLenght * (r2*1.0/ maxRate);
-            RecRating3.Width = maxLenght * (r3*1.0/ maxRate);
-            RecRating4.Width = maxLenght * (r4*1.0/ maxRate);
-            RecRating5.Width = maxLenght * (r5*1.0/ maxRate);
+            RatingChartRatio.Ratio(r1, r2, r3, r4, r5, out var ratio1, out var ratio2, out var ratio3, out var ratio4,
+                out var ratio5);
+            RecRating1.Width = maxLenght * ratio1;
+            RecRating2.Width = maxLenght * ratio2;
+            RecRating3.Width = maxLenght * ratio3;
+            RecRating4.Width = maxLenght * ratio4;
+            RecRating5.Width = maxLenght * ratio5;
             //Set number
             var totalRating = r1 + r2 + r3 + r4 + r5;
             LbNumberRating.Content = "Total: " + totalRating.ToString();
@@ -48,31 +50,13 @@ namespace GUI.Views.Components
 
         private void StarInit( double score)
         {
-            ////////////////////////////////////////////
-           //Kiếm được hình ngôi sao thì đổi mấy cái path này
-           ///////////////////////////////////////////////
-            const string fullStar = "pack://application:,,,/Assets/icons/goldstar_full.png";
-            const string noStar = "pack://application:,,,/Assets/icons/goldstar_empty.png";
-            const string halfStar = "pack://application:,,,/Assets/icons/goldstar_half.png";
-            
-            var converter = new ImageSourceConverter();
-            ImgStar1.Source = (ImageSource)converter.ConvertFromString(noStar);
-            ImgStar2.Source = (ImageSource)converter.ConvertFromString(noStar);
-            ImgStar3.Source = (ImageSource)converter.ConvertFromString(noStar);
-            ImgStar4.Source = (ImageSource)converter.ConvertFromString(noStar);
-            ImgStar5.Source = (ImageSource)converter.ConvertFromString(noStar);
-            
-            var numHalfstars = (int) (score * 2.0f);
-            if (numHalfstars>=1) ImgStar1.Source = (ImageSource)converter.ConvertFromString(halfStar);
-            if (numHalfstars>=2) ImgStar1.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            if (numHalfstars>=3) ImgStar2.Source = (ImageSource)converter.ConvertFromString(halfStar);
-            if (numHalfstars>=4) ImgStar2.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            if (numHalfstars>=5) ImgStar3.Source = (ImageSource)converter.ConvertFromString(halfStar);
-            if (numHalfstars>=6) ImgStar3.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            if (numHalfstars>=7) ImgStar4.Source = (ImageSource)converter.ConvertFromString(halfStar);
-            if (numHalfstars>=8) ImgStar4.Source = (ImageSource)converter.ConvertFromString(fullStar);
-            if (numHalfstars>=9) ImgStar5.Source = (ImageSource)converter.ConvertFromString(halfStar);
-            if (numHalfstars>=10) ImgStar5.Source = (ImageSource)converter.ConvertFromString(fullStar);
+
+            StarSetUp.SetUpStar(StarSetUp.ScoreToStar(score),out var s1,out var s2,out var s3,out var s4,out var s5);
+            ImgStar1.Source = StarSetUp.SetUpPath(s1);
+            ImgStar2.Source = StarSetUp.SetUpPath(s2);
+            ImgStar3.Source = StarSetUp.SetUpPath(s3);
+            ImgStar4.Source = StarSetUp.SetUpPath(s4);
+            ImgStar5.Source = StarSetUp.SetUpPath(s5);
             
         }
     }
