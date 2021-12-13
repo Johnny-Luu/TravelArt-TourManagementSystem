@@ -31,7 +31,7 @@ namespace GUI.Views.Pages
             InitializeComponent();
             
             LoadDataToCombobox();
-            LoadDataAllTour();
+            //LoadDataAllTour();
             
             DataContext = this;
         }
@@ -39,6 +39,7 @@ namespace GUI.Views.Pages
         private async void LoadDataToCombobox()
         {
             // tour combobox
+            CbTour.Items.Add("All");
             tourList = await tourBLL.GetAllTour();
             foreach (var tour in tourList)
             {
@@ -54,10 +55,13 @@ namespace GUI.Views.Pages
             CbYear.Items.Add("2019");
             CbYear.Items.Add("2018");
             CbYear.Items.Add("2017");
+            
+            CbTour.SelectedIndex = 0;
         }
 
         private async void LoadDataAllTour()
         {
+            Chart.Series.Clear();
             tourList = await tourBLL.GetAllTour();
             foreach (var tour in tourList)
             {
@@ -325,14 +329,26 @@ namespace GUI.Views.Pages
 
         private void CbTour_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var id = CbTour.SelectedItem.ToString().Split('-')[0];
-            LoadDataYearOneTour(id, 2);
-            CbYear.SelectedIndex = 0;
-            CbMonth.SelectedIndex = -1;
+            if (CbTour.SelectedIndex == 0)
+            {
+                LoadDataAllTour();
+                CbYear.SelectedIndex = 0;
+                CbMonth.SelectedIndex = -1;
+            }
+            else
+            {
+                var id = CbTour.SelectedItem.ToString().Split('-')[0];
+                LoadDataYearOneTour(id, 2);
+                CbYear.SelectedIndex = 0;
+                CbMonth.SelectedIndex = -1;
+            }
         }
 
         private void CbYear_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if(CbTour.SelectedIndex == 0)
+                return;
+            
             var id = CbTour.SelectedItem.ToString().Split('-')[0];
             LoadDataYearOneTour(id, 2,CbYear.SelectedItem.ToString());
             CbMonth.SelectedIndex = -1;
@@ -340,7 +356,7 @@ namespace GUI.Views.Pages
 
         private void CbMonth_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (CbMonth.SelectedIndex == -1) return;
+            if (CbMonth.SelectedIndex == -1 || CbTour.SelectedIndex == 0) return;
             var id = CbTour.SelectedItem.ToString().Split('-')[0];
             LoadDataMonthOneTour(id, CbYear.SelectedItem.ToString(), CbMonth.SelectedItem.ToString());
         }
