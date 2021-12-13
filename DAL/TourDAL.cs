@@ -58,5 +58,21 @@ namespace DAL
             }
             return id.ToString();
         }
+
+        public async Task<bool> CheckDuplicate(TourModel tour)
+        {
+            var tourList = await GetAllTour();
+            var result = false;
+            
+            if (tourList != null)
+            {
+                if (tourList.Any(item => item.Name == tour.Name || item.Description == tour.Description || item.Price == tour.Price || item.Profit == tour.Profit))
+                {
+                    result = true;
+                }
+            }
+            
+            return result;
+        }
     }
 }

@@ -108,5 +108,21 @@ namespace DAL
             
             return id.ToString();
         }
+        
+        public async Task<bool> CheckDuplicate(TourGroupModel tourGroup)
+        {
+            var tourGroupList = await GetAllTourGroup();
+            var result = false;
+            
+            if (tourGroupList != null)
+            {
+                if (tourGroupList.Any(item => item.Name == tourGroup.Name || item.StartDate == tourGroup.StartDate || item.EndDate == tourGroup.EndDate || item.Slot == tourGroup.Slot))
+                {
+                    result = true;
+                }
+            }
+            
+            return result;
+        }
     }
 }

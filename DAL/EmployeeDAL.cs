@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DTO;
 using FireSharp;
@@ -32,6 +33,22 @@ namespace DAL
             var data = result.ResultAs<EmployeeModel>();
 
             return data;
+        }
+        
+        public async Task<bool> CheckDuplicate(EmployeeModel employee)
+        {
+            var employeeList = await GetAllEmployee();
+            var result = false;
+            
+            if (employeeList != null)
+            {
+                if (employeeList.Any(item => item.Name == employee.Name))
+                {
+                    result = true;
+                }
+            }
+            
+            return result;
         }
     }
 }

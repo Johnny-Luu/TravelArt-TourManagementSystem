@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DTO;
 using FireSharp;
@@ -55,6 +56,23 @@ namespace DAL
             }
             
             return id.ToString();
+        }
+        
+        public async Task<bool> CheckDuplicate(HotelModel hotel)
+        {
+            var hotelList = await GetAllHotel();
+            var result = false;
+            
+            if (hotelList != null)
+            {
+                if (hotelList.Any(item => item.Name == hotel.Name || item.PhoneNumber == hotel.PhoneNumber || item.Price == hotel.Price ||
+                                          item.Province == hotel.Province))
+                {
+                    result = true;
+                }
+            }
+            
+            return result;
         }
     }
 }
