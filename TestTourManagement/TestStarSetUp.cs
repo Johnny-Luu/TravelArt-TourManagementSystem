@@ -32,7 +32,7 @@ namespace TestTourManagement
             Assert.AreEqual(star2, s2,"Failed StarSetUp: star2 value");
             Assert.AreEqual(star3, s3,"Failed StarSetUp: star3 value");
             Assert.AreEqual(star4, s4,"Failed StarSetUp: star4 value");
-           Assert.AreEqual(star5, s5,"Failed StarSetUp: star5 value ");
+            Assert.AreEqual(star5, s5,"Failed StarSetUp: star5 value");
         }
     }
 }
