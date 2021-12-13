@@ -29,7 +29,7 @@
         <Grid Grid.Column="1">
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
+                        HorizontalAlignment="Left"
                         Margin="10 0">
                 <Label Content="Tom Ruise" 
                        FontFamily="Mulish"

@@ -106,6 +106,9 @@
     <Compile Include="Views\Components\DestinationControl.xaml.cs">
       <DependentUpon>DestinationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\ProfileListItem.xaml.cs">
+      <DependentUpon>ProfileListItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\TourGuildItem.xaml.cs">
       <DependentUpon>TourGuildItem.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,9 @@
     </Compile>
     <Compile Include="Views\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\ProfileWindow.xaml.cs">
+      <DependentUpon>ProfileWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow\TourGroupDetailWindow.xaml.cs">
       <DependentUpon>TourGroupDetailWindow.xaml</DependentUpon>
@@ -200,6 +206,7 @@
     <Page Include="Views\Components\ConfirmControl.xaml" />
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
     <Page Include="Views\Components\DestinationControl.xaml" />
+    <Page Include="Views\Components\ProfileListItem.xaml" />
     <Page Include="Views\Components\TourGuildItem.xaml" />
     <Page Include="Views\Components\PlanButton.xaml" />
     <Page Include="Views\Components\TourControl.xaml" />
@@ -208,6 +215,7 @@
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MainWindow\ProfileWindow.xaml" />
     <Page Include="Views\MainWindow\TourGroupDetailWindow.xaml" />
     <Page Include="Views\MainWindow\TourDetailWindow.xaml" />
     <Page Include="Views\Pages\PageAdding.xaml" />
@@ -257,6 +265,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\images\img-train-green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-ferris-wheel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\img-bigbang-clock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\images\img-tourism.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -285,7 +302,7 @@
     <Resource Include="Assets\icons\cameraicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\icons\moneyicon.png">
+    <Resource Include="Assets\icons\icon-money.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icons\renvenueicon.png">
@@ -297,7 +314,7 @@
     <Resource Include="Assets\icons\tourguideicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\icons\travelicon.png">
+    <Resource Include="Assets\icons\icon-travel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icons\icon-check.png">
@@ -347,6 +364,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\images\loading.jpg" />
+    <Resource Include="Assets\images\img-london-sticker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Assets\images\pngaaa.com-18001.png" />
     <Resource Include="Assets\images\img-hotel-building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

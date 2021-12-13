@@ -98,7 +98,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left" Margin="5,105,0,32.8" Width="1270">
 
-				<!--Tour guild label-->
+				
 				<!--Tour guild label-->
 				<Label 
                     Content="Tour Group"

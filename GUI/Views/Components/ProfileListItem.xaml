@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="GUI.Views.Components.ProfileListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:GUI.Views.Components"
+             mc:Ignorable="d"
+             d:DesignHeight="77" 
+             d:DesignWidth="519"
+             Height="77"
+             Width="519">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Image Tour-->
+        <Ellipse 
+            Grid.Column="0"
+            Height="59"
+            Width="73">
+            <Ellipse.Fill>
+                <ImageBrush 
+                    ImageSource="../../Assets/images/img-paris.jpg"
+                    Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        
+        <!--Name Tour & Name Tour Group & Date Start - Date End-->
+        <StackPanel
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left">
+            
+            <!--Name Tour label-->
+            <Label 
+                Content="Name Tour"
+                FontFamily="Mulish"
+                FontSize="14"
+                FontWeight="SemiBold"
+                Foreground="#252733"/>
+            
+            <!--Name Tour Group label-->
+            <Label 
+                Content="Name Tour Group"
+                FontFamily="Mulish"
+                FontSize="14"
+                FontWeight="SemiBold"
+                Foreground="#252733"/>
+            
+            <!--Date start - Date end label-->
+            <Label 
+                Content="21/2/2020 - 23/2/2020"
+                FontFamily="Mulish"
+                FontSize="12"
+                FontWeight="Regular"
+                Foreground="#C5C7CD"/>
+        </StackPanel>
+        
+        <!--Status & Price-->
+        <StackPanel
+            Grid.Column="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+            
+            <!--Status label-->
+            <Label 
+                Content="• planning"
+                FontFamily="Poppins"
+                FontSize="10"
+                FontWeight="Light"
+                Foreground="#66B464"/>
+            
+            <!--Price label-->
+            <Label 
+                Content="1.000.000 vnd"
+                FontFamily="Mulish"
+                FontSize="12"
+                FontWeight="Regular"
+                Foreground="#C5C7CD"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

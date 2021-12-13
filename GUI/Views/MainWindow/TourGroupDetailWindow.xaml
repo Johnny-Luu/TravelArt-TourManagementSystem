@@ -60,7 +60,7 @@
                 <StackPanel
                     VerticalAlignment="Top"
                     HorizontalAlignment="Center"
-                    Margin="10 30">
+                    Margin="150 20 0 0">
                     
                     <!--ID label-->
                     <Label 

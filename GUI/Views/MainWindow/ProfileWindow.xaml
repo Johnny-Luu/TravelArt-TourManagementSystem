@@ -1,0 +1,256 @@
+﻿<Page x:Class="GUI.Views.MainWindow.ProfileWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.MainWindow"
+      xmlns:uc="clr-namespace:GUI.Views.Components"
+      mc:Ignorable="d"
+      Height="720" 
+      Width="1280">
+    <Border
+        Background="#FFF4F4F4" 
+        CornerRadius="20" 
+        BorderThickness="0.3" 
+        BorderBrush="white">
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Profile Tour Joined container-->
+            <Border
+                Grid.Column="0"
+                Background="White"
+                CornerRadius="20"
+                BorderThickness="2"
+                Height="587"
+                Width="519"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0 0 0 20">
+                
+                <WrapPanel
+                    Orientation="Vertical"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="0 24 0 0">
+                    <uc:ProfileListItem></uc:ProfileListItem>
+                    <uc:ProfileListItem></uc:ProfileListItem>
+                    <uc:ProfileListItem></uc:ProfileListItem>
+                </WrapPanel>
+                
+            </Border>
+            
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                
+                <!--Info Customer container-->
+                <Border
+                    Grid.Row="0"
+                    Background="#FFF0DF"
+                    Height="451"
+                    Width="558"
+                    CornerRadius="20"
+                    BorderThickness="2"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Margin="0 50 0 0">
+                    
+                    <StackPanel 
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="40 30">
+                        
+                        <!--Customer label-->
+                        <Label 
+                            Content="Customer"
+                            FontFamily="Poppins"
+                            FontWeight="Regular"
+                            FontSize="32"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Margin="150 0 0 0"/>
+                        
+                        <!--ID label-->
+                        <Label 
+                            Content="ID: "
+                            Style="{StaticResource InfoLabelStyle}"
+                            Margin="0 40 0 10"/>
+                        
+                        <!--Name label-->
+                        <Label 
+                            Content="Name:  "
+                            Style="{StaticResource InfoLabelStyle}"
+                            Margin="0 10"/>
+                        
+                        <!--Phone label-->
+                        <Label 
+                            Content="Phone: "
+                            Style="{StaticResource InfoLabelStyle}"
+                            Margin="0 10"/>
+                        
+                        <!--Email label-->
+                        <Label 
+                            Content="Email: "
+                            Style="{StaticResource InfoLabelStyle}"
+                            Margin="0 10"/>
+                    </StackPanel>
+                </Border>
+                
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <!--Total Tour Group container-->
+                    <Border 
+                        Grid.Column="0"
+                        Background="#dbfcfb"
+                        Width="170"
+                        Height="80"
+                        CornerRadius="20"
+                        BorderThickness="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="40 0 0 0">
+                        
+                        <!--Total Tour label-->
+                        <Label 
+                            Content="3"
+                            FontFamily="Poppins"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 50 0"/>
+                    </Border>
+                    
+                    <!--Total Revenue container-->
+                    <Border 
+                        Grid.Column="1"
+                        Background="#e3fbdb"
+                        Height="80"
+                        Width="270"
+                        CornerRadius="20"
+                        BorderThickness="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0 0 40 0">
+                        
+                        <!--Total Revenue label-->
+                        <Label 
+                            Content="30.000.000"
+                            FontFamily="Poppins"
+                            FontSize="28"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Margin="0 0 30 0"/>
+                    </Border>
+                </Grid>
+            </Grid>
+            
+            <!--Total Tour Group label-->
+            <Label 
+                Grid.Column="1"
+                Content="Total Tour Group"
+                FontSize="16"
+                Style="{StaticResource GroupGuildListStyle}"
+                VerticalAlignment="Bottom"
+                Margin="60 0 0 150"/>
+            
+            <!--Total Revenue label-->
+            <Label 
+                Grid.Column="1"
+                Content="Total Tour Group"
+                FontSize="16"
+                Style="{StaticResource GroupGuildListStyle}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0 0 60 150"/>
+            
+            <!--Icon Money-->
+            <Image 
+                Grid.Column="1"
+                Height="36"
+                Width="37"
+                Source="../../Assets/icons/icon-money.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0 0 230 90"/>
+            
+            <!--Icon Travel-->
+            <Image
+                Grid.Column="1"
+                Height="33"
+                Width="36"
+                Source="../../Assets/icons/icon-travel.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="80 0 0 90"/>
+            
+            <!--Image London Sticker-->
+            <Image
+                Grid.Column="1"
+                Height="105"
+                Width="150"
+                Source="../../Assets/images/img-london-sticker.png"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"/>
+            
+            <!--Image Avatar Customer-->
+            <Ellipse 
+                Grid.Column="1"
+                Height="270"
+                Width="235"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 150 80 0">
+                <Ellipse.Fill>
+                    <ImageBrush 
+                        ImageSource="../../Assets/images/img-paris.jpg"
+                        Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            
+            <!--Image BigBang Clock-->
+            <Image 
+                Grid.Column="0"
+                Height="300"
+                Width="200"
+                Source="../../Assets/images/img-bigbang-clock.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="-20 0 0 75"/>
+            
+            <!--Image Ferris Wheel-->
+            <Image
+                Grid.Column="0"
+                Height="170"
+                Width="170"
+                Source="../../Assets/images/img-ferris-wheel.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"
+                Margin="50 0 0 40"/>
+            
+            <!--Image Train Green-->
+            <Image
+                Grid.Column="0"
+                Height="200"
+                Width="270"
+                Source="../../Assets/images/img-train-green.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0 0 60 10"/>
+            
+        </Grid>
+    </Border>
+</Page>
