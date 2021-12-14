@@ -8,259 +8,216 @@
       mc:Ignorable="d"
       Background="Transparent"
       Title="PageStatistic_Staff" Height="590" Width="1280">
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="85*"/>
-			<ColumnDefinition Width="43*"/>
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="0.8*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-		</Grid.RowDefinitions>
-		
-		<!-- Revenue or Profit btn -->
-		<Border
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Revenue or Profit btn -->
+
+        <Grid 
 			Grid.Row="0"
-			Grid.Column="0"
-			CornerRadius="10" 
-			Background="#EAF7FF"
-			Padding="6"
-			VerticalAlignment="Top"
-			HorizontalAlignment="Right">
-			<Grid Width="160" Height="30">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition />
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
-				
-				<!-- Revenue btn -->
-				<Border
-					Name="BtnRevenue"
-					CornerRadius="8" 
-					Background="White"
-					Style="{StaticResource ButtonHoverStyle}"
-					MouseDown="BtnRevenue_OnMouseDown">
-					<Label
-						Name="TxtYear"
-						VerticalAlignment="Center"
-						HorizontalAlignment="Center"
-						Foreground="#3CA1FF"
-						Content="Year"/>
-				</Border>
-				
-				<!-- Profit btn -->
-				<Border
-					Name="BtnProfit"
-					Grid.Column="1"
-					CornerRadius="8"
-					Style="{StaticResource ButtonHoverStyle}" 
-					MouseDown="BtnProfit_OnMouseDown">
-					<Label
-						Name="TxtMonth"
-						VerticalAlignment="Center"
-						HorizontalAlignment="Center"
-						Foreground="#949494"
-						Content="Month"/>
-				</Border>
-				
-			</Grid>
-		</Border>
-		
-		<Grid 
-			Grid.Row="0"
-			Grid.Column="1">
-			<Grid.RowDefinitions>
-				<RowDefinition />
-				<RowDefinition />
-			</Grid.RowDefinitions>
-			
-			<!--Tour ComboBox-->
-			<Border
+			Grid.Column="1" Margin="0.4,0,0,9.8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--Tour ComboBox-->
+            <Border
 				CornerRadius="10" 
 				BorderThickness="4" 
 				BorderBrush="white"
 				VerticalAlignment="Top"
 				HorizontalAlignment="Center">
-				<ComboBox
+                <ComboBox
 					Name="CbTour"
 					Height="40"
 					Width="330"
 					Style="{StaticResource ComboBoxStyle}"
 					SelectionChanged="CbTour_OnSelectionChanged">
-				</ComboBox>
-			</Border>
-			
-			<WrapPanel Grid.Row="1">
-				
-				<!--Year combobox-->
-				<Border
+                </ComboBox>
+            </Border>
+
+            <WrapPanel Grid.Row="1">
+
+                <!--Year combobox-->
+
+                <!--Year combobox-->
+                <Border
 					CornerRadius="10" 
 					BorderThickness="4" 
 					BorderBrush="white"
 					Margin="50.4,0,0,0"
 					VerticalAlignment="Top"
 					HorizontalAlignment="Center">
-					<ComboBox
-						Name="CbYear"
+                    <ComboBox
+						x:Name="CbYear"
 						Height="40"
 						Width="130"
 						Style="{StaticResource ComboBoxStyle}"
-						SelectionChanged="CbYear_OnSelectionChanged">
-					</ComboBox>
-				</Border>
-				
-				<!--Month combobox-->
-				<Border
+						SelectionChanged="CbYear_OnSelectionChanged"/>
+                </Border>
+
+                <!--Month combobox-->
+                <Border
 					CornerRadius="10" 
 					BorderThickness="4" 
 					BorderBrush="white"
 					Margin="56,0,0,0"
 					VerticalAlignment="Top"
 					HorizontalAlignment="Center">
-					<ComboBox
-						Name="CbMonth"
+                    <ComboBox
+						x:Name="CbMonth"
 						Height="40"
 						Width="130"
 						Style="{StaticResource ComboBoxStyle}"
-						SelectionChanged="CbMonth_OnSelectionChanged">
-					</ComboBox>
-				</Border>
-			</WrapPanel>
-		</Grid>
-		
-		<!-- chart -->
-		<Border 
+						SelectionChanged="CbMonth_OnSelectionChanged"/>
+                </Border>
+            </WrapPanel>
+        </Grid>
+
+        <!-- chart -->
+        <Border 
 			Grid.Column="0" 
 			Grid.Row="0"
 			Grid.RowSpan="4"
-			Height="506"
-			Margin="50.4,60,0,0"
-			VerticalAlignment="Top" Width="800"
+			Height="556"
+			Margin="30,10,0,0"
+			VerticalAlignment="Top" Width="820"
 			HorizontalAlignment="Left"
 			Background="White" 
 			CornerRadius="20" 
 			BorderThickness="0.3" 
-			BorderBrush="white">
-			
-			<lvc:CartesianChart Name="Chart" LegendLocation="Bottom" >
-				<lvc:CartesianChart.AxisX>
-					<lvc:Axis Name="Axis" >
-						<lvc:Axis.Separator>
-							<lvc:Separator IsEnabled="true" Step="1">
-							</lvc:Separator>
-						</lvc:Axis.Separator>
-					</lvc:Axis>
-				</lvc:CartesianChart.AxisX>
-			</lvc:CartesianChart>
-		</Border>
-		
-		<!-- 3 Panel ben phai-->
-		<Border 
+			BorderBrush="white" Grid.ColumnSpan="2">
+
+            <lvc:CartesianChart Name="Chart" LegendLocation="Bottom" Margin="25,20,-0.2,-4.2" >
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Name="Axis" >
+                        <lvc:Axis.Separator>
+                            <lvc:Separator IsEnabled="true" Step="1">
+                            </lvc:Separator>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+            </lvc:CartesianChart>
+        </Border>
+
+        <!-- 3 Panel ben phai-->
+        <Border 
 			Grid.Column="1" 
 			Grid.Row="2"
 			Height="120"
-			Margin="50.4,14,0,0"
+			Margin="50.4,17,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-		<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
-			
-			<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
-				<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
 
-					<ImageBrush ImageSource="/Assets/icons/icon-money.png"/>
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-				</Rectangle.Fill>
-			</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Net Profit" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbProfit" Content="180000000" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF00CC2D"/>
-			</WrapPanel>
-			
-		</WrapPanel>
-			</Border>
-		<Border 
+                        <ImageBrush ImageSource="/Assets/icons/icon-money.png"/>
+
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Net Profit" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbProfit" Content="180000000" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF00CC2D"/>
+                </WrapPanel>
+
+            </WrapPanel>
+        </Border>
+        <Border 
 			Grid.Column="1" 
 			Grid.Row="1"
 			Height="120"
-			Margin="50.4,16,0,0"
+			Margin="55.4,15.2,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-			<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
-			<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
-				<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-					<ImageBrush ImageSource="/Assets/icons/renvenueicon.png"/>
+                        <ImageBrush ImageSource="/Assets/icons/renvenueicon.png"/>
 
-				</Rectangle.Fill>
-			</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Revenue" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbRevenue" Content="12.255.260" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF"/>
-			</WrapPanel>
-			</WrapPanel>
-			</Border>
-		<Border 
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Revenue" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbRevenue" Content="12.255.260" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF"/>
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Border 
 			Grid.Column="1" 
 			Grid.Row="3"
 			Height="120"
-			Margin="50.4,12,0,0"
+			Margin="50.4,14.8,0,0"
 			VerticalAlignment="Top" Width="330"
 			HorizontalAlignment="Left"
 			Background="White" 
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-		<WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
-		<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20"> 
-			<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330" >
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-				<ImageBrush ImageSource="/Assets/icons/cameraicon.png"/>
+                        <ImageBrush ImageSource="/Assets/icons/cameraicon.png"/>
 
-			</Rectangle.Fill>
-		</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Quantity" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbQuantity" Content="120" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontSize="25" Foreground="#FF00FFD1" FontWeight="Bold"/>
-			</WrapPanel>
-		</WrapPanel>
-			</Border>
-	</Grid>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Quantity" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbQuantity" Content="120" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontSize="25" Foreground="#FF00FFD1" FontWeight="Bold"/>
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Label Content="Year" Grid.Column="1" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="35" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+        <Label Content="Month" Grid.Column="1" HorizontalAlignment="Left" Margin="190.4,71,0,0" VerticalAlignment="Top" Width="55" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+        <Label Content="Tour" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="45" Grid.Column="1" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+    </Grid>
 
 </Page>

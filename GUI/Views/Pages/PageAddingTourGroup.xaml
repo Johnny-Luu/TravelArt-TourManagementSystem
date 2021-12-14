@@ -216,7 +216,7 @@
             Source="../../Assets/images/img-coffee-cup.png"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Margin="20 0 0 200 "/>
+            Margin="20 0 0 200 " IsEnabled="False"/>
         
         <!--Image Glasses-->
         <Image
@@ -226,7 +226,7 @@
             Source="../../Assets/images/img-glasses.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Margin="0 -20 40 0 "/>
+            Margin="0 -20 40 0 " IsEnabled="False"/>
         
         <!--Image Umbrella-->
         <Image 
@@ -236,7 +236,7 @@
             Source="../../Assets/images/img-umbrella.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Margin="0 -60 -20 0 ">
+            Margin="0 -60 -20 0 " IsEnabled="False">
             
             <Image.RenderTransform>
                 <RotateTransform Angle="23" />
@@ -252,7 +252,7 @@
             Source="../../Assets/images/img-street-food-car.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            Margin="0 0 0 180 "/> 
+            Margin="0 0 0 180 " IsEnabled="False"/> 
         
         <!--Confirm Button-->
         <Border

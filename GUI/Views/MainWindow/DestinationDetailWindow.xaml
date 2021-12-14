@@ -11,20 +11,20 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
-    
+
     <Border 
         Background="#FFF4F4F4" 
         CornerRadius="20" 
         BorderThickness="0.3" 
         BorderBrush="white">
         <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="4*"/>
-        </Grid.ColumnDefinitions>
-        
-        <!--Icon Arrow Back-->
-        <Image 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Icon Arrow Back-->
+            <Image 
             Source="../../Assets/icons/icon-arrow-left-black.png"
             Width="24"
             Height="24"
@@ -33,122 +33,122 @@
             Margin="10 10 0 0"
             MouseDown="UIElement_OnMouseDown"/>
 
-        
-        <!--Destination Info container-->
-        <Border 
+
+            <!--Destination Info container-->
+            <Border 
             Grid.Column="0"
             Background="#C7DAD2"
             Height="587"
             Width="681"
             CornerRadius="20"
             BorderThickness="2">
-            
-            <WrapPanel
+
+                <WrapPanel
                 Width="500"
                 Orientation="Vertical"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Center"
-                Margin="0 0 0 30">
-                
-                <!--Destination Info label-->
-                <Label
-                    Content="Destination Info"
+                Margin="88.4,0,89.2,1.6" Height="250">
+
+                    <!--Destination Info label-->
+                    <Label
+                    Content="Destination Information&#xD;&#xA;"
                     FontFamily="Poppins"
                     FontSize="32"
                     FontWeight="Regular"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Center"/>
-                
-                <!--Name label-->
-                <Label 
+                    HorizontalAlignment="Center" Height="49"/>
+
+                    <!--Name label-->
+                    <Label 
                     Name="LbDestinationName"
                     Content="Name: "
                     FontWeight="Bold"
-                    Style="{StaticResource InfoLabelStyle}"/>
-                
-                <!--Province label-->
-                <Label 
+                    Style="{StaticResource InfoLabelStyle}" Width="496" Height="30" HorizontalAlignment="Left"/>
+
+                    <!--Province label-->
+                    <Label 
                     Name="LbDestinationProvince"
                     Content="Province: "
                     FontWeight="Bold"
-                    Style="{StaticResource InfoLabelStyle}"/>
-                
-                <!--Description label-->
-                <Label
+                    Style="{StaticResource InfoLabelStyle}" Width="481" Height="30" HorizontalAlignment="Left"/>
+
+                    <!--Description label-->
+                    <Label
                     FontWeight="Bold"
                     Style="{StaticResource InfoLabelStyle}">
-                    <TextBlock
+                        <TextBlock
                         Name="TbDescription" 
-                        Text="Dalat is a city in the central Vietnam. It's a beautiful place where you can take a rest with a peaceful atmosphere, you can enjoy it" 
+                        Text="Description:" 
                         TextWrapping="WrapWithOverflow" 
-                        TextTrimming="CharacterEllipsis" />
-                </Label>
-            </WrapPanel>
-        </Border>
-        
-        
-        <!--Hotel Info container-->
-        <Border
+                        TextTrimming="CharacterEllipsis" Height="122" Width="491" />
+                    </Label>
+                </WrapPanel>
+            </Border>
+
+
+            <!--Hotel Info container-->
+            <Border
             Grid.Column="1"
             Background="#FFF0DF"
             Height="587"
             Width="426"
             CornerRadius="20"
             BorderThickness="2">
-            
-            <WrapPanel 
-                Orientation="Vertical"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="10 60 0 0">
-                
-                <!--Hotel Info label-->
-                <Label
-                    Content="Hotel info"
-                    FontFamily="Poppins"
-                    FontSize="32"
-                    FontWeight="Regular"
+
+                <WrapPanel 
+                    Orientation="Vertical"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
-                    Margin="120 0 0 0"/>
-                
-                <!--Name label-->
-                <Label 
-                    Name="LbHotelName"
-                    Content="Name: "
-                    Style="{StaticResource InfoLabelStyle}"
-                    FontWeight="Bold"
-                    Margin="0 40 0 10"/>
-                
-                <!--Phone label-->
-                <Label 
-                    Name="LbHotelPhone"
-                    Content="Phone: "
-                    Style="{StaticResource InfoLabelStyle}"
-                    FontWeight="Bold"
-                    Margin="0 10"/>
-                
-                <!--Price label-->
-                <Label 
-                    Name="LbHotelPrice"
-                    Content="Price: "
-                    Style="{StaticResource InfoLabelStyle}"
-                    FontWeight="Bold"
-                    Margin="0 10"/>
-                
-                <!--Address label-->
-                <Label 
-                    Name="LbHotelAddress"
-                    Content="Address: "
-                    Style="{StaticResource InfoLabelStyle}"
-                    FontWeight="Bold"
-                    Margin="0 10"/>
-            </WrapPanel>
-        </Border>
-        
-         
-        <!--Image Destination info-->
-        <Border
+                    HorizontalAlignment="Left"
+                    Margin="29.4,47.4,0,0">
+
+                    <!--Hotel Info label-->
+                    <Label
+                        Content="Hotel information"
+                        FontFamily="Poppins"
+                        FontSize="32"
+                        FontWeight="Regular"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        Margin="0"/>
+
+                    <!--Name label-->
+                    <Label 
+                        x:Name="LbHotelName"
+                        Content="Name: "
+                        Style="{StaticResource InfoLabelStyle}"
+                        FontWeight="Bold"
+                        Margin="0 40 0 10" Height="44" Width="233" HorizontalAlignment="Left"/>
+                    <Label 
+                        x:Name="LbHotelPhone"
+                        Content="Phone: "
+                        Style="{StaticResource InfoLabelStyle}"
+                        FontWeight="Bold"
+                        Margin="0 10" Height="45" Width="233" HorizontalAlignment="Left"/>
+
+                    <!--Phone label-->
+
+                    <!--Price label-->
+                    <Label 
+                        x:Name="LbHotelPrice"
+                        Content="Price: "
+                        Style="{StaticResource InfoLabelStyle}"
+                        FontWeight="Bold"
+                        Margin="0 10" Height="45" Width="263" HorizontalAlignment="Left"/>
+
+                    <!--Address label-->
+                    <Label 
+                        x:Name="LbHotelAddress"
+                        Content="Address: "
+                        Style="{StaticResource InfoLabelStyle}"
+                        FontWeight="Bold"
+                        Margin="0 10" Height="75" Width="328"/>
+                </WrapPanel>
+            </Border>
+
+
+            <!--Image Destination info-->
+            <Border
             Name="ImgDestination"
             Grid.Column="0"
             Height="320"
@@ -157,62 +157,62 @@
             BorderThickness="2"
             VerticalAlignment="Top"
             HorizontalAlignment="Center"
-            Margin="0 66 0 0">
-            
-            <!--Image Destination-->
-            <Border.Background>
-                <ImageBrush 
-                    ImageSource="../../Assets/images/img-destination-info.jpg"
+            Margin="0 66 0 0" IsEnabled="False">
+
+                <!--Image Destination-->
+                <Border.Background>
+                    <ImageBrush 
+                    ImageSource="../../Assets/images/loading2.png"
                     Stretch="UniformToFill"/>
-            </Border.Background>
-        </Border>
-        
-        <!--Image Street Light-->
-        <Image
+                </Border.Background>
+            </Border>
+
+            <!--Image Street Light-->
+            <Image
             Grid.Column="0"
             Height="500"
             Width="400"
             Source="../../Assets/images/img-street-light.png"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Left"
-            Margin="-140 0 0 20"/>
-        
-        <!--Image Church-->
-        <Image
+            Margin="-140 0 0 20" IsEnabled="False"/>
+
+            <!--Image Church-->
+            <Image
             Grid.Column="0"
             Height="267"
             Width="268"
             Source="../../Assets/images/img-church.png"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
-            Margin="0 0 -130 0"></Image>
-        
-        <!--Image Bridge-->
-        <Image
+            Margin="0 0 -130 0" IsEnabled="False"></Image>
+
+            <!--Image Bridge-->
+            <Image
             Grid.Column="1"
             Height="265"
             Width="290"
             Source="../../Assets/images/img-bridge.png"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
-            Margin="0 0 0 -70"/>
-        
-        <!--Image Avatar Hotel-->
-        <Ellipse 
+            Margin="0 0 0 -70" IsEnabled="False"/>
+
+            <!--Image Avatar Hotel-->
+            <Ellipse 
             Grid.Column="1"
             Height="172"
             Width="130"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            Margin="0 200 70 0">
-            <Ellipse.Fill>
-                <ImageBrush 
+            Margin="0 200 70 0" IsEnabled="False">
+                <Ellipse.Fill>
+                    <ImageBrush 
                     ImageSource="../../Assets/images/img-building.png"
                     Stretch="UniformToFill"/>
-            </Ellipse.Fill>
-        </Ellipse>
-       
-    </Grid>
+                </Ellipse.Fill>
+            </Ellipse>
+
+        </Grid>
     </Border>
-    
+
 </Window>

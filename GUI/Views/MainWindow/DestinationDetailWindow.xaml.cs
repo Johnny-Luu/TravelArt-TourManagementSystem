@@ -24,6 +24,8 @@ namespace GUI.Views.MainWindow
             var destinationBLL = new DestinationBLL();
             var destination = await destinationBLL.GetDestinationbyID(id);
             
+            //Lb set title
+           
             // destination info
             LbDestinationName.Content = "Name: " + destination.Name;
             LbDestinationProvince.Content = "Province: " + destination.Province;
@@ -47,6 +49,7 @@ namespace GUI.Views.MainWindow
             LbHotelAddress.Content = "Address: " + hotel.Address;
             LbHotelPhone.Content = "Phone: " + hotel.PhoneNumber;
             LbHotelPrice.Content = "Price: " + hotel.Price;
+          
         }
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)

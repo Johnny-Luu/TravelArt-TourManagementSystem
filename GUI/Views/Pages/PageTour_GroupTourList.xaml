@@ -12,143 +12,143 @@
       Width="1280"
       x:Name="PgTourGroup"
       DataContext="{StaticResource TourGroupVm}">
-	
-	<Grid>
-		<i:Interaction.Triggers>
-			<i:EventTrigger EventName="Loaded">
-				<i:InvokeCommandAction
+
+    <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction
 					Command="{Binding LoadTourGroupCommand}"
 					CommandParameter="{Binding ElementName=PgTourGroup}"/>
-			</i:EventTrigger>
-		</i:Interaction.Triggers>
-		
-		<Grid.RowDefinitions>
-			<RowDefinition Height="23*"/>
-			<RowDefinition Height="10*"/>
-			<RowDefinition Height="111*"/>
-		</Grid.RowDefinitions>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
 
-		<Grid Grid.Row="0" Grid.RowSpan="2">
-			<WrapPanel Grid.Row="0" Margin="10,2,-10,28.2">
-				<Label 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="111*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.RowSpan="2">
+            <WrapPanel Grid.Row="0" Margin="10,2,-10,28.2">
+                <Label 
 					Name="LbAll"
 					Content="All Group"
 					BorderBrush="#F4F4F4"
 					Style="{StaticResource NavItemStyle}"
 					Margin="25 15 0 0" 
 					MouseDown="LbAll_OnMouseDown" >
-					<i:Interaction.Triggers>
-						<i:EventTrigger EventName="MouseDown">
-							<i:InvokeCommandAction
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
 								Command="{Binding LoadAllTourGroupCommand}"
 								CommandParameter="{Binding ElementName=PgTourGroup}"/>
-						</i:EventTrigger>
-					</i:Interaction.Triggers>
-				</Label>
-				
-				<Label 
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Label>
+
+                <Label 
                 Name="LbOntrip"
                 Content="On Trip"
                 BorderBrush="#F4F4F4"
                 Style="{StaticResource NavItemStyle}"
                 Margin="25 15 0 0" 
                 MouseDown="LbOntrip_OnMouseDown" >
-					<i:Interaction.Triggers>
-						<i:EventTrigger EventName="MouseDown">
-							<i:InvokeCommandAction
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
 								Command="{Binding OnTripFilterCommand}"
 								CommandParameter="{Binding ElementName=PgTourGroup}"/>
-						</i:EventTrigger>
-					</i:Interaction.Triggers>
-				</Label>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Label>
 
-				<Label
+                <Label
                 Name="LbPlanning"
                 Content="Planning"
                 BorderBrush="#F4F4F4"
                 Margin="25 15 0 0"
                 Style="{StaticResource NavItemStyle}"
                 MouseDown="LbPlanning_OnMouseDown" >
-					<i:Interaction.Triggers>
-						<i:EventTrigger EventName="MouseDown">
-							<i:InvokeCommandAction
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
 								Command="{Binding PlanningFilterCommand}"
 								CommandParameter="{Binding ElementName=PgTourGroup}"/>
-						</i:EventTrigger>
-					</i:Interaction.Triggers>
-				</Label>
-				
-				<Label
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Label>
+
+                <Label
                     x:Name="LbOver"
                     Content="Over"
                     BorderBrush="#F4F4F4"
                     Margin="25 15 0 0"
                     Style="{StaticResource NavItemStyle}" 
                     MouseDown="LbOver_OnMouseDown" >
-					<i:Interaction.Triggers>
-						<i:EventTrigger EventName="MouseDown">
-							<i:InvokeCommandAction
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
 								Command="{Binding OverFilterCommand}"
 								CommandParameter="{Binding ElementName=PgTourGroup}"/>
-						</i:EventTrigger>
-					</i:Interaction.Triggers>
-				</Label>
-			</WrapPanel>
-			<WrapPanel Orientation="Horizontal"
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Label>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left" Margin="5,105,0,32.8" Width="1270">
 
-				
-				<!--Tour guild label-->
-				<Label 
+
+                <!--Tour guild label-->
+                <Label 
                     Content="Tour Group"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="90,0,0,0"/>
-				<Label 
+                    Margin="90,0,0,0" FontWeight="Bold"/>
+                <Label 
                     Content="Status"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="130,0,0,0"/>
-				<Label 
+                    Margin="120,0,0,0" FontWeight="Bold"/>
+                <Label 
                     Content="Tour "
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="50,0,0,0"/>
+                    Margin="45,0,0,0" FontWeight="Bold"/>
 
-				<!--Time start label-->
-				<Label 
+                <!--Time start label-->
+                <Label 
                     Content="Tour Guide Leader"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="160,0,0,0"/>
+                    Margin="155,0,0,0" FontWeight="Bold"/>
 
-				<!--Time end label-->
-				<Label 
+                <!--Time end label-->
+                <Label 
 					Content="Tour Guide Deputy"
 					Style="{StaticResource GroupGuildListStyle}"
-					Margin="80,0,0,0"/>
-				<Label 
+					Margin="73,0,0,0" FontWeight="Bold"/>
+                <Label 
                     Content="Time"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="70,0,0,0"/>
+                    Margin="65,0,0,0" FontWeight="Bold"/>
 
-				<!--Passenger label-->
-				
-				<Label
+                <!--Passenger label-->
+
+                <Label
                     Content="Passenger"
                     Style="{StaticResource GroupGuildListStyle}"
-                    Margin="130,0,0,0"/>
+                    Margin="140,0,0,0" FontWeight="Bold"/>
 
-			</WrapPanel>
-		</Grid>
+            </WrapPanel>
+        </Grid>
 
-		<ScrollViewer 
+        <ScrollViewer 
             Grid.Row="1"
             Width="1280"
             Height="505"
             VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="-20,14.8,20,0" VerticalScrollBarVisibility="Hidden" Grid.RowSpan="2">
 
-			<WrapPanel Name="WpTourGroupList" Orientation="Vertical" Margin="30,5,-29.6,-4.8">
-				
-			</WrapPanel>
-		</ScrollViewer>
-	</Grid>
+            <WrapPanel Name="WpTourGroupList" Orientation="Vertical" Margin="30,5,-29.6,-4.8">
+
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
 </Page>

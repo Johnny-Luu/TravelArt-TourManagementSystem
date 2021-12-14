@@ -308,27 +308,7 @@ namespace GUI.Views.Pages
             LbQuantity.Content = quantity.ToString("N0");
         }
 
-        private void BtnRevenue_OnMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            ResetButtonStyle();
-            BtnRevenue.Background = Brushes.White;
-            TxtYear.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#3CA1FF");
-        }
-
-        private void BtnProfit_OnMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            ResetButtonStyle();
-            BtnProfit.Background = Brushes.White;
-            TxtMonth.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#3CA1FF");
-        }
-
-        private void ResetButtonStyle()
-        {
-            BtnRevenue.Background = Brushes.Transparent;
-            BtnProfit.Background = Brushes.Transparent;
-            TxtYear.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#949494");
-            TxtMonth.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#949494");
-        }
+    
 
         private void CbTour_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -363,5 +343,7 @@ namespace GUI.Views.Pages
             var id = CbTour.SelectedItem.ToString().Split('-')[0];
             LoadDataMonthOneTour(id, CbYear.SelectedItem.ToString(), CbMonth.SelectedItem.ToString());
         }
+
+    
     }
 }

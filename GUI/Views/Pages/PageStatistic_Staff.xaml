@@ -9,82 +9,82 @@
       mc:Ignorable="d"
       Background="Transparent"
       Title="PageStatistic_Staff" Height="590" Width="1280">
-	<Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="43*"/>
-			<ColumnDefinition Width="85*"/>
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="0.8*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-			<RowDefinition Height="1*"/>
-		</Grid.RowDefinitions>
-		
-		<Grid 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid 
 			Grid.Row="0"
 			Grid.Column="0">
-			<Grid.RowDefinitions>
-				<RowDefinition />
-				<RowDefinition />
-			</Grid.RowDefinitions>
-			
-			<!--Employee ComboBox-->
-			<Border
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--Employee ComboBox-->
+            <Border
 				CornerRadius="10" 
 				BorderThickness="4" 
 				BorderBrush="white"
 				VerticalAlignment="Top"
-				HorizontalAlignment="Center">
-				<ComboBox
+				HorizontalAlignment="Center" Margin="10,0,0,0">
+                <ComboBox
 					Name="CbEmployee"
 					Height="40"
 					Width="330"
 					Style="{StaticResource ComboBoxStyle}"
-					SelectionChanged="CbEmployee_OnSelectionChanged">
-				</ComboBox>
-			</Border>
-			
-			<WrapPanel Grid.Row="1">
-				
-				<!--Year combobox-->
-				<Border
+					SelectionChanged="CbEmployee_OnSelectionChanged" Margin="0">
+                </ComboBox>
+            </Border>
+
+            <WrapPanel Grid.Row="1">
+
+                <!--Year combobox-->
+                <Border
 					CornerRadius="10" 
 					BorderThickness="4" 
 					BorderBrush="white"
-					Margin="50.4,0,0,0"
+					Margin="52,0,0,0"
 					VerticalAlignment="Top"
 					HorizontalAlignment="Center">
-					<ComboBox
+                    <ComboBox
 						Name="CbYear"
 						Height="40"
 						Width="130"
 						Style="{StaticResource ComboBoxStyle}"
 						SelectionChanged="CbYear_OnSelectionChanged">
-					</ComboBox>
-				</Border>
-				
-				<!--Month combobox-->
-				<Border
+                    </ComboBox>
+                </Border>
+
+                <!--Month combobox-->
+                <Border
 					CornerRadius="10" 
 					BorderThickness="4" 
 					BorderBrush="white"
 					Margin="56,0,0,0"
 					VerticalAlignment="Top"
 					HorizontalAlignment="Center">
-					<ComboBox
+                    <ComboBox
 						Name="CbMonth"
 						Height="40"
 						Width="130"
 						Style="{StaticResource ComboBoxStyle}"
 						SelectionChanged="CbMonth_OnSelectionChanged">
-					</ComboBox>
-				</Border>
-			</WrapPanel>
-		</Grid>
-		
-		<!-- chart -->
-		<Border 
+                    </ComboBox>
+                </Border>
+            </WrapPanel>
+        </Grid>
+
+        <!-- chart -->
+        <Border 
 			Grid.Column="1" 
 			Grid.Row="0"
 			Grid.RowSpan="4"
@@ -96,21 +96,21 @@
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-			<lvc:CartesianChart Name="Chart" LegendLocation="Bottom" >
-				<lvc:CartesianChart.AxisX>
-					<lvc:Axis Name="Axis" >
-						<lvc:Axis.Separator>
-							<lvc:Separator IsEnabled="true" Step="1">
-							</lvc:Separator>
-						</lvc:Axis.Separator>
-					</lvc:Axis>
-				</lvc:CartesianChart.AxisX>
-			</lvc:CartesianChart>
-		</Border>
-		
-		<!-- 3 Panel ben trai-->
-		<Border 
+
+            <lvc:CartesianChart Name="Chart" LegendLocation="Bottom" >
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Name="Axis" >
+                        <lvc:Axis.Separator>
+                            <lvc:Separator IsEnabled="true" Step="1">
+                            </lvc:Separator>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+            </lvc:CartesianChart>
+        </Border>
+
+        <!-- 3 Panel ben trai-->
+        <Border 
 			Grid.Column="0" 
 			Grid.Row="2"
 			Height="120"
@@ -121,32 +121,32 @@
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-		<WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
-			
-			<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
-				<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
 
-					<ImageBrush ImageSource="/Assets/icons/tourguideicon.png"/>
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-				</Rectangle.Fill>
-			</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Tour Guide" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbTourGuide" Content="180000000" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#3CA1FF"/>
-			</WrapPanel>
-			
-		</WrapPanel>
-			</Border>
-		<Border 
+                        <ImageBrush ImageSource="/Assets/icons/tourguideicon.png"/>
+
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Tour Guide" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbTourGuide" Content="180000000" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#3CA1FF"/>
+                </WrapPanel>
+
+            </WrapPanel>
+        </Border>
+        <Border 
 			Grid.Column="0" 
 			Grid.Row="1"
 			Height="120"
@@ -157,30 +157,30 @@
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-			<WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
-			<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
-				<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-					<ImageBrush ImageSource="/Assets/icons/icon-travel.png"/>
+                        <ImageBrush ImageSource="/Assets/icons/icon-travel.png"/>
 
-				</Rectangle.Fill>
-			</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbTotal" Content="12.255.260" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#00FFD1"/>
-			</WrapPanel>
-			</WrapPanel>
-			</Border>
-		<Border 
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbTotal" Content="12.255.260" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#00FFD1"/>
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Border 
 			Grid.Column="0" 
 			Grid.Row="3"
 			Height="120"
@@ -191,30 +191,33 @@
 			CornerRadius="20" 
 			BorderThickness="0.3" 
 			BorderBrush="white">
-			
-        
-			<Border.Effect>
-				<DropShadowEffect
+
+
+            <Border.Effect>
+                <DropShadowEffect
 					Color="Gray"
 					BlurRadius="5"
 					Opacity=".5"
 					ShadowDepth="2" />
-			</Border.Effect>
-		<WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
-		<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20"> 
-			<Rectangle.Fill>
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="330" >
+                <Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
 
-				<ImageBrush ImageSource="/Assets/icons/tourgroupicon.png"/>
+                        <ImageBrush ImageSource="/Assets/icons/tourgroupicon.png"/>
 
-			</Rectangle.Fill>
-		</Rectangle>
-			<WrapPanel Height="150" Width="210">
-				<Label Content="Tour Deputy" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
-				<Label Name="LbTourDeputy" Content="120" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontSize="25" Foreground="#FFABA6" FontWeight="Bold"/>
-			</WrapPanel>
-		</WrapPanel>
-			</Border>
-	</Grid>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210">
+                    <Label Content="Tour Deputy" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins" FontSize="18" FontWeight="Bold" Foreground="#FF727272"/>
+                    <Label Name="LbTourDeputy" Content="120" Height="48" Width="165" Margin="20,10,0,0" FontFamily="Poppins" FontSize="25" Foreground="#FFABA6" FontWeight="Bold"/>
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Label Content="Month" HorizontalAlignment="Left" Margin="190,71,0,0" VerticalAlignment="Top" Width="55" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+        <Label Content="Year" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="35" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+        <Label Content="Staff" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="40" Height="24" FontWeight="Bold" Foreground="#FF727272" FontSize="14"/>
+    </Grid>
 
 </Page>
 

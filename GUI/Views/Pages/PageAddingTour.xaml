@@ -329,7 +329,7 @@
                   Source="../../Assets/images/img-world-travel.png"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top"
-                  Margin="-15 -55 0 0"/>
+                  Margin="-15 -55 0 0" IsEnabled="False"/>
             
             <!--Image Vector route icon-->
             <Image Grid.Column="0"
@@ -338,7 +338,7 @@
                   Source="../../Assets/images/img-vector-route-icon.png"
                   HorizontalAlignment="Right"
                   VerticalAlignment="Center"
-                  Margin="0 0 -60 0 "/>
+                  Margin="0 0 -60 0 " IsEnabled="False"/>
             
             <!--Image Passport-->
             <Image Grid.Column="1"
@@ -347,6 +347,6 @@
                    Source="../../Assets/images/img-passport.png"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
-                   Margin="0 40 35 0 "/>
+                   Margin="0 40 35 0 " IsEnabled="False"/>
    </Grid>
 </Page>

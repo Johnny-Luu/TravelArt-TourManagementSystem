@@ -202,7 +202,7 @@
                  Source="../../Assets/images/img-taxi.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="50 -70"/>
+                 Margin="50 -70" IsEnabled="False"/>
            
            <!--Image Bag-->
            <Image
@@ -212,7 +212,7 @@
                  Source="../../Assets/images/img-bag.png"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Bottom"
-                 Margin="-80 140"/>
+                 Margin="-80 140" IsEnabled="False"/>
            
            <!--Image Hotel Building-->
            <Image 
@@ -222,6 +222,6 @@
                  Source="../../Assets/images/img-hotel-building.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Bottom"
-                 Margin="0 200"/>
+                 Margin="0 200" IsEnabled="False"/>
     </Grid> 
 </Page>
