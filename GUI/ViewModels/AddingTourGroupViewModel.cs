@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using BLL;
 using DTO;
+using FunctionLibrary;
 using GUI.Views.Pages;
 
 namespace GUI.ViewModels
@@ -60,8 +62,8 @@ namespace GUI.ViewModels
             var tourId = "";
             var tourName = "";
             var slot = PgAddingTourGroup.TbSlot.Text;
-            var startDate = PgAddingTourGroup.DpStartDate.SelectedDate;
-            var endDate = PgAddingTourGroup.DpEndDate.SelectedDate;
+            DateTime? startDate = PgAddingTourGroup.DpStartDate.SelectedDate;
+            DateTime? endDate = PgAddingTourGroup.DpEndDate.SelectedDate;
 
             if (PgAddingTourGroup.CbTourLeader.SelectedItem != null)
             {
@@ -80,36 +82,12 @@ namespace GUI.ViewModels
                 tourId = PgAddingTourGroup.CbTour.SelectedItem.ToString().Split('-')[0];
                 tourName = PgAddingTourGroup.CbTour.SelectedItem.ToString().Split('-')[1];
             }
-            
-            // check if all fields are filled
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(tourLeaderId) || string.IsNullOrEmpty(tourLeaderName) ||
-                string.IsNullOrEmpty(tourDeputyId) || string.IsNullOrEmpty(tourDeputyName) || string.IsNullOrEmpty(tourId) ||
-                string.IsNullOrEmpty(tourName) || string.IsNullOrEmpty(slot) || startDate == null || endDate == null)
-            {
-                MessageBox.Show("Please fill all fields");
-                return;
-            }
 
-            // check if slot is number or not
-            if (!int.TryParse(slot, out int slotNumber))
-            {
-                MessageBox.Show("Slot must be a number");
-                return;
-            }
-            
-            // check tour leader and tour deputy are not the same
-            if (tourLeaderId == tourDeputyId)
-            {
-                MessageBox.Show("Tour leader and tour deputy cannot be the same");
-                return;
-            }
+          if(! AddingTourGroup.isAddAble(name, tourId, tourName, tourLeaderId, tourLeaderName, tourDeputyId,
+                tourDeputyName, slot, startDate, endDate)) return;
 
-            // check date selected validation
-            if(startDate > endDate)
-            {
-                MessageBox.Show("Start date must be less than end date");
-                return;
-            }
+          int.TryParse(slot, out int slotNumber);
+          
             
             var tourGroup = new TourGroupModel
             {

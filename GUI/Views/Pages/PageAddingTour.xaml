@@ -99,6 +99,7 @@
                                                             BorderThickness="4" 
                                                             BorderBrush="white">
                                                             <TextBox
+                                                                  PreviewTextInput="TextInput"
                                                                   Name="TbPrice"
                                                                   Width="160"
                                                                   Height="50" 
@@ -122,6 +123,7 @@
                                                             BorderThickness="4" 
                                                             BorderBrush="white">
                                                             <TextBox
+                                                                  PreviewTextInput="TextInput"
                                                                   Name="TbProfit"
                                                                   Width="160"
                                                                   Height="50" 
