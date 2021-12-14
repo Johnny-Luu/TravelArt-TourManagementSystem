@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using BLL;
 using DTO;
+using FunctionLibrary;
 using GUI.GlobalData;
 using GUI.Views.Pages;
 
@@ -38,12 +39,10 @@ namespace GUI.ViewModels
             var address = PgAddingHotel.TbAddress.Text;
             var province = PgAddingHotel.CbProvince.Text;
             var phone = PgAddingHotel.TbPhone.Text;
+
+
+            if (!AddingHotel.isAddAble(name, price, address, phone, province)) return;
             
-            if(name == "" || price == "" || address == "" || phone == "" || province == "")
-            {
-                MessageBox.Show("Please fill all fields");
-                return;
-            }
             
             var hotelBLL = new HotelBLL();
             var id = await hotelBLL.InitID();

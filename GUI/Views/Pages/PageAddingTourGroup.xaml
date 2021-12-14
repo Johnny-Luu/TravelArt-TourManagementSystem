@@ -150,10 +150,12 @@
                       
                     <!--Slot textBox-->
                     <Border
+                        
                         CornerRadius="10" 
                         BorderThickness="4" 
                         BorderBrush="white">
                         <TextBox
+                            PreviewTextInput="TextInput"
                             Name="TbSlot"
                             Width="350"
                             Height="50" 
@@ -174,6 +176,7 @@
                         Background="White"
                         BorderBrush="white">
                         <DatePicker
+                            Focusable="false"
                             Name="DpStartDate"
                             Width="350"
                             Height="50"
@@ -194,6 +197,7 @@
                         BorderBrush="white"
                         Background="White">
                         <DatePicker
+                            Focusable="false"
                             Name="DpEndDate"
                             Width="350"
                             Height="50"
