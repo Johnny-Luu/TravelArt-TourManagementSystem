@@ -1,4 +1,6 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Input;
+using GUI.Views.MainWindow;
 
 namespace GUI.Views.Components
 {
@@ -7,6 +9,13 @@ namespace GUI.Views.Components
         public CustomerItem()
         {
             InitializeComponent();
+        }
+
+        private void CustomerItem_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var id = LbId.Content.ToString().Split(' ')[1];
+            var w2 = new ProfileWindow(id);
+            w2.ShowDialog();
         }
     }
 }

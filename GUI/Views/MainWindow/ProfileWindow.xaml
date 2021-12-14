@@ -7,7 +7,11 @@
       xmlns:uc="clr-namespace:GUI.Views.Components"
       mc:Ignorable="d"
       Height="720" 
-      Width="1280">
+      Width="1280"
+      WindowStartupLocation="CenterScreen"
+      WindowStyle="None"
+      AllowsTransparency="True"
+      Background="Transparent">
     <Border
         Background="#FFF4F4F4" 
         CornerRadius="20" 
@@ -21,13 +25,15 @@
             </Grid.ColumnDefinitions>
             
             <!--Icon Arrow Back-->
-            <Image 
+            <Image
+                Name="BtnBack"
                 Source="../../Assets/icons/icon-arrow-left-black.png"
                 Width="24"
                 Height="24"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                Margin="10 10 0 0"/>
+                Margin="10 10 0 0" 
+                MouseDown="BtnBack_OnMouseDown"/>
             
             <!--Profile Tour Joined container-->
             <Border
@@ -41,15 +47,15 @@
                 HorizontalAlignment="Center"
                 Margin="0 0 0 20">
                 
-                <WrapPanel
-                    Orientation="Vertical"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Left"
-                    Margin="0 24 0 0">
-                    <uc:ProfileListItem></uc:ProfileListItem>
-                    <uc:ProfileListItem></uc:ProfileListItem>
-                    <uc:ProfileListItem></uc:ProfileListItem>
-                </WrapPanel>
+                <ScrollViewer>
+                    <WrapPanel
+                        Name="WpTourJoined"
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="0 24 0 100">
+                    </WrapPanel>
+                </ScrollViewer>
                 
             </Border>
             
@@ -89,25 +95,43 @@
                         
                         <!--ID label-->
                         <Label 
+                            Name="LbId"
                             Content="ID: "
                             Style="{StaticResource InfoLabelStyle}"
                             Margin="0 40 0 10"/>
                         
                         <!--Name label-->
-                        <Label 
-                            Content="Name:  "
+                        <Label
+                            Width="200"
                             Style="{StaticResource InfoLabelStyle}"
-                            Margin="0 10"/>
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="0 10">
+                            <TextBlock
+                                Name="LbName" 
+                                Text="Name: " 
+                                TextWrapping="WrapWithOverflow" 
+                                TextTrimming="CharacterEllipsis" />
+                        </Label>
+                        
+                        <!--Email label-->
+                        <Label
+                            Width="200"
+                            Style="{StaticResource InfoLabelStyle}"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="0 10">
+                            <TextBlock
+                                Name="TbEmail" 
+                                Text="Email: " 
+                                TextWrapping="WrapWithOverflow" 
+                                TextTrimming="CharacterEllipsis" />
+                        </Label>
                         
                         <!--Phone label-->
                         <Label 
+                            Name="LbPhone"
                             Content="Phone: "
-                            Style="{StaticResource InfoLabelStyle}"
-                            Margin="0 10"/>
-                        
-                        <!--Email label-->
-                        <Label 
-                            Content="Email: "
                             Style="{StaticResource InfoLabelStyle}"
                             Margin="0 10"/>
                     </StackPanel>
@@ -133,6 +157,7 @@
                         
                         <!--Total Tour label-->
                         <Label 
+                            Name="LbTotalTourGroup"
                             Content="3"
                             FontFamily="Poppins"
                             FontSize="28"
@@ -156,6 +181,7 @@
                         
                         <!--Total Revenue label-->
                         <Label 
+                            Name="LbTotalRevenue"
                             Content="30.000.000"
                             FontFamily="Poppins"
                             FontSize="28"
@@ -179,7 +205,7 @@
             <!--Total Revenue label-->
             <Label 
                 Grid.Column="1"
-                Content="Total Tour Group"
+                Content="Total Revenue"
                 FontSize="16"
                 Style="{StaticResource GroupGuildListStyle}"
                 VerticalAlignment="Bottom"
@@ -237,8 +263,9 @@
             
             <!--Image Avatar Customer-->
             <Ellipse 
+                Name="ImgAvatarCustomer"
                 Grid.Column="1"
-                Height="260"
+                Height="240"
                 Width="240"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
@@ -258,17 +285,7 @@
                 Source="../../Assets/images/img-bigbang-clock.png"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="-20 0 0 75"/>
-            
-            <!--Image Ferris Wheel-->
-            <Image
-                Grid.Column="0"
-                Height="170"
-                Width="170"
-                Source="../../Assets/images/img-ferris-wheel.png"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"
-                Margin="50 0 0 40"/>
+                Margin="-40 0 0 75"/>
             
             <!--Image Train Green-->
             <Image
@@ -278,7 +295,7 @@
                 Source="../../Assets/images/img-train-green.png"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
-                Margin="0 0 60 10"/>
+                Margin="0 0 0 -20"/>
             
         </Grid>
     </Border>

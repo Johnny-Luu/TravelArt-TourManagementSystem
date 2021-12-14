@@ -35,6 +35,13 @@ namespace DAL
             return data;
         }
         
+        public async Task<List<TourGroupModel>> GetTourGroupByCustomerId(string id)
+        {
+            var allTourGroup = await GetAllTourGroup();
+            var tourGroupList = allTourGroup.Where(tourGroup => tourGroup.CustomerList.Contains(id)).ToList();
+            return tourGroupList;
+        }
+        
         public async Task<List<TourGroupModel>> GetTourGroupByTourId(string id)
         {
             var today = DateTime.Now.Date;
