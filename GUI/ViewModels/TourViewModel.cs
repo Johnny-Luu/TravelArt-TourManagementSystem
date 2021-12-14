@@ -21,14 +21,16 @@ namespace GUI.ViewModels
 {
     public class TourViewModel : BaseViewModel
     {
-        private List<DestinationModel> destinationlist;
-
         private List<TourModel> tourList;
+        private List<DestinationModel> destinationlist;
+        private List<CustomerModel> customerlist;
+
         // use for binding data
         // public List<TourModel> TourList { get; set; }
         public PageTour PgTour { get; set; }
         public ICommand LoadTourCommand { get; set; }
         public ICommand LoadDestinationCommand { get; set; }
+        public ICommand LoadCustomerCommand { get; set; }
         public ICommand SetTourCommand { get; set; }
         public ICommand SetDestinationCommand { get; set; }
 
@@ -37,6 +39,7 @@ namespace GUI.ViewModels
             // TourList = new List<TourModel>();
             LoadTourCommand = new RelayCommand<PageTour>(para => true, para => LoadTour(para));
             LoadDestinationCommand = new RelayCommand<PageTour>(para => true, para => LoadDesination(para));
+            LoadCustomerCommand = new RelayCommand<PageTour>(para => true, para => LoadCustomer(para));
             SetTourCommand = new RelayCommand<PageTour>(para => true, para => SetTour(para));
             SetDestinationCommand = new RelayCommand<PageTour>(para => true, para => SetDestination(para));
         }
@@ -62,6 +65,45 @@ namespace GUI.ViewModels
              
             SetDestination(para);
             
+        }
+        
+        private async void LoadCustomer(PageTour para)
+        {
+            PgTour = para;
+            
+            var customerBlL = new CustomerBLL();
+            customerlist = await customerBlL.GetAllCustomer();
+            SetCustomer();
+        }
+
+        private void SetCustomer()
+        {
+            PgTour.WpTour.Children.Clear();
+            foreach (var customer in customerlist)
+            {
+                var item = new CustomerItem();
+                item.LbId.Content = "Id: " + customer.Id;
+                item.TbCustomerName.Text = customer.Name;
+                item.TbCustomerEmail.Text = customer.Email;
+
+                if (!string.IsNullOrEmpty(customer.Avatar))
+                {
+                    // convert img from base64 to bitmap
+                    // and add to item's image
+                    var bytes = Convert.FromBase64String(customer.Avatar);
+                    var ms = new MemoryStream();
+                    ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
+
+                    var image = new Bitmap(ms, false);
+                    ms.Dispose();
+
+                    var a = image.GetHbitmap();
+                    var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                    item.ImgAvt.Background = new ImageBrush(b);
+                }
+                
+                PgTour.WpTour.Children.Add(item);
+            }
         }
 
         public  void SetTour(PageTour para)

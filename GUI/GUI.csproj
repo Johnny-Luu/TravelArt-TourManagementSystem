@@ -100,6 +100,9 @@
     <Compile Include="Views\Components\ConfirmControl.xaml.cs">
       <DependentUpon>ConfirmControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\CustomerItem.xaml.cs">
+      <DependentUpon>CustomerItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Components\DestinationChooseItem.xaml.cs">
       <DependentUpon>DestinationChooseItem.xaml</DependentUpon>
     </Compile>
@@ -207,6 +210,7 @@
     <Page Include="ResourceXAML\MainResource.xaml" />
     <Page Include="Views\Components\CommentComponent.xaml" />
     <Page Include="Views\Components\ConfirmControl.xaml" />
+    <Page Include="Views\Components\CustomerItem.xaml" />
     <Page Include="Views\Components\DestinationChooseItem.xaml" />
     <Page Include="Views\Components\DestinationControl.xaml" />
     <Page Include="Views\Components\ProfileListItem.xaml" />

@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="GUI.Views.Components.CustomerItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:GUI.Views.Components"
+             mc:Ignorable="d"
+             Width="200"
+             Height="250"
+             Background="Transparent"
+             Margin="0 0 30 30">
+    <Border 
+        Background="White" 
+        CornerRadius="10" 
+        BorderThickness="0.3" 
+        BorderBrush="white">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+                
+            <!--Destination's image-->
+            <Border CornerRadius="10" Name="ImgAvt">
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="../../Assets/images/img-paris.jpg"
+                        Stretch="UniformToFill" />
+                </Border.Background>
+            </Border>
+           
+            <WrapPanel 
+                Grid.Row="1" 
+                Orientation="Vertical"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                     
+                <!--Customer's name-->
+                <Label
+                    FontFamily="Poppins"
+                    FontSize="14"
+                    Foreground="Black"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                    <TextBlock
+                        Name="TbCustomerName" 
+                        Text="Name of customer" 
+                        TextWrapping="WrapWithOverflow" 
+                        TextTrimming="CharacterEllipsis" />
+                </Label>
+            
+                <!--Customer's Email-->
+                <Label
+                    FontFamily="Poppins"
+                    FontSize="14"
+                    Foreground="Black"
+                    FontWeight="Bold"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+                    <TextBlock
+                        Name="TbCustomerEmail" 
+                        Text="Email of customer" 
+                        TextWrapping="WrapWithOverflow" 
+                        TextTrimming="CharacterEllipsis" />
+                </Label>
+                
+                <!--Day-->
+                <Label
+                    Name="LbId"
+                    Content="Id: 1"
+                    FontFamily="Poppins"
+                    FontWeight="Bold"
+                    FontSize="24"
+                    Foreground="Black"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            </WrapPanel>
+            
+        </Grid>
+    </Border>
+</UserControl>
