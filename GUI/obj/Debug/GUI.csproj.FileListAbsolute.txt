@@ -300,3 +300,5 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\Prof
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\ProfileWindow.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.baml
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.g.cs
+C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.baml

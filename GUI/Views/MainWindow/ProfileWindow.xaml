@@ -1,4 +1,4 @@
-﻿<Page x:Class="GUI.Views.MainWindow.ProfileWindow"
+﻿<Window x:Class="GUI.Views.MainWindow.ProfileWindow"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -19,6 +19,15 @@
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
+            
+            <!--Icon Arrow Back-->
+            <Image 
+                Source="../../Assets/icons/icon-arrow-left-black.png"
+                Width="24"
+                Height="24"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="10 10 0 0"/>
             
             <!--Profile Tour Joined container-->
             <Border
@@ -197,7 +206,7 @@
                 HorizontalAlignment="Left"
                 Margin="80 0 0 90"/>
             
-            <!--Image London Sticker-->
+            <!--Image London sticker-->
             <Image
                 Grid.Column="1"
                 Height="105"
@@ -206,14 +215,34 @@
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"/>
             
+            <!--Image MexicoCity sticker-->
+            <Image
+                Grid.Column="1"
+                Height="133"
+                Width="133"
+                Source="../../Assets/images/img-mexico-city-sticker.png"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 70 0 0"/>
+            
+            <!--Image NY sticker-->
+            <Image
+                Grid.Column="1"
+                Height="77"
+                Width="216"
+                Source="../../Assets/images/img-ny-sticker.png"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 150 -20 0"/>
+            
             <!--Image Avatar Customer-->
             <Ellipse 
                 Grid.Column="1"
-                Height="270"
-                Width="235"
+                Height="260"
+                Width="240"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
-                Margin="0 150 80 0">
+                Margin="0 150 100 0">
                 <Ellipse.Fill>
                     <ImageBrush 
                         ImageSource="../../Assets/images/img-paris.jpg"
@@ -253,4 +282,4 @@
             
         </Grid>
     </Border>
-</Page>
+</Window>

@@ -1,0 +1,193 @@
+﻿<Window x:Class="GUI.Views.MainWindow.DestinationDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:GUI.Views.MainWindow"
+        mc:Ignorable="d"
+        Height="720"
+        Width="1280"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Icon Arrow Back-->
+        <Image 
+            Source="../../Assets/icons/icon-arrow-left-black.png"
+            Width="24"
+            Height="24"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="10 10 0 0"/>
+
+        
+        <!--Destination Info container-->
+        <Border 
+            Grid.Column="0"
+            Background="#C7DAD2"
+            Height="587"
+            Width="681"
+            CornerRadius="20"
+            BorderThickness="2">
+            
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center">
+                
+                <!--Destination Info label-->
+                <Label
+                    Content="Destination Info"
+                    FontFamily="Poppins"
+                    FontSize="32"
+                    FontWeight="Regular"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"/>
+                
+                <!--Name label-->
+                <Label 
+                    Content="Name: "
+                    FontWeight="Bold"
+                    Style="{StaticResource InfoLabelStyle}"/>
+                
+                <!--Province label-->
+                <Label 
+                    Content="Province: "
+                    FontWeight="Bold"
+                    Style="{StaticResource InfoLabelStyle}"/>
+                
+                <!--Description label-->
+                <Label  
+                    Content="Description: chua lam wrap dc"
+                    FontWeight="Bold"
+                    Style="{StaticResource InfoLabelStyle}"/>
+            </WrapPanel>
+        </Border>
+        
+        
+        <!--Hotel Info container-->
+        <Border
+            Grid.Column="1"
+            Background="#FFF0DF"
+            Height="587"
+            Width="426"
+            CornerRadius="20"
+            BorderThickness="2">
+            
+            <WrapPanel 
+                Orientation="Vertical"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="10 60 0 0">
+                
+                <!--Hotel Info label-->
+                <Label
+                    Content="Hotel info"
+                    FontFamily="Poppins"
+                    FontSize="32"
+                    FontWeight="Regular"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Margin="120 0 0 0"/>
+                
+                <!--Name label-->
+                <Label 
+                    Content="Name: "
+                    Style="{StaticResource InfoLabelStyle}"
+                    FontWeight="Bold"
+                    Margin="0 40 0 10"/>
+                
+                <!--Phone label-->
+                <Label 
+                    Content="Phone: "
+                    Style="{StaticResource InfoLabelStyle}"
+                    FontWeight="Bold"
+                    Margin="0 10"/>
+                
+                <!--Price label-->
+                <Label 
+                    Content="Price: "
+                    Style="{StaticResource InfoLabelStyle}"
+                    FontWeight="Bold"
+                    Margin="0 10"/>
+                
+                <!--Address label-->
+                <Label 
+                    Content="Address: "
+                    Style="{StaticResource InfoLabelStyle}"
+                    FontWeight="Bold"
+                    Margin="0 10"/>
+            </WrapPanel>
+        </Border>
+        
+        <!--Image Street Light-->
+        <Image
+            Grid.Column="0"
+            Height="500"
+            Width="400"
+            Source="../../Assets/images/img-street-light.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="-140 0 0 20"/>
+        
+        <!--Image Church-->
+        <Image
+            Grid.Column="0"
+            Height="267"
+            Width="268"
+            Source="../../Assets/images/img-church.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 -130 0"></Image>
+        
+        <!--Image Bridge-->
+        <Image
+            Grid.Column="1"
+            Height="265"
+            Width="290"
+            Source="../../Assets/images/img-bridge.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 0 -70"/>
+        
+        <!--Image Avatar Hotel-->
+        <Ellipse 
+            Grid.Column="1"
+            Height="172"
+            Width="130"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0 220 100 0">
+            <Ellipse.Fill>
+                <ImageBrush 
+                    ImageSource="../../Assets/images/img-building.png"
+                    Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        
+        <!--Image Destination info-->
+        <Border
+            Grid.Column="0"
+            Height="250"
+            Width="513"
+            CornerRadius="20"
+            BorderThickness="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Margin="0 110 0 0">
+            
+            <!--Image Destination-->
+            <Border.Background>
+                <ImageBrush 
+                    ImageSource="../../Assets/images/img-destination-info.jpg"
+                    Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+    </Grid>
+</Window>
