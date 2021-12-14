@@ -19,7 +19,7 @@
         <Border BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="115" Margin="50,30,0,0" VerticalAlignment="Top" Width="240">
             <WrapPanel>
                 <Label Content="  Total" Width="140" Height="50" FontSize="18" FontFamily="Poppins" Margin="125,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Foreground="#FF333333" HorizontalContentAlignment="Center"/>
-                <Label Name="LbTotalQuantity" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FFFF7A00" HorizontalContentAlignment="Center"/>
+                <Label Content ="0" Name="LbTotalQuantity" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FFFF7A00" HorizontalContentAlignment="Center"/>
 
             </WrapPanel>
 
@@ -30,7 +30,7 @@
         <Border Grid.Row="0" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="115" Margin="350,30,0,0" VerticalAlignment="Top" Width="240">
             <WrapPanel>
                 <Label Content="  Today" Width="84" Height="50" FontSize="18" FontFamily="Poppins" Margin="130,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Foreground="#FF333333"/>
-                <Label Name="LbTodayQuantity" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF00D1FF" HorizontalContentAlignment="Center"/>
+                <Label  Content ="0" Name="LbTodayQuantity" Width="137" Height="50" HorizontalAlignment="Left" Margin="100,5,0,0" FontSize="40" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF00D1FF" HorizontalContentAlignment="Center"/>
 
             </WrapPanel>
 
