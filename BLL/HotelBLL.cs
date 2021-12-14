@@ -14,7 +14,13 @@ namespace BLL
             _hotelDAL = new HotelDAL();
             return _hotelDAL.GetAllHotel();
         }
-        
+
+        public Task<HotelModel> GetHotelById(string id)
+        {
+            _hotelDAL = new HotelDAL();
+            return _hotelDAL.GetHotelById(id);
+        }
+
         public void PushHotel(HotelModel hotel)
         {
             _hotelDAL = new HotelDAL();

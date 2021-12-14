@@ -23,6 +23,18 @@ namespace DAL
             return data;
         }
         
+        public async Task<HotelModel> GetHotelById(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            
+            var result = await _client.GetAsync("Hotel/" + id);
+            var data = result.ResultAs<HotelModel>();
+
+            return data;
+        }
+        
         public async void PushHotel(HotelModel hotel)
         {
             _db = new DbUtils();

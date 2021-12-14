@@ -11,7 +11,13 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
-    <Grid Background="White">
+    
+    <Border 
+        Background="#FFF4F4F4" 
+        CornerRadius="20" 
+        BorderThickness="0.3" 
+        BorderBrush="white">
+        <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="4*"/>
@@ -24,7 +30,8 @@
             Height="24"
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
-            Margin="10 10 0 0"/>
+            Margin="10 10 0 0"
+            MouseDown="UIElement_OnMouseDown"/>
 
         
         <!--Destination Info container-->
@@ -37,9 +44,11 @@
             BorderThickness="2">
             
             <WrapPanel
+                Width="500"
                 Orientation="Vertical"
                 VerticalAlignment="Bottom"
-                HorizontalAlignment="Center">
+                HorizontalAlignment="Center"
+                Margin="0 0 0 30">
                 
                 <!--Destination Info label-->
                 <Label
@@ -52,21 +61,28 @@
                 
                 <!--Name label-->
                 <Label 
+                    Name="LbDestinationName"
                     Content="Name: "
                     FontWeight="Bold"
                     Style="{StaticResource InfoLabelStyle}"/>
                 
                 <!--Province label-->
                 <Label 
+                    Name="LbDestinationProvince"
                     Content="Province: "
                     FontWeight="Bold"
                     Style="{StaticResource InfoLabelStyle}"/>
                 
                 <!--Description label-->
-                <Label  
-                    Content="Description: chua lam wrap dc"
+                <Label
                     FontWeight="Bold"
-                    Style="{StaticResource InfoLabelStyle}"/>
+                    Style="{StaticResource InfoLabelStyle}">
+                    <TextBlock
+                        Name="TbDescription" 
+                        Text="Dalat is a city in the central Vietnam. It's a beautiful place where you can take a rest with a peaceful atmosphere, you can enjoy it" 
+                        TextWrapping="WrapWithOverflow" 
+                        TextTrimming="CharacterEllipsis" />
+                </Label>
             </WrapPanel>
         </Border>
         
@@ -98,6 +114,7 @@
                 
                 <!--Name label-->
                 <Label 
+                    Name="LbHotelName"
                     Content="Name: "
                     Style="{StaticResource InfoLabelStyle}"
                     FontWeight="Bold"
@@ -105,6 +122,7 @@
                 
                 <!--Phone label-->
                 <Label 
+                    Name="LbHotelPhone"
                     Content="Phone: "
                     Style="{StaticResource InfoLabelStyle}"
                     FontWeight="Bold"
@@ -112,6 +130,7 @@
                 
                 <!--Price label-->
                 <Label 
+                    Name="LbHotelPrice"
                     Content="Price: "
                     Style="{StaticResource InfoLabelStyle}"
                     FontWeight="Bold"
@@ -119,11 +138,33 @@
                 
                 <!--Address label-->
                 <Label 
+                    Name="LbHotelAddress"
                     Content="Address: "
                     Style="{StaticResource InfoLabelStyle}"
                     FontWeight="Bold"
                     Margin="0 10"/>
             </WrapPanel>
+        </Border>
+        
+         
+        <!--Image Destination info-->
+        <Border
+            Name="ImgDestination"
+            Grid.Column="0"
+            Height="320"
+            Width="681"
+            CornerRadius="20"
+            BorderThickness="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Margin="0 66 0 0">
+            
+            <!--Image Destination-->
+            <Border.Background>
+                <ImageBrush 
+                    ImageSource="../../Assets/images/img-destination-info.jpg"
+                    Stretch="UniformToFill"/>
+            </Border.Background>
         </Border>
         
         <!--Image Street Light-->
@@ -163,31 +204,15 @@
             Width="130"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            Margin="0 220 100 0">
+            Margin="0 200 70 0">
             <Ellipse.Fill>
                 <ImageBrush 
                     ImageSource="../../Assets/images/img-building.png"
                     Stretch="UniformToFill"/>
             </Ellipse.Fill>
         </Ellipse>
-        
-        <!--Image Destination info-->
-        <Border
-            Grid.Column="0"
-            Height="250"
-            Width="513"
-            CornerRadius="20"
-            BorderThickness="2"
-            VerticalAlignment="Top"
-            HorizontalAlignment="Center"
-            Margin="0 110 0 0">
-            
-            <!--Image Destination-->
-            <Border.Background>
-                <ImageBrush 
-                    ImageSource="../../Assets/images/img-destination-info.jpg"
-                    Stretch="UniformToFill"/>
-            </Border.Background>
-        </Border>
+       
     </Grid>
+    </Border>
+    
 </Window>

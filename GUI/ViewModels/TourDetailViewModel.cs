@@ -119,6 +119,7 @@ namespace GUI.ViewModels
                 DestinationControl desCtrl = new DestinationControl();
                 var des = await destinationBlL.GetDestinationbyID(desID);
                 daycount++;
+                desCtrl.LbId.Content = des.Id;
                 desCtrl.TbDescription.Text = des.Description;
                 desCtrl.LbName.Content = des.Name;
                 var bytes = Convert.FromBase64String(des.Img);

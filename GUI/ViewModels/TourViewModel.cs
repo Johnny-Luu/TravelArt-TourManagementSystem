@@ -153,6 +153,7 @@ namespace GUI.ViewModels
             foreach (var destination in destinationlist)
             {
                 DestinationControl item = new DestinationControl();
+                item.LbId.Content = destination.Id;
                 item.LbName.Content = destination.Name;
                 item.TbDescription.Text = destination.Description;
                 item.Margin = new Thickness(20);
