@@ -302,3 +302,11 @@ C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\Prof
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.baml
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.g.cs
 C:\Users\User\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\CustomerItem.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\ProfileWindow.g.cs
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\CustomerItem.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\ProfileWindow.baml

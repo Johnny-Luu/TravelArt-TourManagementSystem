@@ -40,6 +40,7 @@
                 <Label
                     FontFamily="Poppins"
                     FontSize="14"
+                    FontWeight="Bold"
                     Foreground="Black"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
@@ -55,7 +56,7 @@
                     FontFamily="Poppins"
                     FontSize="14"
                     Foreground="Black"
-                    FontWeight="Bold"
+                  
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
                     <TextBlock
@@ -70,8 +71,7 @@
                     Name="LbId"
                     Content="Id: 1"
                     FontFamily="Poppins"
-                    FontWeight="Bold"
-                    FontSize="24"
+                    FontSize="10"
                     Foreground="Black"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"/>

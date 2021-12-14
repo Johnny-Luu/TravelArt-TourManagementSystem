@@ -15,6 +15,7 @@ using GUI.Components;
 using GUI.Views.Components;
 using GUI.Views.Pages;
 using Models;
+using Brushes = System.Windows.Media.Brushes;
 using Image = System.Drawing.Image;
 
 namespace GUI.ViewModels
@@ -47,7 +48,8 @@ namespace GUI.ViewModels
         public async void LoadTour(PageTour para)
         {
             PgTour = para;
-       
+            var converter = new ImageSourceConverter();
+            PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
             PgTour.WpTour.Children.Clear();
             var tourBlL = new TourBLL();
             tourList = await tourBlL.GetAllTour();
@@ -59,6 +61,8 @@ namespace GUI.ViewModels
         {
             
             PgTour = para;
+            var converter = new ImageSourceConverter();
+            PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
             PgTour.WpTour.Children.Clear();
             var destinationBlL = new DestinationBLL();
              destinationlist = await destinationBlL.GetAllDestination();
@@ -70,7 +74,10 @@ namespace GUI.ViewModels
         private async void LoadCustomer(PageTour para)
         {
             PgTour = para;
-            
+            var converter = new ImageSourceConverter();
+            PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
+            PgTour.WpTour.Children.Clear();
+          
             var customerBlL = new CustomerBLL();
             customerlist = await customerBlL.GetAllCustomer();
             SetCustomer();
@@ -104,6 +111,7 @@ namespace GUI.ViewModels
                 
                 PgTour.WpTour.Children.Add(item);
             }
+            PgTour.WpTour.Background = Brushes.Transparent;
         }
 
         public  void SetTour(PageTour para)
@@ -145,6 +153,8 @@ namespace GUI.ViewModels
 
                 PgTour.WpTour.Children.Add(item);
             }
+
+            PgTour.WpTour.Background = Brushes.Transparent;
         }
         
         public  void SetDestination(PageTour para)
@@ -174,6 +184,7 @@ namespace GUI.ViewModels
                 PgTour.WpTour.Children.Add(item);
                
             }
+            PgTour.WpTour.Background = Brushes.Transparent;
         }
     }
 }

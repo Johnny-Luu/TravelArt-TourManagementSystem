@@ -138,7 +138,12 @@
             <ScrollViewer
                 Margin="30 0 0 70"
                 VerticalScrollBarVisibility="Hidden">
-                <WrapPanel Name="WpTour" />
+                <WrapPanel Name="WpTour" >
+                    <WrapPanel.Background>
+                        <ImageBrush
+                            Stretch="None" />
+                    </WrapPanel.Background>
+                </WrapPanel>
             </ScrollViewer>
         </Grid>
     </Grid>

@@ -396,6 +396,7 @@
     <Resource Include="Assets\images\img-building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\images\loading2.png" />
     <Content Include="Assets\images\pngaaa.com-18001.png" />
     <Resource Include="Assets\images\img-hotel-building.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
