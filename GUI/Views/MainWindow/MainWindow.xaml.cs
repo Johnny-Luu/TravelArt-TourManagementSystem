@@ -16,7 +16,7 @@ namespace GUI
         {
             InitializeComponent();
             if (LbStatistic != null) LbStatistic.Style = Resources["NavItemClickedStyle"] as Style;
-            FrContainer.Content = new ProfileWindow();
+            FrContainer.Content = new PageStatistic();
         }
 
         private void BtnMinimize_OnMouseDown(object sender, MouseButtonEventArgs e)

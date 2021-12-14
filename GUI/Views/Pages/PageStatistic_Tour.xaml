@@ -182,7 +182,7 @@
 			<Rectangle  Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
 				<Rectangle.Fill>
 
-					<ImageBrush ImageSource="/Assets/icons/moneyicon.png"/>
+					<ImageBrush ImageSource="/Assets/icons/icon-money.png"/>
 
 				</Rectangle.Fill>
 			</Rectangle>
