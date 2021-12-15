@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -22,6 +23,7 @@ namespace GUI.ViewModels
 {
     public class TourViewModel : BaseViewModel
     {
+        private int currentTab = 0;
         private List<TourModel> tourList;
         private List<DestinationModel> destinationlist;
         private List<CustomerModel> customerlist;
@@ -34,6 +36,7 @@ namespace GUI.ViewModels
         public ICommand LoadCustomerCommand { get; set; }
         public ICommand SetTourCommand { get; set; }
         public ICommand SetDestinationCommand { get; set; }
+        public ICommand SearchCommand { get; set; }
 
         public TourViewModel()
         {
@@ -41,52 +44,117 @@ namespace GUI.ViewModels
             LoadTourCommand = new RelayCommand<PageTour>(para => true, para => LoadTour(para));
             LoadDestinationCommand = new RelayCommand<PageTour>(para => true, para => LoadDesination(para));
             LoadCustomerCommand = new RelayCommand<PageTour>(para => true, para => LoadCustomer(para));
-            SetTourCommand = new RelayCommand<PageTour>(para => true, para => SetTour(para));
-            SetDestinationCommand = new RelayCommand<PageTour>(para => true, para => SetDestination(para));
+            SearchCommand = new RelayCommand<PageTour>(para => true, para => Search(para));
+        }
+
+        private void Search(PageTour para)
+        {
+            PgTour = para;
+            
+            var keyword = PgTour.TbSearch.Text;
+            switch (currentTab)
+            {
+                case 0:
+                    SearchTour(keyword);
+                    break;
+                case 1:
+                    SearchDestination(keyword);
+                    break;
+                case 2:
+                    SearchCustomer(keyword);
+                    break;
+            }
+        }
+
+        private void SearchTour(string keyword)
+        {
+            var searchList = tourList.Where(tour => tour.Id.Contains(keyword) || tour.Name.Contains(keyword)).ToList();
+            if(searchList.Count == 0)
+            {
+                MessageBox.Show("Not found!");
+            }
+            else
+            {
+                PgTour.WpTour.Children.Clear();
+                SetTour(searchList);
+            }
+        }
+        
+        private void SearchDestination(string keyword)
+        {
+            var searchList = destinationlist.Where(destination => destination.Id.Contains(keyword) || destination.Name.Contains(keyword)).ToList();
+            if(searchList.Count == 0)
+            {
+                MessageBox.Show("Not found!");
+            }
+            else
+            {
+                PgTour.WpTour.Children.Clear();
+                SetDestination(searchList);
+            }
+        }
+        
+        private void SearchCustomer(string keyword)
+        {
+            var searchList = customerlist.Where(customer => customer.Id.Contains(keyword) || customer.Name.Contains(keyword)).ToList();
+            if(searchList.Count == 0)
+            {
+                MessageBox.Show("Not found!");
+            }
+            else
+            {
+                PgTour.WpTour.Children.Clear();
+                SetCustomer(searchList);
+            }
         }
 
         public async void LoadTour(PageTour para)
         {
-            PgTour = para;
+            PgTour = para;            
+            currentTab = 0;
+            
             var converter = new ImageSourceConverter();
             PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
             PgTour.WpTour.Children.Clear();
             var tourBlL = new TourBLL();
             tourList = await tourBlL.GetAllTour();
 
-            SetTour(para);
+            SetTour(tourList);
         }
         
         public async void LoadDesination(PageTour para)
         {
-            
             PgTour = para;
+            currentTab = 1;
+            
             var converter = new ImageSourceConverter();
             PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
             PgTour.WpTour.Children.Clear();
             var destinationBlL = new DestinationBLL();
              destinationlist = await destinationBlL.GetAllDestination();
              
-            SetDestination(para);
+            SetDestination(destinationlist);
             
         }
         
         private async void LoadCustomer(PageTour para)
         {
             PgTour = para;
+            currentTab = 2;
+            
             var converter = new ImageSourceConverter();
             PgTour.WpTour.Background =new ImageBrush(((ImageSource)converter.ConvertFromString( "pack://application:,,,/Assets/images/loading2.png")));
             PgTour.WpTour.Children.Clear();
           
             var customerBlL = new CustomerBLL();
             customerlist = await customerBlL.GetAllCustomer();
-            SetCustomer();
+            SetCustomer(customerlist);
         }
 
-        private void SetCustomer()
+        private void SetCustomer(List<CustomerModel> list)
         {
             PgTour.WpTour.Children.Clear();
-            foreach (var customer in customerlist)
+            foreach (var customer in list)
             {
                 var item = new CustomerItem();
                 item.LbId.Content = "Id: " + customer.Id;
@@ -114,10 +182,11 @@ namespace GUI.ViewModels
             PgTour.WpTour.Background = Brushes.Transparent;
         }
 
-        public  void SetTour(PageTour para)
+        public  void SetTour(List<TourModel> list)
         {
+            currentTab = 0;
             PgTour.WpTour.Children.Clear();
-            foreach (var tour in tourList)
+            foreach (var tour in list)
             {
                 TourControl item = new TourControl();
                 item.tourID = tour.Id;
@@ -161,10 +230,11 @@ namespace GUI.ViewModels
             PgTour.WpTour.Background = Brushes.Transparent;
         }
         
-        public  void SetDestination(PageTour para)
+        public  void SetDestination(List<DestinationModel> list)
         {
+            currentTab = 1;
             PgTour.WpTour.Children.Clear();
-            foreach (var destination in destinationlist)
+            foreach (var destination in list)
             {
                 DestinationControl item = new DestinationControl();
                 item.LbId.Content = destination.Id;
