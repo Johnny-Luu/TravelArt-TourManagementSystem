@@ -10,7 +10,6 @@
              Background="Transparent"
              Margin="0 0 25 20">
     <Border 
-        MouseDown="MouseDown_TourDetail"
         Background="white" 
         CornerRadius="10" 
         BorderThickness="0.3" 
@@ -31,7 +30,10 @@
             </Grid.ColumnDefinitions>
 
             <!--Tour image-->
-            <Border CornerRadius="10" Name="BorderImg">
+            <Border 
+                CornerRadius="10" 
+                Name="BorderImg"
+                MouseDown="MouseDown_TourDetail">
                 <Border.Background>
                     <ImageBrush
                         ImageSource="../../Assets/images/img-paris.jpg"
@@ -52,14 +54,11 @@
                 </Grid.RowDefinitions>
 
                 <!--Tour status-->
-                <Label
-                    Content="available"
-                    FontFamily="Poppins"
-                    FontStyle="Italic"
-                    FontSize="12"
-                    Foreground="#33FF00"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Right"/>
+                <Image 
+                    Source="../../Assets/icons/icon-delete.png"
+                    HorizontalAlignment="Right"
+                    Margin="0 2 5 0"
+                    MouseDown="UIElement_OnMouseDown"/>
 
                 <!--Tour name-->
                 <Label

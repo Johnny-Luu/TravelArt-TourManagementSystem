@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using BLL;
 using FunctionLibrary;
 using GUI.Views.Components;
 using GUI.Views.MainWindow;
@@ -32,6 +33,23 @@ namespace GUI.Components
             ImgStar4.Source = StarSetUp.SetUpPath(s4);
             ImgStar5.Source = StarSetUp.SetUpPath(s5);
 
+        }
+
+        private async void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var messageBoxResult = MessageBox.Show("Do you want to delete this tour?", "Delete Confirmation", MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                var tourBLL = new TourBLL();
+                var check = await tourBLL.ExistReference(tourID);
+                
+                if(check) MessageBox.Show("Some tour group currently using this tour, can not delete now!");
+                else
+                {
+                    tourBLL.DeleteTour(tourID);
+                    MessageBox.Show("Delete tour successfully!");
+                }
+            }
         }
     }
 }

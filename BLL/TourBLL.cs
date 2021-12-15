@@ -20,6 +20,18 @@ namespace BLL
             return _tourDAL.GetTourbyID(id);
         }
 
+        public Task<bool> ExistReference(string id)
+        {
+            _tourDAL = new TourDAL();
+            return _tourDAL.ExistReference(id);
+        }
+
+        public void DeleteTour(string id)
+        {
+            _tourDAL = new TourDAL();
+            _tourDAL.DeleteTour(id);
+        }
+
         public void PushTour(TourModel tour)
         {
             _tourDAL = new TourDAL();

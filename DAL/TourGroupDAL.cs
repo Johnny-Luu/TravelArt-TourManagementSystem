@@ -21,7 +21,7 @@ namespace DAL
             var result = await _client.GetAsync("TourGroup");
             var list = result.ResultAs<List<TourGroupModel>>();
             
-            // find all request with id != -1
+            // find all tour group with id != -1
             var data = list.FindAll(x => x.Id != "-1");
             return data;
         }

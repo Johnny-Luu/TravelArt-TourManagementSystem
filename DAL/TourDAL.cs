@@ -23,7 +23,10 @@ namespace DAL
             _client = new FirebaseClient(config);
             
             var result = await _client.GetAsync("Tour");
-            var data = result.ResultAs<List<TourModel>>();
+            var list = result.ResultAs<List<TourModel>>();
+            
+            // find all tour with id != -1
+            var data = list.FindAll(x => x.Id != "-1");
             return data;
         }
         
@@ -57,6 +60,21 @@ namespace DAL
                 id = tourList.Count;
             }
             return id.ToString();
+        }
+
+        public async Task<bool> ExistReference(string id)
+        {
+            var tourGroupDAL = new TourGroupDAL();
+            var tourGroupList = await tourGroupDAL.GetAllTourGroup();
+            return tourGroupList.Any(tourGroup => tourGroup.TourId == id);
+        }
+        
+        public async void DeleteTour(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            await _client.UpdateAsync("Tour/" + id, new { Id = "-1" });
         }
 
         public async Task<bool> CheckDuplicate(TourModel tour)
