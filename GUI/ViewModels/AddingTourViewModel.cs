@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using BLL;
 using DTO;
+using FunctionLibrary;
 using GUI.GlobalData;
 using GUI.Views.Components;
 using GUI.Views.Pages;
@@ -78,36 +79,17 @@ namespace GUI.ViewModels
             var profit = PgAddingTour.TbProfit.Text;
             var shortDescription = PgAddingTour.TbShortDescription.Text;
             
-            // check tour info has filled or not
-            if(name == "" || price == "" || profit == "" || shortDescription == "")
-            {
-                MessageBox.Show("Please fill all fields");
-                return;
-            }
-            
-            // check price and profit is number or not
-            if(!int.TryParse(price, out int priceInt) || !int.TryParse(profit, out int profitInt))
-            {
-                MessageBox.Show("Price and Profit must be number");
-                return;
-            }
-            
+            string destinationIds="";
             // check destination chosen list has item or not
-            if(_destinationChosenList.Count == 0)
+            if(_destinationChosenList.Count != 0)
             {
-                MessageBox.Show("Please choose destination");
-                return;
+                destinationIds = GetDestinationChosenListId();
             }
-            
             // check tour img has chosen or not
-            if (_base64Img == null)
-            {
-                MessageBox.Show("Please choose a picture");
-                return;
-            }
-
-            var destinationIds = GetDestinationChosenListId();
+            bool img = !(_base64Img == null);
             
+            if (!AddingTour.isAddAble(name, price, profit, shortDescription, destinationIds, img)) return;
+
             var tour = new TourModel
             {
                 Id = id,

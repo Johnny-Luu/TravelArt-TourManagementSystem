@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using BLL;
 using DTO;
+using FunctionLibrary;
 using GUI.GlobalData;
 using GUI.Views.Pages;
 using Microsoft.Win32;
@@ -37,24 +38,22 @@ namespace GUI.ViewModels
             var description = PgAddingDestination.TbDescription.Text;
             var province = PgAddingDestination.CbProvinceList.Text;
             var idHotel = "";
-            
+            var picture = false;
             if (PgAddingDestination.CbHotelList.SelectedValue != null)
             {
                 var hotelChoose = PgAddingDestination.CbHotelList.SelectedValue.ToString();
                 idHotel = hotelChoose.Split('-')[0];
             }
-            
-            if(name == "" || description == "" || province == "" || idHotel == "")
-            {
-                MessageBox.Show("Please fill all fields");
-                return;
-            }
-
             if (_base64img == null)
             {
-                MessageBox.Show("Please choose a picture");
-                return;
+                picture = false;
             }
+            else
+            {
+                picture = true;
+            }
+
+            if (!AddingDestination.isAddAble(name, description, province, idHotel, picture)) return;
 
             var destinationBLL = new DestinationBLL();
             var id = await destinationBLL.InitID();
