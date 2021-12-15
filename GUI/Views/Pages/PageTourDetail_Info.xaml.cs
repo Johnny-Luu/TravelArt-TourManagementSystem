@@ -27,10 +27,7 @@ namespace GUI.Views.Pages
         if(n>1) res += "s";
         LbDuration.Content = res;
     }
-    public void Set_LbAvailable(string s)
-    {
-        LbAvailabe.Content = "Available: " + s + " Current Tours";
-    }
+    
     public void Set_LbVisit(string s)
     {
         LbVisit.Content = "Visit: " + s + " Locations";

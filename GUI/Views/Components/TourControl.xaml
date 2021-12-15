@@ -90,7 +90,7 @@
 
                 <!--Tour price-->
                 <WrapPanel Grid.Row="3">
-                    <Image Source="../../Assets/icons/icon-price.png" />
+                    <Image Source="../../Assets/icons/icon-price.png" Margin="10,0,0,0" />
                     <Label
                         Name="LbPrice"
                         FontFamily="Poppins"
@@ -98,12 +98,12 @@
                         Foreground="#FF4C07"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Left" 
-                        Content="12.000.000 vnd"/>
+                        Content="12.000.000 vnd" Margin="10,0,0,0"/>
                 </WrapPanel>
 
                 <!--Tour price-->
                 <WrapPanel Grid.Row="4">
-                    <Image Source="../../Assets/icons/icon-globe.png" />
+                    <Image Source="../../Assets/icons/icon-globe.png" Margin="10,0,0,0" />
                     <Label
                         Name="LbVisit"
                         FontFamily="Poppins"
@@ -111,7 +111,7 @@
                         Foreground="#5500A1"
                         VerticalAlignment="Top"
                         HorizontalAlignment="Left" 
-                        Content="Visit: 4 locations"/>
+                        Content="Visit: 4 locations" Margin="10,0,0,0"/>
                 </WrapPanel>
 
                 <!--Tour rating-->
@@ -123,12 +123,12 @@
                     FontSize="16"
                     Foreground="#EFD700"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Left" Width="33" Margin="-2,0,0,5" Height="25" RenderTransformOrigin="0.539,0.784"/>
-                <Image  x:Name="ImgStar1" Grid.Row="5" Width="12" Height="12.2" Margin="28,6.2,0,13" HorizontalAlignment="Left"/>
-                <Image  x:Name="ImgStar2" Grid.Row="5" Width="12" Height="12.2" Margin="43,6.2,0,13" HorizontalAlignment="Left"/>
-                <Image  x:Name="ImgStar3" Grid.Row="5" Width="12" Height="12.2" Margin="58,6.2,0,13" HorizontalAlignment="Left"/>
-                <Image  x:Name="ImgStar4" Grid.Row="5" Width="12" Height="12.2" Margin="73,6.2,0,13" HorizontalAlignment="Left"/>
-                <Image  x:Name="ImgStar5" Grid.Row="5" Width="12" Height="12.2" Margin="88,6.2,0,13" HorizontalAlignment="Left"/>
+                    HorizontalAlignment="Left" Width="33" Margin="5,0,0,5" Height="25" RenderTransformOrigin="0.539,0.784"/>
+                <Image  x:Name="ImgStar1" Grid.Row="5" Width="12" Height="12.2" Margin="48,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar2" Grid.Row="5" Width="12" Height="12.2" Margin="63,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar3" Grid.Row="5" Width="12" Height="12.2" Margin="78,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar4" Grid.Row="5" Width="12" Height="12.2" Margin="93,6.2,0,13" HorizontalAlignment="Left"/>
+                <Image  x:Name="ImgStar5" Grid.Row="5" Width="12" Height="12.2" Margin="108,6.2,0,13" HorizontalAlignment="Left"/>
             </Grid>
         </Grid>
     </Border>

@@ -92,7 +92,7 @@ namespace GUI.ViewModels
                 item.LbId.Content = "Id: " + customer.Id;
                 item.TbCustomerName.Text = customer.Name;
                 item.TbCustomerEmail.Text = customer.Email;
-
+                item.Margin = new Thickness(25);
                 if (!string.IsNullOrEmpty(customer.Avatar))
                 {
                     // convert img from base64 to bitmap
@@ -128,13 +128,17 @@ namespace GUI.ViewModels
                 
                 // calculate rating point
                 double ratingPoint = 0;
+                if (tour.RatingList.Count > 0) 
                 foreach (var rating in tour.RatingList)
                 {
                     ratingPoint += rating.Rating;
                 }
-                ratingPoint = ratingPoint*1.0 / tour.RatingList.Count;
-                
-                
+
+                if (tour.RatingList.Count > 0)
+                {
+                    ratingPoint = ratingPoint * 1.0 / tour.RatingList.Count;
+                }
+
                 item.LbRating.Content = ratingPoint.ToString("0.0");
                 item.StarInit(ratingPoint);
                 

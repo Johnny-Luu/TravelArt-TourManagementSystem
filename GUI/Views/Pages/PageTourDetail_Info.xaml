@@ -33,13 +33,11 @@
         <Image MouseDown="EditTour" x:Name="BtnEdit" HorizontalAlignment="Left" Height="40" Margin="238.8,55,0,0" VerticalAlignment="Top" Width="45" Grid.Column="1" Source="/GUI;component/Assets/icons/icon_edit.png"/>
         <TextBlock x:Name="TbDescription" HorizontalAlignment="Left" Margin="25,14.8,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="255" Width="340" FontSize="18" Grid.ColumnSpan="2" TextAlignment="Justify"/>
 
-        <Label x:Name="LbPrice" Content="Price:" Grid.Column="1" HorizontalAlignment="Left" Margin="4.8,20,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="250" Foreground="#FFFF4C07" Height="32" FontWeight="Bold"/>
-        <Label x:Name="LbDuration" Content="Duration:" Grid.Column="1" HorizontalAlignment="Left" Margin="5.8,70,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="250" Foreground="#FF004FC7" Height="32" FontWeight="Bold"/>
-        <Label x:Name="LbVisit" Content="Visit:" Grid.Column="1" HorizontalAlignment="Left" Margin="5.8,117,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="250" Foreground="#FF5500A1" Height="32" FontWeight="Bold"/>
-        <Label x:Name="LbAvailabe" Content="Available:" Grid.Column="1" HorizontalAlignment="Left" Margin="5.8,165,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="250" Foreground="#FF029519" Height="32" FontWeight="Bold"/>
+        <Label x:Name="LbPrice" Content="Price:" Grid.Column="1" HorizontalAlignment="Left" Margin="4.8,20,-0.2,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="305" Foreground="#FFFF4C07" Height="32" FontWeight="Bold"/>
+        <Label x:Name="LbDuration" Content="Duration:" Grid.Column="1" HorizontalAlignment="Left" Margin="5.8,70,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="299" Foreground="#FF004FC7" Height="32" FontWeight="Bold"/>
+        <Label x:Name="LbVisit" Content="Visit:" Grid.Column="1" HorizontalAlignment="Left" Margin="5.8,117,0,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="294" Foreground="#FF5500A1" Height="32" FontWeight="Bold"/>
         <Image Source="/GUI;component/Assets/icons/icon-price.png" HorizontalAlignment="Left" Height="30" Margin="25,20,0,0" Grid.Row="2" VerticalAlignment="Top" Width="30"/>
         <Image Source="/GUI;component/Assets/icons/icon-time.png" HorizontalAlignment="Left" Height="30" Margin="25,70,0,0" Grid.Row="2" VerticalAlignment="Top" Width="30"/>
         <Image Source="/GUI;component/Assets/icons/icon-globe.png" HorizontalAlignment="Left" Height="30" Margin="25,120,0,0" Grid.Row="2" VerticalAlignment="Top" Width="30"/>
-        <Image Source="/GUI;component/Assets/icons/icon-check.png" HorizontalAlignment="Left" Height="30" Margin="25,165,0,0" Grid.Row="2" VerticalAlignment="Top" Width="30"/>
     </Grid>
 </Page>

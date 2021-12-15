@@ -20,7 +20,7 @@
                 <RowDefinition Height="1.5*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-                
+
             <!--Customer's avt-->
             <Border CornerRadius="10" Name="ImgAvt">
                 <Border.Background>
@@ -29,13 +29,13 @@
                         Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
-           
+
             <WrapPanel 
                 Grid.Row="1" 
                 Orientation="Vertical"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
-                     
+
                 <!--Customer's name-->
                 <Label
                     FontFamily="Poppins"
@@ -50,7 +50,7 @@
                         TextWrapping="WrapWithOverflow" 
                         TextTrimming="CharacterEllipsis" />
                 </Label>
-            
+
                 <!--Customer's Email-->
                 <Label
                     FontFamily="Poppins"
@@ -65,18 +65,18 @@
                         TextWrapping="WrapWithOverflow" 
                         TextTrimming="CharacterEllipsis" />
                 </Label>
-                
-                <!--Id-->
                 <Label
-                    Name="LbId"
+                    x:Name="LbId"
                     Content="Id: 1"
                     FontFamily="Poppins"
                     FontSize="10"
                     Foreground="Black"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"/>
+
+                <!--Id-->
             </WrapPanel>
-            
+
         </Grid>
     </Border>
 </UserControl>

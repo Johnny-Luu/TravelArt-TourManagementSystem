@@ -119,7 +119,7 @@
                     <Label
                         Name="LbTour"
                         Style="{StaticResource NavItemStyle}"
-                        Content="Tour"
+                        Content="View"
                         MouseDown="LbTour_OnMouseDown">
                     </Label>
                     
