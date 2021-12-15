@@ -15,16 +15,31 @@ namespace BLL
             _destinationDAL = new DestinationDAL();
             return _destinationDAL.GetAllDestination();
         }
+        
         public Task<DestinationModel> GetDestinationbyID(string id)
         {
             _destinationDAL = new DestinationDAL();
             return _destinationDAL.GetDestinationbyID(id);
         }
+
+        public Task<bool> ExistReference(string id)
+        {
+            _destinationDAL = new DestinationDAL();
+            return _destinationDAL.ExistReference(id);
+        }
+
+        public void DeleteDestination(string id)
+        {
+            _destinationDAL = new DestinationDAL();
+            _destinationDAL.DeleteDestination(id);
+        }
+        
         public void PushDestination(DestinationModel destination)
         {
             _destinationDAL = new DestinationDAL();
             _destinationDAL.PushDestination(destination);
         }
+        
         public Task<List<DestinationModel>> GetDestinationByProvince(string province)
         {
             _destinationDAL = new DestinationDAL();

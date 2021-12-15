@@ -19,10 +19,13 @@ namespace DAL
             _client = new FirebaseClient(config);
             
             var result = await _client.GetAsync("Destination");
-            var data = result.ResultAs<List<DestinationModel>>();
-
+            var list = result.ResultAs<List<DestinationModel>>();
+            
+            // find all destination with id != -1
+            var data = list.FindAll(x => x.Id != "-1");
             return data;
         }
+        
         public async Task<DestinationModel> GetDestinationbyID(string id)
         {
             _db = new DbUtils();
@@ -34,6 +37,22 @@ namespace DAL
             return data;
 
         }
+        
+        public async Task<bool> ExistReference(string id)
+        {
+            var tourDAL = new TourDAL();
+            var tourList = await tourDAL.GetAllTour();
+            return tourList.Any(tour => tour.DestinationIds.Contains(id));
+        }
+        
+        public async void DeleteDestination(string id)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            await _client.UpdateAsync("Destination/" + id, new { Id = "-1" });
+        }
+        
         public async void PushDestination(DestinationModel destination)
         {
             _db = new DbUtils();
