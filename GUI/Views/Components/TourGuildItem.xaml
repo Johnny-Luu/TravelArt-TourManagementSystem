@@ -30,6 +30,7 @@
 
         <!--Avatar image-->
         <Ellipse
+            Name="ImgTour"
             Grid.Column="1"
             VerticalAlignment="Center"
             HorizontalAlignment="Right"

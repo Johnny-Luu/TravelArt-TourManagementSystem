@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Interop;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using BLL;
 using GUI.Views.Components;
 
@@ -53,6 +59,17 @@ namespace GUI.Views.Pages
                 item.LbTourName.Content = tour.Name;
                 item.LbTourId.Content = "ID: " + tour.Id;
                 item.LbPrice.Content = tour.Price;
+                
+                var bytes = Convert.FromBase64String(tour.Img);
+                var ms = new MemoryStream();
+                ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
+
+                var image = new Bitmap(ms, false);
+                ms.Dispose();
+
+                var a = image.GetHbitmap();
+                var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                item.ImgAvatar.Fill = new ImageBrush(b);
                 
                 WpListConfirm.Children.Add(item);
             }
