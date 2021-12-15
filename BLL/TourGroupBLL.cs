@@ -44,6 +44,12 @@ namespace BLL
             _tourGroupDAL = new TourGroupDAL();
             return _tourGroupDAL.AddTourismToList(tourGroupId, customerId);
         }
+
+        public void DeleteTourGroup(string tourGroupId)
+        {
+            _tourGroupDAL = new TourGroupDAL();
+            _tourGroupDAL.DeleteTourGroup(tourGroupId);
+        }
         
         public void PushTourGroup(TourGroupModel tourGroup)
         {

@@ -10,8 +10,7 @@
              Height="60"
              Width="1280"
              BorderBrush="#80C4C4C4"
-             BorderThickness="0"
-             MouseDown="UIElement_OnMouseDown">
+             BorderThickness="0">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -36,7 +35,8 @@
             HorizontalAlignment="Right"
             Height="50"
             Width="50"
-            Margin="0,5,10,5">
+            Margin="0,5,10,5"
+            MouseDown="UIElement_OnMouseDown">
             <Ellipse.Fill>
                 <ImageBrush 
                     ImageSource="../../Assets/images/img-paris.jpg"
@@ -198,11 +198,16 @@
             Content="9AM GM+7 - 20/11"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
-          
             FontFamily="Ubuntu"
             FontSize="10"
             FontWeight="SemiBold"
             Margin="18,28,0,5" Height="27" Width="165" Foreground="#FF888888"/>
 
+        <Image 
+            Grid.Column="10"
+            Width="20"
+            Margin="20,0,0,0"
+            Source="../../Assets/icons/icon-delete.png" 
+            MouseDown="Delete_OnMouseDown"/>
     </Grid>
 </UserControl>

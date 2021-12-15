@@ -343,6 +343,9 @@
     <Resource Include="Assets\images\img-destination-info.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\icons\icon-delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Assets\images\clipart2575067 (1).png" />
     <Resource Include="Assets\images\img-camera-vintage.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

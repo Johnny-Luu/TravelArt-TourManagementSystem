@@ -19,8 +19,10 @@ namespace DAL
             _client = new FirebaseClient(config);
 
             var result = await _client.GetAsync("TourGroup");
-            var data = result.ResultAs<List<TourGroupModel>>();
-
+            var list = result.ResultAs<List<TourGroupModel>>();
+            
+            // find all request with id != -1
+            var data = list.FindAll(x => x.Id != "-1");
             return data;
         }
         
@@ -93,6 +95,15 @@ namespace DAL
             var result = await _client.UpdateAsync("TourGroup/" + tourGroupId, new { CustomerList = newCustomerList });
             var response = result.ResultAs<TourGroupModel>();
             return response != null;
+        }
+
+        public async void DeleteTourGroup(string tourGroupId)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            
+            await _client.UpdateAsync("TourGroup/" + tourGroupId, new { Id = "-1" });
         }
         
         public async void PushTourGroup(TourGroupModel tourGroup)
