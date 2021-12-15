@@ -36,6 +36,13 @@ namespace FunctionLibrary
                 MessageBox.Show("Slot must be a number");
                 return false;
             }
+
+            if (slotNumber < 1)
+            {
+                MessageBox.Show("Slot must bigger than 0");
+                return false;
+            }
+            
             //check tourLeader and Deputy the same
             if (tourLeaderId == tourDeputyId)
             {

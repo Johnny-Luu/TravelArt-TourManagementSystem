@@ -24,7 +24,7 @@ namespace FunctionLibrary
                         MessageBox.Show("Price much be a number ");
                         return false;
                     }
-                    if (price.Length<5 || price.Length>9)
+                    if (price.Length<4 || price.Length>9)
                     {
                         MessageBox.Show("Please enter price Minimum 1.000 to  999.999.999");
                         return false;
