@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using BLL;
@@ -18,6 +19,8 @@ namespace GUI.Views.Pages
         private List<EmployeeModel> employeeList = new List<EmployeeModel>();
         private TourGroupBLL tourGroupBLL = new TourGroupBLL();
         private List<TourGroupModel> tourGroupList = new List<TourGroupModel>();
+        
+        private int colorIndex = 0;
         
         public SeriesCollection SeriesCollection { get; set; }
         private string[] LabelMonth = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
@@ -229,8 +232,8 @@ namespace GUI.Views.Pages
                 arrTotal[i] = arrLeader[i] + arrDeputy[i];
             }
             
-            Random r = new Random();
-            Brush stroke = (SolidColorBrush)new BrushConverter().ConvertFrom(ColorData.ColorCodes[r.Next(0, ColorData.ColorCodes.Length)]);
+            if(colorIndex == ColorData.ColorCodes.Length - 1) colorIndex = 0;
+            Brush stroke = (SolidColorBrush)new BrushConverter().ConvertFrom(ColorData.ColorCodes[colorIndex++]);
             
             var fill = new SolidColorBrush
             {
