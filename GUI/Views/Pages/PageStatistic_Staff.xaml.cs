@@ -172,7 +172,7 @@ namespace GUI.Views.Pages
             {
                 new LineSeries
                 {
-                    Title = "Revenue",
+                    Title = "Leader",
                     Values = new ChartValues<double>
                     {
                         arrLeader[0], arrLeader[1], arrLeader[2], arrLeader[3], arrLeader[4], 
@@ -195,7 +195,7 @@ namespace GUI.Views.Pages
                 },
                 new LineSeries
                 {
-                    Title = "Profit",
+                    Title = "Deputy",
                     Values = new ChartValues<double>
                     {
                         arrDeputy[0], arrDeputy[1], arrDeputy[2], arrDeputy[3], arrDeputy[4], 
@@ -265,10 +265,10 @@ namespace GUI.Views.Pages
             int leader = 0;
             int deputy = 0;
             
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < arrLeader.Length; i++)
             {
-                if (arrLeader[i] != 0) leader++;
-                if (arrDeputy[i] != 0) deputy++;
+                leader += arrLeader[i];
+                deputy += arrDeputy[i];
             }
             
             LbTourGuide.Content = leader.ToString("N0");
