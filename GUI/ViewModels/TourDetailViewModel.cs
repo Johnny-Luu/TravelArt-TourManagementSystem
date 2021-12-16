@@ -73,20 +73,32 @@ namespace GUI.ViewModels
             //Chua co Tour Group
             //PgTourDetailInfo.Set_LbAvailable();
         }
-        public  void LoadRating(PageTourDetail_Rating para)
+        public async void LoadRating(PageTourDetail_Rating para)
         {
             int[] rate = new int[6];
             PgTourDetailRating = para;
           
+            var customerBLL = new CustomerBLL();
             
             //Init Comment
             foreach (var rating in tour.RatingList)
             {
                 CommentComponent cmt = new CommentComponent();
                 
-                // haven't init user yet, so display id instead
-                // will be replaced by user name later
-                cmt.LbName.Content = rating.CustomerId;
+                var customer = await customerBLL.GetCustomerByID(rating.CustomerId);
+                cmt.LbName.Content = customer.Name;
+                
+                var bytes = Convert.FromBase64String(customer.Avatar);
+                var ms = new MemoryStream();
+                ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
+
+                var image = new Bitmap(ms, false);
+                ms.Dispose();
+
+                var a = image.GetHbitmap();
+                var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                cmt.ImgAvatar.Fill = new ImageBrush(b);                
+                
                 cmt.LbDate.Content = rating.Time;
                 cmt.score = rating.Rating;
                 cmt.TbComment.Text = rating.Comment;
