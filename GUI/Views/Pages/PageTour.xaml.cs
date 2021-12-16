@@ -42,5 +42,11 @@ namespace GUI.Views.Pages
             LbDestination.Style = Application.Current.Resources["NavItemStyle"] as Style;
             LbCustomer.Style = Application.Current.Resources["NavItemStyle"] as Style;
         }
+
+        private void Key_Down(object sender, KeyEventArgs e)
+        {
+            
+         
+        }
     }
 }

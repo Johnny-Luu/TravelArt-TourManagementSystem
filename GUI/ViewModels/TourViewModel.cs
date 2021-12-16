@@ -37,7 +37,6 @@ namespace GUI.ViewModels
         public ICommand SetTourCommand { get; set; }
         public ICommand SetDestinationCommand { get; set; }
         public ICommand SearchCommand { get; set; }
-
         public TourViewModel()
         {
             // TourList = new List<TourModel>();
@@ -47,6 +46,7 @@ namespace GUI.ViewModels
             SearchCommand = new RelayCommand<PageTour>(para => true, para => Search(para));
         }
 
+    
         private void Search(PageTour para)
         {
             PgTour = para;

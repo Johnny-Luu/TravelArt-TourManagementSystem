@@ -95,10 +95,18 @@
                 Grid.Column="1"
                 Margin="0 10 0 0">
                 <TextBox
+                 
                     Name="TbSearch"
                     Width="160"
                     VerticalAlignment="Center"
-                    Margin="0 0 6 0"/>
+                  Margin="0 0 6 0">
+                    <TextBox.InputBindings>
+                        <KeyBinding 
+                            Command ="{Binding SearchCommand}" 
+                            CommandParameter="{Binding ElementName=PgTour}"        
+                                    Key="Enter"/>
+                    </TextBox.InputBindings>
+                </TextBox>
                 
                 <Image
                     Width="24"
