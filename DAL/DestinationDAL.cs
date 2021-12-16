@@ -21,6 +21,11 @@ namespace DAL
             var result = await _client.GetAsync("Destination");
             var list = result.ResultAs<List<DestinationModel>>();
             
+            if(list == null)
+            {
+                return new List<DestinationModel>();
+            }
+            
             // find all destination with id != -1
             var data = list.FindAll(x => x.Id != "-1");
             return data;
