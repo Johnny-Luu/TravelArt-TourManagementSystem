@@ -26,6 +26,10 @@ namespace GUI.Views.Pages
 
         private async void LoadAllRequest()
         {
+            var customerBLL = new CustomerBLL();
+            var tourGroupBLL = new TourGroupBLL();
+            var tourBLL = new TourBLL();
+
             var requestBLL = new RequestBLL();
             var listRequest = await requestBLL.GetAllRequest();
 
@@ -46,21 +50,11 @@ namespace GUI.Views.Pages
                     item.LbRequestDate.Content = request.Date.ToString("dd/MM/yyyy");
                 }
                 
-                // tour group info
-                var tourGroupBLL = new TourGroupBLL();
-                var tourGroup = await tourGroupBLL.GetTourGroupById(request.TourGroupId);
-                item.LbTourGroupId.Content = tourGroup.Id;
-                item.LbTourGroupName.Content = tourGroup.Name;
-                item.LbTourGroupDate.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");
+                // customer info
+                var customer = await customerBLL.GetCustomerByID(request.CustomerId);
+                item.LbCustomerName.Content = customer.Name;
                 
-                // tour info
-                var tourBLL = new TourBLL();
-                var tour = await tourBLL.GetTourbyID(tourGroup.TourId);
-                item.LbTourName.Content = tour.Name;
-                item.LbTourId.Content = "ID: " + tour.Id;
-                item.LbPrice.Content = tour.Price;
-                
-                var bytes = Convert.FromBase64String(tour.Img);
+                var bytes = Convert.FromBase64String(customer.Avatar);
                 var ms = new MemoryStream();
                 ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
 
@@ -70,6 +64,18 @@ namespace GUI.Views.Pages
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
                 item.ImgAvatar.Fill = new ImageBrush(b);
+                
+                // tour group info
+                var tourGroup = await tourGroupBLL.GetTourGroupById(request.TourGroupId);
+                item.LbTourGroupId.Content = tourGroup.Id;
+                item.LbTourGroupName.Content = tourGroup.Name;
+                item.LbTourGroupDate.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");
+                
+                // tour info
+                var tour = await tourBLL.GetTourbyID(tourGroup.TourId);
+                item.LbTourName.Content = tour.Name;
+                item.LbTourId.Content = "ID: " + tour.Id;
+                item.LbPrice.Content = tour.Price;
                 
                 WpListConfirm.Children.Add(item);
             }

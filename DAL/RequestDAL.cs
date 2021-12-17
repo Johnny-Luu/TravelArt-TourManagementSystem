@@ -19,6 +19,11 @@ namespace DAL
             var result = await _client.GetAsync("Request");
             var list = result.ResultAs<List<RequestModel>>();
             
+            if(list == null)
+            {
+                return new List<RequestModel>();
+            }
+
             // find all request with id != -1
             var data = list.FindAll(x => x.Id != "-1");
             return data;

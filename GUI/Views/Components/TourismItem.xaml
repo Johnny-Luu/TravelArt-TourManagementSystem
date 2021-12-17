@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         
         <!--Image of Tourism-->
-        <Ellipse >
+        <Ellipse Name="ImgAvatarCustomer" >
             <Ellipse.Fill>
                 <ImageBrush ImageSource="../../Assets/images/img-paris.jpg"
                             Stretch="UniformToFill"/>

@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Interop;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using BLL;
 using GUI.Views.Components;
 
@@ -54,6 +59,22 @@ namespace GUI.Views.MainWindow
                     item.LbName.Content = tourism.Name;
                     item.LbId.Content = "CustomerID: " + tourism.Id;
                     item.LbTourGroupId.Content = tourGroup.Id;
+                    
+                    if (!string.IsNullOrEmpty(tourism.Avatar))
+                    {
+                        // convert img from base64 to bitmap
+                        // and add to item's image
+                        var bytes = Convert.FromBase64String(tourism.Avatar);
+                        var ms = new MemoryStream();
+                        ms.Write(bytes, 0, Convert.ToInt32(bytes.Length));
+
+                        var image = new Bitmap(ms, false);
+                        ms.Dispose();
+
+                        var a = image.GetHbitmap();
+                        var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                        item.ImgAvatarCustomer.Fill = new ImageBrush(b);
+                    }
 
                     if (isTourOverOrOnTrip) item.BtnDelete.Visibility = Visibility.Collapsed;
                 

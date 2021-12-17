@@ -24,7 +24,12 @@ namespace DAL
             
             var result = await _client.GetAsync("Tour");
             var list = result.ResultAs<List<TourModel>>();
-            
+             
+            if(list == null)
+            {
+                return new List<TourModel>();
+            }
+
             // find all tour with id != -1
             var data = list.FindAll(x => x.Id != "-1");
             return data;

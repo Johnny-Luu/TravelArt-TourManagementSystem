@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using BLL;
@@ -18,6 +19,8 @@ namespace GUI.Views.Pages
         private List<EmployeeModel> employeeList = new List<EmployeeModel>();
         private TourGroupBLL tourGroupBLL = new TourGroupBLL();
         private List<TourGroupModel> tourGroupList = new List<TourGroupModel>();
+        
+        private int colorIndex = 0;
         
         public SeriesCollection SeriesCollection { get; set; }
         private string[] LabelMonth = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
@@ -169,7 +172,7 @@ namespace GUI.Views.Pages
             {
                 new LineSeries
                 {
-                    Title = "Revenue",
+                    Title = "Leader",
                     Values = new ChartValues<double>
                     {
                         arrLeader[0], arrLeader[1], arrLeader[2], arrLeader[3], arrLeader[4], 
@@ -192,7 +195,7 @@ namespace GUI.Views.Pages
                 },
                 new LineSeries
                 {
-                    Title = "Profit",
+                    Title = "Deputy",
                     Values = new ChartValues<double>
                     {
                         arrDeputy[0], arrDeputy[1], arrDeputy[2], arrDeputy[3], arrDeputy[4], 
@@ -229,8 +232,8 @@ namespace GUI.Views.Pages
                 arrTotal[i] = arrLeader[i] + arrDeputy[i];
             }
             
-            Random r = new Random();
-            Brush stroke = (SolidColorBrush)new BrushConverter().ConvertFrom(ColorData.ColorCodes[r.Next(0, ColorData.ColorCodes.Length)]);
+            if(colorIndex == ColorData.ColorCodes.Length - 1) colorIndex = 0;
+            Brush stroke = (SolidColorBrush)new BrushConverter().ConvertFrom(ColorData.ColorCodes[colorIndex++]);
             
             var fill = new SolidColorBrush
             {
@@ -262,10 +265,10 @@ namespace GUI.Views.Pages
             int leader = 0;
             int deputy = 0;
             
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < arrLeader.Length; i++)
             {
-                if (arrLeader[i] != 0) leader++;
-                if (arrDeputy[i] != 0) deputy++;
+                leader += arrLeader[i];
+                deputy += arrDeputy[i];
             }
             
             LbTourGuide.Content = leader.ToString("N0");

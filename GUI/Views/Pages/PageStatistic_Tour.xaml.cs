@@ -290,7 +290,7 @@ namespace GUI.Views.Pages
             int revenue = 0;
             int profit = 0;
             
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < arrRevenue.Length; i++)
             {
                 revenue += arrRevenue[i];
                 profit += arrProfit[i];
