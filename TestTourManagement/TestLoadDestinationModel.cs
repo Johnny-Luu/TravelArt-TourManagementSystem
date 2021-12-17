@@ -8,10 +8,9 @@ namespace TestTourManagement
 {
     public class TestLoadDestinations
     {
-        [TestCase("1","Xuan Huong Lake",true)]
-        [TestCase("1","Da Lat",false)]
+        [TestCase("0","Railway Station",true)]
+        [TestCase("1","Railway Station",false)]
         [TestCase("99","Da Lat",false)]
-        [TestCase(" "," ",false)]
         public async Task TestLoadDestinationModel(string desID,string name,bool result)
         {
             var desBlL = new DestinationBLL();

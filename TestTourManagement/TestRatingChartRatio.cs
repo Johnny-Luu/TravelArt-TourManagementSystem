@@ -6,15 +6,15 @@ namespace TestTourManagement
     public class TestRatingChartRatio
     {
 
-        [TestCase(2,-1,1,0,0,false,0,0,0,0,0)]
+        [TestCase(-1,6,3,6,3,false,0,0,0,0,0)]
+        [TestCase(3,-1,3,6,3,false,0,0,0,0,0)]
+        [TestCase(3,6,-1,6,3,false,0,0,0,0,0)]
+        [TestCase(3,6,3,-1,3,false,0,0,0,0,0)]
+        [TestCase(3,6,3,6,-1,false,0,0,0,0,0)]
         [TestCase(0,0,0,0,0,false,0,0,0,0,0)]
         [TestCase(0,0,6,0,0,true,0,0,1,0,0)]
-        [TestCase(2,2,1,0,0,true,1,1,0.5,0,0)]
-        [TestCase(20,20,20,20,20,true,1,1,1,1,1)]
-        [TestCase(1,2,3,4,5,true,1.0/5,2.0/5,3.0/5,4.0/5,1)]
-        [TestCase(6,2,1,4,5,true,1,2.0/6,1.0/6,4.0/6,5.0/6)]
-        [TestCase(1001,321,672,9,50,true,1,321.0/1001,672.0/1001,9.0/1001,50.0/1001)]
-
+        [TestCase(6,3,6,3,6,true,1,0.5,1,0.5,1)]
+        
 
 
         public void TestChartRatio(int n1, int n2, int n3, int n4, int n5, bool result, double ratio1, double ratio2,

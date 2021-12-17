@@ -8,18 +8,18 @@ namespace TestTourManagement
    
         [TestCase(-3,-1,0,0,0,0,0,false)]
         [TestCase(0,0,0,0,0,0,0,false)]
-        [TestCase(0.1,0,0,0,0,0,0,true)]
-        [TestCase(0.9,1,1,0,0,0,0,true)]
-        [TestCase(1,2,2,0,0,0,0,true)]
+        [TestCase(0.3,0,0,0,0,0,0,true)]
+        [TestCase(0.6,1,1,0,0,0,0,true)]
+        [TestCase(1.3,2,2,0,0,0,0,true)]
         [TestCase(1.6,3,2,1,0,0,0,true)]
-        [TestCase(2.2,4,2,2,0,0,0,true)]
-        [TestCase(2.51,5,2,2,1,0,0,true)]
-        [TestCase(3.123,6,2,2,2,0,0,true)]
-        [TestCase(3.999,7,2,2,2,1,0,true)]
-        [TestCase(4.001,8,2,2,2,2,0,true)]
+        [TestCase(2.3,4,2,2,0,0,0,true)]
+        [TestCase(2.6,5,2,2,1,0,0,true)]
+        [TestCase(3.3,6,2,2,2,0,0,true)]
+        [TestCase(3.6,7,2,2,2,1,0,true)]
+        [TestCase(4.3,8,2,2,2,2,0,true)]
         [TestCase(4.6,9,2,2,2,2,1,true)]
         [TestCase(5,10,2,2,2,2,2,true)]
-        [TestCase(6.9,-1,0,0,0,0,0,false)]
+        [TestCase(5.6,-1,0,0,0,0,0,false)]
         
         
         public void TestStarSetUp(double score, int resultNumStar,int star1,int star2, int star3, int star4, int star5,bool result)

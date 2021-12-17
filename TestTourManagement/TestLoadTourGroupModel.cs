@@ -7,7 +7,9 @@ namespace TestTourManagement
 {
     public class TestLoadTourGroup
     {
-    
+    [TestCase("0","DaLat winter 2021",true)]
+    [TestCase("1","DaLat winter 2021",false)]
+    [TestCase("999","DaLat winter 2021",false)]
         public async Task TestLoadDestinationModel(string tourgroupID,string name,bool result)
         {
             var tourgroupBlL = new TourGroupBLL();

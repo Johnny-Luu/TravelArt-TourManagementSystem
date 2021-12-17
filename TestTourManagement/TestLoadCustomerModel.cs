@@ -7,6 +7,9 @@ namespace TestTourManagement
 {
     public class TestLoadCustomerModels
     {
+        [TestCase("0","Leo Messi",true)]
+        [TestCase("1","Leo Messi",false)]
+        [TestCase("999","Leo Messi",false)]
         public async Task TestLoadDestinationModel(string customerID,string name,bool result)
         {
             var customerBlL = new CustomerBLL();

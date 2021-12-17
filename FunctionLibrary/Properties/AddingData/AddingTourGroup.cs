@@ -7,15 +7,9 @@ namespace FunctionLibrary
     {
         public static bool isAddAble(string name,string tourId,string tourName,string tourLeaderId,string tourLeaderName,string tourDeputyId,string tourDeputyName,string slot,DateTime? startDate, DateTime? endDate)
         {
-            if (name.Length<5)
+            if (name.Length<5 || name.Length>100)
             {
                 MessageBox.Show("Please enter tour name longer or equal to 50 character ");
-                return false;
-            }
-            
-            if (name.Length>50)
-            {
-                MessageBox.Show("Please enter tour name shorter or equal to 50 character ");
                 return false;
             }
             //check empty
@@ -29,7 +23,11 @@ namespace FunctionLibrary
                 return false;
             }
             //check name
-            
+            if (name.Length<5 || name.Length>100)
+            {
+                MessageBox.Show("Please enter tour name longer or equal to 50 character ");
+                return false;
+            }
             //check type slot
             if (!int.TryParse(slot, out int slotNumber))
             {

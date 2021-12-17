@@ -8,7 +8,9 @@ namespace TestTourManagement
 {
     public class TestLoadTourModels
     {
-       
+        [TestCase("0","DaLat",true)]
+        [TestCase("1","DaLat",false)]
+        [TestCase("999","DaLat",false)]
         public async Task TestLoadTourModel(string tourID,string name,bool result)
         {
             var tourBlL = new TourBLL();

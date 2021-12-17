@@ -310,3 +310,7 @@ C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Co
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\Components\ProfileListItem.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\DestinationDetailWindow.baml
 C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\Views\MainWindow\ProfileWindow.baml
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.exe.manifest
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\bin\Debug\GUI.application
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.exe.manifest
+C:\Users\ROG\RiderProjects\TravelArt-TourManagementSystem\GUI\obj\Debug\GUI.application
