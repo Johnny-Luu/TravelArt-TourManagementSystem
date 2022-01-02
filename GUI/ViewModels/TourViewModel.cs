@@ -174,7 +174,9 @@ namespace GUI.ViewModels
 
                     var a = image.GetHbitmap();
                     var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                    item.ImgAvt.Background = new ImageBrush(b);
+                    ImageBrush ib = new ImageBrush(b);
+                    ib.Stretch = Stretch.UniformToFill;
+                    item.ImgAvt.Background = ib;
                 }
                 
                 PgTour.WpTour.Children.Add(item);
@@ -222,7 +224,9 @@ namespace GUI.ViewModels
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                item.BorderImg.Background = new ImageBrush(b);
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+                item.BorderImg.Background = ib;
 
                 PgTour.WpTour.Children.Add(item);
             }
@@ -253,7 +257,9 @@ namespace GUI.ViewModels
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                item.BorderImg.Background = new ImageBrush(b);
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+                item.BorderImg.Background = ib;
 
                 PgTour.WpTour.Children.Add(item);
                

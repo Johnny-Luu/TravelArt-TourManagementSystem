@@ -211,12 +211,12 @@
         <!--Image Coffee cup-->
         <Image
             Grid.Column="0"
-            Height="160"
-            Width="270"
+            Height="130"
+            Width="250"
             Source="../../Assets/images/img-coffee-cup.png"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Margin="20 0 0 200 " IsEnabled="False"/>
+            Margin="20 20 0 200 " IsEnabled="False"/>
         
         <!--Image Glasses-->
         <Image

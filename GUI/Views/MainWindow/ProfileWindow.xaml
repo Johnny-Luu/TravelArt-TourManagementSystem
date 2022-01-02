@@ -253,16 +253,8 @@
                 HorizontalAlignment="Right"
                 Margin="0 70 0 0" IsEnabled="False"/>
 
-            <!--Image NY sticker-->
-            <Image
-                Grid.Column="1"
-                Height="77"
-                Width="216"
-                Source="../../Assets/images/img-ny-sticker.png"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="0 150 -20 0" IsEnabled="False"/>
-
+       
+          
             <!--Image Avatar Customer-->
             <Ellipse 
                 Name="ImgAvatarCustomer"
@@ -271,10 +263,9 @@
                 Width="240"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
-                Margin="0 150 100 0" IsEnabled="False">
+                Margin="0 150 60 0" IsEnabled="False">
                 <Ellipse.Fill>
                     <ImageBrush 
-                        ImageSource="../../Assets/images/img-paris.jpg"
                         Stretch="UniformToFill"/>
                 </Ellipse.Fill>
             </Ellipse>

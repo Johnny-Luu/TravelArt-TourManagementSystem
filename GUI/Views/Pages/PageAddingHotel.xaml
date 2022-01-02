@@ -45,7 +45,9 @@
                         <Label
                               Content="Hotel Name"
                               Style="{StaticResource AddItemStyle}"
-                              HorizontalAlignment="Left"/>
+                              HorizontalAlignment="Left"
+                              Margin="0 ,100 0 0"/>
+                              
                         
                         <!--Hotel Name textBox-->
                         <Border 
@@ -57,7 +59,7 @@
                               <TextBox
                                     Name="TbName"
                                     Width="400"
-                                    Height="40" 
+                                    Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
@@ -81,7 +83,7 @@
                                     PreviewTextInput="TextInput"
                                     Name="TbPrice"
                                     Width="400"
-                                    Height="40" 
+                                    Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
                         </Border>
@@ -197,31 +199,31 @@
            
            <!--Image Taxi-->
            <Image 
-                 Height="400"
-                 Width="350"
+                 Height="250"
+                 Width="325"
                  Source="../../Assets/images/img-taxi.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="50 -70" IsEnabled="False"/>
+                 Margin="50,0,70, 100" IsEnabled="False"/>
            
            <!--Image Bag-->
            <Image
                  Grid.Column="1" 
-                 Height="200"
-                 Width="200"
+                 Height="150"
+                 Width="100"
                  Source="../../Assets/images/img-bag.png"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Bottom"
-                 Margin="-80 140" IsEnabled="False"/>
+                 Margin="-100,0,0,170 " IsEnabled="False"/>
            
            <!--Image Hotel Building-->
            <Image 
                  Grid.Column="1" 
-                 Height="420"
-                 Width="350"
+                 Height="500"
+                 Width="250"
                  Source="../../Assets/images/img-hotel-building.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Bottom"
-                 Margin="0 200" IsEnabled="False"/>
+                 Margin="50,50,50, 200" IsEnabled="False"/>
     </Grid> 
 </Page>

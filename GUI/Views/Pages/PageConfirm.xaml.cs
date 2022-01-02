@@ -63,7 +63,9 @@ namespace GUI.Views.Pages
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                item.ImgAvatar.Fill = new ImageBrush(b);
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+                item.ImgAvatar.Fill = ib;
                 
                 // tour group info
                 var tourGroup = await tourGroupBLL.GetTourGroupById(request.TourGroupId);

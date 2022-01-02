@@ -56,7 +56,9 @@ namespace GUI.Views.MainWindow
 
                     var a = image.GetHbitmap();
                     var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                    ImgAvatarCustomer.Fill = new ImageBrush(b);
+                    ImageBrush ib = new ImageBrush(b);
+                    ib.Stretch = Stretch.UniformToFill;
+                    ImgAvatarCustomer.Fill = ib;
                 }
             }
             
@@ -86,7 +88,9 @@ namespace GUI.Views.MainWindow
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                item.ImageTour.Fill = new ImageBrush(b);
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+                item.ImageTour.Fill =  ib;
                 
                 // status
                 if (tourGroup.EndDate < today)

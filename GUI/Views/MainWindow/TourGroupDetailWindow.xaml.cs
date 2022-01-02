@@ -73,7 +73,9 @@ namespace GUI.Views.MainWindow
 
                         var a = image.GetHbitmap();
                         var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                        item.ImgAvatarCustomer.Fill = new ImageBrush(b);
+                        ImageBrush ib = new ImageBrush(b);
+                        ib.Stretch = Stretch.UniformToFill;
+                        item.ImgAvatarCustomer.Fill = ib;
                     }
 
                     if (isTourOverOrOnTrip) item.BtnDelete.Visibility = Visibility.Collapsed;

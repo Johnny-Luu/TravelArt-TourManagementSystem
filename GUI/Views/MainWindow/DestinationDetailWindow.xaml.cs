@@ -40,7 +40,9 @@ namespace GUI.Views.MainWindow
 
             var a = image.GetHbitmap();
             var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-            ImgDestination.Background = new ImageBrush(b);
+            ImageBrush ib = new ImageBrush(b);
+            ib.Stretch = Stretch.UniformToFill;
+            ImgDestination.Background = ib;
             
             // hotel info
             var hotelBLL = new HotelBLL();

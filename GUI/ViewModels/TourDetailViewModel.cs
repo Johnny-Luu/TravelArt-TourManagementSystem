@@ -54,7 +54,9 @@ namespace GUI.ViewModels
 
            var a = image.GetHbitmap();
            var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-           WdTourDetail.BorderImg.Background = new ImageBrush(b);
+           ImageBrush ib = new ImageBrush(b);
+           ib.Stretch = Stretch.UniformToFill;
+           WdTourDetail.BorderImg.Background = ib;
           //show khi load xong
           WdTourDetail.LbInfo.Visibility = Visibility.Visible;
           WdTourDetail.LbRating.Visibility = Visibility.Visible;
@@ -97,7 +99,9 @@ namespace GUI.ViewModels
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                cmt.ImgAvatar.Fill = new ImageBrush(b);                
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+                cmt.ImgAvatar.Fill = ib;                
                 
                 cmt.LbDate.Content = rating.Time;
                 cmt.score = rating.Rating;

@@ -119,7 +119,10 @@ namespace GUI.ViewModels
 
                 var a = image.GetHbitmap();
                 var b = Imaging.CreateBitmapSourceFromHBitmap(a, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-                item.ImgTour.Fill = new ImageBrush(b);
+                ImageBrush ib = new ImageBrush(b);
+                ib.Stretch = Stretch.UniformToFill;
+
+                item.ImgTour.Fill = ib;
 
                 // display status
                 if (tourGroup.EndDate < _today)

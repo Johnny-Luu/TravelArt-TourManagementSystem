@@ -324,8 +324,8 @@
             
             <!--Image World Travel Circle-->
             <Image 
-                  Height="320"
-                  Width="350"
+                  Height="300"
+                  Width="300"
                   Source="../../Assets/images/img-world-travel.png"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top"

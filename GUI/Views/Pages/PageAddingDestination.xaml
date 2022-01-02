@@ -237,12 +237,13 @@
                   HorizontalAlignment="Left"
                   Margin="0 0 0 200" IsEnabled="False"/>
         <Image 
-                  Height="310"
-                  Width="325"
-                  Source="../../Assets/images/img-vali.png"
-                  Stretch="Uniform"
-                  HorizontalAlignment="Right"
-                  VerticalAlignment="Top" IsEnabled="False" Grid.ColumnSpan="2" Margin="0,10,580,0"/>
+            Grid.Column="0" 
+            Height="400"
+            Width="250"
+            Source="../../Assets/images/img-vali.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0 95 -30 200" IsEnabled="False"/>
 
     </Grid>
 </Page>
