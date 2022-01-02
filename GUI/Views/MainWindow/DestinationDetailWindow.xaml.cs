@@ -44,7 +44,7 @@ namespace GUI.Views.MainWindow
             
             // hotel info
             var hotelBLL = new HotelBLL();
-            var hotel = await hotelBLL.GetHotelById(id);
+            var hotel = await hotelBLL.GetHotelById(destination.IdHotel);
             LbHotelName.Content = "Name: " + hotel.Name;
             LbHotelAddress.Content = "Address: " + hotel.Address;
             LbHotelPhone.Content = "Phone: " + hotel.PhoneNumber;
