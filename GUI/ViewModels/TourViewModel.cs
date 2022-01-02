@@ -194,7 +194,9 @@ namespace GUI.ViewModels
                 item.tourID = tour.Id;
                 item.LbName.Content = tour.Name;
                 item.TbDescription.Text = tour.Description;
-                item.LbPrice.Content = tour.Price + " vnd";
+                long money = 0;
+                long.TryParse(tour.Price,out money);
+                item.LbPrice.Content = String.Format("{0:0,0}", money) + " vnd";
                 item.LbVisit.Content = "Visit: " + (tour.DestinationIds.Length /2 + 1) + " locations";
                 
                 // calculate rating point

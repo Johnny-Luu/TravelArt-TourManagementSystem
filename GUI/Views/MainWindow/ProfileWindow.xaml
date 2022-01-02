@@ -222,7 +222,7 @@
                 Source="../../Assets/icons/icon-money.png"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
-                Margin="0 0 230 90"/>
+                Margin="0 0 270 90"/>
 
             <!--Icon Travel-->
             <Image
@@ -232,7 +232,7 @@
                 Source="../../Assets/icons/icon-travel.png"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
-                Margin="80 0 0 90"/>
+                Margin="50 0 0 90"/>
 
             <!--Image London sticker-->
             <Image

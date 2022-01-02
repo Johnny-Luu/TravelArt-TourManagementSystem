@@ -76,8 +76,10 @@ namespace GUI.Views.MainWindow
                 item.LbNameTour.Content = tour.Name;
                 item.LbNameTourGroup.Content = tourGroup.Name;
                 item.LbDateStartEnd.Content = tourGroup.StartDate?.ToString("dd/MM/yyyy") + " to " + tourGroup.EndDate?.ToString("dd/MM/yyyy");
-                item.LbPrice.Content = tour.Price;
-                
+               
+                long money = 0;
+                long.TryParse(tour.Price,out money);
+                item.LbPrice.Content = String.Format("{0:0,0}", money) ;
                 // tour img
                 var bytes = Convert.FromBase64String(tour.Img);
                 var ms = new MemoryStream();
@@ -113,7 +115,8 @@ namespace GUI.Views.MainWindow
             }
             
             LbTotalTourGroup.Content = tourGroupList.Count;
-            LbTotalRevenue.Content = totalRevenue;
+            string moneyString = String.Format("{0:0,0}", totalRevenue);
+            LbTotalRevenue.Content = moneyString;
         }
 
         private void BtnBack_OnMouseDown(object sender, MouseButtonEventArgs e)

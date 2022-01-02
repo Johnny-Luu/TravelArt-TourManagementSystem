@@ -77,7 +77,10 @@ namespace GUI.Views.Pages
                 var tour = await tourBLL.GetTourbyID(tourGroup.TourId);
                 item.LbTourName.Content = tour.Name;
                 item.LbTourId.Content = "ID: " + tour.Id;
-                item.LbPrice.Content = tour.Price;
+                long money = 0;
+                long.TryParse(tour.Price,out money);
+                item.LbPrice.Content = String.Format("{0:0,0}", money) ;
+             
                 
                 WpListConfirm.Children.Add(item);
             }
