@@ -220,7 +220,7 @@
         <Image
                   Grid.Column="1" 
                   Height="150"
-                  Width="300"
+                  Width="285"
                   Source="../../Assets/images/img-air-plane.png"
                   Stretch="Uniform"
                   VerticalAlignment="Top"
@@ -229,21 +229,20 @@
 
         <!--Image Camera-->
         <Image 
-                  Grid.Column="1" 
-                  Height="100"
-                  Width="150"
+                  Height="90"
+                  Width="107"
                   Source="../../Assets/images/img-camera-vintage.png"
                   VerticalAlignment="Bottom"
                   HorizontalAlignment="Left"
-                  Margin="0 0 0 200" IsEnabled="False"/>
+                  Margin="678,0,0,200" IsEnabled="False" Grid.ColumnSpan="2" RenderTransformOrigin="0.482,0.222"/>
         <Image 
             Grid.Column="0" 
-            Height="400"
-            Width="250"
+            Height="265"
+            Width="252"
             Source="../../Assets/images/img-vali.png"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            Margin="0 95 -30 200" IsEnabled="False"/>
+            Margin="0,95,570,0" IsEnabled="False" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

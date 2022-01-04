@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Windows.Input;
+using GUI.Views.MainWindow;
 using Models;
 
 namespace GUI.Views.Pages
@@ -35,7 +36,8 @@ namespace GUI.Views.Pages
 
     private void EditTour(object sender, MouseButtonEventArgs e)
     {
-        throw new System.NotImplementedException();
+        var w2 = new EditingTourWindow();
+        w2.ShowDialog();
     }
     }
 }

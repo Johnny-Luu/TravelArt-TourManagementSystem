@@ -11,7 +11,7 @@
     <viewModels:TourDetailViewModel x:Key="TourDetailVm"></viewModels:TourDetailViewModel>
     <viewModels:AddingTourGroupViewModel x:Key="AddingTourGroupVm"></viewModels:AddingTourGroupViewModel>
     <viewModels:TourGroupViewModel x:Key="TourGroupVm"></viewModels:TourGroupViewModel>
-    
+    <viewModels:EditingTourViewModel x:Key="EditingTourVm"></viewModels:EditingTourViewModel>
     <!--Navbar items when clicked-->
     <Style x:Key="NavItemClickedStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="Poppins" />

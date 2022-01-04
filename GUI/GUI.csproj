@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -117,6 +117,7 @@
     <Compile Include="ViewModels\AddingTourGroupViewModel.cs" />
     <Compile Include="ViewModels\AddingTourViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EditingTourViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="ViewModels\StaffChartViewModel.cs" />
     <Compile Include="ViewModels\TourDetailViewModel.cs" />
@@ -157,6 +158,9 @@
     </Compile>
     <Compile Include="Views\MainWindow\DestinationDetailWindow.xaml.cs">
       <DependentUpon>DestinationDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow\EditingTourWindow.xaml.cs">
+      <DependentUpon>EditingTourWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -248,6 +252,7 @@
     <Page Include="Views\Components\TourismItem.xaml" />
     <Page Include="Views\Components\TourRating.xaml" />
     <Page Include="Views\MainWindow\DestinationDetailWindow.xaml" />
+    <Page Include="Views\MainWindow\EditingTourWindow.xaml" />
     <Page Include="Views\MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

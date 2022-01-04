@@ -11,21 +11,21 @@
       Width="1280"
       x:Name="PgAddingHotel"
       DataContext="{StaticResource AddingHotelVm}">
-     <Grid>
-           <i:Interaction.Triggers>
-                 <i:EventTrigger EventName="Loaded">
-                       <i:InvokeCommandAction
+    <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction
                              Command="{Binding LoadProvinceCommand}"
                              CommandParameter="{Binding ElementName=PgAddingHotel}"/>
-                 </i:EventTrigger>
-           </i:Interaction.Triggers>
-           <Grid.ColumnDefinitions>
-               <ColumnDefinition Width="1*"/>
-               <ColumnDefinition Width="1*"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-           
-           <!--Picture button - Hotel Name - Short description-->
-           <Border Grid.Column="0"
+
+        <!--Picture button - Hotel Name - Short description-->
+        <Border Grid.Column="0"
                    Background="#8064614B" 
                    CornerRadius="30" 
                    BorderThickness="1" 
@@ -35,63 +35,63 @@
                    HorizontalAlignment="Right"
                    VerticalAlignment="Top"
                    Margin="0 0 30 0">
-                  
-                  <StackPanel 
+
+            <StackPanel 
                         Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                        
-                        <!--Hotel Name label-->
-                        <Label
+
+                <!--Hotel Name label-->
+                <Label
                               Content="Hotel Name"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               Margin="0 ,100 0 0"/>
-                              
-                        
-                        <!--Hotel Name textBox-->
-                        <Border 
+
+
+                <!--Hotel Name textBox-->
+                <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left"
                               VerticalAlignment="Top">
-                              <TextBox
+                    <TextBox
                                     Name="TbName"
                                     Width="400"
                                     Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
-                        </Border>
-                        
-                        <!--Price (per night) label-->
-                        <Label
+                </Border>
+
+                <!--Price (per night) label-->
+                <Label
                               Content="Price (per night)"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom"
                               Margin="0 25 0 0"/>
-                        
-                        <!--Price textBox-->
-                        <Border 
+
+                <!--Price textBox-->
+                <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left"
                               VerticalAlignment="Bottom">
-                              <TextBox
+                    <TextBox
                                     PreviewTextInput="TextInput"
                                     Name="TbPrice"
                                     Width="400"
                                     Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
-                        </Border>
-                  </StackPanel>
-            </Border>
-           
-           <!--Address & Phone number-->
-           <Border Grid.Column="1"
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <!--Address & Phone number-->
+        <Border Grid.Column="1"
                    Background="#60569589" 
                    CornerRadius="30" 
                    BorderThickness="1" 
@@ -101,129 +101,128 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    Margin="0 100">
-                  
-                  <StackPanel 
+
+            <StackPanel 
                         Orientation="Vertical"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Margin="25 0 0 25">
-                        
-                        <!--Province label-->
-                        <Label
+
+                <!--Province label-->
+                <Label
                               Content="Province"
                               Style="{StaticResource AddItemStyle}"
                               VerticalAlignment="Top"
                               HorizontalAlignment="Left"
                               Margin="0 10"/>
-                        
-                        <!--Province ComboBox-->
-                        <Border 
+
+                <!--Province ComboBox-->
+                <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               VerticalAlignment="Center"
                               HorizontalAlignment="Center"
                               Margin="0 0 40 0">
-                              <ComboBox
+                    <ComboBox
                                     Name="CbProvince"
                                     IsEditable="false"
                                     BorderThickness="0"
                                     Height="50"
                                     Width="300"
                                     Style="{StaticResource ComboBoxStyle}">
-                              </ComboBox>
-                        </Border>
-                        
-                        <!--Address label-->
-                        <Label
+                    </ComboBox>
+                </Border>
+
+                <!--Address label-->
+                <Label
                               Content="Address"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               Margin="0 10"/>
-                        
-                        <!--Address textBox-->
-                        <Border 
+
+                <!--Address textBox-->
+                <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left">
-                              <TextBox
+                    <TextBox
                                     Name="TbAddress"
                                     Width="300"
                                     Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
-                        </Border>
-                        
-                        <!--Phone Number label-->
-                        <Label
+                </Border>
+
+                <!--Phone Number label-->
+                <Label
                               Content="Phone Number"
                               Style="{StaticResource AddItemStyle}"
                               HorizontalAlignment="Left"
                               Margin="0 10"/>
-                        
-                        <!--Phone Number textBox-->
-                        <Border 
+
+                <!--Phone Number textBox-->
+                <Border 
                               CornerRadius="10" 
                               BorderThickness="4" 
                               BorderBrush="white"
                               HorizontalAlignment="Left">
-                              <TextBox
+                    <TextBox
                                     PreviewTextInput="TextInput"
                                     Name="TbPhone"
                                     Width="300"
                                     Height="50" 
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}"/>
-                        </Border>
-                  </StackPanel>
-            </Border>
-            
-           <!--Confirm Button-->
-           <Border Grid.Column="1"
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <!--Confirm Button-->
+        <Border Grid.Column="1"
                    Style="{StaticResource ConfirmButtonStyle}"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
                    Margin="0 0 40 155">
-                
-                <i:Interaction.Triggers>
-                      <i:EventTrigger EventName="MouseDown">
-                            <i:InvokeCommandAction
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction
                                   Command="{Binding PushHotelCommand}"
                                   CommandParameter="{Binding ElementName=PgAddingHotel}"/>
-                      </i:EventTrigger>
-                </i:Interaction.Triggers>
-                
-                <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
-            </Border>
-           
-           <!--Image Taxi-->
-           <Image 
-                 Height="250"
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
+        </Border>
+
+        <!--Image Taxi-->
+        <Image 
+                 Height="185"
                  Width="325"
                  Source="../../Assets/images/img-taxi.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Top"
-                 Margin="50,0,70, 100" IsEnabled="False"/>
-           
-           <!--Image Bag-->
-           <Image
-                 Grid.Column="1" 
-                 Height="150"
-                 Width="100"
+                 Margin="0,0,70,0" IsEnabled="False"/>
+
+        <!--Image Bag-->
+        <Image 
+                 Height="145"
+                 Width="95"
                  Source="../../Assets/images/img-bag.png"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Bottom"
-                 Margin="-100,0,0,170 " IsEnabled="False"/>
-           
-           <!--Image Hotel Building-->
-           <Image 
+                 Margin="545,0,0,170" IsEnabled="False"/>
+
+        <!--Image Hotel Building-->
+        <Image 
                  Grid.Column="1" 
-                 Height="500"
+                 Height="360"
                  Width="250"
                  Source="../../Assets/images/img-hotel-building.png"
                  HorizontalAlignment="Right"
                  VerticalAlignment="Bottom"
-                 Margin="50,50,50, 200" IsEnabled="False"/>
-    </Grid> 
+                 Margin="0,0,45,215" IsEnabled="False"/>
+    </Grid>
 </Page>

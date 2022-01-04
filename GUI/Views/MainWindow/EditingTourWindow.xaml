@@ -1,0 +1,375 @@
+﻿<Window x:Class="GUI.Views.MainWindow.EditingTourWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.MainWindow"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d"
+      WindowStartupLocation="CenterScreen"
+      WindowStyle="None"
+      AllowsTransparency="True"
+      Background="Transparent"
+      x:Name="EditingTourWd"
+      DataContext="{StaticResource EditingTourVm}"
+      Title="Editing Tour" Height="720" Width="1280">
+    <Border 
+        Background="#FFF4F4F4" 
+        CornerRadius="20" 
+        BorderThickness="0.3" 
+        BorderBrush="white">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction
+                    Command="{Binding LoadTourCommand}"
+                    CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                <i:InvokeCommandAction
+                    Command="{Binding LoadProvinceCommand}"
+                    CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+
+        <!--About TourAdding-->
+        <Border Grid.Column="0"
+                 Background="#705E8397" 
+                 CornerRadius="30" 
+                 BorderThickness="1" 
+                 BorderBrush="#705E8397"
+                 Width="650"
+                 Height="500"
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Left"
+                 Margin="62,105,0,0">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5.5*"/>
+                    <RowDefinition Height="4.5*"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3.2*"/>
+                        <ColumnDefinition Width="6.8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--TourName, Price, Pictures(Button) of TourAdding-->
+                    <Border Grid.Column="1"
+                                      CornerRadius="30" 
+                                      BorderThickness="1" 
+                                      BorderBrush="Transparent">
+
+                        <WrapPanel
+                                          Orientation="Vertical"
+                                          VerticalAlignment="Top"
+                                          HorizontalAlignment="Stretch"
+                                          Margin="25">
+
+                            <!--TourName label-->
+                            <Label
+                                                Content="Tour Name"
+                                                Style="{StaticResource AddItemStyle}"/>
+
+                            <!--TourName textBox-->
+                            <Border 
+                                                CornerRadius="10" 
+                                                BorderThickness="4" 
+                                                BorderBrush="white">
+                                <TextBox
+                                                      Name="TbName"
+                                                      Width="350"
+                                                      Height="50" 
+                                                      BorderThickness="0"
+                                                      Style="{StaticResource TextBoxStyle}"/>
+                            </Border>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <WrapPanel>
+                                    <!--Price label-->
+                                    <Label
+                                                            Content="Price"
+                                                            Margin=" 0 20 0 0 "
+                                                            Style="{StaticResource AddItemStyle}"/>
+
+                                    <!--Price textBox-->
+                                    <Border 
+                                                            CornerRadius="10" 
+                                                            HorizontalAlignment="Left"
+                                                            BorderThickness="4" 
+                                                            BorderBrush="white">
+                                        <TextBox
+                                                                  PreviewTextInput="TextInput"
+                                                                  Name="TbPrice"
+                                                                  Width="160"
+                                                                  Height="50" 
+                                                                  BorderThickness="0"
+                                                                  Style="{StaticResource TextBoxStyle}"/>
+                                    </Border>
+                                </WrapPanel>
+
+                                <WrapPanel Grid.Column="1">
+                                    <!--Profit label-->
+                                    <Label
+                                                            Content="Profit"
+                                                            Margin=" 20 20 0 0 "
+                                                            Style="{StaticResource AddItemStyle}"/>
+
+                                    <!--Profit textBox-->
+                                    <Border 
+                                                            CornerRadius="10" 
+                                                            HorizontalAlignment="Left"
+                                                            Margin="10 0 0 0"
+                                                            BorderThickness="4" 
+                                                            BorderBrush="white">
+                                        <TextBox
+                                                                  PreviewTextInput="TextInput"
+                                                                  Name="TbProfit"
+                                                                  Width="160"
+                                                                  Height="50" 
+                                                                  BorderThickness="0"
+                                                                  Style="{StaticResource TextBoxStyle}"/>
+                                    </Border>
+                                </WrapPanel>
+                            </Grid>
+                        </WrapPanel>
+                    </Border>
+                </Grid>
+
+                <!--Short Description of TourAdding-->
+                <Border Grid.Row="1">
+                    <WrapPanel
+                                    Orientation="Vertical"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Margin="40 0 0 0">
+
+                        <!--Short Description label-->
+                        <Label
+                                          Content="Short Description"
+                                          Style="{StaticResource AddItemStyle}"/>
+
+                        <!--Short Description textBox-->
+                        <Border 
+                                          CornerRadius="10" 
+                                          BorderThickness="4" 
+                                          BorderBrush="white"
+                                          Background="White">
+                            <TextBox
+                                                Name="TbShortDescription"
+                                                Width="330"
+                                                Height="150"
+                                                BorderThickness="0"
+                                                TextWrapping="Wrap"
+                                                FontSize="20"
+                                                FontFamily="Mulish"/>
+                        </Border>
+
+                        <!--Picture label-->
+                        <Label 
+                                          Content="Picture"
+                                          Margin="20 0 0 0"
+                                          Style="{StaticResource AddItemStyle}"/>
+
+                        <!--Picture textBlock-->
+                        <Border
+                                          Height="160"
+                                          Width="200"
+                                          CornerRadius="10" 
+                                          BorderThickness="4" 
+                                          BorderBrush="white"
+                                          Background="White"
+                                          Margin="20 0 ">
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseDown">
+                                    <i:InvokeCommandAction
+                                                            Command="{Binding ChooseImageCommand}"
+                                                            CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+
+                            <Image
+                                                Name="ImgPicture"
+                                                Style="{StaticResource IconAddStyle}"
+                                                Stretch="None"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Source="../../Assets/images/img-add-icon.png" />
+                        </Border>
+                    </WrapPanel>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!--Destination Planning of TourAdding-->
+        <Border
+                    Background="#90A6A6A6" 
+                    CornerRadius="30" 
+                    BorderThickness="1" 
+                    BorderBrush="#90A6A6A6"
+                    Width="450"
+                    Height="500"
+                    Margin="2,100,60,0"
+                    VerticalAlignment="Top" Grid.Column="1">
+            <Grid>
+                <StackPanel 
+                              Orientation="Vertical"
+                              VerticalAlignment="Top"
+                              Margin="20 10 0 0">
+
+                    <!--Province label-->
+                    <Label
+                                    Content="Province"
+                                    Style="{StaticResource AddItemStyle}"/>
+
+                    <!--Province ComboBox-->
+                    <Border 
+                                    CornerRadius="10" 
+                                    BorderThickness="4" 
+                                    BorderBrush="white"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                        <ComboBox
+                                          Name="CbProvince"
+                                          Height="40"
+                                          Width="330"
+                                          Style="{StaticResource ComboBoxStyle}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction
+                                                            Command="{Binding LoadDestinationCommand}"
+                                                            CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                    </Border>
+
+
+                    <!--Destination planning label-->
+                    <Label
+                                    Margin="0 20 0 0"
+                                    Content="Destination planning"
+                                    Style="{StaticResource AddItemStyle}"/>
+
+                    <!--Destination planning ComboBox-->
+                    <Border 
+                              CornerRadius="10" 
+                              BorderThickness="4" 
+                              BorderBrush="white"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center">
+                        <ComboBox
+                                    Name="CbDestinationPlanning"
+                                    Height="40"
+                                    Width="330"
+                                    Style="{StaticResource ComboBoxStyle}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction
+                                                      Command="{Binding DestinationChooseCommand}"
+                                                      CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                    </Border>
+
+                    <!--Destination planning list-->
+                    <ScrollViewer 
+                                    Width="400" 
+                                    Height="350" 
+                                    VerticalScrollBarVisibility="Hidden">
+                        <WrapPanel 
+                                          Name="WpDestinationChoose"
+                                          Margin="0 20 0 30"/>
+                    </ScrollViewer>
+                </StackPanel>
+
+                <!--Clear button-->
+                <Image
+                              Width="20"
+                              Height="20"
+                              Style="{StaticResource IconClearStyle}"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Right"
+                              Margin="0 0 40 250"
+                              Source="../../Assets/icons/icon-clear.png">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
+                                                Command="{Binding ClearCommand}"
+                                                CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Image>
+            </Grid>
+        </Border>
+
+        <!--Confirm Button-->
+        <Border Grid.Column="1"
+                MouseDown="Cancel"
+                    Style="{StaticResource ConfirmButtonStyle}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="190,0,0,54">
+
+            <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Cancel"/>
+        </Border>
+        <Border Grid.Column="1"
+                    Style="{StaticResource ConfirmButtonStyle}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,67,54"
+                >
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction
+                                    Command="{Binding PushTourCommand}"
+                                    CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Edit"/>
+        </Border>
+
+        <!--Image World Travel Circle-->
+        <Image 
+                  Height="300"
+                  Width="300"
+                  Source="../../Assets/images/img-world-travel.png"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Margin="-30,60,0,0" IsEnabled="False"/>
+
+        <!--Image Vector route icon-->
+        <Image Grid.Column="0"
+                  Height="160"
+                  Width="153"
+                  Source="../../Assets/images/img-vector-route-icon.png"
+                  HorizontalAlignment="Right"
+                  VerticalAlignment="Center"
+                  Margin="0,220,450,340" IsEnabled="False" Grid.ColumnSpan="2"/>
+
+        <!--Image Passport-->
+        <Image Grid.Column="1"
+                   Height="160"
+                   Width="80"
+                   Source="../../Assets/images/img-passport.png"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Margin="0,455,20,105" IsEnabled="False" RenderTransformOrigin="0.253,0.717"/>
+        <Label   Content="Edit Tour Information"
+                                    Style="{StaticResource AddItemStyle}" HorizontalAlignment="Left" Margin="60,30,0,0" VerticalAlignment="Top" FontSize="30" Foreground="#FF8707C7"/>
+    </Grid> </Border>
+</Window>

@@ -20,12 +20,12 @@
                     CommandParameter="{Binding ElementName=PgAddingTourGroup}"/>
             </i:EventTrigger>
         </i:Interaction.Triggers>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4.5*"/>
             <ColumnDefinition Width="5.5*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--About TourGroup-->
         <Border
             Grid.Column="0"
@@ -38,17 +38,17 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
             Margin="70 15 30 0">
-            
+
             <WrapPanel 
                 Orientation="Vertical"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
                 Margin="30">
-                
+
                 <!--Tourist Group label-->
                 <Label Content="Tour Group Name"
                        Style="{StaticResource AddItemStyle}"/>
-                
+
                 <!--Tourist Group textBox-->
                 <Border CornerRadius="10" 
                         BorderThickness="4" 
@@ -59,14 +59,14 @@
                         Height="50" 
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}"/>
-                 </Border>
-                
+                </Border>
+
                 <!--Tour Leader label-->
                 <Label 
                     Content="Tour Leader"
                     Margin="0 20 0 0"
                     Style="{StaticResource AddItemStyle}"/>
-                    
+
                 <!--Tour Leader ComboBox-->
                 <Border
                     CornerRadius="10" 
@@ -81,13 +81,13 @@
                         Style="{StaticResource ComboBoxStyle}" >
                     </ComboBox>
                 </Border>
-                
+
                 <!--Tour Deputy label-->
                 <Label 
                     Content="Tour Deputy"
                     Margin="0 20 0 0"
                     Style="{StaticResource AddItemStyle}"/>
-                    
+
                 <!--Tour Deputy ComboBox-->
                 <Border
                     CornerRadius="10" 
@@ -102,7 +102,7 @@
                         Style="{StaticResource ComboBoxStyle}">
                     </ComboBox>
                 </Border>
-                
+
             </WrapPanel>
         </Border>
         <Border
@@ -121,12 +121,12 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Margin="50 30">
-                    
+
                     <!--Tour Name label-->
                     <Label 
                         Content="Tour"
                         Style="{StaticResource AddItemStyle}"/>
-                    
+
                     <!--Tour Name ComboBox-->
                     <Border
                         CornerRadius="10" 
@@ -140,14 +140,14 @@
                             Width="350"
                             Style="{StaticResource ComboBoxStyle}"/>
                     </Border>
-                    
-                    
+
+
                     <!--Slot label-->
                     <Label 
                         Content="Slot"
                         Style="{StaticResource AddItemStyle}"
                         Margin="0 20 0 0"/>
-                      
+
                     <!--Slot textBox-->
                     <Border
                         
@@ -162,13 +162,13 @@
                             BorderThickness="0"
                             Style="{StaticResource TextBoxStyle}"/>
                     </Border>
-                    
+
                     <!--Start Date label-->
                     <Label
                         Content="Start Date"
                         Style="{StaticResource AddItemStyle}"
                         Margin="0 20 0 0"/>
-                    
+
                     <!--Start Date textBox-->
                     <Border
                         CornerRadius="10"
@@ -183,13 +183,13 @@
                             FontSize="20"
                             FontFamily="Mulish"/>
                     </Border>
-                  
+
                     <!--End Date label-->
                     <Label 
                         Content="End Date"
                         Style="{StaticResource AddItemStyle}"
                         Margin="0 20 0 0"/>
-                    
+
                     <!--End Date textBox-->
                     <Border
                         CornerRadius="10" 
@@ -207,17 +207,17 @@
                 </WrapPanel>
             </Grid>
         </Border>
-        
+
         <!--Image Coffee cup-->
         <Image
             Grid.Column="0"
             Height="130"
-            Width="250"
+            Width="145"
             Source="../../Assets/images/img-coffee-cup.png"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Margin="20 20 0 200 " IsEnabled="False"/>
-        
+            Margin="20,0,0,200" IsEnabled="False"/>
+
         <!--Image Glasses-->
         <Image
             Grid.Column="0"
@@ -227,33 +227,33 @@
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Margin="0 -20 40 0 " IsEnabled="False"/>
-        
+
         <!--Image Umbrella-->
         <Image 
             Grid.Column="1"
             Height="200"
-            Width="270"
+            Width="232"
             Source="../../Assets/images/img-umbrella.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Margin="0 -60 -20 0 " IsEnabled="False">
-            
+            Margin="0,-40,-25,0" IsEnabled="False">
+
             <Image.RenderTransform>
                 <RotateTransform Angle="23" />
             </Image.RenderTransform>
-           
+
         </Image>
-        
+
         <!--Image Street Food Car-->
         <Image
             Grid.Column="1"
-            Height="230"
-            Width="250"
+            Height="215"
+            Width="235"
             Source="../../Assets/images/img-street-food-car.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            Margin="0 0 0 180 " IsEnabled="False"/> 
-        
+            Margin="0,0,15,210" IsEnabled="False"/>
+
         <!--Confirm Button-->
         <Border
             Grid.Column="1"
@@ -268,7 +268,7 @@
                         CommandParameter="{Binding ElementName=PgAddingTourGroup}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            
+
             <Label Style="{StaticResource ConfirmButtonLabelStyle}"/>
         </Border>
     </Grid>
