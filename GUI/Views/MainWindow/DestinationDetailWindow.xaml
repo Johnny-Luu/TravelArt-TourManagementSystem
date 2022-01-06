@@ -142,7 +142,7 @@
                         Content="Address: "
                         Style="{StaticResource InfoLabelStyle}"
                         FontWeight="Bold"
-                        Margin="0 10" Height="75" Width="328"/>
+                        Margin="0 10" Height="75" Width="395"/>
                 </WrapPanel>
             </Border>
 
