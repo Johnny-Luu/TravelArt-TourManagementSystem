@@ -41,7 +41,8 @@ namespace GUI.ViewModels
             EditingDestinationWd = para;
             var desBLL = new DestinationBLL();
             //EditingTourWindow.GetDesID()
-            des = await desBLL.GetDestinationbyID("3");
+            
+            des = await desBLL.GetDestinationbyID(EditingDestinationWd.GetDesID());
             //img
             var bytes = Convert.FromBase64String(des.Img);
             var ms = new MemoryStream();
@@ -54,6 +55,7 @@ namespace GUI.ViewModels
             ImageBrush ib = new ImageBrush(b);
             ib.Stretch = Stretch.UniformToFill;
             EditingDestinationWd.ImgPicture.Source = ib.ImageSource;
+            _base64Img = des.Img;
             //data
             EditingDestinationWd.TbName.Text = des.Name;
             EditingDestinationWd.TbDescription.Text = des.Description;
@@ -73,25 +75,20 @@ namespace GUI.ViewModels
             var description = EditingDestinationWd.TbDescription.Text;
             var province = EditingDestinationWd.CbProvinceList.Text;
             var idHotel = "";
-            var picture = false;
+         
             if (EditingDestinationWd.CbHotelList.SelectedValue != null)
             {
                 var hotelChoose = EditingDestinationWd.CbHotelList.SelectedValue.ToString();
                 idHotel = hotelChoose.Split('-')[0];
             }
-            if (_base64Img == null)
-            {
-                picture = false;
-            }
-            else
-            {
-                picture = true;
-            }
+          
+             bool picture = _base64Img != null;
+            
 
             if (!AddingDestination.isAddAble(name, description, province, idHotel, picture)) return;
 
             var destinationBLL = new DestinationBLL();
-            var id = await destinationBLL.InitID();
+            var id = des.Id;
             
             var destination = new DestinationModel
             {
@@ -103,7 +100,7 @@ namespace GUI.ViewModels
                 Img = _base64Img
             };
             //// update here
-            destinationBLL.PushDestination(destination);
+            destinationBLL.EditDestination(destination);
             //////////
             MessageBox.Show("Edit Successfully");
             

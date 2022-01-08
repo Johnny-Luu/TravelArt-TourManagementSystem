@@ -15,7 +15,8 @@ namespace DAL
     {
         private DbUtils _db;
         private FirebaseClient _client;
-
+        
+       
         public async Task<List<TourModel>> GetAllTour()
         {
             _db = new DbUtils();
@@ -54,7 +55,13 @@ namespace DAL
             _client = new FirebaseClient(config);
             await _client.SetAsync("Tour/" + tour.Id, tour);
         }
-
+        public async void EditTour(TourModel tour)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            await _client.UpdateAsync("Tour/" + tour.Id, tour);
+        }
         public async Task<string> InitID()
         {
             var tourList = await GetAllTour();

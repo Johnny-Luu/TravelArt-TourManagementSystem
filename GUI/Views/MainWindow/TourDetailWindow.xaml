@@ -62,7 +62,7 @@
 					<Grid.Row>0</Grid.Row>
 					<Image.Source>/Assets/icons/arrow-left.png</Image.Source>
 				</Image>
-					
+				<Image  x:Name="BtnEdit" MouseDown="EditTour" HorizontalAlignment="Right" Height="30" Margin="10 10 15 0" VerticalAlignment="Top" Width="45" Grid.Column="1" Source="/GUI;component/Assets/icons/icon_edit.png"/>
 			</Grid >
 
 			<Grid Grid.Column="1" Grid.ColumnSpan="1"  Width="385">

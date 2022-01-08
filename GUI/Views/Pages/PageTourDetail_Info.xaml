@@ -30,7 +30,6 @@
             <ColumnDefinition Width="309.6"/>
         </Grid.ColumnDefinitions>
         <TextBox  x:Name="LbTourName" Text="Loading" HorizontalAlignment="Left" Margin="20,15,0,0" VerticalAlignment="Top" FontFamily="Ubuntu" FontSize="32" FontWeight="Bold" Height="120" Width="310" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="Transparent" BorderBrush="Transparent" IsEnabled="False"/>
-        <Image MouseDown="EditTour" x:Name="BtnEdit" HorizontalAlignment="Left" Height="40" Margin="238.8,55,0,0" VerticalAlignment="Top" Width="45" Grid.Column="1" Source="/GUI;component/Assets/icons/icon_edit.png"/>
         <TextBlock x:Name="TbDescription" HorizontalAlignment="Left" Margin="25,14.8,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="255" Width="340" FontSize="18" Grid.ColumnSpan="2" TextAlignment="Justify"/>
 
         <Label x:Name="LbPrice" Content="Price:" Grid.Column="1" HorizontalAlignment="Left" Margin="4.8,20,-0.2,0" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" FontSize="22" Width="305" Foreground="#FFFF4C07" Height="32" FontWeight="Bold"/>

@@ -55,5 +55,12 @@ namespace GUI.Views.MainWindow
             LbRating.Style = Application.Current.Resources["NavItemStyle"] as Style;
             
         }
+        private void EditTour(object sender, MouseButtonEventArgs e)
+        {
+            // var w2 = new EditingTourWindow();
+            var w2 = new EditingTourWindow(TourID);
+            w2.ShowDialog();
+            Close();
+        }
     }
 }

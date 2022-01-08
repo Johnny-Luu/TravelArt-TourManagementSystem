@@ -38,6 +38,11 @@ namespace BLL
             _tourDAL.PushTour(tour);
         }
 
+        public void EditTour(TourModel tour)
+        {
+            _tourDAL = new TourDAL();
+            _tourDAL.EditTour(tour);
+        }
         public Task<string> InitID()
         {
             _tourDAL = new TourDAL();

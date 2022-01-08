@@ -39,7 +39,11 @@ namespace BLL
             _destinationDAL = new DestinationDAL();
             _destinationDAL.PushDestination(destination);
         }
-        
+        public void EditDestination(DestinationModel destination)
+        {
+            _destinationDAL = new DestinationDAL();
+            _destinationDAL.EditDestination(destination);
+        }
         public Task<List<DestinationModel>> GetDestinationByProvince(string province)
         {
             _destinationDAL = new DestinationDAL();

@@ -65,6 +65,13 @@ namespace DAL
             _client = new FirebaseClient(config);
             await _client.SetAsync("Destination/" + destination.Id, destination);
         }
+        public async void EditDestination(DestinationModel destination)
+        {
+            _db = new DbUtils();
+            var config = _db.CreateConnection();
+            _client = new FirebaseClient(config);
+            await _client.UpdateAsync("Destination/" + destination.Id, destination);
+        }
         
         public async Task<List<DestinationModel>> GetDestinationByProvince(string province)
         {

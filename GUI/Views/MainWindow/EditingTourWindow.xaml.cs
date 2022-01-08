@@ -8,11 +8,16 @@ namespace GUI.Views.MainWindow
     public partial class EditingTourWindow : Window
 
     {
-        public EditingTourWindow()
+        private string ID;
+        public EditingTourWindow(string id)
         {
             InitializeComponent();
+            ID = id;
         }
-
+        public string GetTourID()
+        {
+            return ID;
+        }
         private void TextInput(object sender, TextCompositionEventArgs e)
         {
             
@@ -23,6 +28,10 @@ namespace GUI.Views.MainWindow
 
         private void Cancel(object sender, MouseButtonEventArgs e)
         {
+            
+           
+           var w2 = new TourDetailWindow(ID);
+           w2.ShowDialog();
            Close();
         }
     }

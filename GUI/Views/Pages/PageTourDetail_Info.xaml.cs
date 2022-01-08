@@ -34,11 +34,6 @@ namespace GUI.Views.Pages
         LbVisit.Content = "Visit: " + s + " Locations";
     }
 
-    private void EditTour(object sender, MouseButtonEventArgs e)
-    {
-       // var w2 = new EditingTourWindow();
-        var w2 = new EditingDestinationWindow();
-        w2.ShowDialog();
-    }
+   
     }
 }

@@ -13,12 +13,14 @@ namespace GUI.Views.MainWindow
 {
     public partial class DestinationDetailWindow : Window
     {
+        private string ID;
         public DestinationDetailWindow(string id)
         {
             InitializeComponent();
             LoadData(id);
+            ID = id;
         }
-
+        
         private async void LoadData(string id)
         {
             var destinationBLL = new DestinationBLL();
@@ -56,6 +58,14 @@ namespace GUI.Views.MainWindow
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
+            this.Close();
+        }
+
+        private void EditDes(object sender, MouseButtonEventArgs e)
+        {
+            // var w2 = new EditingTourWindow();
+            var w2 = new EditingDestinationWindow(ID);
+            w2.ShowDialog();
             this.Close();
         }
     }

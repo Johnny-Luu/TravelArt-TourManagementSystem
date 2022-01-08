@@ -219,7 +219,7 @@
                     VerticalAlignment="Bottom"
                     Margin="250,0,0,54">
 
-                <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Cancel"/>
+                <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Back"/>
             </Border>
             <Border Grid.Column="1"
                     Style="{StaticResource ConfirmButtonStyle}"
@@ -231,8 +231,8 @@
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseDown">
                         <i:InvokeCommandAction
-                            Command="{Binding PushTourCommand}"
-                            CommandParameter="{Binding ElementName=EditingTourWd}"/>
+                            Command="{Binding PushDestinationCommand}"
+                            CommandParameter="{Binding ElementName=EditingDestinationWd}"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
                 <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Edit"/>

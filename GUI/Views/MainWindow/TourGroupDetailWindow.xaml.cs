@@ -102,5 +102,6 @@ namespace GUI.Views.MainWindow
                 WpListOfTourism.Children.Remove(tourismItem);
             }
         }
+       
     }
 }

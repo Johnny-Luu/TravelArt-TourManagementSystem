@@ -55,8 +55,8 @@ namespace GUI.ViewModels
         
             //WdTourDetail.GridDestination.Background.;
             var tourBlL = new TourBLL();
-            //EditingTourWindow.GetTourID()
-            tour = await tourBlL.GetTourbyID("2");
+           
+            tour = await tourBlL.GetTourbyID(para.GetTourID());
             //img
             var bytes = Convert.FromBase64String(tour.Img);
             var ms = new MemoryStream();
@@ -69,6 +69,8 @@ namespace GUI.ViewModels
             ImageBrush ib = new ImageBrush(b);
             ib.Stretch = Stretch.UniformToFill;
             EditingTourWd.ImgPicture.Source = ib.ImageSource;
+
+            _base64Img = tour.Img;
             //info
             EditingTourWd.TbName.Text = tour.Name;
             EditingTourWd.TbPrice.Text = tour.Price;
@@ -112,7 +114,40 @@ namespace GUI.ViewModels
         public async void PushTour(EditingTourWindow para)
         {
            
-          
+            EditingTourWd = para;
+
+            var tourBLL = new TourBLL();
+
+            var id = this.tour.Id;
+            var name = EditingTourWd.TbName.Text;
+            var price = EditingTourWd.TbPrice.Text;
+            var profit = EditingTourWd.TbProfit.Text;
+            var shortDescription = EditingTourWd.TbShortDescription.Text;
+            
+            string destinationIds="";
+            // check destination chosen list has item or not
+            if(_destinationChosenList.Count != 0)
+            {
+                destinationIds = GetDestinationChosenListId();
+            }
+            // check tour img has chosen or not
+            bool img = _base64Img != null;
+            
+            if (!AddingTour.isAddAble(name, price, profit, shortDescription, destinationIds, img)) return;
+
+            var tour = new TourModel
+            {
+                Id = id,
+                Name = name,
+                Price = price,
+                Profit = profit,
+                Description = shortDescription,
+                Img = _base64Img,
+                Status = 1,
+                DestinationIds = destinationIds
+            };
+                
+            tourBLL.EditTour(tour);
             MessageBox.Show("Edit Successfully");
         }
         

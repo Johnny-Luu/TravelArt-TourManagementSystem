@@ -32,7 +32,7 @@
             HorizontalAlignment="Left"
             Margin="10 10 0 0"
             MouseDown="UIElement_OnMouseDown"/>
-
+            <Image  x:Name="BtnEdit" MouseDown="EditDes" HorizontalAlignment="Right" Height="30" Margin="10 10 15 0" VerticalAlignment="Top" Width="45" Grid.Column="1" Source="/GUI;component/Assets/icons/icon_edit2.png"/>
 
             <!--Destination Info container-->
             <Border 
@@ -165,6 +165,7 @@
                     ImageSource="../../Assets/images/loading2.png"
                     Stretch="UniformToFill"/>
                 </Border.Background>
+              
             </Border>
 
             <!--Image Street Light-->

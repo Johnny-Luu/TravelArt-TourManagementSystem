@@ -324,7 +324,7 @@
                     VerticalAlignment="Bottom"
                     Margin="190,0,0,54">
 
-            <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Cancel"/>
+            <Label Style="{StaticResource ConfirmButtonLabelStyle}" Content="Back"/>
         </Border>
         <Border Grid.Column="1"
                     Style="{StaticResource ConfirmButtonStyle}"
